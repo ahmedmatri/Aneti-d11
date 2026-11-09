@@ -1,0 +1,18 @@
+uuid: b2e60660-8d74-4b4d-ab40-94540297a4dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.curriculum_vitae
+id: node.curriculum_vitae.metatag
+field_name: metatag
+entity_type: node
+bundle: curriculum_vitae
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

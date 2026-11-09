@@ -1,0 +1,19 @@
+uuid: 76f0e791-dc3d-4023-95f9-add0556322f7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_courriel_contact
+    - profile.type.entreprise
+id: profile.entreprise.field_courriel_contact
+field_name: field_courriel_contact
+entity_type: profile
+bundle: entreprise
+label: 'Courriel contact'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

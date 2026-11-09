@@ -1,0 +1,31 @@
+uuid: c36696fc-71fd-4b0f-81ee-c9039cc3cc89
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:771117eb-a276-4f9f-b205-4da54b182fc2'
+  module:
+    - block_content
+    - system
+  theme:
+    - job_board
+id: videoaneti
+theme: job_board
+region: sidebar_second
+weight: -18
+provider: null
+plugin: 'block_content:771117eb-a276-4f9f-b205-4da54b182fc2'
+settings:
+  id: 'block_content:771117eb-a276-4f9f-b205-4da54b182fc2'
+  label: 'Espace vidéo'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

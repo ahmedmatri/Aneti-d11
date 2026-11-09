@@ -1,0 +1,6 @@
+services:
+  aneti_candidat.default:
+    class: Drupal\aneti_candidat\EventSubscriber\DefaultSubscriber
+    arguments: []
+    tags:
+      - { name: event_subscriber }

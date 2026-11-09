@@ -1,0 +1,17 @@
+uuid: a135b969-4100-417c-abdc-830c0e77c6b0
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Curriculum Vitae'
+type: curriculum_vitae
+description: 'Ajouter modifier un CV '
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,31 @@
+uuid: a909e5db-95c5-4eaa-b67e-17f87c0d5b93
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.block_front_page
+    - field.storage.block_content.field_body
+    - paragraphs.paragraphs_type.description
+  module:
+    - entity_reference_revisions
+id: block_content.block_front_page.field_body
+field_name: field_body
+entity_type: block_content
+bundle: block_front_page
+label: body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      description: description
+    target_bundles_drag_drop:
+      description:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

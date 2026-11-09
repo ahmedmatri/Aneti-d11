@@ -1,0 +1,90 @@
+uuid: a6dbd431-8d5a-4943-9d15-54745fb48355
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_action_api.field_date
+    - field.field.field_collection_item.field_action_api.field_domaine
+    - field.field.field_collection_item.field_action_api.field_informations_fournies
+    - field.field.field_collection_item.field_action_api.field_niveau_d_adhesion
+    - field.field.field_collection_item.field_action_api.field_pai_duree
+    - field.field.field_collection_item.field_action_api.field_prochaine_action
+    - field.field.field_collection_item.field_action_api.field_rendez_vous
+    - field.field.field_collection_item.field_action_api.field_theme
+    - field_collection.field_collection.field_action_api
+  module:
+    - datetime
+    - options
+    - text
+id: field_collection_item.field_action_api.default
+targetEntityType: field_collection_item
+bundle: field_action_api
+mode: default
+content:
+  field_date:
+    weight: 7
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_domaine:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_informations_fournies:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_niveau_d_adhesion:
+    weight: 5
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_pai_duree:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_prochaine_action:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_rendez_vous:
+    weight: 6
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_theme:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

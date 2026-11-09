@@ -1,0 +1,22 @@
+uuid: ac9c91b5-e808-45a2-88e6-73e84cb261a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.partenaire
+id: node.partenaire.status
+field_name: status
+entity_type: node
+bundle: partenaire
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

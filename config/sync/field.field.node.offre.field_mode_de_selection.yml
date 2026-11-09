@@ -1,0 +1,21 @@
+uuid: 3e7bbddf-cbb0-4f3f-9c3c-6dbb7b50ca81
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mode_de_selection
+    - node.type.offre
+  module:
+    - options
+id: node.offre.field_mode_de_selection
+field_name: field_mode_de_selection
+entity_type: node
+bundle: offre
+label: 'Mode de sélection'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

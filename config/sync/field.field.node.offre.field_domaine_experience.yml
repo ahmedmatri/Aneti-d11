@@ -1,0 +1,29 @@
+uuid: 025104b9-40e4-4a94-a12a-7e5eeeac3d5c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_domaine_experience
+    - node.type.offre
+    - taxonomy.vocabulary.domaine
+id: node.offre.field_domaine_experience
+field_name: field_domaine_experience
+entity_type: node
+bundle: offre
+label: 'Domaine d’expérience (savoir-faire)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      domaine: domaine
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

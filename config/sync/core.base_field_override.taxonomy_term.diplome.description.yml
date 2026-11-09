@@ -1,0 +1,20 @@
+uuid: ee9e15fb-36be-471c-aa50-bbc5e965fa41
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.diplome
+  module:
+    - text
+id: taxonomy_term.diplome.description
+field_name: description
+entity_type: taxonomy_term
+bundle: diplome
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

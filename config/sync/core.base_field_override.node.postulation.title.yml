@@ -1,0 +1,18 @@
+uuid: c4056a9a-ee4e-43a3-84dc-940e56312570
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.postulation
+id: node.postulation.title
+field_name: title
+entity_type: node
+bundle: postulation
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

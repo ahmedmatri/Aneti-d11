@@ -1,0 +1,18 @@
+uuid: 42dca6ee-f476-44e4-8a2e-1b989c3a504b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.newletter_candidats
+id: node.newletter_candidats.created
+field_name: created
+entity_type: node
+bundle: newletter_candidats
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

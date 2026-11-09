@@ -1,0 +1,77 @@
+uuid: ea514f5e-2cf4-4f36-bc93-8f1d55f80094
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.action_ai.field_date_ac
+    - field.field.paragraph.action_ai.field_domaine_ai
+    - field.field.paragraph.action_ai.field_duree_ac
+    - field.field.paragraph.action_ai.field_informations_fournies
+    - field.field.paragraph.action_ai.field_niveau_d_adhesion
+    - field.field.paragraph.action_ai.field_prochain_rendez_vous
+    - field.field.paragraph.action_ai.field_prochaine_action
+    - field.field.paragraph.action_ai.field_theme
+    - paragraphs.paragraphs_type.action_ai
+  module:
+    - datetime
+    - text
+id: paragraph.action_ai.default
+targetEntityType: paragraph
+bundle: action_ai
+mode: default
+content:
+  field_date_ac:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_domaine_ai:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_duree_ac:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_informations_fournies:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_niveau_d_adhesion:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_prochain_rendez_vous:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_prochaine_action:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_theme:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

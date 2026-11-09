@@ -1,0 +1,20 @@
+uuid: bdfee4d9-0c02-4234-9f2f-9f19964b06f4
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_cv_langue
+field_name: field_cv_langue
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

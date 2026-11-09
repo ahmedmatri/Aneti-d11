@@ -1,0 +1,571 @@
+uuid: d9cd1d38-5c70-4203-bd3f-b35482aff7a0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.offre.field__requirement_langue_2
+    - field.field.node.offre.field_a_la_une
+    - field.field.node.offre.field_afficher_le_n_tel
+    - field.field.node.offre.field_afficher_le_nom
+    - field.field.node.offre.field_afficher_mail
+    - field.field.node.offre.field_autres_avantages
+    - field.field.node.offre.field_came_international
+    - field.field.node.offre.field_code_situation
+    - field.field.node.offre.field_competences_exigees
+    - field.field.node.offre.field_conge_annuel
+    - field.field.node.offre.field_cv_langue
+    - field.field.node.offre.field_date_contrat
+    - field.field.node.offre.field_date_d_insertion
+    - field.field.node.offre.field_date_de_suivie
+    - field.field.node.offre.field_date_debut_publication
+    - field.field.node.offre.field_date_derniere_modification
+    - field.field.node.offre.field_date_fin_publication
+    - field.field.node.offre.field_date_situation
+    - field.field.node.offre.field_date_validation_
+    - field.field.node.offre.field_description
+    - field.field.node.offre.field_devise
+    - field.field.node.offre.field_diplome_exige
+    - field.field.node.offre.field_domaine_et_specialite
+    - field.field.node.offre.field_domaine_experience
+    - field.field.node.offre.field_duree_contrat
+    - field.field.node.offre.field_duree_experience
+    - field.field.node.offre.field_entreprise_id
+    - field.field.node.offre.field_exiger_lettre_motivation
+    - field.field.node.offre.field_experience
+    - field.field.node.offre.field_formation_diplome_exige
+    - field.field.node.offre.field_frais_de_voyage
+    - field.field.node.offre.field_help_offer
+    - field.field.node.offre.field_horaire_de_travail
+    - field.field.node.offre.field_informations_complementair
+    - field.field.node.offre.field_langue
+    - field.field.node.offre.field_langue2
+    - field.field.node.offre.field_langue3
+    - field.field.node.offre.field_langue_de_cv_exigee
+    - field.field.node.offre.field_logement
+    - field.field.node.offre.field_mode_de_selection
+    - field.field.node.offre.field_mode_de_traitement
+    - field.field.node.offre.field_motifs_de_depublication
+    - field.field.node.offre.field_nombre_de_cv_poste
+    - field.field.node.offre.field_nombre_de_poste
+    - field.field.node.offre.field_nourriture
+    - field.field.node.offre.field_observation
+    - field.field.node.offre.field_observations
+    - field.field.node.offre.field_pays
+    - field.field.node.offre.field_primes
+    - field.field.node.offre.field_profession_offre
+    - field.field.node.offre.field_protection_sociale
+    - field.field.node.offre.field_referant
+    - field.field.node.offre.field_requirement_langue_1
+    - field.field.node.offre.field_requirement_langue_3
+    - field.field.node.offre.field_salaire_mensuel_net
+    - field.field.node.offre.field_source_de_l_offre
+    - field.field.node.offre.field_type_cv_exige
+    - field.field.node.offre.field_type_de_logement
+    - field.field.node.offre.field_type_du_contrat
+    - field.field.node.offre.field_valider
+    - field.field.node.offre.field_vehicule
+    - field.field.node.offre.field_ville
+    - field.field.node.offre.field_ville_tunisie
+    - node.type.offre
+  module:
+    - datetime
+    - datetime_range
+    - options
+    - text
+    - user
+id: node.offre.default
+targetEntityType: node
+bundle: offre
+mode: default
+content:
+  content_moderation_control:
+    weight: 52
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field__requirement_langue_2:
+    weight: 27
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_afficher_le_n_tel:
+    weight: 40
+    label: above
+    settings:
+      format: unicode-yes-no
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_afficher_le_nom:
+    weight: 39
+    label: above
+    settings:
+      format: unicode-yes-no
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_afficher_mail:
+    weight: 41
+    label: above
+    settings:
+      format: unicode-yes-no
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_autres_avantages:
+    weight: 23
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_code_situation:
+    weight: 42
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_competences_exigees:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_conge_annuel:
+    weight: 16
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_cv_langue:
+    weight: 31
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_date_contrat:
+    weight: 12
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_d_insertion:
+    weight: 44
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_de_suivie:
+    weight: 50
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_debut_publication:
+    weight: 48
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_derniere_modification:
+    weight: 45
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_fin_publication:
+    weight: 49
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_situation:
+    weight: 43
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_validation_:
+    weight: 47
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_description:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_devise:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_diplome_exige:
+    weight: 55
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_domaine_et_specialite:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_domaine_experience:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_duree_contrat:
+    weight: 11
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_duree_experience:
+    weight: 6
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_entreprise_id:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_exiger_lettre_motivation:
+    weight: 34
+    label: above
+    settings:
+      format: unicode-yes-no
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_experience:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_formation_diplome_exige:
+    weight: 56
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_frais_de_voyage:
+    weight: 19
+    label: above
+    settings:
+      format: unicode-yes-no
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_horaire_de_travail:
+    weight: 15
+    label: above
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_informations_complementair:
+    weight: 30
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_langue:
+    weight: 24
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_langue2:
+    weight: 26
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_langue3:
+    weight: 28
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_langue_de_cv_exigee:
+    weight: 32
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_logement:
+    weight: 21
+    label: above
+    settings:
+      format: unicode-yes-no
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_mode_de_selection:
+    weight: 37
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_mode_de_traitement:
+    weight: 38
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_nombre_de_cv_poste:
+    weight: 33
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_nombre_de_poste:
+    weight: 2
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_nourriture:
+    weight: 22
+    label: above
+    settings:
+      format: unicode-yes-no
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_observation:
+    weight: 51
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_observations:
+    weight: 36
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_pays:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_primes:
+    weight: 17
+    label: above
+    settings:
+      format: unicode-yes-no
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_protection_sociale:
+    weight: 18
+    label: above
+    settings:
+      format: unicode-yes-no
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_requirement_langue_1:
+    weight: 25
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_requirement_langue_3:
+    weight: 29
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_salaire_mensuel_net:
+    weight: 13
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_source_de_l_offre:
+    weight: 54
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_type_cv_exige:
+    weight: 35
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_type_de_logement:
+    weight: 57
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_type_du_contrat:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_valider:
+    weight: 46
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_vehicule:
+    weight: 20
+    label: above
+    settings:
+      format: unicode-yes-no
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_ville:
+    weight: 9
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 53
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_a_la_une: true
+  field_came_international: true
+  field_help_offer: true
+  field_motifs_de_depublication: true
+  field_profession_offre: true
+  field_referant: true
+  field_ville_tunisie: true
+  langcode: true

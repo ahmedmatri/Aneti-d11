@@ -1,0 +1,21 @@
+uuid: ddd628f6-4446-40b7-8705-118a7b562157
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mode_de_traitement
+    - node.type.offre
+  module:
+    - options
+id: node.offre.field_mode_de_traitement
+field_name: field_mode_de_traitement
+entity_type: node
+bundle: offre
+label: 'Mode de traitement'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

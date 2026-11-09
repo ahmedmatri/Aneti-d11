@@ -1,0 +1,14 @@
+uuid: e04b5e82-cb9c-4660-931d-d4f9cb786f74
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.entreprise
+  module:
+    - user
+id: user_add_role_action.entreprise
+label: 'Ajouter le rôle entreprise aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: entreprise

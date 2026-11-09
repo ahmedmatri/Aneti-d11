@@ -1,0 +1,18 @@
+uuid: 9bae4f07-1806-402b-a62e-1ec3bc74d349
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.delegations
+id: taxonomy_term.delegations.name
+field_name: name
+entity_type: taxonomy_term
+bundle: delegations
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

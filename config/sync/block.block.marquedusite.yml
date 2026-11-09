@@ -1,0 +1,23 @@
+uuid: 7c426677-8640-4224-b9a3-0541a6a106db
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - job_board
+id: marquedusite
+theme: job_board
+region: footer_left
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Marque du site'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

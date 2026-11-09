@@ -1,0 +1,18 @@
+uuid: c9764659-d1b2-4212-8d5d-35911f1a7542
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.entreprise_cliente
+id: node.entreprise_cliente.title
+field_name: title
+entity_type: node
+bundle: entreprise_cliente
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

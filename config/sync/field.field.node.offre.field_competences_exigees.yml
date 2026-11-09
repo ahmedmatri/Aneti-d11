@@ -1,0 +1,21 @@
+uuid: 493a1047-db43-4687-b249-b76c87a263b6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_competences_exigees
+    - node.type.offre
+  module:
+    - text
+id: node.offre.field_competences_exigees
+field_name: field_competences_exigees
+entity_type: node
+bundle: offre
+label: 'Profil recherché'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

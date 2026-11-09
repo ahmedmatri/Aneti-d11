@@ -1,0 +1,8 @@
+uuid: 4321e2c5-b7b9-4c5a-8600-756cef70b5e7
+langcode: fr
+status: true
+dependencies: {  }
+id: menu-bureau-a-l-etranger
+label: 'Menu Bureau à l''étranger'
+description: ''
+locked: false

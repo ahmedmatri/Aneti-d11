@@ -1,0 +1,19 @@
+uuid: daa045d9-208a-4717-a2dc-1fcd33173ffe
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_prenom_cb
+    - profile.type.chef_de_bureau
+id: profile.chef_de_bureau.field_prenom_cb
+field_name: field_prenom_cb
+entity_type: profile
+bundle: chef_de_bureau
+label: Prénom
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

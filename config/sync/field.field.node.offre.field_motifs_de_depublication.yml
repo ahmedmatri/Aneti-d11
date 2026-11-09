@@ -1,0 +1,21 @@
+uuid: 8fe13c31-17db-42ba-bc17-090ab4ac717e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_motifs_de_depublication
+    - node.type.offre
+  module:
+    - text
+id: node.offre.field_motifs_de_depublication
+field_name: field_motifs_de_depublication
+entity_type: node
+bundle: offre
+label: 'Motifs de dépublication'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

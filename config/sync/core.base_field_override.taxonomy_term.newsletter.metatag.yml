@@ -1,0 +1,18 @@
+uuid: 6a4d9c11-51d6-4019-9d42-555c20439ee5
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.newsletter
+id: taxonomy_term.newsletter.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: newsletter
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

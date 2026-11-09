@@ -1,0 +1,36 @@
+.region-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  .block {
+    @include flex(1 1 auto);
+    margin-bottom: 0;
+  }
+}
+
+//
+.path-frontpage .region-panel-third {
+  @include flex-row;
+  margin-left: rem(-15px);
+  margin-right: rem(-15px);
+  padding-top: rem(45px);
+  padding-bottom: rem(40px);
+  .block {
+    @include flex-width-auto;
+    padding-left: rem(15px);
+    padding-right: rem(15px);
+  }
+  div[class*="block-views-blockrecruiter-block-"] {
+    @include flex-width-col-xs(66.6667%);
+    @media(max-width: 767px) {
+      @include flex-width-col-xs(100%);
+    }
+  }
+  div[id*="block-jobboardheadhuntersrightads"] {
+    @include flex-width-col-xs(33.3333%);
+    @media(max-width: 767px) {
+      @include flex-width-col-xs(100%);
+      text-align: center;
+    }
+  }
+}

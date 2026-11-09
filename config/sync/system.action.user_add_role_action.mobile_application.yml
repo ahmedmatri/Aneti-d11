@@ -1,0 +1,14 @@
+uuid: 4c9b6084-ef87-4ca8-8a0e-bb2ece1b6c10
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.mobile_application
+  module:
+    - user
+id: user_add_role_action.mobile_application
+label: 'Ajouter le rôle Mobile Application aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: mobile_application

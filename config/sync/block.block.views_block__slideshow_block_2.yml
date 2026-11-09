@@ -1,0 +1,30 @@
+uuid: f0ef2876-5c1f-42fc-a990-259b15c76115
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.slideshow
+  module:
+    - system
+    - views
+  theme:
+    - job_board
+id: views_block__slideshow_block_2
+theme: job_board
+region: banner
+weight: -19
+provider: null
+plugin: 'views_block:slideshow-block_2'
+settings:
+  id: 'views_block:slideshow-block_2'
+  label: slideshow
+  provider: views
+  label_display: '0'
+  views_label: slideshow
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,41 @@
+uuid: 7393d11f-c22c-4374-9423-0cea1ccbe74c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pag_candidats
+    - node.type.plan_d_accompagnement_collectif
+id: node.plan_d_accompagnement_collectif.field_pag_candidats
+field_name: field_pag_candidats
+entity_type: node
+bundle: plan_d_accompagnement_collectif
+label: Candidats
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: role
+      role:
+        candidat: candidat
+        entreprise: '0'
+        super_admin: '0'
+        administrator: '0'
+        referent: '0'
+        conseiller_central: '0'
+        traduction: '0'
+        chef_unite_migration: '0'
+        bureau_a_l_etranger: '0'
+        partenaire: '0'
+        webmaster: '0'
+        pdg: '0'
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: 91c40a47-c499-4052-91cb-c138b803c85b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.complement_postulation
+id: node.complement_postulation.status
+field_name: status
+entity_type: node
+bundle: complement_postulation
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

@@ -1,0 +1,21 @@
+uuid: 58861dc2-87fe-4b2f-95f8-72b8e9195e7b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_validation_
+    - node.type.offre
+  module:
+    - datetime
+id: node.offre.field_date_validation_
+field_name: field_date_validation_
+entity_type: node
+bundle: offre
+label: "Date validation\t"
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

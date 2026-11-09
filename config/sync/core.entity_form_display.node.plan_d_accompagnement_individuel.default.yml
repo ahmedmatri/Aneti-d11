@@ -1,0 +1,186 @@
+uuid: e883a053-f4cd-47ec-95e3-ead6f6a335de
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.plan_d_accompagnement_individuel.field_action_ai
+    - field.field.node.plan_d_accompagnement_individuel.field_action_api
+    - field.field.node.plan_d_accompagnement_individuel.field_conaissance_de_soi
+    - field.field.node.plan_d_accompagnement_individuel.field_connaissance_de_metiers
+    - field.field.node.plan_d_accompagnement_individuel.field_connaissance_destination
+    - field.field.node.plan_d_accompagnement_individuel.field_pai_candidat
+    - field.field.node.plan_d_accompagnement_individuel.field_pai_categorie
+    - field.field.node.plan_d_accompagnement_individuel.field_pai_destination
+    - field.field.node.plan_d_accompagnement_individuel.field_pai_taches
+    - field.field.node.plan_d_accompagnement_individuel.field_preparation_pour_le_depart
+    - field.field.node.plan_d_accompagnement_individuel.field_validation_du_choix_profes
+    - node.type.plan_d_accompagnement_individuel
+  module:
+    - content_moderation
+    - field_collection
+    - paragraphs
+    - path
+    - scheduler
+    - text
+id: node.plan_d_accompagnement_individuel.default
+targetEntityType: node
+bundle: plan_d_accompagnement_individuel
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_action_ai:
+    type: entity_reference_paragraphs
+    weight: 27
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_action_api:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_embed
+    region: content
+  field_conaissance_de_soi:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_connaissance_de_metiers:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_connaissance_destination:
+    weight: 5
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_pai_candidat:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_pai_categorie:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_pai_destination:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_pai_taches:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_preparation_pour_le_depart:
+    weight: 7
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_validation_du_choix_profes:
+    weight: 6
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  langcode:
+    type: language_select
+    weight: 9
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 18
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 12
+    region: content
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 17
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 13
+    region: content
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 10
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  title: true

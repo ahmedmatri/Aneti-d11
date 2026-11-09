@@ -1,0 +1,31 @@
+uuid: 6273fcc8-9362-4fd7-b041-24b23d3249a4
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2ba9c180-8ad4-491d-a8ad-0719edfdfea4'
+  module:
+    - block_content
+    - system
+  theme:
+    - job_board
+id: espaces
+theme: job_board
+region: banner_bottom
+weight: -19
+provider: null
+plugin: 'block_content:2ba9c180-8ad4-491d-a8ad-0719edfdfea4'
+settings:
+  id: 'block_content:2ba9c180-8ad4-491d-a8ad-0719edfdfea4'
+  label: Espaces
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

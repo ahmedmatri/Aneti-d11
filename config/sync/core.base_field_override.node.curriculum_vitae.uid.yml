@@ -1,0 +1,20 @@
+uuid: f3fbc430-4140-4972-bf16-2ddc6744f632
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.curriculum_vitae
+id: node.curriculum_vitae.uid
+field_name: uid
+entity_type: node
+bundle: curriculum_vitae
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

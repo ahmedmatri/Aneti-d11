@@ -1,0 +1,21 @@
+uuid: 4dcf345c-7948-4f6e-b0f3-b453892c1a65
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_source_de_l_offre
+    - node.type.offre
+  module:
+    - options
+id: node.offre.field_source_de_l_offre
+field_name: field_source_de_l_offre
+entity_type: node
+bundle: offre
+label: 'Source de l''offre'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

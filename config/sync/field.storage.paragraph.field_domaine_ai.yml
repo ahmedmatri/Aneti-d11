@@ -1,0 +1,55 @@
+uuid: 6175682a-dbba-4474-ae45-e1ef639cf802
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_domaine_ai
+field_name: field_domaine_ai
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Valorisation des competences'
+      label: 'Valorisation des competences'
+    -
+      value: "TRE\_: Ecrire un CV convinquant"
+      label: "TRE\_: Ecrire un CV convinquant"
+    -
+      value: "TRE\_: Répondre à une offre d’emploi"
+      label: "TRE\_: Répondre à une offre d’emploi"
+    -
+      value: "TRE\_: Envoyer une lettre de motivation"
+      label: "TRE\_: Envoyer une lettre de motivation"
+    -
+      value: "TRE\_: Réussir un entretien d’embauche"
+      label: "TRE\_: Réussir un entretien d’embauche"
+    -
+      value: "TRE\_: Rédiger une lettre de relance"
+      label: "TRE\_: Rédiger une lettre de relance"
+    -
+      value: 'Connaissance de soi'
+      label: 'Connaissance de soi'
+    -
+      value: 'Connaissance de metiers'
+      label: 'Connaissance de metiers'
+    -
+      value: 'Connaissance destination'
+      label: 'Connaissance destination'
+    -
+      value: 'Validation de choix professionnel'
+      label: 'Validation de choix professionnel'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

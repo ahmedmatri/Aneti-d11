@@ -1,0 +1,18 @@
+uuid: 53df7fe0-509e-461c-8cef-35e91b61a931
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.specialite_par_domaine
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.specialite_par_domaine
+target_entity_type_id: taxonomy_term
+target_bundle: specialite_par_domaine
+default_langcode: site_default
+language_alterable: true

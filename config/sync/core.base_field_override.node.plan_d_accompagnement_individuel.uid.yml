@@ -1,0 +1,20 @@
+uuid: 748c099b-1c98-445e-aef5-a52d6bb4716b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.plan_d_accompagnement_individuel
+id: node.plan_d_accompagnement_individuel.uid
+field_name: uid
+entity_type: node
+bundle: plan_d_accompagnement_individuel
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

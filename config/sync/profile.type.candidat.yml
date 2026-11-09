@@ -1,0 +1,26 @@
+uuid: 5077fb0d-45cf-40fc-af4e-a11d7b69daf0
+langcode: fr
+status: true
+dependencies: {  }
+id: candidat
+label: candidat
+registration: true
+multiple: false
+roles:
+  candidat: candidat
+  authenticated: '0'
+  entreprise: '0'
+  super_admin: '0'
+  administrator: '0'
+  referent: '0'
+  conseiller_central: '0'
+  traduction: '0'
+  chef_unite_migration: '0'
+  bureau_a_l_etranger: '0'
+  partenaire: '0'
+  webmaster: '0'
+  pdg: '0'
+  chef_de_bureau: '0'
+weight: 0
+use_revisions: true
+description: ''

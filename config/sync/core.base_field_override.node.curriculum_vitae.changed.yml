@@ -1,0 +1,18 @@
+uuid: 27db549a-cd0f-4fd5-9e35-bb684b106204
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.curriculum_vitae
+id: node.curriculum_vitae.changed
+field_name: changed
+entity_type: node
+bundle: curriculum_vitae
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

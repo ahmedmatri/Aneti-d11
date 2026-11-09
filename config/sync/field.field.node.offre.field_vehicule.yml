@@ -1,0 +1,23 @@
+uuid: 6661480e-a569-4f8f-86f6-641958e952df
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vehicule
+    - node.type.offre
+id: node.offre.field_vehicule
+field_name: field_vehicule
+entity_type: node
+bundle: offre
+label: Véhicule
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

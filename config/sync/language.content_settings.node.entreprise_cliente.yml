@@ -1,0 +1,18 @@
+uuid: fdeea810-22cb-4249-8e49-6702ff5c66e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.entreprise_cliente
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.entreprise_cliente
+target_entity_type_id: node
+target_bundle: entreprise_cliente
+default_langcode: site_default
+language_alterable: true

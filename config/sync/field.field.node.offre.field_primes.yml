@@ -1,0 +1,23 @@
+uuid: 100871d1-69cf-467a-a999-c672dfd08755
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_primes
+    - node.type.offre
+id: node.offre.field_primes
+field_name: field_primes
+entity_type: node
+bundle: offre
+label: Primes
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

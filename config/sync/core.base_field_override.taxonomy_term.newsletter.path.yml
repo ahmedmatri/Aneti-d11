@@ -1,0 +1,20 @@
+uuid: 6f196587-fa84-4274-afeb-dbb3d1d1a279
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.newsletter
+  module:
+    - path
+id: taxonomy_term.newsletter.path
+field_name: path
+entity_type: taxonomy_term
+bundle: newsletter
+label: 'Alias d''URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

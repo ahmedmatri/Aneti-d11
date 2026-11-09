@@ -1,0 +1,21 @@
+uuid: f5fc388f-2d57-4047-9998-53b1b0260313
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_niveau
+    - node.type.curriculum_vitae
+  module:
+    - options
+id: node.curriculum_vitae.field_niveau
+field_name: field_niveau
+entity_type: node
+bundle: curriculum_vitae
+label: Niveau
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: 0a327013-98cb-4a48-bb20-ce5a192f3bac
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_prochaine_action
+    - paragraphs.paragraphs_type.action_ai
+  module:
+    - options
+id: paragraph.action_ai.field_prochaine_action
+field_name: field_prochaine_action
+entity_type: paragraph
+bundle: action_ai
+label: 'Prochaine action'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

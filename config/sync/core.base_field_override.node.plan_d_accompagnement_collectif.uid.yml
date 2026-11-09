@@ -1,0 +1,20 @@
+uuid: 441f6cd9-d85f-49eb-8bcb-89152fbd5018
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.plan_d_accompagnement_collectif
+id: node.plan_d_accompagnement_collectif.uid
+field_name: uid
+entity_type: node
+bundle: plan_d_accompagnement_collectif
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,24 @@
+uuid: e6e36cce-a927-45ba-a858-9301bbbecef2
+langcode: fr
+status: true
+dependencies:
+  module:
+    - datetime
+    - field_collection
+    - field_permissions
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: field_collection_item.field_rendez_vous
+field_name: field_rendez_vous
+entity_type: field_collection_item
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,18 @@
+uuid: 417073f9-83af-43af-a38d-9530bf2f0404
+langcode: fr
+status: false
+dependencies:
+  module:
+    - language
+id: aneti_2019_selecteurdelangue
+theme: aneti_2019
+region: ''
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Sélecteur de langue'
+  provider: language
+  label_display: '0'
+visibility: {  }

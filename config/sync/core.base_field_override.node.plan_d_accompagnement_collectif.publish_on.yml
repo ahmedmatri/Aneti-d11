@@ -1,0 +1,18 @@
+uuid: fc947176-ab4b-401a-83d5-2b8932702266
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.plan_d_accompagnement_collectif
+id: node.plan_d_accompagnement_collectif.publish_on
+field_name: publish_on
+entity_type: node
+bundle: plan_d_accompagnement_collectif
+label: 'Publish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

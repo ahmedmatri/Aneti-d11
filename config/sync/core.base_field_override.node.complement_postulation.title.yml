@@ -1,0 +1,18 @@
+uuid: 2cf8a463-6d77-4745-b416-026949a9a9ea
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.complement_postulation
+id: node.complement_postulation.title
+field_name: title
+entity_type: node
+bundle: complement_postulation
+label: Titre
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

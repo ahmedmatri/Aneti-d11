@@ -1,0 +1,22 @@
+uuid: 887db4d9-905d-438b-a3d7-81664aea9222
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.newletter_candidats
+id: node.newletter_candidats.promote
+field_name: promote
+entity_type: node
+bundle: newletter_candidats
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

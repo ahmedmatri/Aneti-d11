@@ -1,0 +1,21 @@
+uuid: 6a29b6d1-ad9f-4ec2-80f6-56a978fda122
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_date
+    - field_collection.field_collection.field_action_api
+  module:
+    - datetime
+id: field_collection_item.field_action_api.field_date
+field_name: field_date
+entity_type: field_collection_item
+bundle: field_action_api
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

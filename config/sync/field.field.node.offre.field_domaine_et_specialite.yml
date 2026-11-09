@@ -1,0 +1,29 @@
+uuid: 43749cc2-266c-4a86-a1a0-2c97cdaa4b78
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_domaine_et_specialite
+    - node.type.offre
+    - taxonomy.vocabulary.metier_p_domaine
+id: node.offre.field_domaine_et_specialite
+field_name: field_domaine_et_specialite
+entity_type: node
+bundle: offre
+label: 'Domaine de specialité'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      metier_p_domaine: metier_p_domaine
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

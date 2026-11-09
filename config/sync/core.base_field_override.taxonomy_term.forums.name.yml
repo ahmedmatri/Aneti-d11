@@ -1,0 +1,18 @@
+uuid: 76288bda-1a1a-4a05-a6fd-92eb6f55355c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.forums
+id: taxonomy_term.forums.name
+field_name: name
+entity_type: taxonomy_term
+bundle: forums
+label: Nom
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: 0d6996ed-233e-4602-9ba8-981199a8ea9b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_domaine
+    - field_collection.field_collection.field_action_api
+  module:
+    - options
+id: field_collection_item.field_action_api.field_domaine
+field_name: field_domaine
+entity_type: field_collection_item
+bundle: field_action_api
+label: Domaine
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

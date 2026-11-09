@@ -1,0 +1,14 @@
+uuid: 2f12645d-1dc5-4499-b4ef-9fc9336d17bf
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.chef_unite_migration
+  module:
+    - user
+id: user_remove_role_action.chef_unite_migration
+label: 'Enlever le rôle Chef Unité Migration des utilisateurs sélectionnés'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: chef_unite_migration

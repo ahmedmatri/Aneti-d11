@@ -1,0 +1,23 @@
+uuid: aef274e1-8ffd-48c2-ac1d-887c612b84e3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.espaces
+    - field.storage.block_content.field_lien
+  module:
+    - link
+id: block_content.espaces.field_lien
+field_name: field_lien
+entity_type: block_content
+bundle: espaces
+label: Lien
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 1
+  title: 2
+field_type: link

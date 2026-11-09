@@ -1,0 +1,126 @@
+uuid: f92efc8f-7297-4c0c-a185-7d219641dae5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.profile.referent.field_bureau_referent
+    - field.field.profile.referent.field_cin_referent
+    - field.field.profile.referent.field_date_naissance_referent
+    - field.field.profile.referent.field_delegation_referent
+    - field.field.profile.referent.field_diplome_referent
+    - field.field.profile.referent.field_mail_referent
+    - field.field.profile.referent.field_matricule_referent
+    - field.field.profile.referent.field_nom_referent
+    - field.field.profile.referent.field_prenom_referent
+    - field.field.profile.referent.field_specialite_referent
+    - field.field.profile.referent.field_telephone
+    - profile.type.referent
+  module:
+    - content_moderation
+    - datetime
+id: profile.referent.default
+targetEntityType: profile
+bundle: referent
+mode: default
+content:
+  field_bureau_referent:
+    weight: 8
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_cin_referent:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_date_naissance_referent:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_delegation_referent:
+    weight: 9
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_diplome_referent:
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_mail_referent:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_matricule_referent:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_nom_referent:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_prenom_referent:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_specialite_referent:
+    weight: 7
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_telephone:
+    weight: 101
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+hidden: {  }

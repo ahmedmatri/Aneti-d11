@@ -1,0 +1,31 @@
+uuid: a9c61323-62b5-4fd9-b9d3-6a7ff23136a0
+langcode: fr
+status: false
+dependencies:
+  content:
+    - 'block_content:hero:62d411b1-1acc-4d28-8727-e600a1e60e78'
+  module:
+    - block_content
+    - system
+  theme:
+    - job_board
+id: heroaccueil
+theme: job_board
+region: banner
+weight: -16
+provider: null
+plugin: 'block_content:62d411b1-1acc-4d28-8727-e600a1e60e78'
+settings:
+  id: 'block_content:62d411b1-1acc-4d28-8727-e600a1e60e78'
+  label: 'Hero accueil'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,33 @@
+uuid: d895c6f2-d0ff-4000-a70f-96074aaf00e5
+langcode: fr
+status: true
+dependencies: {  }
+id: diapo_actualites
+label: 'Diapo actualités'
+settings:
+  images_loaded: true
+  cell_selector: .gallery-cell
+  initial_index: 1
+  accessibility: false
+  set_gallery_size: true
+  resize: true
+  cell_align: center
+  contain: true
+  percent_position: true
+  right_to_left: true
+  draggable: true
+  free_scroll: false
+  wrap_around: true
+  group_cells: 1
+  adaptive_height: false
+  lazy_load: 0
+  auto_play: 0
+  auto_play_time: null
+  watch_css: false
+  as_nav_for: ''
+  drag_threshold: 3
+  selected_attraction: 0.025
+  friction: 0.28
+  free_scroll_friction: 0.075
+  prev_next_buttons: false
+  page_dots: true

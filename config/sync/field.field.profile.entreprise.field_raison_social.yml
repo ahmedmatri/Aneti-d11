@@ -1,0 +1,19 @@
+uuid: a8a56b91-a48f-46d1-95e4-52db1b0049e1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_raison_social
+    - profile.type.entreprise
+id: profile.entreprise.field_raison_social
+field_name: field_raison_social
+entity_type: profile
+bundle: entreprise
+label: 'Raison sociale'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: deddf2f9-0fe0-4ba3-b8bb-15ceda43a026
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_cin_referent
+    - profile.type.referent
+id: profile.referent.field_cin_referent
+field_name: field_cin_referent
+entity_type: profile
+bundle: referent
+label: CIN
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

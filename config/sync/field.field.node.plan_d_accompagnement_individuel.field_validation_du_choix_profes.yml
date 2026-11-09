@@ -1,0 +1,23 @@
+uuid: 0b0e8ba5-2978-431d-9aa8-8fc26ff9a788
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_validation_du_choix_profes
+    - node.type.plan_d_accompagnement_individuel
+id: node.plan_d_accompagnement_individuel.field_validation_du_choix_profes
+field_name: field_validation_du_choix_profes
+entity_type: node
+bundle: plan_d_accompagnement_individuel
+label: 'Validation du choix professionnel'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 5
+  prefix: ''
+  suffix: ''
+field_type: integer

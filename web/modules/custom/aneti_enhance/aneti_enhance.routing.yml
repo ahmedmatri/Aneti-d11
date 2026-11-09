@@ -1,0 +1,24 @@
+
+aneti_enhance.aneti_apply_controller_index:
+  path: '/node/{nid}/apply'
+  defaults:
+    _controller: '\Drupal\aneti_enhance\Controller\AnetiApplyController::index'
+    _title: 'Apply'
+  requirements:
+    _permission: 'access content'
+
+aneti_enhance.aneti_apply_controller_finsh:
+  path: '/node/{nid}/finish'
+  defaults:
+    _controller: '\Drupal\aneti_enhance\Controller\AnetiApplyController::finish'
+    _title: 'Finish the application'
+  requirements:
+    _permission: 'access content'
+
+aneti_enhance.my_profile_controller_redirect:
+  path: '/my-profile'
+  defaults:
+    _controller: '\Drupal\aneti_enhance\Controller\MyProfileController::redirectToProfile'
+    _title: 'redirect'
+  requirements:
+    _permission: 'access content'

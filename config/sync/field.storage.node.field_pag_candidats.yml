@@ -1,0 +1,24 @@
+uuid: 3db6e385-a304-4bd6-937c-ff37cf78660f
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - user
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_pag_candidats
+field_name: field_pag_candidats
+entity_type: node
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

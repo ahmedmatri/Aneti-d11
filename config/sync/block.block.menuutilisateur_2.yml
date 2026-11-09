@@ -1,0 +1,48 @@
+uuid: 691010f8-8d4e-46c1-8ac2-df759c587d39
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.menu-utilisateur-dashboard
+  module:
+    - block_class
+    - system
+    - user
+  theme:
+    - job_board
+third_party_settings:
+  block_class:
+    classes: null
+id: menuutilisateur_2
+theme: job_board
+region: sidebar_second
+weight: -21
+provider: null
+plugin: 'system_menu_block:menu-utilisateur-dashboard'
+settings:
+  id: 'system_menu_block:menu-utilisateur-dashboard'
+  label: '‣ Menu utilisateur'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      super_admin: super_admin
+      administrator: administrator
+      conseiller_central: conseiller_central
+      chef_unite_migration: chef_unite_migration
+      bureau_a_l_etranger: bureau_a_l_etranger
+      webmaster: webmaster
+      pdg: pdg
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  request_path:
+    id: request_path
+    pages: "http://www.aneti-international.tn/webmaster/offers\r\n/webmaster/offers\r\n/administration/offre/postulation/*\r\n/webmaster/entreprise/postulations/*\r\n/referent/validation-candidat/*\r\n/administration/offre/postulation-mail/*\r\n/referent/validation-cv/*\r\n/referent/validation-postulation/*\r\n/referent/validation-candidat\r\n/referent/validation-cv\r\n/referent/validation-postulation\r\n/stats-upi-postulations-an\r\n/recherche-cv"
+    negate: true
+    context_mapping: {  }

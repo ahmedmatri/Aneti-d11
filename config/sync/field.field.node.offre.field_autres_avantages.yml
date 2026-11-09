@@ -1,0 +1,21 @@
+uuid: 8568220d-ca6e-4b12-ba20-884cf800301f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_autres_avantages
+    - node.type.offre
+  module:
+    - text
+id: node.offre.field_autres_avantages
+field_name: field_autres_avantages
+entity_type: node
+bundle: offre
+label: 'Autres avantages'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

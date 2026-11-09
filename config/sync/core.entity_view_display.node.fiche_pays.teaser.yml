@@ -1,0 +1,34 @@
+uuid: a142526d-daf0-4055-907f-ff988ddb1e54
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.fiche_pays
+  module:
+    - user
+id: node.fiche_pays.teaser
+targetEntityType: node
+bundle: fiche_pays
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_annuaires_d_entreprise: true
+  field_equivalence_de_diplomes: true
+  field_fiscalite: true
+  field_informations_generale: true
+  field_informations_salariales: true
+  field_la_presse: true
+  field_liens: true
+  field_marche_d_emploi: true
+  field_metiers_en_tension: true
+  field_niveau_de_vie: true
+  field_recherche_de_logement: true
+  field_sante_protection_: true
+  field_transports: true
+  langcode: true

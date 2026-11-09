@@ -1,0 +1,29 @@
+uuid: 2b986cf6-4160-496f-8cc5-8238fb2f5e43
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_secteurs_d_activite
+    - profile.type.entreprise
+    - taxonomy.vocabulary.secteur_d_activite
+id: profile.entreprise.field_secteurs_d_activite
+field_name: field_secteurs_d_activite
+entity_type: profile
+bundle: entreprise
+label: 'Secteurs d''activité'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      secteur_d_activite: secteur_d_activite
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

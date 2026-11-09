@@ -1,0 +1,20 @@
+uuid: f5dbb38a-dbca-4920-9105-ccd646533e3a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.metier_par_domaine
+  module:
+    - text
+id: taxonomy_term.metier_par_domaine.description
+field_name: description
+entity_type: taxonomy_term
+bundle: metier_par_domaine
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,18 @@
+uuid: 39ad3d22-81a3-4491-a244-8cb2b0ac59d7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.diplome
+id: taxonomy_term.diplome.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: diplome
+label: Modifié
+description: 'Le moment auquel le terme a été modifié pour la dernière fois.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,30 @@
+uuid: 901cb4bc-4253-42fd-9a80-ac18f99773cf
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.map_agence
+  module:
+    - system
+    - views
+  theme:
+    - job_board
+id: views_block__map_agence_block_1
+theme: job_board
+region: sidebar_second
+weight: -16
+provider: null
+plugin: 'views_block:map_agence-block_1'
+settings:
+  id: 'views_block:map_agence-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /contact
+    negate: false
+    context_mapping: {  }

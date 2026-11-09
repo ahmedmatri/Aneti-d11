@@ -1,0 +1,36 @@
+uuid: 8ec00ae5-5144-4b19-b66e-ab02c5f55bb7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.evenement.field_description_actualite
+    - field.field.node.evenement.field_image
+    - node.type.evenement
+  module:
+    - image
+    - text
+    - user
+id: node.evenement.default
+targetEntityType: node
+bundle: evenement
+mode: default
+content:
+  field_description_actualite:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  langcode: true
+  links: true

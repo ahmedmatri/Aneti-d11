@@ -1,0 +1,18 @@
+uuid: 283f69f9-8c81-45d7-8be3-df451503af0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.curriculum_vitae
+id: node.curriculum_vitae.title
+field_name: title
+entity_type: node
+bundle: curriculum_vitae
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,24 @@
+uuid: 91db41e4-f38f-4018-af11-2616c1028c61
+langcode: fr
+status: true
+dependencies:
+  module:
+    - block_class
+    - language
+  theme:
+    - job_board
+third_party_settings:
+  block_class:
+    classes: 'col-md-3 a_block_header a_block_header__langue'
+id: selecteurdelangue_2
+theme: job_board
+region: headline
+weight: -6
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Sélecteur de langue'
+  provider: language
+  label_display: '0'
+visibility: {  }

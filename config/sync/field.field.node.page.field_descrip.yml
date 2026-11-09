@@ -1,0 +1,31 @@
+uuid: b6e2a72b-ba4f-4bb8-81ba-9a8b6f840468
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descrip
+    - node.type.page
+    - paragraphs.paragraphs_type.description
+  module:
+    - entity_reference_revisions
+id: node.page.field_descrip
+field_name: field_descrip
+entity_type: node
+bundle: page
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      description: description
+    target_bundles_drag_drop:
+      description:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

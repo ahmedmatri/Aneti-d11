@@ -1,0 +1,22 @@
+uuid: b49decd7-738b-477c-bf6b-b47a4bde7d6d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.client
+id: taxonomy_term.client.status
+field_name: status
+entity_type: taxonomy_term
+bundle: client
+label: Publié
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

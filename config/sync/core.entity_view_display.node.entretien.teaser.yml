@@ -1,0 +1,31 @@
+uuid: e2899ece-75b9-4312-ba04-7d6ef02da699
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.entretien.field_candidat_retenu
+    - field.field.node.entretien.field_date_entretien
+    - field.field.node.entretien.field_etat
+    - field.field.node.entretien.field_message
+    - field.field.node.entretien.field_offre_entretien
+    - node.type.entretien
+  module:
+    - user
+id: node.entretien.teaser
+targetEntityType: node
+bundle: entretien
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_candidat_retenu: true
+  field_date_entretien: true
+  field_etat: true
+  field_message: true
+  field_offre_entretien: true
+  langcode: true

@@ -1,0 +1,23 @@
+uuid: 03af7185-deec-4c59-a152-6e55a4312095
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_r11d
+    - field_collection.field_collection.field_checklist_avant_depart
+id: field_collection_item.field_checklist_avant_depart.field_r11d
+field_name: field_r11d
+entity_type: field_collection_item
+bundle: field_checklist_avant_depart
+label: R11d
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Oui
+  off_label: Non
+field_type: boolean

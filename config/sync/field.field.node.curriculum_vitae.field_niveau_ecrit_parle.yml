@@ -1,0 +1,21 @@
+uuid: 07c90ff9-2920-41e4-ab6d-1b006855a201
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_niveau_ecrit_parle
+    - node.type.curriculum_vitae
+  module:
+    - options
+id: node.curriculum_vitae.field_niveau_ecrit_parle
+field_name: field_niveau_ecrit_parle
+entity_type: node
+bundle: curriculum_vitae
+label: 'Niveau Langue 1(Ecrit, Parlé)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,23 @@
+uuid: 6455b87d-40b3-404d-b6ad-56aeee0f2cdf
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_r24
+    - field_collection.field_collection.field_checklist_apres_depart
+id: field_collection_item.field_checklist_apres_depart.field_r24
+field_name: field_r24
+entity_type: field_collection_item
+bundle: field_checklist_apres_depart
+label: R24
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Oui
+  off_label: Non
+field_type: boolean

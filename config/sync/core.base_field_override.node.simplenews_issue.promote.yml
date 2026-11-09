@@ -1,0 +1,22 @@
+uuid: 686e9458-d83c-4ec0-9fca-9a4050de7e29
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.simplenews_issue
+id: node.simplenews_issue.promote
+field_name: promote
+entity_type: node
+bundle: simplenews_issue
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

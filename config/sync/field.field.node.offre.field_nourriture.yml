@@ -1,0 +1,23 @@
+uuid: 09db9455-884e-4a36-8070-41f5700fb051
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nourriture
+    - node.type.offre
+id: node.offre.field_nourriture
+field_name: field_nourriture
+entity_type: node
+bundle: offre
+label: Nourriture
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

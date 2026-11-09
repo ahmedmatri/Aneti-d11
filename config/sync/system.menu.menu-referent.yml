@@ -1,0 +1,8 @@
+uuid: 210b9a70-9e2e-4e09-8114-72ac4e1b1083
+langcode: fr
+status: true
+dependencies: {  }
+id: menu-referent
+label: 'Menu référent'
+description: ''
+locked: false

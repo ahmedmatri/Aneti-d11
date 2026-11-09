@@ -1,0 +1,28 @@
+uuid: 5a4d1c51-8c7c-4ae0-bffd-2bc610897ba5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - contact.form.feedback
+    - field.storage.contact_message.field_map
+  module:
+    - geolocation
+id: contact_message.feedback.field_map
+field_name: field_map
+entity_type: contact_message
+bundle: feedback
+label: map
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    lat: '36.817171'
+    lng: '10.1790077'
+    lat_sin: null
+    lat_cos: null
+    lng_rad: null
+    data: null
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

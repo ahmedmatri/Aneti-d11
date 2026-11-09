@@ -1,0 +1,478 @@
+uuid: 14165e23-c3ef-40d1-bf93-2bde84de56aa
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.profile.entreprise.field_adresse_entreprise
+    - field.field.profile.entreprise.field_adresse_entreprise_ar
+    - field.field.profile.entreprise.field_code_postal
+    - field.field.profile.entreprise.field_courriel
+    - field.field.profile.entreprise.field_courriel_contact
+    - field.field.profile.entreprise.field_date_validation
+    - field.field.profile.entreprise.field_field_groupe_filiale_ar
+    - field.field.profile.entreprise.field_fonction
+    - field.field.profile.entreprise.field_groupe_filiale
+    - field.field.profile.entreprise.field_identifiant_entreprise
+    - field.field.profile.entreprise.field_image
+    - field.field.profile.entreprise.field_nom_entreprise
+    - field.field.profile.entreprise.field_nom_entreprise_ar
+    - field.field.profile.entreprise.field_pays
+    - field.field.profile.entreprise.field_personne_contacter
+    - field.field.profile.entreprise.field_poste_resp_contact_ar
+    - field.field.profile.entreprise.field_profile_blacklisted
+    - field.field.profile.entreprise.field_raison_social
+    - field.field.profile.entreprise.field_referant
+    - field.field.profile.entreprise.field_resp_contact_ar
+    - field.field.profile.entreprise.field_secteurs_d_activite
+    - field.field.profile.entreprise.field_site_web
+    - field.field.profile.entreprise.field_telecopie
+    - field.field.profile.entreprise.field_telephone
+    - field.field.profile.entreprise.field_telephone_contact
+    - field.field.profile.entreprise.field_valider
+    - field.field.profile.entreprise.field_ville
+    - field.field.profile.entreprise.field_ville_ar
+    - field.field.profile.entreprise.field_ville_tunisie
+    - image.style.thumbnail
+    - profile.type.entreprise
+  module:
+    - chosen_field
+    - content_moderation
+    - datetime
+    - field_group
+    - image
+third_party_settings:
+  field_group:
+    group_identifiant:
+      children:
+        - group_right
+        - group_left
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        description: ''
+        required_fields: true
+        id: ''
+        classes: col-md-12
+      label: Identifiant
+      region: content
+    group_right:
+      children:
+        - field_groupe_filiale
+        - field_nom_entreprise
+        - field_identifiant_entreprise
+      parent_name: group_identifiant
+      weight: 21
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'col-md-6 right-form'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: right
+      region: content
+    group_left:
+      children:
+        - field_raison_social
+        - field_secteurs_d_activite
+        - field_image
+      parent_name: group_identifiant
+      weight: 22
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: col-md-6
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: left
+      region: content
+    group_coordonnees:
+      children:
+        - field_adresse_entreprise
+        - group_right_1
+        - group_left_1
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: col-md-12
+        description: ''
+        required_fields: true
+      label: Coordonnées
+      region: content
+    group_contact:
+      children:
+        - group_right_2
+        - group_left_2
+        - field_courriel_contact
+        - group_right_3
+        - group_left_3
+        - field_adresse_entreprise_ar
+        - field_ville_ar
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: col-md-12
+        description: ''
+        required_fields: true
+      label: Contact
+      region: content
+    group_right_1:
+      children:
+        - field_pays
+        - field_courriel
+      parent_name: group_coordonnees
+      weight: 26
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'col-md-6 right-form'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: right
+      region: content
+    group_left_1:
+      children:
+        - field_code_postal
+        - field_ville
+        - field_telephone
+      parent_name: group_coordonnees
+      weight: 27
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: col-md-6
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: left
+      region: content
+    group_right_2:
+      children:
+        - field_fonction
+        - field_telecopie
+      parent_name: group_contact
+      weight: 24
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'col-md-6 right-form'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: right
+      region: content
+    group_left_2:
+      children:
+        - field_personne_contacter
+        - field_telephone_contact
+      parent_name: group_contact
+      weight: 25
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: col-md-6
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: left
+      region: content
+    group_right_3:
+      children:
+        - field_nom_entreprise_ar
+        - field_field_groupe_filiale_ar
+      parent_name: group_contact
+      weight: 27
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'col-md-6 right-form'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: right
+      region: content
+    group_left_3:
+      children:
+        - field_resp_contact_ar
+        - field_poste_resp_contact_ar
+      parent_name: group_contact
+      weight: 28
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: col-md-6
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: left
+      region: content
+id: profile.entreprise.default
+targetEntityType: profile
+bundle: entreprise
+mode: default
+content:
+  field_adresse_entreprise:
+    weight: 25
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_adresse_entreprise_ar:
+    weight: 29
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_code_postal:
+    weight: 23
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_courriel:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_courriel_contact:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_date_validation:
+    type: datetime_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_field_groupe_filiale_ar:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_fonction:
+    weight: 23
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_groupe_filiale:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_identifiant_entreprise:
+    weight: 24
+    settings:
+      size: 60
+      placeholder: 'SIRET, registre de commerce...'
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_nom_entreprise:
+    weight: 23
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_nom_entreprise_ar:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_pays:
+    weight: 25
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_personne_contacter:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_poste_resp_contact_ar:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_profile_blacklisted:
+    weight: 7
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_raison_social:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_referant:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+  field_resp_contact_ar:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_secteurs_d_activite:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: chosen_select
+    region: content
+  field_telecopie:
+    weight: 24
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_telephone:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_telephone_contact:
+    weight: 23
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_valider:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_ville:
+    weight: 25
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ville_ar:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_site_web: true
+  field_ville_tunisie: true

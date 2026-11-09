@@ -1,0 +1,11 @@
+uuid: 3d18266d-5d03-46b7-a175-1730d37406ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.reclamation
+id: webform_submission.reclamation
+target_entity_type_id: webform_submission
+target_bundle: reclamation
+default_langcode: site_default
+language_alterable: false

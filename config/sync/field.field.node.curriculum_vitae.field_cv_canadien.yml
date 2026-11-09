@@ -1,0 +1,27 @@
+uuid: 05af0f33-963f-4ae1-aa52-a646722ccb01
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cv_canadien
+    - node.type.curriculum_vitae
+  module:
+    - file
+id: node.curriculum_vitae.field_cv_canadien
+field_name: field_cv_canadien
+entity_type: node
+bundle: curriculum_vitae
+label: 'CV canadien'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'doc docx pdf'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

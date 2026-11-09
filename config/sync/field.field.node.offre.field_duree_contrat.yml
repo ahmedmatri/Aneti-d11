@@ -1,0 +1,23 @@
+uuid: 0484f9dd-1057-4638-9f0c-d52f370b57b0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duree_contrat
+    - node.type.offre
+id: node.offre.field_duree_contrat
+field_name: field_duree_contrat
+entity_type: node
+bundle: offre
+label: 'Durée du contrat (ans)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

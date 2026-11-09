@@ -1,0 +1,4 @@
+access europass cv:
+  title: 'Access europass CV'
+  description: 'Allow user to access europass CV'
+  restrict access: TRUE

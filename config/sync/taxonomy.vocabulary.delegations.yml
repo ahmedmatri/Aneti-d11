@@ -1,0 +1,8 @@
+uuid: 89aa1e1e-86d2-44cd-bd9e-93e2ce1f14a6
+langcode: fr
+status: true
+dependencies: {  }
+name: Délégations
+vid: delegations
+description: ''
+weight: 0

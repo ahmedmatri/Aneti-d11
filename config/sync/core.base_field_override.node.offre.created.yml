@@ -1,0 +1,18 @@
+uuid: 4dc7ce68-111a-4414-81a0-498a63014267
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.offre
+id: node.offre.created
+field_name: created
+entity_type: node
+bundle: offre
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

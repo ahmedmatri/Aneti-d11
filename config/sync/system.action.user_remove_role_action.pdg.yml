@@ -1,0 +1,14 @@
+uuid: 52bcefbe-edcc-48a4-8603-0c007cee55dd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.pdg
+  module:
+    - user
+id: user_remove_role_action.pdg
+label: 'Enlever le rôle pdg des utilisateurs sélectionnés'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: pdg

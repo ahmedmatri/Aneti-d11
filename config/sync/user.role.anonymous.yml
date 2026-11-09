@@ -1,0 +1,26 @@
+uuid: aae1764d-1a66-4e29-9656-b1d28c25c1ef
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Utilisateur anonyme'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site map'
+  - 'access site-wide contact form'
+  - 'create field_validator'
+  - 'create field_valider_par'
+  - 'restful post webform_rest_submit'
+  - 'use editorial transition create_new_draft'
+  - 'use text format filtered_html'
+  - 'view faq page'
+  - 'view field_candidature'
+  - 'view files'
+  - 'view media'
+  - 'view own field_candidature'
+  - 'vote on polls'

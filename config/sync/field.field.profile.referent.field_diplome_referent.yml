@@ -1,0 +1,29 @@
+uuid: 498fb668-9f4b-4b62-a8bd-3953d626d4f1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_diplome_referent
+    - profile.type.referent
+    - taxonomy.vocabulary.diplome
+id: profile.referent.field_diplome_referent
+field_name: field_diplome_referent
+entity_type: profile
+bundle: referent
+label: Diplôme
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      diplome: diplome
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

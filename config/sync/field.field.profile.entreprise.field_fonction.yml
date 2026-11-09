@@ -1,0 +1,19 @@
+uuid: 0a4e931b-dc98-4c1e-8ae1-6268dfb17358
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_fonction
+    - profile.type.entreprise
+id: profile.entreprise.field_fonction
+field_name: field_fonction
+entity_type: profile
+bundle: entreprise
+label: Fonction
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

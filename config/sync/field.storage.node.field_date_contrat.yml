@@ -1,0 +1,20 @@
+uuid: 776bf043-c33b-4ca2-a517-cc48d4f9586e
+langcode: fr
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_date_contrat
+field_name: field_date_contrat
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

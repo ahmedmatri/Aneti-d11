@@ -1,0 +1,31 @@
+uuid: ee972e6d-6d19-4dc0-8777-1f808bd927ce
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_niveau
+field_name: field_niveau
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Etude & Formation'
+    -
+      value: '1'
+      label: 'Formation Professionnelle'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

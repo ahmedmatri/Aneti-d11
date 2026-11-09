@@ -1,0 +1,23 @@
+uuid: 9c0d7395-cc66-4780-8857-594b9566ec24
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_accepter
+    - node.type.postulation
+id: node.postulation.field_accepter
+field_name: field_accepter
+entity_type: node
+bundle: postulation
+label: accepter
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

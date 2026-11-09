@@ -1,0 +1,14 @@
+uuid: 99169daf-322a-4328-b879-831d926b01fe
+langcode: fr
+status: true
+dependencies: {  }
+name: partenaire
+label: Partenaire
+effects:
+  74826657-b598-42a5-bca0-75d85807dadd:
+    uuid: 74826657-b598-42a5-bca0-75d85807dadd
+    id: image_resize
+    weight: 1
+    data:
+      width: 90
+      height: 50

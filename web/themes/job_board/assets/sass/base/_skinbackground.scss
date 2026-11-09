@@ -1,0 +1,47 @@
+/* background skin */
+.change-skin-menu-wrapper {
+    // .bg-default a {
+    //     background: rgba(#fff, 0.8) url('../images/bg-body.jpg') repeat-y center 0;
+    // }
+
+    .bg-1 a {
+        background: url(../images/skins-menu/bg-1.png) 0 0 repeat;
+    }
+}
+
+/* change background */
+@mixin change_bg($bg) {
+    background: url("../images/skins-menu/#{$bg}.png") 0 0 repeat;
+}
+
+.bg-1 {
+  @include change_bg(bg-1);
+}
+
+.bg-2 {
+  @include change_bg(bg-2);
+}
+
+.bg-3 {
+  @include change_bg(bg-3);
+}
+
+.bg-4 {
+  @include change_bg(bg-4);
+}
+
+.bg-5 {
+  @include change_bg(bg-5);
+}
+
+.bg-6 {
+  @include change_bg(bg-6);
+}
+
+.bg-7 {
+  @include change_bg(bg-7);
+}
+
+.bg-default {
+  background-color: #fff;
+}

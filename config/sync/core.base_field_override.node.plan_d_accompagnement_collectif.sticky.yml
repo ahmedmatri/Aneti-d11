@@ -1,0 +1,22 @@
+uuid: 9738bd72-abd7-45bf-8a0f-c1927644f4af
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.plan_d_accompagnement_collectif
+id: node.plan_d_accompagnement_collectif.sticky
+field_name: sticky
+entity_type: node
+bundle: plan_d_accompagnement_collectif
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

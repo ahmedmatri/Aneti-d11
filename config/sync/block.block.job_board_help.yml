@@ -1,0 +1,22 @@
+uuid: e3887c6d-1f8c-4ea5-a3af-ac5f9da301b9
+langcode: fr
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - job_board
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: job_board_help
+theme: job_board
+region: content
+weight: -19
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Aide
+  provider: help
+  label_display: '0'
+visibility: {  }

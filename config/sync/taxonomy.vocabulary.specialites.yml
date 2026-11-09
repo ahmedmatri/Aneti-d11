@@ -1,0 +1,8 @@
+uuid: e50608ec-a480-4998-a065-318b65223acd
+langcode: fr
+status: true
+dependencies: {  }
+name: Spécialités
+vid: specialites
+description: ''
+weight: -4

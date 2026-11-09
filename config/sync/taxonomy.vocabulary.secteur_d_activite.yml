@@ -1,0 +1,8 @@
+uuid: 73dc72b2-dd63-43be-a2bd-d7a7430e38f2
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Secteur d''activité'
+vid: secteur_d_activite
+description: ''
+weight: 0

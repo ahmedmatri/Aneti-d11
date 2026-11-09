@@ -1,0 +1,21 @@
+uuid: 5172da60-2806-4c49-b0dc-b3ec0def9ce7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type_du_contrat
+    - node.type.offre
+  module:
+    - options
+id: node.offre.field_type_du_contrat
+field_name: field_type_du_contrat
+entity_type: node
+bundle: offre
+label: 'Type du contrat'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

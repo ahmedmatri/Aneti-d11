@@ -1,0 +1,23 @@
+uuid: 0092e666-b3f3-4c9b-99f8-5dfa673aca14
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_niveau_d_adhesion
+    - field_collection.field_collection.field_action_api
+id: field_collection_item.field_action_api.field_niveau_d_adhesion
+field_name: field_niveau_d_adhesion
+entity_type: field_collection_item
+bundle: field_action_api
+label: 'Niveau d’adhesion'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 5
+  prefix: ''
+  suffix: ''
+field_type: integer

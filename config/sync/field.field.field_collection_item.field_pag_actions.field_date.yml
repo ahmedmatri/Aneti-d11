@@ -1,0 +1,21 @@
+uuid: 9f0f9015-025e-41a6-82de-335158edd0d8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_date
+    - field_collection.field_collection.field_pag_actions
+  module:
+    - datetime
+id: field_collection_item.field_pag_actions.field_date
+field_name: field_date
+entity_type: field_collection_item
+bundle: field_pag_actions
+label: Date
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

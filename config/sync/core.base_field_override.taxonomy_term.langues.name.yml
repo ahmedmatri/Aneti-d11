@@ -1,0 +1,18 @@
+uuid: 98da082e-7d8a-4f36-8bf6-8ee15e01eea1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.langues
+id: taxonomy_term.langues.name
+field_name: name
+entity_type: taxonomy_term
+bundle: langues
+label: Nom
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

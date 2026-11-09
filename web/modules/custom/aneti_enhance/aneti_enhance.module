@@ -1,0 +1,700 @@
+<?php
+
+/**
+ * @file
+ * Contains aneti_enhance.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+use \Drupal\views\ViewExecutable;
+use \Drupal\views\Plugin\views\query\QueryPluginBase;
+
+/**
+ * Implements hook_help().
+ */
+function aneti_enhance_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the aneti_enhance module.
+    case 'help.page.aneti_enhance':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Aneti enhancements') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function aneti_enhance_theme() {
+  return [
+    'aneti_enhance' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+function aneti_user_redirect(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $uid = \Drupal::currentUser()->id();
+  $user = user_load($uid);
+
+  // If candidat redirect to add CV.
+  if ($user->hasRole('candidat')) {
+    drupal_set_message(t("Please add your CV"));
+    $form_state->setRedirect('view.mon_cv.page_1');
+  }
+
+  // If entreprise add offer.
+  if ($user->hasRole('entreprise')) {
+    drupal_set_message(t("Please add your first Offer"));
+    $form_state->setRedirect('node.add', ['node_type' => 'offre']);
+  }
+}
+
+/**
+ * Implement hook_form_alter()
+ */
+function aneti_enhance_form_alter(&$form, \Drupal\Core\Form\FormStateInterface &$form_state, $form_id) {
+  if ($form_id == "user_form" && \Drupal::request()->get('pass-reset-token')) {
+    $form['account']['name']['#access'] = $form['account']['mail']['#access'] = FALSE;
+    $form['actions']['submit']['#submit'][] = 'aneti_user_redirect';
+  }
+
+  if ($form_id == 'user_register_form') {
+    $form['entity_entreprise']['moderation_state']['widget'][0]['state']['#default_value'] = 'need_review';
+    // Hide moderation state for anonymous users.
+    if (\Drupal::currentUser()->isAnonymous()) {
+      if (isset($form['entity_entreprise']['moderation_state'])) {
+        $form['entity_entreprise']['moderation_state']['#access'] = FALSE;
+        $form['entity_entreprise']['moderation_state']['widget'][0]['state']['#default_value'] = 'need_review';
+      }
+      if (isset($form['entity_candidat']['moderation_state'])) {
+        $form['entity_candidat']['moderation_state']['#access'] = FALSE;
+      }
+      
+    }
+
+    // Convert profile forms to containers.
+    $route_match = \Drupal::routeMatch();
+    $rid = $route_match->getParameter('rid');
+
+    if ($rid == 'candidat') {
+      unset($form['entity_entreprise']);
+      unset($form['entity_partenaire']);
+      unset($form['entity_referent']);
+      $form['entity_candidat']['#type'] = 'container';
+    }
+
+    if ($rid == 'entreprise') {
+      unset($form['entity_candidat']);
+      unset($form['entity_partenaire']);
+      unset($form['entity_referent']);
+      $form['entity_entreprise']['#type'] = 'container';
+    }
+
+    if ($rid == 'referent') {
+      unset($form['entity_candidat']);
+      unset($form['entity_partenaire']);
+      unset($form['entity_entreprise']);
+      $form['entity_referent']['#type'] = 'container';
+    }
+
+    if ($rid == 'partenaire') {
+      unset($form['entity_candidat']);
+      unset($form['entity_referent']);
+      unset($form['entity_entreprise']);
+      $form['entity_partenaire']['#type'] = 'container';
+    }
+
+    $form['actions']['submit']['#validate'][] = 'aneti_enhance_candidat_form_validate';
+
+    $uri = \Drupal::request()->getUri();
+    if (strpos($uri, '/people/create')) {
+      unset($form['entity_candidat']);
+      unset($form['entity_entreprise']);
+    }
+
+  }
+
+  if ($form_id == 'profile_entreprise_edit_form') {
+    $form['actions']['submit']['#submit'][] = 'aneti_enhance_profile_entreprise_edit_form_submit';
+  }
+
+  if ($form_id == 'node_complement_postulation_form') {
+    // Get thi nid from the URL
+    $nid = Drupal::request()->get('nid');
+    // Disable the entity ref field
+    $form['field_postulation']['#access'] = FALSE;
+    // Provide a default value;
+    $form['field_postulation']['widget'][0]['target_id']['#default_value'] = \Drupal\node\Entity\Node::load($nid);
+  }
+
+  if ($form_id == 'node_curriculum_vitae_form') {
+    $form['moderation_state']['widget'][0]['state']['#default_value'] = 'published';
+  }
+
+  if ($form_id == 'node_postulation_edit_form') {
+    $form['actions']['submit']['#submit'][] = 'aneti_node_postulation_edit_form_submit';
+  }
+
+  if ($form_id == 'node_offre_edit_form' || $form_id == 'node_offre_form') {
+    $form['#attached']['library'][] = 'aneti_enhance/conditional';
+  }
+}
+
+/**
+ * Custom submit handler.
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function aneti_node_postulation_edit_form_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  if ($candidature = $form_state->getValue('field_candidature')) {
+    $candidature = array_shift($candidature);
+    // Postulation preselectionnée.
+    if ($candidature['value'] == 3) {
+      // Get the email address.
+      $field_candidats = $form_state->getValue('field_candidats');
+      $field_candidats = array_shift($field_candidats);
+
+      $user = user_load($field_candidats['target_id']);
+      // notify user by email
+      $subject = $message = t('Your postulation has been validated');
+      aneti_enhance_notify($user->getEmail(), $subject, $message);
+      // Notify the entreprise
+      $field_offre = $form_state->getValue('field_intitul_de_l_offre');
+      $field_offre = array_shift($field_offre);
+      if ($offre = node_load($field_offre['target_id'])) {
+        $entreprise_id = $offre->get('field_entreprise_id')->getString();
+        // load the user and notify.
+        if ($entreprise = user_load($entreprise_id)) {
+          $subject = $message = t('An application has been validated (Preselected)');
+          aneti_enhance_notify($entreprise->getEmail(), $subject, $message);
+        }
+      }
+    }
+    // Postulation accèptée
+    if ($candidature['value'] == 1) {
+      // Get the email address.
+      $field_candidats = $form_state->getValue('field_candidats');
+      $field_candidats = array_shift($field_candidats);
+
+      $user = user_load($field_candidats['target_id']);
+      // notify user by email
+      $subject = $message = t('Your application has been selected by the company');
+      aneti_enhance_notify($user->getEmail(), $subject, $message);
+      // Notify the referant
+      $field_offre = $form_state->getValue('field_intitul_de_l_offre');
+      $field_offre = array_shift($field_offre);
+      if ($offre = node_load($field_offre['target_id'])) {
+        $ref_id = $offre->get('field_referant')->getString();
+        // load the user and notify.
+        if ($entreprise = user_load($ref_id)) {
+          $subject = $message = t('An application has been validated (Selected)');
+          aneti_enhance_notify($entreprise->getEmail(), $subject, $message);
+        }
+      }
+    }
+  }
+}
+
+function aneti_enhance_candidat_form_validate(&$form, \Drupal\Core\Form\FormStateInterface &$form_state) {
+  if ($form_state->hasValue('entity_candidat')) {
+    $entity_candidat = $form_state->getValue('entity_candidat');
+    // Validate CIN
+    //drupal_set_message(t('Validation callback called! Whoopee! Success!'), 'status');
+    if (isset($entity_candidat['field_cin'])) {
+      $cin = array_shift($entity_candidat['field_cin']);
+      $cin = reset($cin);
+      if (strlen($cin) != 8 || !is_numeric($cin)) {
+        $form_state->setErrorByName('entity_candidat[field_cin][0][value]', t('CIN Length is limited to 8 numbers.'));
+      }
+
+      if (!cin_is_unique($cin)) {
+        $form_state->setErrorByName('entity_candidat[field_cin][0][value]', t('CIN must be unique.'));
+      }
+    }
+
+    // Validate emprinte
+    if (isset($entity_candidat['field_numero_empreinte'])) {
+      $num = array_shift($entity_candidat['field_numero_empreinte']);
+      $num = reset($num);
+      if (strlen($num) != 8 || !is_numeric($num)) {
+        $form_state->setErrorByName('entity_candidat[field_numero_empreinte][0][value]', t('Length limited to 8 numbers.'));
+      }
+
+      if (!num_is_unique($num)) {
+        $form_state->setErrorByName('entity_candidat[field_numero_empreinte][0][value]', t('Fingerprint must be unique.'));
+      }
+    }
+
+
+  }
+}
+
+/**
+ * Check if CIN is unique
+ * @param $cin
+ *
+ * @return bool
+ */
+function cin_is_unique($cin) {
+  $query = \Drupal::entityQuery('profile')
+  	->condition('field_cin', $cin)
+	->accessCheck(FALSE);
+  $result = $query->execute();
+  return empty($result);
+}
+
+/**
+ * Check if NUM EMPREINT is unique
+ * @param $num
+ *
+ * @return bool
+ */
+function num_is_unique($cin) {
+  $query = \Drupal::entityQuery('profile')
+  	->condition('field_numero_empreinte', $cin)
+	->accessCheck(FALSE);
+  $result = $query->execute();
+  return empty($result);
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function aneti_enhance_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+  // Fill in the candidat field when it's added by candidat itself.
+  if (in_array('candidat', Drupal::currentUser()->getRoles()) && $entity->bundle() == 'curriculum_vitae') {
+    $author_uid = $entity->getOwnerId();
+    $entity->set('field_candidat', $author_uid);
+  }
+
+  // Fill in the entrepise field whene offre added by entreprise
+  if (in_array('entreprise', Drupal::currentUser()->getRoles()) && $entity->bundle() == 'offre') {
+    $author_uid = $entity->getOwnerId();
+    $entity->set('field_entreprise_id', $author_uid);
+  }
+
+}
+
+function aneti_enhance_entity_prepare_form(\Drupal\Core\Entity\EntityInterface $entity, $operation, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $form_state->set('original_entity', $entity);
+  $form_state->addBuildInfo('original_entity', $entity);
+  $form_state->setRebuild(TRUE);
+}
+
+function aneti_enhance_profile_entreprise_edit_form_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+
+  $original_entity = $form_state->getBuildInfo()['original_entity'];
+  $profile_entity = $form_state->getFormObject()->getEntity();
+  // If new registration default state to need review.
+  if ($profile_entity->isNew()) {
+    $form_state->setValue('moderation_state', 'need_review');
+  }
+  // Get original entity
+
+  $blacklisted = ($profile_entity->get('field_profile_blacklisted')->getValue() != $original_entity->get('field_profile_blacklisted')->getValue());
+
+  if ($blacklisted) {
+    // Profile blacklisted. Block user and notify webmaster and pdg.
+    if ($profile_entity->get('field_profile_blacklisted')->getValue()[0]['value'] == 1) {
+      $profile_entity->set('moderation_state', 'archived')->save();
+      $user = $profile_entity->getOwner();
+      $user->block()->save();
+      aneti_enhance_notify_roles(['webmaster', 'pdg'], 'Profile blacklisted', 'A profile has been Blacklisted');
+    }
+  }
+
+  $moderation_state = $profile_entity->get('moderation_state')->getString();
+  if ($moderation_state == 'published') {
+    $profile_entity->set('field_valider', TRUE)->save();
+  }
+
+}
+
+/**
+ * Implement hook_enhance_module_implements_alter()
+ */
+function aneti_enhance_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'form_alter' && isset($implementations['aneti_enhance'])) {
+    // Move my_module_form_alter() to the end of the list.
+    // \Drupal::moduleHandler()->getImplementations()
+    // iterates through $implementations with a foreach loop which PHP iterates
+    // in the order that the items were added, so to move an item to the end of
+    // the array, we remove it and then add it.
+    $group = $implementations['aneti_enhance'];
+    unset($implementations['aneti_enhance']);
+    $implementations['aneti_enhance'] = $group;
+  }
+}
+
+/**
+ * Helper function to check if profile is entreprise
+ *
+ * @param Drupal\Core\Entity\EntityInterface $entity
+ * @return bool
+ */
+function aneti_enhance_entity_is_profile_entreprise(Drupal\Core\Entity\EntityInterface $entity) {
+  $entity_type = $entity->getEntityType()->getBundleEntityType();
+  $bundle = $entity->bundle();
+
+  if ($entity_type == 'profile_type' && $bundle == 'entreprise') {
+    if ($entity->get('field_raison_social') !== null && $entity->get('field_raison_social')->getValue()) {
+      return TRUE;
+    }
+  }
+  return FALSE;
+}
+
+/**
+ * Helper function to check if node of type offre.
+ *
+ * @param Drupal\Core\Entity\EntityInterface $entity
+ * @return bool
+ */
+function aneti_enhance_entity_is_offre(Drupal\Core\Entity\EntityInterface $entity) {
+  $entity_type = $entity->getEntityType()->getBundleEntityType();
+  $bundle = $entity->bundle();
+  if ($entity_type == 'node_type' && $bundle == 'offre') {
+    return TRUE;
+  }
+  return FALSE;
+}
+
+/**
+ * Implement hook__entity_insert().
+ */
+function aneti_enhance_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
+  // Fix the profile owner.
+  if (aneti_enhance_entity_is_profile_entreprise($entity)) {
+    $uid = array_shift($entity->get('uid')->getValue()[0]);
+    $entity->setOwnerId($uid);
+  }
+
+  // Execute Offres workflow.
+  aneti_enhance_exec_offre_workflow($entity);
+}
+/**
+ * Helper function to send email to all users of a role.
+ *
+ * @param [type] $role
+ * @param [type] $subject
+ * @param [type] $message
+ * @return void
+ */
+function aneti_enhance_notify_roles(array $roles, $subject, $message) {
+  // Load all users of a role.
+  $users = aneti_enhance_retrieve_users_of_roles($roles);
+  foreach ($users as $user) {
+    if ($user instanceof \Drupal\user\Entity\User) {
+      $langcode = $user->getPreferredLangcode();
+      $params = [
+        'subject' => t('@subject', ['@subject' => $subject]),
+        'message' => $message,
+      ];
+      // Set a unique key for this mail.
+      $key = 'aneti_enhance_notify';
+
+      $mail = $user->get('mail')->getValue();
+      $to = $mail[0]['value'];
+
+      // Send the Email.
+      \Drupal::service('plugin.manager.mail')
+        ->mail('aneti_enhance', $key, $to, $langcode, $params);
+    }
+  }
+}
+
+/**
+ * Utility functon to send an email to a specific user
+ *
+ * @param Drupal\user\Entity\User $user
+ * @param String $subject
+ * @param String $message
+ * @return mixed
+ */
+function aneti_enhance_notify_user(Drupal\user\Entity\User $user, $subject, $message) {
+  // Set a unique key for this mail.
+  $key = 'aneti_enhance_notify';
+  $langcode = $user->getPreferredLangcode();
+  $params = [
+    'subject' => t('@subject', ['@subject' => $subject]),
+    'message' => $message,
+  ];
+  $mail = $user->get('mail')->getValue();
+  $to = $mail[0]['value'];
+
+  // Send the Email.
+  \Drupal::service('plugin.manager.mail')
+    ->mail('aneti_enhance', $key, $to, $langcode, $params);
+}
+
+function aneti_enhance_retrieve_users_of_roles(array $roles) {
+  $uids = Drupal::entityQuery('user')
+    ->condition('roles', $roles, 'IN')
+    ->condition('status', 1)
+    ->execute();
+
+  return \Drupal\user\Entity\User::loadMultiple($uids);
+}
+
+/**
+ * Implementation of the Entreprise Profile workflow.
+ *
+ * @param Drupal\Core\Entity\EntityInterface $entity
+ * @return void
+ */
+function aneti_enhance_exec_entreprise_workflow(Drupal\Core\Entity\EntityInterface $entity) {
+
+  if (aneti_enhance_entity_is_profile_entreprise($entity)) {
+
+    // Get the moderation state.
+    $moderation_state = $entity->get('moderation_state')->getValue();
+
+    // Profile: From draft to published.
+    if (isset($moderation_state[0]['value']) && $moderation_state[0]['value'] == 'published') {
+      $uid = array_shift($entity->get('uid')->getValue()[0]);
+      $user = \Drupal\user\Entity\User::load($uid);
+      // Initial creation.
+      if ($user && !$user->isActive()) {
+        // Activate the user and save the user.
+        $user->activate();
+        $user->addRole('entreprise');
+        if ($user->save()) {
+          \Drupal::messenger()->addMessage(t('User activated an email has been sent.'));
+          // @todo customize the message
+          //aneti_enhance_notify_user($user, t('Your profile has been activated'), t('Your profile has been activated'));
+        }
+      }
+      else {
+        // Updated profile is activated, we nofity the user.
+        aneti_enhance_notify_user($user, t('Your profile has been published'), t('Your profile has been reviewed and published'));
+      }
+    }
+    // Profile: New draft. notify webmaster
+    if (isset($moderation_state[0]['value']) && $moderation_state[0]['value'] == 'need_review') {
+      // show message
+      \Drupal::messenger()->addMessage(t('The modified profile is pending validation.'));
+      if (isset($entity->get('field_referant')->getValue()[0]['target_id']) && $referant_uid = $entity->get('field_referant')->getValue()[0]['target_id']) {
+        $user = \Drupal\user\Entity\User::load($referant_uid);
+        aneti_enhance_notify_user($user, t('Profile to be reviewed'), t('A profile needs to be reviewed'));
+      }
+      else {
+        // No referant found, notify the webmaster
+        aneti_enhance_notify_roles(['webmaster'], 'Profile to be reviewed', 'A profile needs to be reviewed');
+      }
+    }
+  }
+}
+
+function aneti_enhance_exec_offre_workflow(Drupal\Core\Entity\EntityInterface $entity) {
+  if (aneti_enhance_entity_is_offre($entity)) {
+    $moderation_state = $entity->get('moderation_state')->getValue();
+    // 1- Offre needs review
+    //  * Notify role UPI
+    if (isset($moderation_state[0]['value']) && $moderation_state[0]['value'] == 'need_review') {
+      aneti_enhance_notify_roles(['conseille_upi'], 'An offer needs review', 'An offer has been added');
+    }
+    // 2- Offre validated
+    //  * Notify Owner
+    if (isset($moderation_state[0]['value']) && $moderation_state[0]['value'] == 'validated') {
+      // Get entity owner.
+      $owner = $entity->getOwner();
+      aneti_enhance_notify_user($owner, 'Your offer is validated', 'Your offer is validated');
+    }
+    // 3- Offre publiée
+    // @todo: Envoie de mailing (job letter)
+    if (isset($moderation_state[0]['value']) && $moderation_state[0]['value'] == 'published') {
+      $owner = $entity->getOwner();
+      aneti_enhance_notify_user($owner, 'Your offer is published', 'Your offer is published');
+      // Get users that will be notified.
+      $tid = $entity->get('field_profession_offre')->getString();
+      $exp = $entity->get('field_duree_experience')->getString();
+      if ($exp == "") {
+        $exp = 0;
+      }
+      if ($users = aneti_get_notifiable_users($tid, $exp)) {
+        /** @var QueueFactory $queue_factory */
+        $queue_factory = \Drupal::service('queue');
+        /** @var QueueInterface $queue */
+        $queue = $queue_factory->get('cron_jobs_notifier');
+        $url = $entity->toUrl()->toString();
+        // Add items to the queue
+        foreach ($users as $user) {
+          $item = new \stdClass();
+          $item->email = $user->getEmail();
+          $item->url = $url;
+          $queue->createItem($item);
+        }
+        // Inform the webmaster about notifiaction.
+        drupal_set_message(t('%count users will be notified', ['%count' => count($users)]));
+      }
+    }
+    // 4- offre dépubliée alerter le webmaster.
+    if (isset($moderation_state[0]['value']) && $moderation_state[0]['value'] == 'unpublished') {
+      $roles = ['webmaster'];
+      $subject = t('An offer has been unpublished');
+      $message = t('A compagny unpulished an offer, please check the website');
+      // Notify the webmaster      
+      aneti_enhance_notify_roles($roles, $subject, $message);
+    }
+  }
+}
+
+
+function aneti_get_notifiable_users($tid, $exp) {
+  $query = \Drupal::entityQuery('node')
+    ->condition('type', 'curriculum_vitae')
+    ->condition('field_nombre_d_annee_d_exercice', $exp, '>=')
+   // ->condition('status', 1)
+    ->condition('field_profession.target_id', $tid);
+  if ( $result = $query->execute()) {
+    $nids = [];
+    // Populate the array of nids in order to load nodes once.
+    foreach ($result as $k => $v) {
+      $nids[] = $v;
+    }
+
+    // Load nodes
+    if ($nodes = node_load_multiple($nids)) {
+      $uids = [];
+      foreach ($nodes as $node) {
+        if ($uid = $node->get('field_candidat')->getString()) {
+          $uids[] = $uid;
+        }
+      }
+      // get the candidat users
+      $users = entity_load_multiple('user', $uids);
+      return $users;
+    }
+  }
+
+  return FALSE;
+}
+/**
+ * implement hook_entity_update().
+ */
+function aneti_enhance_entity_update(Drupal\Core\Entity\EntityInterface $entity) {
+  // Execute the user workflow.
+  // @see : aneti_enhance_exec_entreprise_workflow()
+  aneti_enhance_exec_entreprise_workflow($entity);
+
+  // Execute Offres workflow.
+  aneti_enhance_exec_offre_workflow($entity);
+
+}
+
+
+/**
+* Implements hook_mail().
+*/
+function aneti_enhance_mail($key, &$message, $params) {
+  $options = array(
+    'langcode' => $message['langcode'],
+  );
+  switch ($key) {
+    case 'aneti_enhance_notify':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = $params['subject'];
+      $message['body'][] = $params['message'];
+      break;
+
+    case 'aneti_enhance_jobletter':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('A new offer matching your profile is published');
+      $message['body'][] = $params['message'];
+
+      break;
+  }
+}
+
+
+function aneti_enhance_notify($to, $subject, $message) {
+  $mailManager = \Drupal::service('plugin.manager.mail');
+  $module = 'aneti_enhance';
+  $key = 'aneti_enhance_notify';
+  $params['subject'] = $subject;
+  $params['message'] = $message;
+  $langcode = \Drupal::currentUser()->getPreferredLangcode();
+  $send = true;
+  $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
+  if ($result['result'] !== true) {
+    drupal_set_message(t('There was a problem sending your message and it was not sent.'), 'error');
+  }
+  else {
+    drupal_set_message(t('Your message has been sent.'));
+  }
+}
+
+/**
+ * Implements hook_toolbar().
+ */
+function aneti_enhance_toolbar() {
+  $user = \Drupal::currentUser();
+
+  $items['aneti'] = [
+    '#type' => 'toolbar_item',
+    'tab' => [
+      '#type' => 'link',
+      '#title' => 'ANETI',
+      '#url' => Url::fromRoute('user.page'),
+      '#attributes' => [
+        'title' => t('ANETI'),
+        'class' => ['toolbar-icon', 'toolbar-icon-user'],
+      ],
+      '#cache' => [
+        // Vary cache for anonymous and authenticated users.
+        'contexts' => ['user.roles:anonymous'],
+      ],
+    ],
+    'tray' => [
+      '#heading' => t('User account actions'),
+    ],
+    '#weight' => 9999,
+    '#attached' => [
+      'library' => [
+        'user/drupal.user.icons',
+      ],
+    ],
+  ];
+
+  $links = [
+    'login' => [
+      'title' => t('Entreprises'),
+      //view.gestion_des_profiles.page_1
+      'url' => Url::fromRoute('view.gestion_des_profiles.page_1'),
+    ],
+  ];
+  $items['aneti']['tray']['user_links'] = [
+    '#theme' => 'links__toolbar_user',
+    '#links' => $links,
+    '#attributes' => [
+      'class' => ['toolbar-menu'],
+    ],
+  ];
+
+  return $items;
+}
+
+/**
+ * Implement hook_entity_view()
+ */
+function aneti_enhance_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  // Check if cli mode
+  if (php_sapi_name() == "cli") {
+    return;
+  }	
+	
+  // Prevent non proper roles to access CV.
+  $current_user = \Drupal::currentUser();
+  $roles = $current_user->getRoles();
+
+  $not_allowed = in_array('anonymous', $roles);
+
+  if ($not_allowed && $entity->bundle() == "curriculum_vitae") {
+    //throw new \Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException();
+  }
+}

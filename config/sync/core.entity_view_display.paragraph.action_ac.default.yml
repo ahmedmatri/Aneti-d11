@@ -1,0 +1,54 @@
+uuid: b892deca-8645-4cd6-9c33-1a346789a15b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.action_ac.field_date_ac
+    - field.field.paragraph.action_ac.field_duree_ac
+    - field.field.paragraph.action_ac.field_informations_fournies
+    - field.field.paragraph.action_ac.field_theme
+    - paragraphs.paragraphs_type.action_ac
+  module:
+    - datetime
+    - options
+    - text
+id: paragraph.action_ac.default
+targetEntityType: paragraph
+bundle: action_ac
+mode: default
+content:
+  field_date_ac:
+    weight: 0
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_duree_ac:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_informations_fournies:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_theme:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

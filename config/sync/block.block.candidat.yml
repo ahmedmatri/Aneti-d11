@@ -1,0 +1,31 @@
+uuid: 3b7cae60-75a3-474e-846a-0ae6c6d65ac2
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:bloc_image:fa2e09cf-56be-4761-959b-7629b629a9ae'
+  module:
+    - block_content
+    - system
+  theme:
+    - job_board
+id: candidat
+theme: job_board
+region: sidebar_second
+weight: -15
+provider: null
+plugin: 'block_content:fa2e09cf-56be-4761-959b-7629b629a9ae'
+settings:
+  id: 'block_content:fa2e09cf-56be-4761-959b-7629b629a9ae'
+  label: Candidat
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /Espace-candidat
+    negate: false
+    context_mapping: {  }

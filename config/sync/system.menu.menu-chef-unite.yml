@@ -1,0 +1,8 @@
+uuid: a40d2c1e-0554-42bb-b64c-9a7bd57e0746
+langcode: fr
+status: true
+dependencies: {  }
+id: menu-chef-unite
+label: 'Menu Chef unité'
+description: ''
+locked: false

@@ -1,0 +1,18 @@
+uuid: 45772300-99fa-4aec-a7f0-ca00456d97bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.metier_par_domaine
+id: taxonomy_term.metier_par_domaine.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: metier_par_domaine
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

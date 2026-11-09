@@ -1,0 +1,18 @@
+uuid: 9e01fb59-6eae-4751-bd4f-415a9b97f29b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.specialites
+id: taxonomy_term.specialites.name
+field_name: name
+entity_type: taxonomy_term
+bundle: specialites
+label: Nom
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

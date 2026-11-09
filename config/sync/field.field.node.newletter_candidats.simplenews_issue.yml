@@ -1,0 +1,33 @@
+uuid: 04376f40-2082-4116-8761-9c3f57cc7e09
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.simplenews_issue
+    - node.type.newletter_candidats
+    - simplenews.newsletter.candidat
+  module:
+    - simplenews
+id: node.newletter_candidats.simplenews_issue
+field_name: simplenews_issue
+entity_type: node
+bundle: newletter_candidats
+label: Issue
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    handler: simplenews_all
+    handler_settings: null
+    status: 0
+    sent_count: 0
+    subscribers: 0
+    target_uuid: 434e71d0-22b2-4441-83fd-bfc1b2bc5ec4
+default_value_callback: ''
+settings:
+  handler: 'default:simplenews_newsletter'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: simplenews_issue

@@ -1,0 +1,23 @@
+uuid: 8fb282b1-474f-4265-b047-368b3cee1ae5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_afficher_le_n_tel
+    - node.type.offre
+id: node.offre.field_afficher_le_n_tel
+field_name: field_afficher_le_n_tel
+entity_type: node
+bundle: offre
+label: 'afficher le N Tél'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

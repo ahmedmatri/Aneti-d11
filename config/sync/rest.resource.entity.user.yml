@@ -1,0 +1,22 @@
+uuid: 733f830f-09c6-4320-9507-554404e77a69
+langcode: fr
+status: true
+dependencies:
+  module:
+    - hal
+    - jwt
+    - serialization
+    - user
+id: entity.user
+plugin_id: 'entity:user'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - PATCH
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - jwt_auth

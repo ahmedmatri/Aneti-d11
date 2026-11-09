@@ -1,0 +1,18 @@
+uuid: 00b30df7-8024-405d-9064-2cb2d7c0aaad
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.newsletter
+id: taxonomy_term.newsletter.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: newsletter
+label: Modifié
+description: 'Le moment auquel le terme a été modifié pour la dernière fois.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

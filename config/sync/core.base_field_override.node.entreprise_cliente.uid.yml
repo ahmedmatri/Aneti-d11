@@ -1,0 +1,20 @@
+uuid: c1199935-aad0-4248-a788-aef1c2bc4357
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.entreprise_cliente
+id: node.entreprise_cliente.uid
+field_name: uid
+entity_type: node
+bundle: entreprise_cliente
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

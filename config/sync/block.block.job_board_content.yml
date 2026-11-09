@@ -1,0 +1,27 @@
+uuid: 78682d0d-2c31-476e-825f-2bb04b176814
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - job_board
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: job_board_content
+theme: job_board
+region: content
+weight: -15
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenu de la page principale'
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

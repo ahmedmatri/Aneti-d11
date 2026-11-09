@@ -1,0 +1,18 @@
+uuid: f8d37eb4-0ba6-4f07-94f1-38582f6f5d82
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.localites
+id: taxonomy_term.localites.name
+field_name: name
+entity_type: taxonomy_term
+bundle: localites
+label: Nom
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

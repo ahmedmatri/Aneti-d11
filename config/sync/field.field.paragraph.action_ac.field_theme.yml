@@ -1,0 +1,21 @@
+uuid: 3ce2e79b-b039-4564-9b51-491dcffd0981
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_theme
+    - paragraphs.paragraphs_type.action_ac
+  module:
+    - options
+id: paragraph.action_ac.field_theme
+field_name: field_theme
+entity_type: paragraph
+bundle: action_ac
+label: Thème
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

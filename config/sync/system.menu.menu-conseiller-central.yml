@@ -1,0 +1,8 @@
+uuid: 218c04c9-355a-41fd-920a-d1d6c986b06c
+langcode: fr
+status: true
+dependencies: {  }
+id: menu-conseiller-central
+label: 'Menu Conseiller central'
+description: ''
+locked: false

@@ -1,0 +1,18 @@
+uuid: 6a939b4e-24c5-41ba-bc95-afcdd302bf39
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.delegations
+id: taxonomy_term.delegations.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: delegations
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

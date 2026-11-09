@@ -1,0 +1,20 @@
+uuid: c9a112fe-e487-4d81-803e-b4f93f2e0c28
+langcode: fr
+status: false
+dependencies:
+  module:
+    - system
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: aneti_2019_content
+theme: aneti_2019
+region: ''
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenu de la page principale'
+  provider: system
+  label_display: '0'
+visibility: {  }

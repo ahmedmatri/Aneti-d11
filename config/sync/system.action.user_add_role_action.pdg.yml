@@ -1,0 +1,14 @@
+uuid: 63064d62-dff4-4d1f-8448-ce4218c826c8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.pdg
+  module:
+    - user
+id: user_add_role_action.pdg
+label: 'Ajouter le rôle pdg aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: pdg

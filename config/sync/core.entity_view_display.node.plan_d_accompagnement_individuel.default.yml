@@ -1,0 +1,126 @@
+uuid: 7b292c7d-02c2-4fa8-94da-7a483e1a0814
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.plan_d_accompagnement_individuel.field_action_ai
+    - field.field.node.plan_d_accompagnement_individuel.field_action_api
+    - field.field.node.plan_d_accompagnement_individuel.field_conaissance_de_soi
+    - field.field.node.plan_d_accompagnement_individuel.field_connaissance_de_metiers
+    - field.field.node.plan_d_accompagnement_individuel.field_connaissance_destination
+    - field.field.node.plan_d_accompagnement_individuel.field_pai_candidat
+    - field.field.node.plan_d_accompagnement_individuel.field_pai_categorie
+    - field.field.node.plan_d_accompagnement_individuel.field_pai_destination
+    - field.field.node.plan_d_accompagnement_individuel.field_pai_taches
+    - field.field.node.plan_d_accompagnement_individuel.field_preparation_pour_le_depart
+    - field.field.node.plan_d_accompagnement_individuel.field_validation_du_choix_profes
+    - node.type.plan_d_accompagnement_individuel
+  module:
+    - entity_reference_revisions
+    - field_collection
+    - options
+    - text
+    - user
+id: node.plan_d_accompagnement_individuel.default
+targetEntityType: node
+bundle: plan_d_accompagnement_individuel
+mode: default
+content:
+  field_action_ai:
+    type: entity_reference_revisions_entity_view
+    weight: 111
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_action_api:
+    weight: 110
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_list
+    region: content
+  field_conaissance_de_soi:
+    weight: 104
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_connaissance_de_metiers:
+    weight: 105
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_connaissance_destination:
+    weight: 106
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_pai_candidat:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_pai_categorie:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_pai_destination:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_pai_taches:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_preparation_pour_le_depart:
+    weight: 108
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_validation_du_choix_profes:
+    weight: 107
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

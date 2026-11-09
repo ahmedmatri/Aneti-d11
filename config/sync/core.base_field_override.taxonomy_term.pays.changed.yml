@@ -1,0 +1,18 @@
+uuid: da6ea54a-8e61-4fd0-ac08-65f73251afe7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.pays
+id: taxonomy_term.pays.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: pays
+label: Modifié
+description: 'Le moment auquel le terme a été modifié pour la dernière fois.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

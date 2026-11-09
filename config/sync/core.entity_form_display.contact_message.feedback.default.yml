@@ -1,0 +1,109 @@
+uuid: 652dc5d1-553a-4116-9bde-86f34ea637d6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - contact.form.feedback
+    - field.field.contact_message.feedback.field_map
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_left:
+      children:
+        - name
+        - mail
+        - subject
+        - message
+      parent_name: group_container
+      weight: 6
+      format_type: html_element
+      format_settings:
+        label: Left
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: Left
+      region: content
+    group_right:
+      children:
+        - field_map
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: col-md-6
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Right
+      region: hidden
+    group_container:
+      children:
+        - group_left
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: Container
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: col-md-12
+      label: Container
+      region: content
+id: contact_message.feedback.default
+targetEntityType: contact_message
+bundle: feedback
+mode: default
+content:
+  mail:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  message:
+    type: string_textarea
+    weight: 6
+    settings:
+      rows: 12
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  name:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  subject:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  copy: true
+  field_map: true
+  langcode: true
+  preview: true

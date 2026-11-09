@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Contains aneti_custom_form.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+
+
+/**
+ * Implement hook_form_alter()
+ */
+function aneti_custom_form_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  if ($form_id == 'contact_message_feedback_form') {
+      $form['mail']['#title']="E-mail";
+      $form['actions']['preview']['#access'] = FALSE;
+  }
+
+}

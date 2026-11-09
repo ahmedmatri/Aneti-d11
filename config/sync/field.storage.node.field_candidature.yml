@@ -1,0 +1,46 @@
+uuid: ebaac370-bdc7-4632-9178-eaf3b9703b77
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+id: node.field_candidature
+field_name: field_candidature
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Traitement en cours'
+    -
+      value: '5'
+      label: 'Présélectionné(e) ANETI'
+    -
+      value: '3'
+      label: 'Sélectionné(e) ANETI'
+    -
+      value: '1'
+      label: Retenu(e)
+    -
+      value: '6'
+      label: 'Non retenu(e)'
+    -
+      value: '4'
+      label: 'Non retenu(e)'
+    -
+      value: '2'
+      label: 'Non retenu(e)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

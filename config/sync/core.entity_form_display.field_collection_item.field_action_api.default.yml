@@ -1,0 +1,76 @@
+uuid: daf49e13-21bc-4e3f-83d3-f6f5af61af5f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_action_api.field_date
+    - field.field.field_collection_item.field_action_api.field_domaine
+    - field.field.field_collection_item.field_action_api.field_informations_fournies
+    - field.field.field_collection_item.field_action_api.field_niveau_d_adhesion
+    - field.field.field_collection_item.field_action_api.field_pai_duree
+    - field.field.field_collection_item.field_action_api.field_prochaine_action
+    - field.field.field_collection_item.field_action_api.field_rendez_vous
+    - field.field.field_collection_item.field_action_api.field_theme
+    - field_collection.field_collection.field_action_api
+  module:
+    - datetime
+    - text
+id: field_collection_item.field_action_api.default
+targetEntityType: field_collection_item
+bundle: field_action_api
+mode: default
+content:
+  field_date:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_domaine:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_informations_fournies:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_niveau_d_adhesion:
+    weight: 5
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_pai_duree:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_prochaine_action:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_rendez_vous:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_theme:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  moderation_state: true

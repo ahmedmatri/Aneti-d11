@@ -1,0 +1,25 @@
+uuid: e3b79abb-e463-4115-beea-b2f9dfaaba45
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_q30b_label
+    - field_collection.field_collection.field_checklist_apres_depart
+  module:
+    - markup
+id: field_collection_item.field_checklist_apres_depart.field_q30b_label
+field_name: field_q30b_label
+entity_type: field_collection_item
+bundle: field_checklist_apres_depart
+label: Q30b_label
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>b. D’un service de soutien juridique&nbsp;en cas de litige avec son employeur ou personne tiers ?</p>\r\n"
+    format: basic_html
+field_type: markup

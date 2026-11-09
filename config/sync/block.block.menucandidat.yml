@@ -1,0 +1,38 @@
+uuid: e20aa86d-c242-4a50-b8d2-bf2e27d8df9d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.menu-candidat
+  module:
+    - system
+    - user
+  theme:
+    - job_board
+id: menucandidat
+theme: job_board
+region: sidebar_second
+weight: -22
+provider: null
+plugin: 'system_menu_block:menu-candidat'
+settings:
+  id: 'system_menu_block:menu-candidat'
+  label: 'Menu Candidat'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      candidat: candidat
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  request_path:
+    id: request_path
+    pages: '*'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,27 @@
+uuid: d0a981d1-8b8b-47f0-956f-5b2bb6868093
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ajouter_lettre__motivation
+    - node.type.complement_postulation
+  module:
+    - file
+id: node.complement_postulation.field_ajouter_lettre__motivation
+field_name: field_ajouter_lettre__motivation
+entity_type: node
+bundle: complement_postulation
+label: 'Ajouter une lettre de motivation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'doc docx pdf'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

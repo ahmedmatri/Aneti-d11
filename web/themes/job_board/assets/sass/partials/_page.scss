@@ -1,0 +1,85 @@
+#page{
+  background-color: $white-color;
+}
+
+.path-job {
+  .sidebar-first {
+    position: relative;
+    z-index: 10;
+    .region-sidebar-first {
+      position: relative;
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 80%;
+        width: 1px;
+        background: $bg-tag-color;
+        content: "";
+        @media(max-width: 767px) {
+          display: none;
+        }
+      }
+    }
+  }
+  .content {
+    @media(min-width: 768px) {
+      padding-top: rem(60px);
+    }
+  }
+}
+
+.top-headhunt {
+  .region-content {
+    div[ id *="block-views-block-recruiter-block-"] {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+  .sidebar-first {
+    position: relative;
+    z-index: 10;
+    .region-sidebar-first {
+      position: relative;
+      div[ id *="block-views-block-recruiter-block-"] {
+        @media (max-width: 767px) {
+          display: none;
+        }
+      }
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: rem(350px);
+        width: 1px;
+        background: $bg-tag-color;
+        content: "";
+        @media(max-width: 767px) {
+          display: none;
+        }
+      }
+    }
+  }
+  .content {
+    @media (min-width: 768px) {
+      padding-top: rem(90px);
+    }
+  }
+}
+
+//page-node-type-job
+.page-node-type-job {
+  article {
+    .content-body {
+      margin-bottom: rem(40px);
+    }
+    .field__label {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .tag-label {
+      margin-right: rem(25px);
+    }
+  }
+}

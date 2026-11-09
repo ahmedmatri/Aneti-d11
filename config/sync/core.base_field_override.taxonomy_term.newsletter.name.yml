@@ -1,0 +1,18 @@
+uuid: dda3e519-0fbb-4b6f-a91a-6e4aa6f4deab
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.newsletter
+id: taxonomy_term.newsletter.name
+field_name: name
+entity_type: taxonomy_term
+bundle: newsletter
+label: Nom
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

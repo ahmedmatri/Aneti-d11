@@ -1,0 +1,18 @@
+uuid: 1203b981-6a5b-4d15-80d8-1cefb7f86cb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.localites
+id: taxonomy_term.localites.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: localites
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

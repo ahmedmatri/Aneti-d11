@@ -1,0 +1,8 @@
+uuid: faa538ff-224b-4e0a-9839-4051a5ad8f9d
+langcode: fr
+status: true
+dependencies: {  }
+name: Bureau
+vid: bureau
+description: ''
+weight: 0

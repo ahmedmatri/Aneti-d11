@@ -1,0 +1,19 @@
+uuid: b58eea9c-c0a1-4fe6-8229-b4a8760b224e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_nom_entreprise
+    - profile.type.entreprise
+id: profile.entreprise.field_nom_entreprise
+field_name: field_nom_entreprise
+entity_type: profile
+bundle: entreprise
+label: 'Nom de l''entreprise'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

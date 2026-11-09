@@ -1,0 +1,23 @@
+uuid: 5b833795-ac5a-444a-868e-6d6b5aff68b6
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_informations_salariales
+field_name: field_informations_salariales
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

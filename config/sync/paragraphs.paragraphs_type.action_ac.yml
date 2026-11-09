@@ -1,0 +1,9 @@
+uuid: 7794131e-4566-430b-a728-4fd50f403aba
+langcode: fr
+status: true
+dependencies: {  }
+id: action_ac
+label: 'Action ac'
+icon_uuid: null
+description: 'Action Accompagnement Collectif'
+behavior_plugins: {  }

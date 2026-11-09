@@ -1,0 +1,24 @@
+uuid: b42062da-1f71-4f30-94fe-6580f3e21c5c
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+id: node.field_nombre_de_cv_poste
+field_name: field_nombre_de_cv_poste
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

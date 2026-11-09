@@ -1,0 +1,21 @@
+uuid: 8aa4063f-44f5-4f1b-b840-56426e119056
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_fin_publication
+    - node.type.offre
+  module:
+    - datetime
+id: node.offre.field_date_fin_publication
+field_name: field_date_fin_publication
+entity_type: node
+bundle: offre
+label: 'date fin publication'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

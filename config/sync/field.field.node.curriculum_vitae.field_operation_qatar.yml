@@ -1,0 +1,23 @@
+uuid: 5669b979-a399-4c86-8a43-bff91785b887
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_operation_qatar
+    - node.type.curriculum_vitae
+id: node.curriculum_vitae.field_operation_qatar
+field_name: field_operation_qatar
+entity_type: node
+bundle: curriculum_vitae
+label: 'Operation Qatar'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

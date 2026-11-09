@@ -1,0 +1,8 @@
+uuid: 5e73dc7b-98fa-4153-bdd7-d50f246215b5
+langcode: fr
+status: true
+dependencies: {  }
+name: codepostal
+vid: codepostal
+description: null
+weight: 0

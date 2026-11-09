@@ -1,0 +1,43 @@
+uuid: b599662c-7643-4c49-a30e-1b90dfcb7f6e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.plan_d_accompagnement_individuel.field_action_ai
+    - field.field.node.plan_d_accompagnement_individuel.field_action_api
+    - field.field.node.plan_d_accompagnement_individuel.field_conaissance_de_soi
+    - field.field.node.plan_d_accompagnement_individuel.field_connaissance_de_metiers
+    - field.field.node.plan_d_accompagnement_individuel.field_connaissance_destination
+    - field.field.node.plan_d_accompagnement_individuel.field_pai_candidat
+    - field.field.node.plan_d_accompagnement_individuel.field_pai_categorie
+    - field.field.node.plan_d_accompagnement_individuel.field_pai_destination
+    - field.field.node.plan_d_accompagnement_individuel.field_pai_taches
+    - field.field.node.plan_d_accompagnement_individuel.field_preparation_pour_le_depart
+    - field.field.node.plan_d_accompagnement_individuel.field_validation_du_choix_profes
+    - node.type.plan_d_accompagnement_individuel
+  module:
+    - user
+id: node.plan_d_accompagnement_individuel.teaser
+targetEntityType: node
+bundle: plan_d_accompagnement_individuel
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_action_ai: true
+  field_action_api: true
+  field_conaissance_de_soi: true
+  field_connaissance_de_metiers: true
+  field_connaissance_destination: true
+  field_pai_candidat: true
+  field_pai_categorie: true
+  field_pai_destination: true
+  field_pai_taches: true
+  field_preparation_pour_le_depart: true
+  field_validation_du_choix_profes: true
+  langcode: true

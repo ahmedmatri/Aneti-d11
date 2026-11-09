@@ -1,0 +1,19 @@
+uuid: 6effcfe7-2a37-4de4-b4dd-b01987fee92a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre
+    - node.type.postulation
+id: node.postulation.field_offre
+field_name: field_offre
+entity_type: node
+bundle: postulation
+label: offre
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

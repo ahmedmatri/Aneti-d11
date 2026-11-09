@@ -1,0 +1,21 @@
+uuid: e8d30cf8-ffe1-41b8-b16a-a009e85e8681
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.hero
+    - field.storage.block_content.field_contenu
+  module:
+    - text
+id: block_content.hero.field_contenu
+field_name: field_contenu
+entity_type: block_content
+bundle: hero
+label: Contenu
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

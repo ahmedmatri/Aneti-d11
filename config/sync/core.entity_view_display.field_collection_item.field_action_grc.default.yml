@@ -1,0 +1,33 @@
+uuid: 946aff86-985f-4e9c-bd7c-2dd7a2d3ddda
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_action_grc.field_date_action_grc
+    - field.field.field_collection_item.field_action_grc.field_description_grc
+    - field_collection.field_collection.field_action_grc
+  module:
+    - datetime
+    - text
+id: field_collection_item.field_action_grc.default
+targetEntityType: field_collection_item
+bundle: field_action_grc
+mode: default
+content:
+  field_date_action_grc:
+    weight: 0
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_description_grc:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

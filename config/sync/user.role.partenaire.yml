@@ -1,0 +1,22 @@
+uuid: af1b13b8-25ea-484e-9514-a16d777c4ba6
+langcode: fr
+status: true
+dependencies: {  }
+id: partenaire
+label: partenaire
+weight: 12
+is_admin: null
+permissions:
+  - 'create field_cv_valider'
+  - 'create field_date_debut_publication'
+  - 'edit field_cv_valider'
+  - 'edit field_date_debut_publication'
+  - 'edit own field_cv_valider'
+  - 'edit own field_date_debut_publication'
+  - 'search content'
+  - 'view field_cv_valider'
+  - 'view field_date_debut_publication'
+  - 'view files'
+  - 'view media'
+  - 'view own field_cv_valider'
+  - 'view own field_date_debut_publication'

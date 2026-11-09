@@ -1,0 +1,18 @@
+uuid: 9368697f-cd03-40bd-ba35-03e60a208ef5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.plan_d_accompagnement_individuel
+id: node.plan_d_accompagnement_individuel.created
+field_name: created
+entity_type: node
+bundle: plan_d_accompagnement_individuel
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,20 @@
+uuid: afc31559-f08d-4876-ad94-25e8c2eb0260
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.metier_par_domaine
+  module:
+    - path
+id: taxonomy_term.metier_par_domaine.path
+field_name: path
+entity_type: taxonomy_term
+bundle: metier_par_domaine
+label: 'Alias d''URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

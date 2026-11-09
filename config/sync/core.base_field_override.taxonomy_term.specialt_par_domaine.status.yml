@@ -1,0 +1,22 @@
+uuid: 9604dba7-c955-4770-9325-407790686202
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.specialt_par_domaine
+id: taxonomy_term.specialt_par_domaine.status
+field_name: status
+entity_type: taxonomy_term
+bundle: specialt_par_domaine
+label: Publié
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

@@ -1,0 +1,18 @@
+uuid: 59d4425f-67a2-428a-89ec-74a12a52696b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.entreprise_cliente
+id: node.entreprise_cliente.unpublish_on
+field_name: unpublish_on
+entity_type: node
+bundle: entreprise_cliente
+label: 'Unpublish on'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

@@ -1,0 +1,21 @@
+uuid: 9afdeff0-7f8b-4ba1-9527-e3a9628387d0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sante_protection_
+    - node.type.fiche_pays
+  module:
+    - text
+id: node.fiche_pays.field_sante_protection_
+field_name: field_sante_protection_
+entity_type: node
+bundle: fiche_pays
+label: 'Santé, protection '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

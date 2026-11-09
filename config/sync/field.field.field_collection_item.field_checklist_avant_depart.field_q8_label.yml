@@ -1,0 +1,25 @@
+uuid: 0a01940c-7dc3-4e5b-84b5-a3b105458c4d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_q8_label
+    - field_collection.field_collection.field_checklist_avant_depart
+  module:
+    - markup
+id: field_collection_item.field_checklist_avant_depart.field_q8_label
+field_name: field_q8_label
+entity_type: field_collection_item
+bundle: field_checklist_avant_depart
+label: Q8_label
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>8. La travailleuse/Le travailleur a-t-elle/il gratuitement et aisément accès à toutes les informations nécessaires quant à ses droits et obligations, conditions de travail et de vie en tant que travailleur migrant dans le pays de destination ? (Fiche pays + plan d’information)</p>\r\n"
+    format: basic_html
+field_type: markup

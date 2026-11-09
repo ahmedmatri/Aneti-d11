@@ -1,0 +1,29 @@
+uuid: 71e1bc07-c696-440e-b159-df933a7292a2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_bureau_cb
+    - profile.type.chef_de_bureau
+    - taxonomy.vocabulary.bureau
+id: profile.chef_de_bureau.field_bureau_cb
+field_name: field_bureau_cb
+entity_type: profile
+bundle: chef_de_bureau
+label: Bureau
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      bureau: bureau
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

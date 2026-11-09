@@ -1,0 +1,25 @@
+uuid: d21e8527-9a13-4875-bafb-c06e408e9bd5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_entreprise_id
+    - node.type.offre
+id: node.offre.field_entreprise_id
+field_name: field_entreprise_id
+entity_type: node
+bundle: offre
+label: Entreprises
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: autocomplete_users
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

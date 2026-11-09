@@ -1,0 +1,24 @@
+uuid: 5479f03b-4ed7-4de3-ab20-0ab0d2d3368e
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_conaissance_de_soi
+field_name: field_conaissance_de_soi
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

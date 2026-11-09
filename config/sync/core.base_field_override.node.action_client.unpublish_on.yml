@@ -1,0 +1,18 @@
+uuid: b2163a33-d5f8-4fc7-9292-321424e0d812
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.action_client
+id: node.action_client.unpublish_on
+field_name: unpublish_on
+entity_type: node
+bundle: action_client
+label: 'Unpublish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

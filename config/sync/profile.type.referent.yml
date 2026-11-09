@@ -1,0 +1,25 @@
+uuid: 45deefc5-cb34-40f6-9642-bfa467ee57ee
+langcode: fr
+status: true
+dependencies: {  }
+id: referent
+label: Référent
+registration: true
+multiple: false
+roles:
+  referent: referent
+  authenticated: '0'
+  candidat: '0'
+  entreprise: '0'
+  super_admin: '0'
+  administrator: '0'
+  conseiller_central: '0'
+  traduction: '0'
+  chef_unite_migration: '0'
+  bureau_a_l_etranger: '0'
+  partenaire: '0'
+  webmaster: '0'
+  pdg: '0'
+weight: 0
+use_revisions: false
+description: ''

@@ -1,0 +1,22 @@
+uuid: 16a56583-fa0f-4e90-a2be-24f4dac1f84f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.agence_national
+id: node.agence_national.status
+field_name: status
+entity_type: node
+bundle: agence_national
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

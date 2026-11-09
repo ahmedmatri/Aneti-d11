@@ -1,0 +1,21 @@
+uuid: d2a4e82c-f6d2-4e14-8a62-cf21ab87a89d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_informations_complementair
+    - node.type.offre
+  module:
+    - text
+id: node.offre.field_informations_complementair
+field_name: field_informations_complementair
+entity_type: node
+bundle: offre
+label: 'Informations Complémentaires'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

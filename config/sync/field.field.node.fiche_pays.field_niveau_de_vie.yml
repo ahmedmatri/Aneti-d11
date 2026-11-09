@@ -1,0 +1,21 @@
+uuid: 56707c6c-61c3-4a21-89b6-35abf8ef0f5c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_niveau_de_vie
+    - node.type.fiche_pays
+  module:
+    - text
+id: node.fiche_pays.field_niveau_de_vie
+field_name: field_niveau_de_vie
+entity_type: node
+bundle: fiche_pays
+label: 'Niveau de vie'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

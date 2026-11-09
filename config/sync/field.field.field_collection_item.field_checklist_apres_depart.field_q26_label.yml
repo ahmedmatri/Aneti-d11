@@ -1,0 +1,25 @@
+uuid: c8ce924a-60b7-451a-a966-8716bfc3f0dc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_q26_label
+    - field_collection.field_collection.field_checklist_apres_depart
+  module:
+    - markup
+id: field_collection_item.field_checklist_apres_depart.field_q26_label
+field_name: field_q26_label
+entity_type: field_collection_item
+bundle: field_checklist_apres_depart
+label: Q26_label
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>26. Le contrat de travail respecte-t-il les termes et conditions établis quant au nombre de jours de congé, y compris les jours de congé maladie&nbsp;?</p>\r\n"
+    format: basic_html
+field_type: markup

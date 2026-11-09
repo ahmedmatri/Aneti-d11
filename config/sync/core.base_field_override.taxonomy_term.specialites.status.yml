@@ -1,0 +1,22 @@
+uuid: c78722d9-3182-4ebe-bec4-c298ad67977b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.specialites
+id: taxonomy_term.specialites.status
+field_name: status
+entity_type: taxonomy_term
+bundle: specialites
+label: Publié
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

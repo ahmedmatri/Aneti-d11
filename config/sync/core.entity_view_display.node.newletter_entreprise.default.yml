@@ -1,0 +1,30 @@
+uuid: 981e2a36-7f2a-46b7-97b7-ac0bb20cb2c5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.newletter_entreprise.body
+    - node.type.newletter_entreprise
+  module:
+    - text
+    - user
+id: node.newletter_entreprise.default
+targetEntityType: node
+bundle: newletter_entreprise
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  simplenews_issue: true

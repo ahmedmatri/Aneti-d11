@@ -1,0 +1,22 @@
+uuid: 4d2d8d34-1617-4a82-82a1-df27bc4ecdab
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.plan_d_accompagnement_collectif
+id: node.plan_d_accompagnement_collectif.status
+field_name: status
+entity_type: node
+bundle: plan_d_accompagnement_collectif
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

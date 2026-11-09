@@ -1,0 +1,21 @@
+uuid: fa1ff8de-8f40-4a47-9ba5-874e37bff082
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_informations_fournies
+    - field_collection.field_collection.field_pag_actions
+  module:
+    - text
+id: field_collection_item.field_pag_actions.field_informations_fournies
+field_name: field_informations_fournies
+entity_type: field_collection_item
+bundle: field_pag_actions
+label: 'Informations fournies'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

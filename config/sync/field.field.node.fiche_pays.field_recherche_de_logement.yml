@@ -1,0 +1,21 @@
+uuid: cb6c49d7-378c-4026-86c2-6b2867e0eae6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recherche_de_logement
+    - node.type.fiche_pays
+  module:
+    - text
+id: node.fiche_pays.field_recherche_de_logement
+field_name: field_recherche_de_logement
+entity_type: node
+bundle: fiche_pays
+label: 'Recherche de logement'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

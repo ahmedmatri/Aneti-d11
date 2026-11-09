@@ -1,0 +1,20 @@
+uuid: 36eed87a-c0de-4b6d-8b30-7e828e5dc689
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.offre
+id: node.offre.uid
+field_name: uid
+entity_type: node
+bundle: offre
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

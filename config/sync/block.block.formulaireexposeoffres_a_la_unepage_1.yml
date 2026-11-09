@@ -1,0 +1,33 @@
+uuid: 1959b9b3-6221-4c25-b475-f07ba2e6425c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.offres_a_la_une
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - job_board
+third_party_settings:
+  block_class:
+    classes: null
+id: formulaireexposeoffres_a_la_unepage_1
+theme: job_board
+region: sidebar_first
+weight: -18
+provider: null
+plugin: 'views_exposed_filter_block:offres_a_la_une-page_1'
+settings:
+  id: 'views_exposed_filter_block:offres_a_la_une-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: 'Recherche offres d''emploi'
+visibility:
+  request_path:
+    id: request_path
+    pages: /offres
+    negate: false
+    context_mapping: {  }

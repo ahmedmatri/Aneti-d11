@@ -1,0 +1,20 @@
+uuid: afe97250-c072-4128-8bb4-48dbe5ffe9f0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.client
+  module:
+    - path
+id: taxonomy_term.client.path
+field_name: path
+entity_type: taxonomy_term
+bundle: client
+label: 'Alias d''URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

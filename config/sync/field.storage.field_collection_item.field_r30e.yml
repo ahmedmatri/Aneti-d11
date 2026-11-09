@@ -1,0 +1,22 @@
+uuid: 0259a664-0286-4479-9c6a-1fa88a948cd2
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_collection
+    - field_permissions
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: field_collection_item.field_r30e
+field_name: field_r30e
+entity_type: field_collection_item
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

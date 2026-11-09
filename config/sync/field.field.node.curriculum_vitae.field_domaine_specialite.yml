@@ -1,0 +1,29 @@
+uuid: 76b114fd-7c73-41e6-8d4a-1795d7577562
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_domaine_specialite
+    - node.type.curriculum_vitae
+    - taxonomy.vocabulary.metier_p_domaine
+id: node.curriculum_vitae.field_domaine_specialite
+field_name: field_domaine_specialite
+entity_type: node
+bundle: curriculum_vitae
+label: 'Domaine spécialité'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      metier_p_domaine: metier_p_domaine
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: metier_p_domaine
+field_type: entity_reference

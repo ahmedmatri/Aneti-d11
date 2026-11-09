@@ -1,0 +1,18 @@
+uuid: 4671c1b4-be25-467b-b869-57193b9f20f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.complement_postulation
+id: node.complement_postulation.metatag
+field_name: metatag
+entity_type: node
+bundle: complement_postulation
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

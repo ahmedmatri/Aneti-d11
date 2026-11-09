@@ -1,0 +1,18 @@
+uuid: a84f424c-8379-4339-bf34-74a9d5f52608
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.diplome
+id: taxonomy_term.diplome.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: diplome
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

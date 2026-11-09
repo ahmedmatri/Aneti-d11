@@ -1,0 +1,23 @@
+uuid: c2d79aa8-a320-4725-b4b3-016504fb7e9e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.article.comment
+    - node.type.article
+  module:
+    - user
+_core:
+  default_config_hash: 4NcL2hSQZBpJbYtNuh5jC6kyQTcAc1m5bQpTegEWEso
+id: node.article.teaser
+targetEntityType: node
+bundle: article
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  comment: true
+  langcode: true

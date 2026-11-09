@@ -1,0 +1,8 @@
+
+aneti_cv.europass_controller_index:
+  path: '/node/{nid}/europass'
+  defaults:
+    _controller: '\Drupal\aneti_cv\Controller\EuropassController::index'
+    _title: 'Europass CV'
+  requirements:
+    _permission: 'access content'

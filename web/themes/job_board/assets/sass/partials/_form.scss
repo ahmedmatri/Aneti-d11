@@ -1,0 +1,762 @@
+form#views-exposed-form-job-page-job {
+  padding-right: rem(15px);
+  @media(max-width: 767px) {
+    padding-right: 0;
+  }
+  .form-item-sort-by label {
+    display: none;
+  }
+  .form-item-title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    label {
+      display: none;
+    }
+  }
+  legend {
+    font-size: rem(20px);
+    color: $title-color;
+    margin-bottom: rem(15px);
+    border-bottom: none;
+  }
+  #edit-sort-by {
+    margin-right: rem(-5px);
+    margin-left: rem(-5px);
+    font-size: rem(16px);
+    display: flex;
+    @media (max-width: 767px) {
+      display:inline-block;
+      width: 100%;
+    }
+    a {
+      padding: rem(10px) rem(30px);
+      position: relative;
+      border: 1px solid $sub-color;
+      color: $sub-color;
+      border-radius: 3px;
+      text-transform: uppercase;
+      font-weight: bold;
+      @media (max-width: 991px) {
+        padding-left: rem(10px);
+        padding-right: rem(10px);
+        font-size: rem(14px);
+      }
+      @media (max-width: 767px) {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+      }
+      &:after {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: rem(10px);
+        height: rem(10px);
+        content: "";
+        display: inline-block;
+        transform: translateX(-50%) rotate(45deg);
+        margin-top: rem(-5px);
+        @media (max-width: 767px) {
+          display:none;
+        }
+      }
+    }
+    >div {
+      padding: 0 rem(5px);
+      margin: 0;
+      @media (max-width: 767px) {
+        display:block;
+        width: 100%;
+        margin-bottom: rem(10px);
+      }
+      &.bef-link-active {
+        a {
+          background: $button-color;
+          color: $white-color;
+          border-color: $button-color;
+          &:after {
+            background: $button-color;
+          }
+        }
+      }
+    }
+  }
+  .form-checkboxes {
+    .form-type-checkbox {
+      margin-top: rem(15px);
+      margin-bottom: rem(15px);
+    }
+  }
+}
+
+form[id*="views-exposed-form-recruiter-page"] {
+  @extend form#views-exposed-form-job-page-job;
+}
+
+.region-sidebar-first form#views-exposed-form-job-page-job {
+  fieldset {
+    display: inline-block;
+    width: 100%;
+  }
+  .form-item-sort-by {
+    position: absolute;
+    left: rem(380px);
+    width: rem(730px);
+    @media (max-width: 1199px) {
+      left: rem(320px);
+      width: rem(610px);
+    }
+    @media (max-width: 991px) {
+      width: rem(450px);
+      left: rem(240px);
+    }
+    @media (max-width: 767px) {
+      position: static;
+      width: 100%;
+    }
+  }
+}
+
+.region-content form#views-exposed-form-job-page-job {
+  fieldset,
+  .form-item-title {
+    display: none;
+  }
+}
+
+//node-form
+form.node-form {
+  padding: rem(30px) rem(30px) rem(10px) rem(30px);
+  @media (max-width: 575px) {
+    padding: rem(20px) rem(20px) 0 rem(20px);
+  }
+  background-color: $row-color;
+  border: 1px solid $secondary-color;
+  max-width: rem(630px);
+  @media (max-width: 991px) {
+    max-width: 100%;
+  }
+  .form-wrapper {
+    >.form-item {
+      margin-bottom: rem(15px);
+      margin-top: 0;
+      >label {
+        color: $primary-color;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: rem(3px);
+      }
+    }
+    >fieldset {
+      >legend {
+        color: $primary-color;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: rem(5px);
+      }
+      .form-checkboxes .form-type-checkbox {
+        &:first-child {
+          margin-top: 0;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  input,
+  select,
+  textarea {
+    max-width: rem(570px);
+    @media (max-width: 991px) {
+      max-width: 100%;
+    }
+  }
+  .form-text {
+    margin-top: 0;
+  }
+  .field--widget-datetime-default {
+    margin-top: 0;
+    .form-item {
+      display: block;
+      margin-top: 0;
+      margin-bottom: rem(15px);
+    }
+    h4.label {
+      color: $primary-color;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: rem(3px);
+      display: block;
+      line-height: 1.42857143;
+      text-align: left;
+    }
+  }
+  .field--type-text-with-summary label {
+    color: $primary-color;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: rem(3px);
+    display: block;
+  }
+  .form-type-vertical-tabs {
+    display: none;
+  }
+  .field--type-language {
+    display: none;
+  }
+  .field--name-field-image {
+    .form-item {
+      margin-bottom: rem(15px);
+      margin-top: 0;
+      >label {
+        color: $primary-color;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: rem(6px);
+      }
+    }
+    .form-managed-file {
+      position: relative;
+      display: inline-block;
+      margin-bottom: rem(3px);
+      .image-preview {
+        border: 1px solid $border-color-7;
+        border-radius: rem(4px);
+      }
+      .image-widget-data{
+        input[type="submit"] {
+          position: absolute;
+          right: rem(-12px);
+          top: rem(-9px);
+          width: rem(22px);
+          height: rem(22px);
+          overflow: hidden;
+          padding: 0;
+          font-size: 0;
+          margin: 0;
+          background: url(../../assets/images/cancel-button.png) no-repeat center $red-color;
+          background-size: rem(10px);
+          border: none;
+          border-radius: 50%;
+        }
+      }
+      input[type="file"] {
+        position: absolute;
+        right: rem(-10px);
+        top: rem(-10px);
+        width: rem(20px);
+        height: rem(20px);
+        overflow: hidden;
+        padding: 0;
+        font-size: 0;
+        opacity: 0;
+        cursor: pointer;
+        border: none;
+      }
+      span.file--image {
+        display: none;
+      }
+      span {
+        display: none;
+      }
+      .image-widget-data:before {
+        position: absolute;
+        right: rem(-10px);
+        top: rem(-10px);
+        @include fontawesome;
+        content: "\f055";
+        display: inline-block;
+        width: rem(20px);
+        height: rem(20px);
+        cursor: pointer;
+        font-size: rem(25px);
+        color: $primary-color;
+      }
+    }
+  }
+  input#edit-preview {
+    display: none;
+  }
+  a#edit-delete {
+    @extend input[type="submit"];
+    display: inline-block;
+    background-color: $red-color-2;
+    border: 1px solid $red-color-3;
+    text-align: center;
+    transition: all 0.3s ease-out;
+    &:hover,
+    &:focus {
+      background-color: lighten($red-color-2, 10%);
+      border-color: lighten($red-color-2, 10%);
+    }
+  }
+  .text-format-wrapper {
+    .filter-wrapper {
+      display: none;
+    }
+  }
+  >.form-actions {
+    text-align: right;
+    margin-top: rem(40px);
+    input[type="submit"] {
+      min-width: rem(170px);
+      margin-right: 0;
+      margin-left: rem(10px);
+    }
+  }
+  &.node-resumes-edit-form {
+    .field--name-field-job-preferences,
+    .field--name-field-education {
+      display: none;
+    }
+  }
+  &.node-resumes-form {
+    .field--name-field-job-preferences,
+    .field--name-field-education {
+      border-top: 2px solid $secondary-color;
+      margin-top: rem(30px);
+      padding-top: rem(20px);
+      input[type="submit"] {
+        background-color: $button-color;
+        padding: rem(6px) rem(15px) rem(5px);
+        color: $white-color;
+        border-radius: rem(20px);
+        border: none;
+        display: inline-block;
+        &:hover,
+        &:focus {
+          background-color: lighten($button-color, 10%);
+          color: $white-color;
+        }
+      }
+      input[data-drupal-selector$="add-cancel"] {
+        background-color: $red-color;
+        &:hover,
+        &:focus {
+          background-color: $red-color-2;
+        }
+      }
+      fieldset {
+        margin-top: 0;
+        legend {
+          text-transform: uppercase;
+          font-size: rem(16px);
+        }
+      }
+    }
+  }
+}
+
+//Appliance account Page 3h
+.user-register-form {
+  max-width: rem(570px);
+  margin-left: auto;
+  margin-right: auto;
+  .form-item {
+    margin-bottom: rem(30px);
+    margin-top: 0;
+    >label {
+      color: $primary-color;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: rem(8px);
+    }
+  }
+  input,
+  select,
+  textarea {
+    max-width: rem(570px);
+  }
+  .form-text {
+    margin-top: 0;
+  }
+  .description {
+    display: none;
+  }
+  .confirm-parent,
+  .password-parent {
+    max-width: none;
+  }
+  >.form-actions {
+    text-align: right;
+    margin-top: rem(40px);
+  }
+  .password-strength__meter {
+    height: rem(5px);
+  }
+  .field--name-user-picture {
+    .form-managed-file {
+      position: relative;
+      margin-bottom: rem(3px);
+      input[value="Remove"] {
+        position: absolute;
+        left: rem(90px);
+        top: rem(-9px);
+        width: rem(22px);
+        height: rem(22px);
+        overflow: hidden;
+        padding: 0;
+        font-size: 0;
+        margin: 0;
+        background: url(../../assets/images/cancel-button.png) no-repeat center $red-color;
+        background-size: rem(10px);
+        border: none;
+        border-radius: 50%;
+      }
+      span.file--image {
+        display: none;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+//user-form
+.user-form {
+  max-width: rem(570px);
+  margin-left: auto;
+  margin-right: auto;
+  .form-item:not(.form-type-checkbox):not(.form-type-radio) {
+    margin-bottom: rem(30px);
+    margin-top: 0;
+    >label {
+      color: $primary-color;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: rem(8px);
+    }
+  }
+  input,
+  select,
+  textarea {
+    max-width: rem(570px);
+  }
+  .form-text {
+    margin-top: 0;
+  }
+  .description {
+    display: none;
+  }
+  .confirm-parent,
+  .password-parent {
+    max-width: none;
+  }
+  >.form-actions {
+    text-align: right;
+    margin-top: rem(40px);
+  }
+  fieldset {
+    >legend {
+      color: $primary-color;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: rem(8px);
+    }
+    .form-checkboxes .form-type-checkbox {
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .password-strength__meter {
+    height: rem(5px);
+  }
+  .field--name-user-picture {
+    .form-managed-file {
+      position: relative;
+      margin-bottom: rem(3px);
+      input[value="Remove"],input#edit-user-picture-0-remove-button {
+        position: absolute;
+        left: rem(90px);
+        top: rem(-9px);
+        width: rem(22px);
+        height: rem(22px);
+        overflow: hidden;
+        padding: 0;
+        font-size: 0;
+        margin: 0;
+        background: url(../../assets/images/cancel-button.png) no-repeat center $red-color;
+        background-size: rem(10px);
+        border: none;
+        border-radius: 50%;
+      }
+      span.file--image {
+        display: none;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+//webform-submission-form
+form.webform-submission-form{
+  max-width: rem(570px);
+  display: flex;
+  flex-wrap: wrap;
+  .form-item {
+    margin-bottom: rem(30px);
+    margin-top: 0;
+    >label {
+      color: $primary-color;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: rem(8px);
+    }
+  }
+  #edit-email-headhunters--description {
+    margin-top: rem(10px);
+    .edit-email-headhunter {
+      color: $red-color;
+      cursor: pointer;
+    }
+  }
+  >.form-item {
+    @include flex-width-col-xs(100%);
+  }
+  >.form-actions {
+    text-align: right;
+    width: 100%;
+  }
+  @media (min-width: 576px) {
+    >#ajax-wrapper {
+      width: calc(100% - 170px);
+    }
+    >.form-actions {
+      width: rem(170px);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+  .form-item-your-resume {
+    .description {
+      order: -1;
+      margin-bottom: rem(3px);
+      br:first-of-type {
+        display: none;
+      }
+    }
+    .form-managed-file {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  input,
+  select,
+  textarea {
+    max-width: rem(570px);
+  }
+  .form-text {
+    margin-top: 0;
+  }
+}
+
+
+//Send profile Page 4h
+form.webform-submission-send-profile-form {
+  @media (min-width: 576px) {
+    >#ajax-wrapper {
+      width: calc(100% - 130px);
+    }
+    >.form-actions {
+      width: rem(130px);
+    }
+  }
+}
+
+
+
+
+// form contact
+form.webform-submission-contact-form {
+  margin-top: rem(55px);
+  max-width: rem(570px);
+  .form-item {
+    margin-bottom: rem(30px);
+    margin-top: 0;
+    label {
+      color: $primary-color;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: rem(8px);
+    }
+  }
+  input,
+  select,
+  textarea {
+    max-width: rem(570px);
+  }
+  >.form-actions {
+    text-align: right;
+    margin-top: rem(40px);
+  }
+  @media (min-width: 576px) {
+    >#ajax-wrapper {
+      width: 100%;
+    }
+    >.form-actions {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+// commerce-checkout-flow
+form.commerce-checkout-flow {
+  margin-top: rem(30px);
+  legend {
+    border-bottom: none;
+  }
+  fieldset.checkout-pane-payment-information,
+  fieldset#edit-review-contact-information {
+    margin-top: 0;
+    >legend {
+      font-size: rem(14px);
+      text-transform: uppercase;
+      border-bottom: none;
+      font-weight: 700;
+      background: $border-color-4;
+      padding: rem(5px) rem(5px) rem(3px) rem(5px);
+      color: $body-color;
+    }
+  }
+  fieldset#edit-review-payment-information {
+    margin-top: rem(30px);
+    >legend {
+      font-size: rem(14px);
+      text-transform: uppercase;
+      border-bottom: none;
+      font-weight: 700;
+      background: $border-color-4;
+      padding: rem(5px) rem(5px) rem(3px) rem(5px);
+      color: $body-color;
+    }
+    .field--name-address {
+      margin-top: rem(10px);
+    }
+    .address {
+      font-style: italic;
+      .given-name,
+      .family-name {
+        font-weight: 700;
+        font-style: normal;
+      }
+    }
+  }
+  .form-item {
+    label {
+      display: block;
+    }
+  }
+  .form-type-radio label {
+    display: inline-block;
+  }
+  .form-email,
+  .form-text,
+  .form-select {
+    width: 100%;
+    max-width: rem(446px);
+  }
+  .credit-card-form__expiration {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    select {
+      width: rem(213px);
+      @media (min-width: 768px) and (max-width:991px) {
+        width:rem(210px);
+      }
+      @media(max-width:480px) {
+        width: 100%;
+      }
+    }
+    @media (max-width:480px) {
+      max-width: rem(446px);
+      .form-type-select {
+        width: 48%;
+      }
+    }
+  }
+  .address-container-inline {
+    >.form-item {
+      display: block;
+      margin-right: 0;
+    }
+  }
+  .view-commerce-checkout-order-summary {
+    .order-total-line-value {
+      color: $link-color;
+    }
+    a {
+      &:hover,
+      &:focus {
+        color: $link-color;
+      }
+    }
+    td.views-field-quantity {
+      width: rem(50px);
+    }
+    td.views-field-total-price__number {
+      width: rem(100px);
+    }
+    .views-field-purchased-entity {
+      font-size: rem(13px);
+    }
+    table tbody tr td {
+      padding: rem(5px);
+    }
+  }
+  .checkout-pane-coupon-redemption input[type="submit"] {
+    margin: 0;
+  }
+  .layout-region-checkout-secondary h3 {
+    font-size: rem(14px);
+    text-transform: uppercase;
+    border-bottom: none;
+    font-weight: 700;
+    background: $border-color-4;
+    padding: rem(5px) rem(5px) rem(3px) rem(5px);
+    color: $body-color;
+    line-height: 1.42857143;
+  }
+  .layout-region-checkout-footer {
+    input.form-submit {
+      margin-right: 10px;
+      margin-bottom: 15px;
+    }
+  }
+  .layout-region-checkout-main,
+  .layout-region-checkout-secondary,
+  .layout-region-checkout-footer {
+    @media (min-width: 768px) and (max-width:991px) {
+      width:100%;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  .form-actions>a {
+    @extend input[type="submit"];
+    display: inline-block;
+  }
+}
+
+
+//form node-confirm-form
+form.node-confirm-form{
+  ul[data-drupal-selector="edit-deleted-translations"]{
+    display: none;
+  }
+  .item-list > h3{
+    display: none;
+  }
+}

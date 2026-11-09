@@ -1,0 +1,22 @@
+uuid: c16e319c-f976-415b-8689-638c3f71a719
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.newletter_entreprise
+id: node.newletter_entreprise.sticky
+field_name: sticky
+entity_type: node
+bundle: newletter_entreprise
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

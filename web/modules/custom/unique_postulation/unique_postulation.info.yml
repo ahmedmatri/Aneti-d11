@@ -1,0 +1,8 @@
+name: Unique Postulation
+type: module
+description: Unique postulation par CIN.
+core_version_requirement: ^8 || ^9 || ^10 || ^11
+package: 'ANETI-GK'
+
+version: '8.x-1.0'
+project: 'unique_postulation'

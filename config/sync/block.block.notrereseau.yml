@@ -1,0 +1,35 @@
+uuid: 8876bc68-d442-4625-9644-de3be4d8c319
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:block_front_page:aae432a4-081d-4b5c-b313-64d5153699a5'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - job_board
+third_party_settings:
+  block_class:
+    classes: col-md-4
+id: notrereseau
+theme: job_board
+region: bloc_front
+weight: 0
+provider: null
+plugin: 'block_content:aae432a4-081d-4b5c-b313-64d5153699a5'
+settings:
+  id: 'block_content:aae432a4-081d-4b5c-b313-64d5153699a5'
+  label: 'Notre réseau'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

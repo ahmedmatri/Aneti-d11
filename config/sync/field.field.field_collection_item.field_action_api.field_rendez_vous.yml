@@ -1,0 +1,21 @@
+uuid: 013fbad7-88e2-4e0e-a3c7-51aa28a3b969
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_rendez_vous
+    - field_collection.field_collection.field_action_api
+  module:
+    - datetime
+id: field_collection_item.field_action_api.field_rendez_vous
+field_name: field_rendez_vous
+entity_type: field_collection_item
+bundle: field_action_api
+label: Rendez-vous
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2940 59 148.148 40.202">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cd202f;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #0b536d;
+      }
+
+      .cls-3 {
+        font-size: 33px;
+        font-family: Roboto-Bold, Roboto;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <g id="Symbol_1_1" data-name="Symbol 1 – 1" transform="translate(2872)">
+    <g id="Group_2" data-name="Group 2" transform="translate(68 61.931)">
+      <g id="Group_1" data-name="Group 1" transform="translate(4.565 4.912)">
+        <path id="Path_1" data-name="Path 1" class="cls-1" d="M15.643,38.254l-3.872,3-3.872-3L9.634,8.9h4.218Z" transform="translate(-7.9 -8.9)"/>
+      </g>
+      <path id="Path_2" data-name="Path 2" class="cls-1" d="M15.352.4H9.4l.462,3.525H14.89Z" transform="translate(-3.968 -0.4)"/>
+      <path id="Path_3" data-name="Path 3" class="cls-2" d="M4.854,17.8,4.045,31.9,1.156,33.98,0,30.8Z" transform="translate(0 -7.746)"/>
+    </g>
+    <text id="OBOARD" class="cls-3" transform="translate(84.148 90)"><tspan x="0" y="0">OBOARD</tspan></text>
+  </g>
+</svg>

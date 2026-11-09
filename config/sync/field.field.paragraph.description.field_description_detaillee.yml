@@ -1,0 +1,23 @@
+uuid: 66c1d963-330c-4e43-a801-e51e9e15a246
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description_detaillee
+    - paragraphs.paragraphs_type.description
+  module:
+    - text
+id: paragraph.description.field_description_detaillee
+field_name: field_description_detaillee
+entity_type: paragraph
+bundle: description
+label: 'Description détaillée'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

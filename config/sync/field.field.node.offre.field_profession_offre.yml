@@ -1,0 +1,29 @@
+uuid: 064cca1f-32c2-4983-8f46-d6d7caba242e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profession_offre
+    - node.type.offre
+    - taxonomy.vocabulary.specialite_par_domaine
+id: node.offre.field_profession_offre
+field_name: field_profession_offre
+entity_type: node
+bundle: offre
+label: Profession
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      specialite_par_domaine: specialite_par_domaine
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

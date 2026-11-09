@@ -1,0 +1,29 @@
+uuid: d893ee49-3426-4479-896d-df8ff846f8da
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_ville_tunisie
+    - profile.type.entreprise
+    - taxonomy.vocabulary.ville
+id: profile.entreprise.field_ville_tunisie
+field_name: field_ville_tunisie
+entity_type: profile
+bundle: entreprise
+label: Ville
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ville: ville
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

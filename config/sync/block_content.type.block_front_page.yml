@@ -1,0 +1,8 @@
+uuid: 20c5072e-cad2-414f-899b-cb84b37b9523
+langcode: fr
+status: true
+dependencies: {  }
+id: block_front_page
+label: 'Block Front Page'
+revision: 1
+description: ''

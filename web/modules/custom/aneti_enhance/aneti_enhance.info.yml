@@ -1,0 +1,5 @@
+name: 'aneti_enhance'
+type: module
+description: 'Aneti enhancements'
+core_version_requirement: ^8.9 || ^9 || ^10
+package: 'Custom'

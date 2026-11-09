@@ -1,0 +1,22 @@
+uuid: 884d8c2a-f5a1-420d-be22-c80d19802766
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.postulation
+id: node.postulation.status
+field_name: status
+entity_type: node
+bundle: postulation
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

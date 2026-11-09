@@ -1,0 +1,25 @@
+uuid: cf003b57-ad7b-4af5-9ceb-8ee7c616f5fe
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_q11e_label
+    - field_collection.field_collection.field_checklist_avant_depart
+  module:
+    - markup
+id: field_collection_item.field_checklist_avant_depart.field_q11e_label
+field_name: field_q11e_label
+entity_type: field_collection_item
+bundle: field_checklist_avant_depart
+label: Q11e_label
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>Garantissent-elles le respect d’une sécurité sanitaire sur le lieu de vie&nbsp;?</p>\r\n"
+    format: basic_html
+field_type: markup

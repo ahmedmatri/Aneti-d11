@@ -1,0 +1,21 @@
+uuid: 89f54958-5fac-40b0-86fc-4f6cb364a6d1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fiscalite
+    - node.type.fiche_pays
+  module:
+    - text
+id: node.fiche_pays.field_fiscalite
+field_name: field_fiscalite
+entity_type: node
+bundle: fiche_pays
+label: Fiscalité
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

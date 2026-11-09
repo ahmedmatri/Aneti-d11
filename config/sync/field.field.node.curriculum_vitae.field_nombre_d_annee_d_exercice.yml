@@ -1,0 +1,23 @@
+uuid: 7e09bf5a-b94f-4c3e-b39d-9ee9f8c60334
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nombre_d_annee_d_exercice
+    - node.type.curriculum_vitae
+id: node.curriculum_vitae.field_nombre_d_annee_d_exercice
+field_name: field_nombre_d_annee_d_exercice
+entity_type: node
+bundle: curriculum_vitae
+label: 'Nombre d’année d’exercice'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

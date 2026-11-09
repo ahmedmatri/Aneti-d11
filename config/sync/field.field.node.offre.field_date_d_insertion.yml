@@ -1,0 +1,21 @@
+uuid: 920f66f8-d17c-405a-bf4f-98d2976c1ccc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_d_insertion
+    - node.type.offre
+  module:
+    - datetime
+id: node.offre.field_date_d_insertion
+field_name: field_date_d_insertion
+entity_type: node
+bundle: offre
+label: 'date d''insertion'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

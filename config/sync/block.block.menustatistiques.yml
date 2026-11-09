@@ -1,0 +1,43 @@
+uuid: 65423e67-b9c5-4aa5-8eea-3cc2f17f1080
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.menu-statistiques
+  module:
+    - system
+    - user
+  theme:
+    - job_board
+id: menustatistiques
+theme: job_board
+region: content
+weight: -14
+provider: null
+plugin: 'system_menu_block:menu-statistiques'
+settings:
+  id: 'system_menu_block:menu-statistiques'
+  label: Statistiques
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      super_admin: super_admin
+      administrator: administrator
+      referent: referent
+      conseiller_central: conseiller_central
+      chef_unite_migration: chef_unite_migration
+      bureau_a_l_etranger: bureau_a_l_etranger
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  request_path:
+    id: request_path
+    pages: /dash-board
+    negate: false
+    context_mapping: {  }

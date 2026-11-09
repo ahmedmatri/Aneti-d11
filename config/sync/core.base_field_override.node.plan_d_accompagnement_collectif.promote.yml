@@ -1,0 +1,22 @@
+uuid: 85f8b7b4-9498-4e1e-923b-cb479869fbcd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.plan_d_accompagnement_collectif
+id: node.plan_d_accompagnement_collectif.promote
+field_name: promote
+entity_type: node
+bundle: plan_d_accompagnement_collectif
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

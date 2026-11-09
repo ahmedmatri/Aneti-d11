@@ -1,0 +1,20 @@
+uuid: a448992b-d6f7-41b1-b37e-df21f7253bbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.postulation
+id: node.postulation.uid
+field_name: uid
+entity_type: node
+bundle: postulation
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

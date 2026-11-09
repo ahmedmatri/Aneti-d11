@@ -1,0 +1,13 @@
+uuid: 2fa825c6-59f6-4d97-b7af-28cc87a3b9b8
+langcode: fr
+status: true
+dependencies:
+  module:
+    - file_entity
+_core:
+  default_config_hash: VRFBIks_Esq9botXshdDFVGQxVNpIAh5BXiNU_mgGPY
+id: file_temporary_action
+label: 'Set file status to temporary'
+type: file
+plugin: file_temporary_action
+configuration: {  }

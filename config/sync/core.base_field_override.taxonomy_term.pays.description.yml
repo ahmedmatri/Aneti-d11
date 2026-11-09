@@ -1,0 +1,20 @@
+uuid: 6af69806-7761-4d92-bdb3-3071ca70ec5a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.pays
+  module:
+    - text
+id: taxonomy_term.pays.description
+field_name: description
+entity_type: taxonomy_term
+bundle: pays
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

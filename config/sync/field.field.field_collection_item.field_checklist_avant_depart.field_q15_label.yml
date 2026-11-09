@@ -1,0 +1,25 @@
+uuid: 194bd863-0cf7-4a79-9dec-5ad24c0f5124
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_q15_label
+    - field_collection.field_collection.field_checklist_avant_depart
+  module:
+    - markup
+id: field_collection_item.field_checklist_avant_depart.field_q15_label
+field_name: field_q15_label
+entity_type: field_collection_item
+bundle: field_checklist_avant_depart
+label: Q15_label
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>15. Cette assurance prévoit-elle le rapatriement en cas de problème de santé grave&nbsp;?</p>\r\n"
+    format: basic_html
+field_type: markup

@@ -1,0 +1,29 @@
+uuid: d711ba47-fecb-490d-8368-d3214a746973
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_specialite_referent
+    - profile.type.referent
+    - taxonomy.vocabulary.specialite_par_domaine
+id: profile.referent.field_specialite_referent
+field_name: field_specialite_referent
+entity_type: profile
+bundle: referent
+label: 'Domaine et Spécialié'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      specialite_par_domaine: specialite_par_domaine
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

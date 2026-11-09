@@ -1,0 +1,21 @@
+uuid: fbd61d41-5eaa-4106-abd3-830b5d98fc4c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_la_presse
+    - node.type.fiche_pays
+  module:
+    - text
+id: node.fiche_pays.field_la_presse
+field_name: field_la_presse
+entity_type: node
+bundle: fiche_pays
+label: 'La presse'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

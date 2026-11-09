@@ -1,0 +1,11 @@
+uuid: c8444bf6-c4c2-45ab-a28d-835dec094ddb
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.mass_mailing
+id: node.mass_mailing
+target_entity_type_id: node
+target_bundle: mass_mailing
+default_langcode: site_default
+language_alterable: false

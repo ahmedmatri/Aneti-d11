@@ -1,0 +1,18 @@
+uuid: 3405d7f1-92d9-4884-823c-1c2c9bf76363
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.client
+id: taxonomy_term.client.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: client
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

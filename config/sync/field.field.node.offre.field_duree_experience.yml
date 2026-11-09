@@ -1,0 +1,23 @@
+uuid: 8b670f6b-9f9c-44e3-a2a1-0ae6269950bc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duree_experience
+    - node.type.offre
+id: node.offre.field_duree_experience
+field_name: field_duree_experience
+entity_type: node
+bundle: offre
+label: 'Durée d’expérience (ans)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

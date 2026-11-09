@@ -1,0 +1,25 @@
+uuid: 3136515b-33ae-4887-b0f2-4895ca93bf66
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e26a52b9-7376-4fc1-9730-950ca1e7e10e'
+  module:
+    - block_content
+  theme:
+    - job_board
+id: contact
+theme: job_board
+region: footer_right
+weight: 0
+provider: null
+plugin: 'block_content:e26a52b9-7376-4fc1-9730-950ca1e7e10e'
+settings:
+  id: 'block_content:e26a52b9-7376-4fc1-9730-950ca1e7e10e'
+  label: Contact
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

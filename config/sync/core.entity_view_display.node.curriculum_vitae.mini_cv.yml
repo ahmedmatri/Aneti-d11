@@ -1,0 +1,290 @@
+uuid: f096613a-5e82-427e-b2d9-42f8acc58167
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.mini_cv
+    - field.field.node.curriculum_vitae.field_candidat
+    - field.field.node.curriculum_vitae.field_cv_anglais
+    - field.field.node.curriculum_vitae.field_cv_arabe
+    - field.field.node.curriculum_vitae.field_cv_canadien
+    - field.field.node.curriculum_vitae.field_cv_francais
+    - field.field.node.curriculum_vitae.field_cv_valider
+    - field.field.node.curriculum_vitae.field_date_diplome
+    - field.field.node.curriculum_vitae.field_date_fin_validit_
+    - field.field.node.curriculum_vitae.field_destination
+    - field.field.node.curriculum_vitae.field_diplome
+    - field.field.node.curriculum_vitae.field_domaine_de_profession
+    - field.field.node.curriculum_vitae.field_domaine_specialite
+    - field.field.node.curriculum_vitae.field_help_moderation
+    - field.field.node.curriculum_vitae.field_langue
+    - field.field.node.curriculum_vitae.field_langue2
+    - field.field.node.curriculum_vitae.field_langue3
+    - field.field.node.curriculum_vitae.field_langue4
+    - field.field.node.curriculum_vitae.field_langue5
+    - field.field.node.curriculum_vitae.field_langue_maternelle
+    - field.field.node.curriculum_vitae.field_n_du_passeport
+    - field.field.node.curriculum_vitae.field_niveau
+    - field.field.node.curriculum_vitae.field_niveau_ecrit_parle
+    - field.field.node.curriculum_vitae.field_niveau_langue_2_ecrit_parl
+    - field.field.node.curriculum_vitae.field_niveau_langue_3_ecrit_parl
+    - field.field.node.curriculum_vitae.field_niveau_langue_4_ecrit_parl
+    - field.field.node.curriculum_vitae.field_niveau_langue_5_ecrit_parl
+    - field.field.node.curriculum_vitae.field_nombre_d_annee_d_exercice
+    - field.field.node.curriculum_vitae.field_operation_qatar
+    - field.field.node.curriculum_vitae.field_passeport_valide
+    - field.field.node.curriculum_vitae.field_pays_experience
+    - field.field.node.curriculum_vitae.field_profession
+    - field.field.node.curriculum_vitae.field_pseudo_skype
+    - field.field.node.curriculum_vitae.field_validit_du_passeport
+    - node.type.curriculum_vitae
+  module:
+    - datetime
+    - file
+    - options
+    - user
+id: node.curriculum_vitae.mini_cv
+targetEntityType: node
+bundle: curriculum_vitae
+mode: mini_cv
+content:
+  field_candidat:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_cv_anglais:
+    weight: 2
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_cv_arabe:
+    weight: 0
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_cv_canadien:
+    weight: 3
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_cv_francais:
+    weight: 1
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_date_diplome:
+    weight: 13
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_fin_validit_:
+    weight: 10
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_diplome:
+    weight: 12
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_domaine_de_profession:
+    weight: 14
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_domaine_specialite:
+    weight: 11
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_langue:
+    weight: 19
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_langue2:
+    weight: 21
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_langue3:
+    weight: 23
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_langue4:
+    weight: 25
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_langue5:
+    weight: 27
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_langue_maternelle:
+    weight: 18
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_n_du_passeport:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_niveau:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_niveau_ecrit_parle:
+    weight: 20
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_niveau_langue_2_ecrit_parl:
+    weight: 22
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_niveau_langue_3_ecrit_parl:
+    weight: 24
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_niveau_langue_4_ecrit_parl:
+    weight: 26
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_niveau_langue_5_ecrit_parl:
+    weight: 28
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_nombre_d_annee_d_exercice:
+    weight: 16
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_passeport_valide:
+    weight: 7
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_pays_experience:
+    weight: 17
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_profession:
+    weight: 15
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_pseudo_skype:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_validit_du_passeport:
+    weight: 8
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  content_moderation_control: true
+  field_cv_valider: true
+  field_destination: true
+  field_help_moderation: true
+  field_operation_qatar: true
+  langcode: true
+  links: true

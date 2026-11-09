@@ -1,0 +1,18 @@
+uuid: 1cbd75ec-a1c7-45e0-ad17-9b56a08d4cfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.evenement
+id: node.evenement.metatag
+field_name: metatag
+entity_type: node
+bundle: evenement
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

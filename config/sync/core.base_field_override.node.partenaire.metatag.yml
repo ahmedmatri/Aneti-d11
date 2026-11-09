@@ -1,0 +1,18 @@
+uuid: 1e82e8ab-7091-420d-b43e-d13073f67d6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.partenaire
+id: node.partenaire.metatag
+field_name: metatag
+entity_type: node
+bundle: partenaire
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

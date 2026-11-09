@@ -1,0 +1,28 @@
+uuid: de31371d-369d-4d1b-81cb-90814f0e7729
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_entretien
+    - node.type.entretien
+    - node.type.offre
+id: node.entretien.field_offre_entretien
+field_name: field_offre_entretien
+entity_type: node
+bundle: entretien
+label: Offre
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      offre: offre
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

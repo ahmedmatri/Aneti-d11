@@ -1,0 +1,23 @@
+uuid: 25e7ee0a-ae2e-46a4-8ee0-295025148643
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_formation_diplome_exige
+    - node.type.offre
+id: node.offre.field_formation_diplome_exige
+field_name: field_formation_diplome_exige
+entity_type: node
+bundle: offre
+label: 'Formation/diplôme exigé'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

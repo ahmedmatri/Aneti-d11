@@ -1,0 +1,21 @@
+uuid: b85543f6-7d09-4efc-8aec-e07540bc0a6d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_diplome
+    - node.type.curriculum_vitae
+  module:
+    - datetime
+id: node.curriculum_vitae.field_date_diplome
+field_name: field_date_diplome
+entity_type: node
+bundle: curriculum_vitae
+label: 'Date Diplôme'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

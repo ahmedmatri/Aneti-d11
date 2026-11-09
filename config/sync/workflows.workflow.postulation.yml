@@ -1,0 +1,102 @@
+uuid: e1b29d7d-a229-4ea3-bd44-1a65966df5df
+langcode: fr
+status: true
+dependencies:
+  module:
+    - content_moderation
+id: postulation
+label: Postulation
+type: content_moderation
+type_settings:
+  states:
+    archived:
+      published: false
+      default_revision: false
+      label: Archived
+      weight: 2
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: -3
+    pending:
+      published: false
+      default_revision: false
+      label: Pending
+      weight: -2
+    preselect_referent:
+      published: false
+      default_revision: false
+      label: PreselectReferent
+      weight: -1
+    preselected:
+      published: false
+      default_revision: false
+      label: Preselected
+      weight: 0
+    published:
+      published: true
+      default_revision: true
+      label: Accepted
+      weight: 1
+  transitions:
+    archive:
+      label: Archive
+      from:
+        - archived
+        - draft
+        - pending
+        - preselect_referent
+        - preselected
+        - published
+      to: archived
+      weight: 1
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: -3
+      from:
+        - draft
+        - pending
+        - preselected
+        - published
+    pending:
+      label: Pending
+      from:
+        - archived
+        - draft
+        - pending
+        - preselect_referent
+        - preselected
+        - published
+      to: pending
+      weight: -2
+    preselect:
+      label: Preselect
+      from:
+        - draft
+        - pending
+        - preselect_referent
+        - preselected
+        - published
+      to: preselected
+      weight: 0
+    preselect_referent:
+      label: 'Preselect Referent'
+      from:
+        - draft
+        - pending
+      to: preselect_referent
+      weight: 2
+    publish:
+      label: Publish
+      to: published
+      weight: -1
+      from:
+        - draft
+        - pending
+        - preselect_referent
+        - preselected
+        - published
+  entity_types: {  }
+  default_moderation_state: draft

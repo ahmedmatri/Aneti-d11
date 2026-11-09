@@ -1,0 +1,37 @@
+uuid: 0da1a57b-dca4-4533-9def-88e10185df61
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_action_ai
+    - node.type.plan_d_accompagnement_individuel
+    - paragraphs.paragraphs_type.action_ai
+  module:
+    - entity_reference_revisions
+id: node.plan_d_accompagnement_individuel.field_action_ai
+field_name: field_action_ai
+entity_type: node
+bundle: plan_d_accompagnement_individuel
+label: Actions
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      action_ai: action_ai
+    target_bundles_drag_drop:
+      action_ai:
+        enabled: true
+        weight: 4
+      action_ac:
+        weight: 5
+        enabled: false
+      description:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,38 @@
+uuid: fd50ab77-90e3-4ebf-9235-ee607849b174
+langcode: fr
+status: true
+dependencies:
+  module:
+    - aneti_enhance
+    - node
+    - user
+  theme:
+    - job_board
+id: applyblock
+theme: job_board
+region: sidebar_second
+weight: -23
+provider: null
+plugin: apply_block
+settings:
+  id: apply_block
+  label: 'Apply block'
+  provider: aneti_enhance
+  label_display: '0'
+  context_mapping:
+    node: '@node.node_route_context:node'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      offre: offre
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  user_role:
+    id: user_role
+    roles:
+      candidat: candidat
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

@@ -1,0 +1,29 @@
+uuid: bdba2338-cd50-4e1e-a88b-139c2f71c229
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pays_experience
+    - node.type.curriculum_vitae
+    - taxonomy.vocabulary.pays
+id: node.curriculum_vitae.field_pays_experience
+field_name: field_pays_experience
+entity_type: node
+bundle: curriculum_vitae
+label: 'Pays expérience'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      pays: pays
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

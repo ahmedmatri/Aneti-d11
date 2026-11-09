@@ -1,0 +1,18 @@
+uuid: 19ccf6f6-f2b8-4ae3-b830-24a483279919
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.specialt_par_domaine
+id: taxonomy_term.specialt_par_domaine.name
+field_name: name
+entity_type: taxonomy_term
+bundle: specialt_par_domaine
+label: Nom
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

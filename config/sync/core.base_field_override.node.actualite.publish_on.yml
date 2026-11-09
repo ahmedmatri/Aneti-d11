@@ -1,0 +1,18 @@
+uuid: c527fb3a-9b78-46c6-b189-93e52acf1f24
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.actualite
+id: node.actualite.publish_on
+field_name: publish_on
+entity_type: node
+bundle: actualite
+label: 'Publish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

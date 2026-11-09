@@ -1,0 +1,38 @@
+uuid: 71ff7f8f-0747-4d46-b1bc-6416462d6d90
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.action_client.field_action_grc
+    - field.field.node.action_client.field_entreprise_grc
+    - node.type.action_client
+  module:
+    - field_collection
+    - user
+id: node.action_client.default
+targetEntityType: node
+bundle: action_client
+mode: default
+content:
+  field_action_grc:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_list
+    region: content
+  field_entreprise_grc:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

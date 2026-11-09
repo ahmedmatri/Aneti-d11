@@ -1,0 +1,25 @@
+uuid: 287d6694-39cb-4a80-952b-0ce590a29d81
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_q19_label
+    - field_collection.field_collection.field_checklist_apres_depart
+  module:
+    - markup
+id: field_collection_item.field_checklist_apres_depart.field_q19_label
+field_name: field_q19_label
+entity_type: field_collection_item
+bundle: field_checklist_apres_depart
+label: Q19_label
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>19. La travailleuse/Le travailleur a-t-elle/il payé une commission de recrutement ou autre frais connexes dans le pays de destination&nbsp;pour accéder à son emploi ?</p>\r\n"
+    format: basic_html
+field_type: markup

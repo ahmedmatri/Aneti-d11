@@ -1,0 +1,18 @@
+uuid: e32d3c9e-5468-4b23-849c-53600e6a8265
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.evenement
+id: node.evenement.publish_on
+field_name: publish_on
+entity_type: node
+bundle: evenement
+label: 'Publish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

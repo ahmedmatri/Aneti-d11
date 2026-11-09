@@ -1,0 +1,18 @@
+uuid: 59edc0bb-6221-4040-a399-f13e33c2c790
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.entreprise_cliente
+id: node.entreprise_cliente.metatag
+field_name: metatag
+entity_type: node
+bundle: entreprise_cliente
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

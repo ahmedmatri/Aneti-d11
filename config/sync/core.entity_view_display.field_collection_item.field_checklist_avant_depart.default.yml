@@ -1,0 +1,505 @@
+uuid: a07f1a3a-93a2-4a57-b149-dcf106aa69d4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q10_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q11_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q11a_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q11b_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q11c_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q11d_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q11e_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q11f_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q12_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q13_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q14_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q15_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q16_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q17_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q17a_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q17b_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q17c_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q18_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q1_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q2_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q3_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q4_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q5_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q6_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q7_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q8_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_q9_label
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r1
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r10
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r11a
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r11b
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r11c
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r11d
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r11e
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r11f
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r12
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r13
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r14
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r15
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r16
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r17a
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r17b
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r17c
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r18
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r2
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r3
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r4
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r5
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r6
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r7
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r8
+    - field.field.field_collection_item.field_checklist_avant_depart.field_r9
+    - field_collection.field_collection.field_checklist_avant_depart
+  module:
+    - markup
+id: field_collection_item.field_checklist_avant_depart.default
+targetEntityType: field_collection_item
+bundle: field_checklist_avant_depart
+mode: default
+content:
+  field_q10_label:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q11_label:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q11a_label:
+    weight: 29
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q11b_label:
+    weight: 30
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q11c_label:
+    weight: 31
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q11d_label:
+    weight: 32
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q11e_label:
+    weight: 33
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q11f_label:
+    weight: 34
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q12_label:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q13_label:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q14_label:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q15_label:
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q16_label:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q17_label:
+    weight: 17
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q17a_label:
+    weight: 35
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q17b_label:
+    weight: 36
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q17c_label:
+    weight: 37
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q18_label:
+    weight: 28
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q1_label:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q2_label:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q3_label:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q4_label:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q5_label:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q6_label:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q7_label:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q8_label:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q9_label:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_r1:
+    weight: 18
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r10:
+    weight: 27
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r11a:
+    weight: 38
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r11b:
+    weight: 39
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r11c:
+    weight: 40
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r11d:
+    weight: 41
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r11e:
+    weight: 42
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r11f:
+    weight: 43
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r12:
+    weight: 44
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r13:
+    weight: 45
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r14:
+    weight: 46
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r15:
+    weight: 47
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r16:
+    weight: 48
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r17a:
+    weight: 49
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r17b:
+    weight: 50
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r17c:
+    weight: 51
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r18:
+    weight: 52
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r2:
+    weight: 19
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r3:
+    weight: 20
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r4:
+    weight: 21
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r5:
+    weight: 22
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r6:
+    weight: 23
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r7:
+    weight: 24
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r8:
+    weight: 25
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_r9:
+    weight: 26
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden: {  }

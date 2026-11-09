@@ -1,0 +1,23 @@
+uuid: eeb98bf4-84f7-44e2-a817-b69c5f8af7be
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_action_grc
+    - node.type.action_client
+  module:
+    - field_collection
+id: node.action_client.field_action_grc
+field_name: field_action_grc
+entity_type: node
+bundle: action_client
+label: Action
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+  - {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_collection

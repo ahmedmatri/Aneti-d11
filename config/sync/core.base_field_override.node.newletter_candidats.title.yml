@@ -1,0 +1,18 @@
+uuid: 657cb53c-de38-44a3-91c3-ce1ee6a60271
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.newletter_candidats
+id: node.newletter_candidats.title
+field_name: title
+entity_type: node
+bundle: newletter_candidats
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

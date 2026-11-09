@@ -1,0 +1,23 @@
+uuid: 3b747870-6fef-4dab-899a-52d64575c76d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.agence_national
+  module:
+    - text
+id: node.agence_national.body
+field_name: body
+entity_type: node
+bundle: agence_national
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

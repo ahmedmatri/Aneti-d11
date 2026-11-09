@@ -1,0 +1,21 @@
+uuid: 9dec8fd1-6f3f-498c-a1c0-7defef343009
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_prochain_rendez_vous
+    - paragraphs.paragraphs_type.action_ai
+  module:
+    - datetime
+id: paragraph.action_ai.field_prochain_rendez_vous
+field_name: field_prochain_rendez_vous
+entity_type: paragraph
+bundle: action_ai
+label: 'Prochain rendez-vous'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

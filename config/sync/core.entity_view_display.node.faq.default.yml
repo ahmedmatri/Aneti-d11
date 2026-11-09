@@ -1,0 +1,36 @@
+uuid: 77052c7d-79b4-4d7f-b6c7-9cca95b9eb7f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.faq.field_faq
+    - node.type.faq
+  module:
+    - faqfield
+    - user
+id: node.faq.default
+targetEntityType: node
+bundle: faq
+mode: default
+content:
+  field_faq:
+    weight: 101
+    label: above
+    settings:
+      active: 0
+      heightStyle: auto
+      collapsible: false
+      event: click
+      animate:
+        easing: linear
+        duration: 200
+    third_party_settings: {  }
+    type: faqfield_accordion
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,18 @@
+uuid: f014fc88-f8d9-45a5-840e-82a639d73376
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.simplenews_issue
+id: node.simplenews_issue.created
+field_name: created
+entity_type: node
+bundle: simplenews_issue
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

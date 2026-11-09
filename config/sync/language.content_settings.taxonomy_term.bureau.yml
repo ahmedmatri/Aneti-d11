@@ -1,0 +1,18 @@
+uuid: e256cb90-6630-4ff6-8a06-1a0a6f7731e7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.bureau
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.bureau
+target_entity_type_id: taxonomy_term
+target_bundle: bureau
+default_langcode: site_default
+language_alterable: true

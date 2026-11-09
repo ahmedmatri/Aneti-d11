@@ -1,0 +1,30 @@
+uuid: d547843e-8aae-47d7-9085-f919db35f403
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.newletter_candidats.body
+    - node.type.newletter_candidats
+  module:
+    - text
+    - user
+id: node.newletter_candidats.default
+targetEntityType: node
+bundle: newletter_candidats
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  simplenews_issue: true

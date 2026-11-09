@@ -1,0 +1,29 @@
+uuid: 87fef77c-3fec-43ae-a110-f864f72fd5fe
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cv_langue
+    - node.type.offre
+    - taxonomy.vocabulary.lang
+id: node.offre.field_cv_langue
+field_name: field_cv_langue
+entity_type: node
+bundle: offre
+label: 'CV Langue'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      lang: lang
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

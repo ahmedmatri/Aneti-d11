@@ -1,0 +1,25 @@
+uuid: 23b0382d-68e3-4a98-b6ba-77ac9f50156b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_q5_label
+    - field_collection.field_collection.field_checklist_avant_depart
+  module:
+    - markup
+id: field_collection_item.field_checklist_avant_depart.field_q5_label
+field_name: field_q5_label
+entity_type: field_collection_item
+bundle: field_checklist_avant_depart
+label: Q5_label
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>5. La travailleuse/Le travailleur a-t-elle/il payé des frais liés à l’établissement de papiers d’identité ou documents de voyage (passeport, visas)&nbsp;? (facilitation de l’ANETI)</p>\r\n"
+    format: basic_html
+field_type: markup

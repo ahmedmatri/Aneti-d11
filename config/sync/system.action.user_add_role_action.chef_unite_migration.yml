@@ -1,0 +1,14 @@
+uuid: f3eeb7c7-4b99-40c3-a3e2-cecf0bf939f2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.chef_unite_migration
+  module:
+    - user
+id: user_add_role_action.chef_unite_migration
+label: 'Ajouter le rôle Chef Unité Migration aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: chef_unite_migration

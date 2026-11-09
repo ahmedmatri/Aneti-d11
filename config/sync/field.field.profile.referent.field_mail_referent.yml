@@ -1,0 +1,19 @@
+uuid: 9e9661ee-fdbc-4175-9873-a5309bb42c07
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_mail_referent
+    - profile.type.referent
+id: profile.referent.field_mail_referent
+field_name: field_mail_referent
+entity_type: profile
+bundle: referent
+label: Courriel
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

@@ -1,0 +1,25 @@
+uuid: 7a7b203b-7172-4700-bf53-043f4aebe29d
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - job_board
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: job_board_branding
+theme: job_board
+region: header
+weight: -4
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Marque du site'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

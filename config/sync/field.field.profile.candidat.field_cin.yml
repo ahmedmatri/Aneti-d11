@@ -1,0 +1,19 @@
+uuid: f8697011-5603-45e1-b785-ca189cdc4ff1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_cin
+    - profile.type.candidat
+id: profile.candidat.field_cin
+field_name: field_cin
+entity_type: profile
+bundle: candidat
+label: CIN
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

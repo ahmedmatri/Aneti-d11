@@ -1,0 +1,22 @@
+uuid: b60d1a89-1a74-4443-9a60-b98c8ad512d3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coordonnees
+    - node.type.agence_national
+  module:
+    - geofield
+id: node.agence_national.field_coordonnees
+field_name: field_coordonnees
+entity_type: node
+bundle: agence_national
+label: Coordonnées
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  backend: geofield_backend_default
+field_type: geofield

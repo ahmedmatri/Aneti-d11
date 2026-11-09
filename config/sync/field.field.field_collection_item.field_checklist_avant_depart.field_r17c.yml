@@ -1,0 +1,23 @@
+uuid: b8aee604-da09-4b65-9962-82aa1e57af63
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_r17c
+    - field_collection.field_collection.field_checklist_avant_depart
+id: field_collection_item.field_checklist_avant_depart.field_r17c
+field_name: field_r17c
+entity_type: field_collection_item
+bundle: field_checklist_avant_depart
+label: R17c
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Oui
+  off_label: Non
+field_type: boolean

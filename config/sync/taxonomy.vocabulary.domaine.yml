@@ -1,0 +1,8 @@
+uuid: b6a7b2d2-a89f-4b33-91bb-b9b8d29762e1
+langcode: fr
+status: true
+dependencies: {  }
+name: Domaine
+vid: domaine
+description: Domaine
+weight: 0

@@ -1,0 +1,14 @@
+uuid: dcc8fc0d-64d4-442b-957c-6cdd78dac491
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.chef_de_bureau
+  module:
+    - user
+id: user_add_role_action.chef_de_bureau
+label: 'Ajouter le rôle Chef de Bureau aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: chef_de_bureau

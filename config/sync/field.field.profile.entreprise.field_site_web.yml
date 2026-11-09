@@ -1,0 +1,23 @@
+uuid: 9387acf6-d904-451e-bab2-9e719a2ca531
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_site_web
+    - profile.type.entreprise
+  module:
+    - link
+id: profile.entreprise.field_site_web
+field_name: field_site_web
+entity_type: profile
+bundle: entreprise
+label: 'Site Web'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

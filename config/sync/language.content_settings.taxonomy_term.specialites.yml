@@ -1,0 +1,18 @@
+uuid: a54632fc-0b38-43ca-a0a3-bd5060eda735
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.specialites
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.specialites
+target_entity_type_id: taxonomy_term
+target_bundle: specialites
+default_langcode: site_default
+language_alterable: false

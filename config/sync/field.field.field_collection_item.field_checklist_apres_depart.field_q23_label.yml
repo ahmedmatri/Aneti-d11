@@ -1,0 +1,25 @@
+uuid: 551b67d8-0305-4a55-8289-ad61fbf46e41
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_q23_label
+    - field_collection.field_collection.field_checklist_apres_depart
+  module:
+    - markup
+id: field_collection_item.field_checklist_apres_depart.field_q23_label
+field_name: field_q23_label
+entity_type: field_collection_item
+bundle: field_checklist_apres_depart
+label: Q23_label
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>23. Le contrat de travail respecte-t-il les termes et conditions établis quant à la nature du travail et des tâches précises à effectuer&nbsp;?</p>\r\n"
+    format: basic_html
+field_type: markup

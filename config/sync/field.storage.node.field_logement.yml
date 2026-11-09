@@ -1,0 +1,18 @@
+uuid: a9b6e5f5-1074-421e-9906-b24463ff752f
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_logement
+field_name: field_logement
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

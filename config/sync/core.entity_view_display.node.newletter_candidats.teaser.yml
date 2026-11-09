@@ -1,0 +1,32 @@
+uuid: aff7c9aa-7d76-422c-9569-7b26fc12bbbb
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.newletter_candidats.body
+    - node.type.newletter_candidats
+  module:
+    - text
+    - user
+id: node.newletter_candidats.teaser
+targetEntityType: node
+bundle: newletter_candidats
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  simplenews_issue: true

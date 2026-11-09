@@ -1,0 +1,20 @@
+uuid: 9a038842-a425-4994-a88c-dde7175cd1cd
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_nombre_d_annee_d_exercice
+field_name: field_nombre_d_annee_d_exercice
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

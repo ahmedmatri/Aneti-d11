@@ -1,0 +1,8 @@
+uuid: 3aa1d02a-523f-4c56-a265-e65b725818c0
+langcode: fr
+status: true
+dependencies: {  }
+name: 'specialté par domaine'
+vid: specialt_par_domaine
+description: 'specialité par domaine'
+weight: 0

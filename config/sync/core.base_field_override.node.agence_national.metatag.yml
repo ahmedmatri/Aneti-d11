@@ -1,0 +1,18 @@
+uuid: 2385f44c-7784-4a74-9966-6b987a52d537
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.agence_national
+id: node.agence_national.metatag
+field_name: metatag
+entity_type: node
+bundle: agence_national
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

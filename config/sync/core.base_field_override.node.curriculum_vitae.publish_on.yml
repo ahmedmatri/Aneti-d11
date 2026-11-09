@@ -1,0 +1,18 @@
+uuid: f4b6ae16-62c7-4bcb-a1ce-28bbcd0bfda8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.curriculum_vitae
+id: node.curriculum_vitae.publish_on
+field_name: publish_on
+entity_type: node
+bundle: curriculum_vitae
+label: 'Publish on'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

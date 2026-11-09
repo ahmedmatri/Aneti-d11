@@ -1,0 +1,20 @@
+uuid: d20d9839-1ad8-45af-8831-042a3468442f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.plan_d_accompagnement_individuel
+id: node.plan_d_accompagnement_individuel.menu_link
+field_name: menu_link
+entity_type: node
+bundle: plan_d_accompagnement_individuel
+label: 'Menu link'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

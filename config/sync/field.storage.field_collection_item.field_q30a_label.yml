@@ -1,0 +1,23 @@
+uuid: 515436d2-a711-4dee-81c9-03e99e8a824b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_collection
+    - field_permissions
+    - markup
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: field_collection_item.field_q30a_label
+field_name: field_q30a_label
+entity_type: field_collection_item
+type: markup
+settings: {  }
+module: markup
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,25 @@
+uuid: f7ad2b5d-d257-489c-a571-2edc4f5fde4d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.complement_postulation
+  module:
+    - user
+id: node.complement_postulation.teaser
+targetEntityType: node
+bundle: complement_postulation
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_ajouter_lettre__motivation: true
+  field_ajouter_un_cv: true
+  field_ecrire_letter_motivation: true
+  field_postulation: true
+  langcode: true

@@ -1,0 +1,31 @@
+uuid: d9766282-926a-4269-a6b4-19dc495b89d0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.pays.field_code_pays
+    - taxonomy.vocabulary.pays
+  module:
+    - text
+id: taxonomy_term.pays.default
+targetEntityType: taxonomy_term
+bundle: pays
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_code_pays:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

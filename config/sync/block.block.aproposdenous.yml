@@ -1,0 +1,25 @@
+uuid: e7fda32b-8678-48e9-8260-6f15f0b796ab
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:7e31163a-2df6-4d2c-bd8b-632c75ac32d4'
+  module:
+    - block_content
+  theme:
+    - job_board
+id: aproposdenous
+theme: job_board
+region: footer_middle
+weight: 0
+provider: null
+plugin: 'block_content:7e31163a-2df6-4d2c-bd8b-632c75ac32d4'
+settings:
+  id: 'block_content:7e31163a-2df6-4d2c-bd8b-632c75ac32d4'
+  label: 'A propos de nous'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

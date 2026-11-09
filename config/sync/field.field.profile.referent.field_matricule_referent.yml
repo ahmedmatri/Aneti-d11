@@ -1,0 +1,19 @@
+uuid: ea50cae8-77a6-49a1-b813-8c84f49ff2ed
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_matricule_referent
+    - profile.type.referent
+id: profile.referent.field_matricule_referent
+field_name: field_matricule_referent
+entity_type: profile
+bundle: referent
+label: matricule_referent
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

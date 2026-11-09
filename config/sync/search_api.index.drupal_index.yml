@@ -1,0 +1,65 @@
+uuid: 20002efc-06e2-47d4-a3b8-c035eb9d93a1
+langcode: fr
+status: false
+dependencies:
+  module:
+    - node
+    - search_api
+id: drupal_index
+name: 'drupal index'
+description: ''
+read_only: false
+field_settings:
+  created:
+    label: 'Écrit le'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
+  nid:
+    label: 'Identifiant (ID)'
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+  type:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - offre
+    languages:
+      default: false
+      selected:
+        - fr
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: null

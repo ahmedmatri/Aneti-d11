@@ -1,0 +1,18 @@
+uuid: 801e4faf-be35-4abb-9dcb-9a5d221c9454
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.fiche_pays
+id: node.fiche_pays.title
+field_name: title
+entity_type: node
+bundle: fiche_pays
+label: Pays
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

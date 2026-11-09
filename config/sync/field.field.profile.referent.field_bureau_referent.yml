@@ -1,0 +1,29 @@
+uuid: d08c5f5a-ea4f-4e83-ba04-7594ec7dd0c1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_bureau_referent
+    - profile.type.referent
+    - taxonomy.vocabulary.bureau
+id: profile.referent.field_bureau_referent
+field_name: field_bureau_referent
+entity_type: profile
+bundle: referent
+label: Bureau
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      bureau: bureau
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

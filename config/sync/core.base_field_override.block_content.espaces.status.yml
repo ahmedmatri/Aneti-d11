@@ -1,0 +1,22 @@
+uuid: 9671591a-1a8a-432c-9445-22ede70b53c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.espaces
+id: block_content.espaces.status
+field_name: status
+entity_type: block_content
+bundle: espaces
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

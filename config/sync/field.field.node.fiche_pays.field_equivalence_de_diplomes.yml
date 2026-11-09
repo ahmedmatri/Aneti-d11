@@ -1,0 +1,21 @@
+uuid: fa8a1466-4d6c-4636-8352-d9b94a9cf988
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_equivalence_de_diplomes
+    - node.type.fiche_pays
+  module:
+    - text
+id: node.fiche_pays.field_equivalence_de_diplomes
+field_name: field_equivalence_de_diplomes
+entity_type: node
+bundle: fiche_pays
+label: 'Équivalence de diplômes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

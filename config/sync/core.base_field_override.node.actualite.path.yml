@@ -1,0 +1,20 @@
+uuid: bc6674de-4a6a-4c93-b4a3-69b1fb27d9f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.actualite
+  module:
+    - path
+id: node.actualite.path
+field_name: path
+entity_type: node
+bundle: actualite
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

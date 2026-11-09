@@ -1,0 +1,29 @@
+uuid: abff6cd6-c198-4ad0-86ff-062e2eaa6e81
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:441a5021-be9a-45ec-bc04-2b8249ed66de'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - job_board
+third_party_settings:
+  block_class:
+    classes: a_copyright
+id: copyright
+theme: job_board
+region: footer
+weight: -12
+provider: null
+plugin: 'block_content:441a5021-be9a-45ec-bc04-2b8249ed66de'
+settings:
+  id: 'block_content:441a5021-be9a-45ec-bc04-2b8249ed66de'
+  label: Copyright
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

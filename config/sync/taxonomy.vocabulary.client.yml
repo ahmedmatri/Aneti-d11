@@ -1,0 +1,8 @@
+uuid: ef82e399-ba5e-4a27-8a79-098788084993
+langcode: fr
+status: true
+dependencies: {  }
+name: client
+vid: client
+description: ''
+weight: 0

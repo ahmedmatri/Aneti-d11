@@ -1,0 +1,19 @@
+uuid: 701a11ab-4012-460e-8510-64cabc9d63a1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_code_pays
+    - taxonomy.vocabulary.pays
+id: taxonomy_term.pays.field_code_pays
+field_name: field_code_pays
+entity_type: taxonomy_term
+bundle: pays
+label: 'Code pays'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

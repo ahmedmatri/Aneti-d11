@@ -1,0 +1,64 @@
+uuid: c6ebcb6e-a362-41d8-a214-5c3ce3220816
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_collection
+    - field_permissions
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: field_collection_item.field_prochaine_action
+field_name: field_prochaine_action
+entity_type: field_collection_item
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Analyse et diagnostic de la demande'
+      label: 'Analyse et diagnostic de la demande'
+    -
+      value: 'Entretien Individuel'
+      label: 'Entretien Individuel'
+    -
+      value: 'Entretien Collective'
+      label: 'Entretien Collective'
+    -
+      value: 'Information sur le marché de l’emploi'
+      label: 'Information sur le marché de l’emploi'
+    -
+      value: 'Bilan de compétences'
+      label: 'Bilan de compétences'
+    -
+      value: 'Soft Skills'
+      label: 'Soft Skills'
+    -
+      value: 'Recrutement equitable'
+      label: 'Recrutement equitable'
+    -
+      value: 'Facilitation des Démarches administratives avant départ'
+      label: 'Facilitation des Démarches administratives avant départ'
+    -
+      value: 'Clarification des clauses du contrat'
+      label: 'Clarification des clauses du contrat'
+    -
+      value: 'Présentation des caracteristiques socioculturelles et économique d’un pays'
+      label: 'Présentation des caracteristiques socioculturelles et économique d’un pays'
+    -
+      value: 'Présentation des exigences particulières du recruteur'
+      label: 'Présentation des exigences particulières du recruteur'
+    -
+      value: 'Constitution du dossier de migration à enlever'
+      label: 'Constitution du dossier de migration à enlever'
+    -
+      value: 'Préparation pour le départ à enlever'
+      label: 'Préparation pour le départ à enlever'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

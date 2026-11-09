@@ -1,0 +1,24 @@
+uuid: 35515921-9cd0-488e-aa42-0ad968805150
+langcode: fr
+status: true
+dependencies:
+  module:
+    - datetime
+    - field_permissions
+    - profile
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+id: profile.field_date_validation
+field_name: field_date_validation
+entity_type: profile
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

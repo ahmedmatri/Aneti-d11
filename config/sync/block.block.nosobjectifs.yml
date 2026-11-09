@@ -1,0 +1,35 @@
+uuid: fff4aded-22ab-41a6-a4e5-ac334c75316a
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:block_front_page:57ed7c75-9298-4a49-ad07-977e69be1279'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - job_board
+third_party_settings:
+  block_class:
+    classes: col-md-4
+id: nosobjectifs
+theme: job_board
+region: bloc_front
+weight: 0
+provider: null
+plugin: 'block_content:57ed7c75-9298-4a49-ad07-977e69be1279'
+settings:
+  id: 'block_content:57ed7c75-9298-4a49-ad07-977e69be1279'
+  label: 'Nos objectifs'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,25 @@
+uuid: f6e02fc7-58d2-4773-abfc-f46abccfda4a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_q2_label
+    - field_collection.field_collection.field_checklist_avant_depart
+  module:
+    - markup
+id: field_collection_item.field_checklist_avant_depart.field_q2_label
+field_name: field_q2_label
+entity_type: field_collection_item
+bundle: field_checklist_avant_depart
+label: Q2_label
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>2. La travailleuse/Le travailleur a-t-elle/il payé une commission de recrutement ou autre frais connexes à un intermédiaire pour obtenir l’accès aux employeurs / agences de recrutement&nbsp;?</p>\r\n"
+    format: basic_html
+field_type: markup

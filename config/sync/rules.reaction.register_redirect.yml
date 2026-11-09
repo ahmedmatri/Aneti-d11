@@ -1,0 +1,34 @@
+uuid: 809d5201-bd2c-4278-93e6-0ba96379e896
+langcode: fr
+status: true
+dependencies: {  }
+id: register_redirect
+label: 'Register redirect'
+events:
+  -
+    event_name: 'rules_entity_insert:user'
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: 55ef276d-5881-4849-b087-f9fd7e637644
+  conditions:
+    id: rules_and
+    uuid: e9626e93-4d29-47cd-9ef1-50339b0edcd2
+    conditions: {  }
+  actions:
+    id: rules_action_set
+    uuid: c8ed91cd-71f3-4a38-8ee6-eca090d92a28
+    actions:
+      -
+        id: rules_action
+        uuid: 112ea45d-7198-473f-bfa9-12688233bec3
+        context_values:
+          url: /user/login
+        context_mapping: {  }
+        context_processors:
+          url:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_page_redirect

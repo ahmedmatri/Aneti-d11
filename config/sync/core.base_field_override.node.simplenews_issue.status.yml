@@ -1,0 +1,22 @@
+uuid: 425d8e05-8945-49b9-928f-5f287b7c504b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.simplenews_issue
+id: node.simplenews_issue.status
+field_name: status
+entity_type: node
+bundle: simplenews_issue
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

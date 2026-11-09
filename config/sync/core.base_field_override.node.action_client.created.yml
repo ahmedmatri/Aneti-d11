@@ -1,0 +1,18 @@
+uuid: 4c45ce18-4c65-4110-b6b5-8af9d430a3bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.action_client
+id: node.action_client.created
+field_name: created
+entity_type: node
+bundle: action_client
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

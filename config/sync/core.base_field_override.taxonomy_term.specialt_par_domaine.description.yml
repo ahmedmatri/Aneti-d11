@@ -1,0 +1,20 @@
+uuid: 4f9ffa51-5aa8-49e7-bdc6-336dbe792437
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.specialt_par_domaine
+  module:
+    - text
+id: taxonomy_term.specialt_par_domaine.description
+field_name: description
+entity_type: taxonomy_term
+bundle: specialt_par_domaine
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

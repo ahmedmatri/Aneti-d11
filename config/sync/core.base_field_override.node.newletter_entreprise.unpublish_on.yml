@@ -1,0 +1,18 @@
+uuid: 93b67753-9418-444e-b061-e1b81c0d8ac9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.newletter_entreprise
+id: node.newletter_entreprise.unpublish_on
+field_name: unpublish_on
+entity_type: node
+bundle: newletter_entreprise
+label: 'Unpublish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

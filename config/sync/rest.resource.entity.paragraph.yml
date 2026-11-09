@@ -1,0 +1,20 @@
+uuid: c62b13b8-af52-40ff-9b8a-5de029ae4987
+langcode: fr
+status: true
+dependencies:
+  module:
+    - jwt
+    - paragraphs
+    - serialization
+id: entity.paragraph
+plugin_id: 'entity:paragraph'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - PATCH
+  formats:
+    - json
+  authentication:
+    - jwt_auth

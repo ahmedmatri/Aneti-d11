@@ -1,0 +1,8 @@
+uuid: 3a6083b6-14e3-4586-8a7f-b9accc04171e
+langcode: fr
+status: true
+dependencies: {  }
+name: Diplome
+vid: diplome
+description: Diplome
+weight: 0

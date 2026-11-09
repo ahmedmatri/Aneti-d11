@@ -1,0 +1,23 @@
+uuid: ac8ef84a-aa65-4638-adfa-9aee0e5c8d6f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_poids
+    - node.type.partenaire
+id: node.partenaire.field_poids
+field_name: field_poids
+entity_type: node
+bundle: partenaire
+label: Poids
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

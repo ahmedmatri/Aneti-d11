@@ -1,0 +1,55 @@
+uuid: f227f528-f3d0-47b9-9cfa-9ffde8dc53b6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.profile.chef_de_bureau.field_bureau_cb
+    - field.field.profile.chef_de_bureau.field_nom_cb
+    - field.field.profile.chef_de_bureau.field_prenom_cb
+    - field.field.profile.chef_de_bureau.field_telephone_gsm_cb
+    - profile.type.chef_de_bureau
+  module:
+    - chosen_field
+    - content_moderation
+id: profile.chef_de_bureau.default
+targetEntityType: profile
+bundle: chef_de_bureau
+mode: default
+content:
+  field_bureau_cb:
+    weight: 103
+    settings: {  }
+    third_party_settings: {  }
+    type: chosen_select
+    region: content
+  field_nom_cb:
+    weight: 101
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_prenom_cb:
+    weight: 102
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_telephone_gsm_cb:
+    weight: 104
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+hidden: {  }

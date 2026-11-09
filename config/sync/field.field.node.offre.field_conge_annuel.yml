@@ -1,0 +1,23 @@
+uuid: f65e4b63-2407-4243-87b2-1a15caec33df
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_conge_annuel
+    - node.type.offre
+id: node.offre.field_conge_annuel
+field_name: field_conge_annuel
+entity_type: node
+bundle: offre
+label: 'Congé annuel'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,24 @@
+uuid: 16f80ca5-d892-4935-881b-b658ae1098e0
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - profile
+    - taxonomy
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: profile.field_bureau_cb
+field_name: field_bureau_cb
+entity_type: profile
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

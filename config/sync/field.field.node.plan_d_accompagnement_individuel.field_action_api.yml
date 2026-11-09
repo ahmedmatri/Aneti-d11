@@ -1,0 +1,22 @@
+uuid: df7aca20-4abf-4f8e-994b-19e80cf97a20
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_action_api
+    - node.type.plan_d_accompagnement_individuel
+  module:
+    - field_collection
+id: node.plan_d_accompagnement_individuel.field_action_api
+field_name: field_action_api
+entity_type: node
+bundle: plan_d_accompagnement_individuel
+label: Actions
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_collection

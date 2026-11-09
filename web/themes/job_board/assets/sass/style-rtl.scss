@@ -1,0 +1,670 @@
+@import "config/variables";
+@import "config/flex";
+@import "config/mixins";
+html[dir="rtl"] {
+  input[type="submit"] {
+    margin-right: 0;
+    margin-left: rem(10px);
+    &:last-child {
+      margin-left: 0;
+    }
+  }
+
+  //navbar-toggle
+  .navbar-toggle{
+    float: left;
+  }
+
+  //close
+  .btn-close{
+    right: auto;
+    left: rem(15px);
+  }
+
+  //block-job-board-branding
+  #block-job-board-branding{
+    text-align: right;
+  }
+
+
+  // block-login-description
+  .block-login-description {
+    text-align: right;
+  } // block-form-login
+  .block-form-login {
+    .block-title {
+      text-align: right;
+    }
+    .form-item label {
+      text-align: right;
+    }
+    .user-new-password {
+      @include display-flexbox;
+      padding-right: rem(105px);
+      margin: 0;
+    }
+    .form-actions {
+      text-align: right;
+      padding-right: rem(105px);
+    }
+  }
+  // block-ccount-yet
+  .block-ccount-yet {
+    .block-title,
+    p {
+      text-align: right;
+    }
+  } //
+  .user-register-form .form-item>label {
+    text-align: right;
+  }
+  .password-confirm,
+  .password-strength {
+    text-align: right;
+  }
+  .user-register-form {
+    .description {
+      text-align: right;
+    }
+    .image-preview {
+      text-align: right;
+    }
+  }
+  .user-register-form>.form-actions {
+    text-align: inherit;
+  } //about
+  .block-about-content {
+    h3,
+    p,
+    ul {
+      text-align: right;
+    }
+    ul {
+      direction: initial;
+    }
+  }
+  .block-privacy-statement,
+  .block-term-of-us {
+    text-align: right;
+  }
+  .view-faqs p {
+    text-align: right;
+  }
+  .pager__items li.pager__item--first a,
+  .pager__items li.pager__item--last a,
+  .pager__items li.pager__item--next a,
+  .pager__items li.pager__item--previous a {
+    @include transform(rotate(180deg));
+  }
+
+  //webform-submission-form
+  form.webform-submission-form{
+    .form-item > label{
+      text-align: right;
+    }
+    >.form-actions {
+      text-align:left;
+    }
+  }
+
+  //send-profile
+  form.webform-submission-send-profile-form {
+    .form-item>label,
+    #edit-email-headhunters--description,
+    .description {
+      text-align: right;
+    }
+    .file--image {
+      padding-left: rem(20px);
+    }
+  }
+  @media (max-width:767px) {
+    .block-form-login {
+      .user-new-password {
+        padding: 0;
+      }
+      .form-actions {
+        text-align: center;
+        padding: 0;
+      }
+    }
+  } //
+  // homepage
+  .headline .block-menu ul.menu li:last-child {
+    border-left: 1px solid #000;
+  }
+  .headline .block-menu ul.menu li:first-child {
+    border-left: 0;
+  }
+  .region-header {
+    .block {
+      text-align: right;
+    }
+  }
+  select {
+    background-position: calc( 11px) center;
+    padding-left: rem(35px);
+    padding-right: rem(10px);
+  }
+  div[id*=block-bannerhomepage] .field--name-body .show-less,
+  div[id*=block-bannerhomepage] .field--name-body .show-more {
+    text-align: right;
+  }
+  div[id*=block-bannerhomepage] .field--name-body .show-less:after,
+  div[id*=block-bannerhomepage] .field--name-body .show-more:after {
+    margin-right: rem(8px);
+    margin-left: 0;
+  }
+  div[id*=block-bannerhomepage] {
+    .field--name-body {
+      .info-inner {
+        text-align: right;
+        &>* {
+          margin-right: auto;
+          margin-left: 0;
+        }
+      }
+      .image-bg img {
+        transform: rotateY(180deg);
+      }
+      .form-search-homepage-inner {
+        padding-left: rem(8px);
+        padding-right: 0;
+        @media (max-width: 767px) {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+  .sidebar .block {
+    text-align: right;
+  }
+
+  //.view-recruiter
+  .view-recruiter{
+    .link-send a:after,&.view-logo .view-footer a:after{
+      margin-right: rem(10px);
+      margin-left: 0;
+    }
+    &.view-logo-slideshow{
+      padding-left: rem(20px);
+      padding-right: 0;
+      .owl-carousel{
+        direction: ltr;
+      }
+    }
+    &.view-list-employers .views-field{
+      text-align: center;
+    }
+  }
+
+
+  div[id*=block-postajob] {
+    .post-job {
+      .info {
+        text-align: right;
+      }
+    }
+  }
+  .view-job {
+    .views-row {
+      >.views-field {
+        text-align: right;
+      }
+    }
+  }
+  .view-gird-homepage {
+    .views-row-inner>.image {
+      margin-left: rem(20px);
+      margin-right: 0;
+      @media (min-width: $tablet-vt) and (max-width: $tablet-ht - 1) {
+        margin-left: 0;
+      }
+    }
+    .views-row-inner>.info {
+      text-align: right;
+      @media (min-width: $tablet-vt) and (max-width: $tablet-ht - 1) {
+        text-align: center;
+      }
+    }
+    .link a:after {
+      margin-right: rem(10px);
+      margin-left: 0;
+    }
+  }
+  .region-content ul.quicktabs-tabs {
+    text-align: right;
+    li {
+      display: inline-block;
+    }
+  }
+  .swiper-button-prev {
+    left: 0;
+    right: auto;
+    background-image: url(../images/angle-left.svg);
+  }
+  .swiper-button-next {
+    background-image: url(../images/angle-right.svg);
+    left: 1.5625rem;
+    right: auto;
+  }
+  .path-frontpage {
+    .region-panel-third {
+      div[class*=block-views-blockrecruiter-block-] {
+        text-align: right;
+      }
+    }
+  } // footer
+  .footer_top {
+    text-align: right;
+    .block h2{
+      text-align: right;
+    }
+  }
+
+  ul.menu {
+    margin: 0 rem(-10px);
+  } // contact page
+  form.webform-submission-contact-form {
+    .form-item {
+      label {
+        text-align: right;
+      }
+    }
+    >.form-actions {
+      text-align:left;
+    }
+  }
+
+  //user-form
+  .user-form {
+    text-align: right;
+    .field--name-user-picture {
+      .form-managed-file {
+        input[value="Remove"],input#edit-user-picture-0-remove-button {
+          left: auto;
+          right: rem(90px);
+        }
+      }
+    }
+  }
+
+
+  .block-address {
+    .label {
+      text-align: right;
+    }
+  } // blog page
+  .view-blog.view-blog-list .views-field-group {
+    text-align: right;
+  }
+  article.node--type-blog .body-page-blog {
+    text-align: right;
+  }
+  article.node--type-blog .node__cemment {
+    text-align: right;
+  }
+  .button:first-child,
+  .image-button:first-child {
+    margin-left: rem(10px);
+    margin-right: 0;
+  } // recruiters page
+  .view-client-feedback {
+    .owl-carousel {
+      direction: ltr;
+    }
+    @media (min-width:992px) {
+      .views-field.views-field-user-picture {
+        order: 1;
+        padding-right: 0;
+        padding-left: rem(20px);
+      }
+    }
+    .views-field-nothing {
+      text-align: right;
+      @media (max-width: 991px) {
+        text-align: center;
+      }
+    }
+  }
+
+
+
+  div[id*="block-recruiterspagebanner"] {
+    background-image: url(../images/banner2-rtl.png);
+    background-position: right;
+    @media (max-width: 575px) {
+      background-color: #09526d;
+      background-image: none;
+      min-height: auto;
+    }
+  }
+  .block-banner-recruiters {
+    padding-right: rem(430px);
+    padding-left: 0;
+    text-align: right;
+    h3 {
+      @media (max-width: $tablet-ht - 1) {
+        text-align: right;
+      }
+    }
+    @media (max-width: $tablet-vt - 1) {
+      padding-right: 60%;
+      padding-bottom: 8%;
+    }
+    @media (max-width: 575px) {
+      padding-right: rem(50px);
+    }
+  }
+  .box-services ul {
+    text-align: right;
+    padding-right: rem(20px);
+    padding-left: 0;
+  }
+  .box-services li {
+    margin-bottom: rem(20px);
+    padding-right: rem(45px);
+    padding-left: 0;
+    &:before {
+      margin-right: rem(-45px);
+      margin-left: rem(30px);
+    }
+  } // job page
+  .form--inline ul li .form-item {
+    float: none;
+  }
+  input[type=checkbox]+label:before {
+    margin-left: rem(15px);
+    margin-right: 0;
+  }
+  .path-job .sidebar-first .region-sidebar-first:after {
+    left: 0;
+    right: auto;
+  }
+  form[id*="views-exposed-form-job-page-job"],
+  form[id*="views-exposed-form-recruiter-page"] {
+    padding-left: rem(15px);
+    padding-right: 0;
+  }
+  .region-sidebar-first {
+    form[id*="views-exposed-form-job-page-job"] {
+      .form-item-sort-by {
+        right: rem(380px);
+        @media (max-width: 1199px) {
+          right: rem(320px);
+        }
+        @media (max-width: 991px) {
+          right: rem(240px);
+        }
+      }
+    }
+    form[id*="views-exposed-form-recruiter-page"] {
+      .form-item-sort-by {
+        right: rem(380px);
+        @media (max-width: 1199px) {
+          right: rem(320px);
+        }
+        @media (max-width: 991px) {
+          right: rem(240px);
+        }
+      }
+    }
+  }
+  .view-job .view-header {
+    text-align: left;
+  } // top-headhunt
+  .top-headhunt {
+    .sidebar-first {
+      .region-sidebar-first:after {
+        left: 0;
+        right: auto;
+      }
+    }
+  }
+  .view-recruiter .views-field {
+    text-align: right;
+  } // industrial-engineer page
+  .box-profile p.field-salary {
+    padding-right: rem(5px);
+  }
+  .box-profile p.application-email {
+    padding-right: rem(5px);
+  }
+  .page-node-type-job article .content-body {
+    text-align: right;
+  }
+  .page-node-type-job .field__label .tag-label {
+    margin-left: rem(10px);
+    margin-right: 0;
+  } // addjob page
+  form.node-form>.form-actions {
+    text-align: left;
+  }
+  form.node-form>.form-actions input[type=submit] {
+    margin-left: 0;
+    margin-right: rem(10px);
+  }
+  form.node-form {
+    .form-wrapper {
+      &>.form-item>label {
+        text-align: right;
+      }
+      &>fieldset>legend {
+        text-align: right;
+      }
+    }
+    .field--type-text-with-summary label {
+      text-align: right;
+    }
+  }
+  .form-item .description {
+    text-align: right;
+  }
+  div[id*=block-100zsatisfactiongruaranteed] .image-block {
+    float: right;
+    margin-left: rem(15px);
+    max-width: 100px;
+    margin-right: 0;
+    @media (max-width: 991px) and (min-width: 768px) {
+      float: none;
+      margin-left: 0;
+    }
+  }
+  div[id*=block-ijustwanted]{
+    .content-block {
+      border-right: 4px solid #0b536d;
+      border-left: 0;
+      padding-right: rem(20px);
+      padding-left: 0;
+    }
+    .link-footer .fa-sort-asc{
+      margin-right: rem(-5px);
+      margin-left: rem(10px);
+      transform: rotate(-90deg);
+    }
+  }
+
+
+  // my-resume page
+  .view-my-resume {
+    .views-field {
+      text-align: right;
+    }
+    h2 {
+      text-align: right;
+    }
+    .view-header {
+      text-align: right;
+    }
+  }
+  .view-job-preferences .views-field:not(:last-child) {
+    padding-left: rem(135px);
+    padding-right: 0;
+  }
+  .view-resume-education .views-field:not(:last-child) {
+    padding-left: rem(135px);
+    padding-right: 0;
+  }
+  .btn-bookmark:before {
+    margin-right: 0;
+    margin-left: rem(16px);
+  } // -----
+  form.node-form {
+    .field--name-field-image {
+      .form-item {
+        text-align: right;
+      }
+      .form-managed-file .image-widget-data {
+        input[type=submit] {
+          left: rem(-13px);
+          right: auto;
+        }
+        &:before {
+          left: rem(-12px);
+          right: auto;
+        }
+      }
+    }
+    .field--widget-datetime-default {
+      h4.label {
+        text-align: right;
+      }
+    }
+    input {
+      text-align: right;
+    }
+    &>.form-actions input[type=submit] {
+      text-align: center;
+    }
+  } // add resume page
+  form.node-form.node-resumes-form {
+    .field--name-field-education,
+    .field--name-field-job-preferences {
+      text-align: right;
+    }
+  } // guarantee page
+  .block-gruaranteed {
+    .group-top-image {
+      margin-left: rem(15px);
+      margin-right: 0;
+      text-align: right;
+      @media(max-width: 767px) {
+        text-align: center;
+      }
+    }
+    .group-top-content {
+      text-align: right;
+      @media(max-width: 767px) {
+        text-align: center;
+      }
+    }
+    .group-content-left {
+      padding-left: rem(73px);
+      padding-right: 0;
+    }
+    .group-content-right {
+      text-align: right;
+    }
+  } // pricing page
+  .view-product table.views-table {
+    text-align: right;
+    td:nth-child(2),
+    th:nth-child(2) {
+      padding-right: 0;
+    }
+    td:last-child,
+    th:last-child {
+      @media (min-width: 992px) {
+        padding-left: rem(80px);
+      }
+    }
+  } // cart page
+  .view-commerce-cart-form {
+    .order-total-line {
+      text-align: left;
+    }
+    .form-actions {
+      text-align: right;
+    }
+    table.views-table {
+      td.views-field-total-price__number,
+      th.views-field-total-price__number {
+        text-align: left;
+      }
+      th,
+      td {
+        text-align: right;
+      }
+      .views-field-remove-button {
+        text-align: center;
+      }
+    }
+  } // checkout page
+  .layout-region-checkout-main {
+    text-align: right;
+  }
+  form.commerce-checkout-flow {
+    .layout-region-checkout-secondary {
+      h3 {
+        line-height: 1.42857143;
+        text-align: right;
+      }
+      .order-total-line {
+        text-align: left;
+      }
+      .order-total-line-value {
+        text-align: left;
+      }
+      .form-item label {
+        text-align: right;
+      }
+      .view-content {
+        text-align: right;
+      }
+      .checkout-pane {
+        text-align: right;
+      }
+    }
+    .layout-region-checkout-footer {
+      text-align: right;
+      input.form-submit {
+        margin-right: 0;
+        margin-left: rem(10px);
+        margin-bottom: 15px;
+      }
+    }
+  }
+  article.js-comment .content-comment{
+    text-align: right;
+  }
+
+  //form comment
+  form.comment-form{
+    label{
+      text-align: right;
+    }
+    input[type="submit"]{
+      margin-left: 0;
+    }
+  }
+
+  //user-pass
+  form.user-pass{
+    text-align: right;
+  }
+
+  //comment
+  .node__cemment {
+    .indented {
+      padding-left:0;
+      padding-right: rem(140px);
+      @media (max-width: 1199px) {
+        padding-right:rem(90px);
+      }
+      @media (max-width: 767px) {
+        padding-right:10%;
+      }
+    }
+  }
+
+}

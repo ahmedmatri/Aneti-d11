@@ -1,0 +1,14 @@
+uuid: ef692c3d-eecf-4e9c-bc9a-66a1e3b406cf
+langcode: fr
+status: true
+dependencies: {  }
+id: traduction
+label: Traduction
+weight: 9
+is_admin: null
+permissions:
+  - 'translate admin strings'
+  - 'translate content'
+  - 'translate interface'
+  - 'translate user-defined strings'
+  - 'view files'

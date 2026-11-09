@@ -1,0 +1,11 @@
+id: subscribe_user_to_nl
+label: 'Subscribe user to nl'
+status: true
+langcode: en
+type: user
+plugin: subscribe_user_to_nl
+dependencies:
+  module:
+    - user
+    - aneti_enhance
+

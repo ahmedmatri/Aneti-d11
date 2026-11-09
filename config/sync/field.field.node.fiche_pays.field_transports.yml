@@ -1,0 +1,21 @@
+uuid: 8f66ee79-4873-4509-9997-eada6ded7faf
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_transports
+    - node.type.fiche_pays
+  module:
+    - text
+id: node.fiche_pays.field_transports
+field_name: field_transports
+entity_type: node
+bundle: fiche_pays
+label: Transports
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

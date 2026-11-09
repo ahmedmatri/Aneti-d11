@@ -1,0 +1,91 @@
+uuid: 261dd8df-fa6f-4b57-9063-efdccca49b10
+langcode: fr
+status: true
+dependencies: {  }
+id: add_entreprise_to_offer
+label: 'add entreprise to offer'
+events:
+  -
+    event_name: 'rules_entity_insert:node'
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: 4c107f1c-19e5-4037-97e6-d782fe770efe
+  conditions:
+    id: rules_and
+    uuid: 26cf8b91-17ea-4a76-bfec-d6961c36bc42
+    conditions:
+      -
+        id: rules_condition
+        uuid: ee2af36b-bdfd-44eb-88ab-0eb7ec63760e
+        context_values:
+          field: field_entreprise_id
+        context_mapping:
+          entity: node
+        context_processors:
+          field:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: rules_entity_has_field
+        negate: false
+      -
+        id: rules_condition
+        uuid: c5b76f9e-7303-4ce1-9e74-058c68ce9c36
+        context_values:
+          roles: entreprise
+        context_mapping:
+          user: '@user.current_user_context:current_user'
+        context_processors:
+          roles:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: custom_rules_user_has_role
+        negate: false
+      -
+        id: rules_condition
+        uuid: 5f9258ca-1486-4de5-bc6b-18ce4c8eac1c
+        context_values:
+          types:
+            - offre
+        context_mapping:
+          node: node
+        context_processors:
+          types:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: rules_node_is_of_type
+        negate: false
+  actions:
+    id: rules_action_set
+    uuid: cedfa3f1-cd85-4e6d-bf34-649851e937e2
+    actions:
+      -
+        id: rules_action
+        uuid: f7773315-2466-4263-87e6-7a119c5d5c44
+        context_values:
+          type: string
+          value: 'node:field_entreprise_id:uid'
+        context_mapping: {  }
+        context_processors:
+          type:
+            rules_tokens: {  }
+          value:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_variable_add
+      -
+        id: rules_action
+        uuid: 9f6b17a5-a7ff-483c-be54-ffe376c23bf8
+        context_values:
+          data: 'node:field_entreprise_id:uid'
+          value: '@user.current_user_context:current_user.uid'
+        context_mapping: {  }
+        context_processors:
+          data:
+            rules_tokens: {  }
+          value:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_data_set

@@ -1,0 +1,25 @@
+uuid: 52f4e129-fe82-4e85-8012-e70c05d19cf0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_q9_label
+    - field_collection.field_collection.field_checklist_avant_depart
+  module:
+    - markup
+id: field_collection_item.field_checklist_avant_depart.field_q9_label
+field_name: field_q9_label
+entity_type: field_collection_item
+bundle: field_checklist_avant_depart
+label: Q9_label
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>9. Le contrat de travail est-il écrit&nbsp;(à l’inverse d’avoir été arrangé à l’oral) ?</p>\r\n"
+    format: basic_html
+field_type: markup

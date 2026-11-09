@@ -1,0 +1,48 @@
+uuid: 3b1c8407-39eb-40a1-a37d-0210c78fad00
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.action_ac.field_date_ac
+    - field.field.paragraph.action_ac.field_duree_ac
+    - field.field.paragraph.action_ac.field_informations_fournies
+    - field.field.paragraph.action_ac.field_theme
+    - paragraphs.paragraphs_type.action_ac
+  module:
+    - datetime
+    - text
+id: paragraph.action_ac.default
+targetEntityType: paragraph
+bundle: action_ac
+mode: default
+content:
+  field_date_ac:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_duree_ac:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_informations_fournies:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_theme:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

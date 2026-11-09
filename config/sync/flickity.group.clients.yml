@@ -1,0 +1,32 @@
+uuid: f7406420-2e63-4a92-af12-00c817955158
+langcode: fr
+status: true
+dependencies: {  }
+id: clients
+label: clients
+settings:
+  images_loaded: true
+  cell_selector: .gallery-cell
+  initial_index: 1
+  accessibility: false
+  set_gallery_size: true
+  resize: true
+  cell_align: center
+  contain: true
+  percent_position: true
+  right_to_left: true
+  draggable: true
+  free_scroll: false
+  wrap_around: true
+  group_cells: 1
+  adaptive_height: false
+  lazy_load: 0
+  auto_play: 0
+  watch_css: false
+  as_nav_for: ''
+  drag_threshold: 3
+  selected_attraction: 0.025
+  friction: 0.28
+  free_scroll_friction: 0.075
+  prev_next_buttons: true
+  page_dots: false

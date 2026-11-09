@@ -1,0 +1,18 @@
+uuid: a8c15934-b69b-4acb-a322-7c27398ef776
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.action_client
+id: node.action_client.metatag
+field_name: metatag
+entity_type: node
+bundle: action_client
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

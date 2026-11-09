@@ -1,0 +1,30 @@
+uuid: 26b72b69-358b-4ed8-b3ca-6a287965fc62
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_niveau_ecrit_parle
+field_name: field_niveau_ecrit_parle
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: Moyen
+    -
+      value: '1'
+      label: Bon
+    -
+      value: '2'
+      label: Excellent
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

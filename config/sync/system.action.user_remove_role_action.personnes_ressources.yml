@@ -1,0 +1,14 @@
+uuid: 5f85e373-413d-4258-b0ad-c287719d1e4e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.personnes_ressources
+  module:
+    - user
+id: user_remove_role_action.personnes_ressources
+label: 'Enlever le rôle Personnes-Ressources des utilisateurs sélectionnés'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: personnes_ressources

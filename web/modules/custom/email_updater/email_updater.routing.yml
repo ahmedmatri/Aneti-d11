@@ -1,0 +1,7 @@
+email_updater.change_email_form:
+  path: '/admin/config/people/change-email'
+  defaults:
+    _form: '\Drupal\email_updater\Form\ChangeEmailForm'
+    _title: 'Change User Email'
+  requirements:
+    _role: 'administrator+referent'

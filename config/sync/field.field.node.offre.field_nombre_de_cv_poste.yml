@@ -1,0 +1,23 @@
+uuid: e5d22bd8-6246-452a-a5e8-0c809506d374
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nombre_de_cv_poste
+    - node.type.offre
+id: node.offre.field_nombre_de_cv_poste
+field_name: field_nombre_de_cv_poste
+entity_type: node
+bundle: offre
+label: 'Nombre de CV/Poste'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

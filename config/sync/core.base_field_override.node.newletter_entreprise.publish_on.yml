@@ -1,0 +1,18 @@
+uuid: 0d395522-d4f3-42bc-b5c1-797c367799e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.newletter_entreprise
+id: node.newletter_entreprise.publish_on
+field_name: publish_on
+entity_type: node
+bundle: newletter_entreprise
+label: 'Publish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

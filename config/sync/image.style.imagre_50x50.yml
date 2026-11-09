@@ -1,0 +1,15 @@
+uuid: 18b1089c-cc2d-4072-9676-b4e7f3d4bc13
+langcode: fr
+status: true
+dependencies: {  }
+name: imagre_50x50
+label: 'imagre 50x50'
+effects:
+  ec22ff01-177d-4389-9ac0-04dad4ea5fd6:
+    uuid: ec22ff01-177d-4389-9ac0-04dad4ea5fd6
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 50
+      height: 50
+      anchor: center-center

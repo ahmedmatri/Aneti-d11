@@ -1,0 +1,21 @@
+uuid: 766a9373-ed29-47ca-bb7c-91f3a9ef7928
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_horaire_de_travail
+    - node.type.offre
+  module:
+    - datetime_range
+id: node.offre.field_horaire_de_travail
+field_name: field_horaire_de_travail
+entity_type: node
+bundle: offre
+label: 'Horaire de travail'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

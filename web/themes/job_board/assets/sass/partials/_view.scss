@@ -1,0 +1,717 @@
+.views-view-grid {
+	.views-row {
+		margin-left: rem(-15px);
+		margin-right: rem(-15px);
+		float: none;
+		width: auto;
+	}
+	.views-col {
+		padding-left: rem(15px);
+		padding-right: rem(15px);
+	}
+}
+
+.field {
+	margin-bottom: rem(10px);
+	.field__label {
+		margin-right: rem(10px);
+	}
+}
+
+.views-row {
+	margin-bottom: rem(10px);
+}
+
+.views-field {
+	margin-bottom: rem(5px);
+}
+
+.views-field-title {
+	font-weight: bold;
+	color: $link-color;
+	a {
+		color: $link-color;
+		&:hover,
+		&:focus {
+			color: rgb(26, 54, 65);
+		}
+	}
+}
+
+//view-empty
+.view-empty{
+	text-align: center;
+	font-size: rem(16px);
+}
+
+//
+.view-blog {
+	.views-row {
+		@include flex-row;
+		margin-left: rem(-15px);
+		margin-right: rem(-15px);
+		@media (max-width: 991px) and (min-width:768px) {
+			margin-left: rem(-5px);
+			margin-right: rem(-5px);
+		}
+		>* {
+			padding-left: rem(15px);
+			padding-right: rem(15px);
+			@media (max-width: 991px) and (min-width:768px) {
+				padding-left: rem(5px);
+				padding-right: rem(5px);
+			}
+		}
+	}
+	.views-field-changed {
+		color: $white-color;
+		text-align: center;
+		font-weight: 700;
+		font-size: rem(16px);
+		@include flex-width-col-xs(20%);
+		@media(max-width: 767px) {
+			@include flex-width-col-xs(112px);
+		}
+		.field-content {
+			padding: rem(20px) rem(15px);
+			background: $primary-color;
+			display: inline-block;
+			width: 100%;
+			@media (max-width: 1199px) {
+				padding: rem(8px) rem(10px);
+			}
+			@media (max-width: $tablet-ht - 1) {
+				padding: rem(15px) rem(5px);
+			}
+		}
+	}
+	.views-field-field-image {
+		@include flex-width-col-xs(100%);
+	}
+	.views-field-changed-date {
+		font-size: rem(60px);
+		line-height: 1;
+		@media (max-width: $tablet-ht - 1) {
+			font-size: rem(30px);
+		}
+	}
+	.views-field-created {
+		color: $sub-color;
+		font-size: rem(13px);
+		.fa {
+			margin-right: rem(2px);
+		}
+	}
+	.views-field-link a {
+		background-color: $bg-tag-color;
+		padding: rem(10px) rem(20px);
+		border-radius: rem(20px);
+		display: inline-block;
+		&:hover,
+		&:focus {
+			background-color: $primary-color;
+			color: $white-color;
+		}
+	}
+	.comment-count {
+		color: $body-color;
+	}
+	&.view-blog-sidebar {
+		.views-row {
+			flex-wrap: nowrap;
+			margin-left: rem(-10px);
+			margin-right: rem(-10px);
+			>* {
+				padding-left: rem(10px);
+				padding-right: rem(10px);
+			}
+		}
+		.views-field-field-image {
+			@include flex-width-col-xs(85px);
+		}
+		.views-field-title {
+			font-weight: normal;
+			margin-top: rem(-2px);
+			a {
+				color: $body-color;
+				&:hover,
+				&:focus {
+					color: $primary-color;
+				}
+			}
+		}
+	}
+	&.view-blog-list {
+		.views-row{
+			margin-bottom: rem(20px);
+		}
+		.views-field-group {
+			@include flex-width-col-xs(80%);
+			@media(max-width: 767px) {
+				@include flex-width-col-xs(100%);
+			}
+		}
+		.views-field {
+			margin-bottom: rem(20px);
+			@media (max-width: 767px) {
+				margin-bottom: rem(15px);
+			}
+		}
+		.views-field-field-image {
+			margin-bottom: rem(33px);
+			@media (max-width: 767px) {
+				margin-bottom: rem(20px);
+			}
+		}
+		.views-field-title {
+			font-size: rem(24px);
+			@media (max-width: 991px) {
+				font-size: rem(20px);
+			}
+		}
+		.views-field-body {
+			margin-bottom: rem(30px);
+			@media (max-width: 767px) {
+				margin-bottom: rem(20px);
+			}
+		}
+		.views-field-link {
+			margin-bottom: rem(10px);
+		}
+	}
+}
+
+.view-taxonomy-term.view-blog-list {
+	@extend .view-blog;
+} // 
+.view-tags {
+	margin-left: rem(-3px);
+	margin-right: rem(-3px);
+	.view-content {
+		@include flex-row;
+		margin-top: rem(10px);
+	}
+	a {
+		padding: rem(8px) rem(10px);
+		background: $bg-tag-color;
+		display: inline-block;
+		&:hover,
+		&focus {
+			background-color: $primary-color;
+			color: $white-color;
+		}
+	}
+	.views-row {
+		padding-left: rem(3px);
+		padding-right: rem(3px);
+		margin-bottom: 0;
+	}
+} // view-job
+.view-job {
+	.views-row {
+		display: flex;
+		border-radius: rem(5px);
+		align-items: center;
+		padding: rem(20px) rem(15px);
+		&:nth-child(2n+1) {
+			background: $row-color;
+		}
+		.sidebar & {
+			margin-bottom: 1px;
+			&:nth-child(2n) {
+				background: $row-color;
+			}
+		}
+		>.views-field {
+			padding: rem(10px) rem(5px) rem(5px) rem(5px);
+			@include flex(1 1 auto);
+		}
+		>.views-field-user-picture {
+			@include flex-width-col-xs(80px);
+		}
+	}
+	.views-field-title {
+		color: $link-color;
+		font-weight: 500;
+	}
+	.views-field-nothing {
+		.views-field {
+			margin-bottom: 0;
+		}
+	}
+	.views-field-nothing-1 {
+		text-align: center;
+		@include flex-width-col-xs(60px);
+	}
+	.views-field-edit-node {
+		text-align: center;
+		@include flex-width-col-xs(60px);
+		a[href*="edit"] {
+			background: $red-color-2;
+			color: $white-color;
+			padding: rem(5px) rem(12px);
+			text-transform: uppercase;
+			border-radius: rem(5px);
+			font-size: rem(12px);
+			font-weight: bold;
+			&:hover,
+			&:focus {
+				background-color: lighten($red-color-2, 10%);
+			}
+		}
+	}
+	.views-field-changed {
+		color: $sub-color;
+		font-size: rem(13px);
+	}
+	.view-header {
+		text-align: right;
+		color: $primary-color;
+		margin-bottom: rem(20px);
+		font-weight: bold;
+	}
+	a[href$="new"] {
+		background: $red-color-2;
+		color: $white-color;
+		padding: rem(5px) rem(12px);
+		text-transform: uppercase;
+		border-radius: rem(5px);
+		font-size: rem(12px);
+		font-weight: bold;
+		&:hover,
+		&:focus {
+			background-color: lighten($red-color-2, 10%);
+		}
+	}
+	span.new {
+		background: $red-color-2;
+		color: $white-color;
+		padding: rem(5px) rem(12px);
+		text-transform: uppercase;
+		border-radius: rem(5px);
+		font-size: rem(12px);
+		font-weight: bold;
+	}
+	a[href$="/node/add/job"] {
+		background-color: $button-color;
+		padding: rem(13px) rem(30px) rem(9px);
+		color: $white-color;
+		border-radius: rem(4px);
+		border-bottom: 2px solid $button-color-2;
+		font-weight: bold;
+		&:hover,
+		&:focus {
+			background-color: lighten($button-color, 10%);
+			border-bottom-color: lighten($button-color-2, 10%);
+		}
+		&.is-active {
+			color: $white-color;
+		}
+	}
+} // view-recruiter
+.view-recruiter {
+	&.job-board-headhunters {
+		margin-top: rem(-38px);
+		.views-field-user-picture {
+			@include flex-width-col-xs(110px);
+		}
+		.views-row {
+			margin-bottom: rem(5px);
+			margin-left: rem(-5px);
+			margin-right: rem(-5px);
+			>* {
+				padding-left: rem(5px);
+				padding-right: rem(5px);
+			}
+		}
+	}
+	&.view-list-employers {
+		text-align: center;
+		.view-content{
+			margin-left: rem(-15px);
+			margin-right: rem(-15px);
+			@media (max-width:575px){
+				margin-left: rem(-10px);
+				margin-right: rem(-10px);
+			}
+		}
+		.views-row {
+			margin-left: 0;
+			margin-right: 0;
+			margin-bottom: rem(30px);
+			height: rem(223px);
+			padding-left: rem(15px);
+			padding-right: rem(15px);
+			@media (min-width: 992px) and (max-width: 1199px){
+				height: rem(183px);
+			}
+			@media (max-width:991px){
+				height: rem(210px);
+			}
+			@media (max-width:767px){
+				height: rem(150px);
+			}
+			@media (max-width:575px){
+				height: auto;
+				padding-left: rem(10px);
+				padding-right: rem(10px);
+			}
+			@media (max-width: 480px) {
+				margin-bottom: rem(20px);
+			}
+			@media (max-width: 360px) {
+				@include flex-width-col-xs(50%);
+			}
+			>* {
+				padding: rem(15px);
+				@media (max-width: 480px) {
+					padding: rem(10px) rem(8px);
+				}
+			}
+		}
+		.views-field-user-picture {
+			margin-bottom: rem(25px);
+			margin-left: auto;
+			margin-right: auto;
+			max-width: rem(80px);
+			@media (max-width:767px){
+				margin-bottom: rem(15px);
+			}
+			@media (max-width: 480px) {
+				max-width: rem(55px);
+			}
+		}
+		.views-field-nothing {
+			border-radius: rem(10px);
+			border: 1px solid $border-color-6;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			@include transition(all 0.5s ease);
+			margin: 0;
+			&:hover,
+			&:focus {
+				box-shadow: 0 0 5px 3px $border-color-7;
+				.views-field-field-company-name {
+					display: block;
+				}
+			}
+		}
+		.views-field-field-company-name {
+			text-transform: uppercase;
+			font-weight: bold;
+			@media (max-width: 480px) {
+				font-size: rem(12px);
+			}
+		}
+	}
+	&.view-logo {
+		padding: rem(30px) rem(35px);
+		border: 1px solid $border-color-5;
+		border-radius: rem(4px);
+		@media (max-width:1199px) {
+			padding: rem(15px) rem(20px);
+		}
+		@media (min-width: 768px) and (max-width: 991px){
+			padding: rem(13px);
+		}
+		.view-content {
+			@include flex-row;
+			align-items: center;
+			margin-left: rem(-13px);
+			margin-right: rem(-13px);
+			@media (max-width:1199px) {
+				margin-left: rem(-7px);
+				margin-right: rem(-7px);
+			}
+			@media (min-width: 768px) and (max-width: 991px){
+				margin-left: rem(-5px);
+				margin-right: rem(-5px);
+			}
+			@media (max-width:767px) {
+				justify-content: center;
+				margin-left: rem(-7px);
+				margin-right: rem(-7px);
+			}
+		}
+		.views-row {
+			padding-left: rem(13px);
+			padding-right: rem(13px);
+			margin-left: 0;
+			margin-right: 0;
+			margin-bottom: rem(20px);
+			@media (max-width:1199px) {
+				padding-left: rem(7px);
+				padding-right: rem(7px);
+			}
+			@media (min-width: 768px) and (max-width: 991px){
+				padding-left: rem(-5px);
+				padding-right: rem(-5px);
+			}
+			@media (max-width:767px) {
+				padding-left: rem(7px);
+				padding-right: rem(7px);
+			}
+			>* {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+		.views-field-user-picture {
+			text-align: center;
+			.field-content {
+				background: none;
+			}
+		}
+		.view-footer {
+			a {
+				&:after {
+					width: rem(12px);
+					height: rem(12px);
+					content: "";
+					display: inline-block;
+					background: url(../images/caret-right.svg) no-repeat;
+					background-size: 98%;
+					margin-left: rem(10px);
+				}
+				&:hover,
+				&:focus {
+					&:after {
+						background-image: url(../images/caret-right-hv.svg);
+					}
+				}
+			}
+		}
+	}
+
+	&.view-logo-slideshow{
+		padding: rem(10px) 0;
+		max-width: rem(230px);
+		@media (max-width: 991px) and (min-width: 768px) {
+			padding-right: rem(20px);
+		}
+		@media (max-width: 767px) {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.views-field-user-picture {
+			text-align: center;
+			.field-content {
+				background: none;
+			}
+		}
+	}
+
+	.path-top-headhunt & {
+		.views-row {
+			margin-bottom: rem(35px);
+		}
+	}
+	.view-content {
+		margin-left: rem(-15px);
+		margin-right: rem(-15px);
+	}
+	.views-row {
+		display: flex;
+		margin-bottom: rem(15px);
+		padding-left: rem(15px);
+		padding-right: rem(15px);
+		@media(min-width: 576px) {
+			margin-left: rem(-15px);
+			margin-right: rem(-15px);
+		}
+		>* {
+			padding-left: rem(15px);
+			padding-right: rem(15px);
+		}
+	}
+	.swiper-slide {
+		@media(max-width: 991px) {
+			flex-flow: wrap;
+		}
+	}
+	.views-field-user-picture {
+		.field-content {
+			background-color: $border-color-2;
+			border-radius: rem(4px);
+			overflow: hidden;
+		}
+	}
+	.views-field {
+		@include flex-width-auto;
+	}
+	.views-field-specialized {
+		line-height: 1.2;
+	}
+	.views-field-name {
+		color: $title-color;
+		font-weight: 500;
+		margin-bottom: rem(3px);
+	}
+	.link-send a {
+		&:after {
+			width: rem(12px);
+			height: rem(12px);
+			content: "";
+			display: inline-block;
+			background: url(../images/caret-right.svg) no-repeat;
+			background-size: 98%;
+			margin-left: rem(10px);
+		}
+		&:hover,
+		&:focus {
+			&:after {
+				background-image: url(../images/caret-right-hv.svg);
+			}
+		}
+	}
+	.views-label {
+		font-weight: bold;
+	}
+} //view-product
+// pricing page
+.view-product {
+	margin-bottom: rem(90px);
+	@media (max-width: 991px) {
+		margin-bottom: rem(50px);
+	}
+	.view-content {
+		overflow-x: auto;
+	}
+	table.views-table {
+		border: none;
+		@media (max-width: $tablet-vt - 1) {
+			width:rem(630px);
+		}
+		td.views-field-title {
+			width: 18.018%;
+		}
+		td.views-field-price__number {
+			width: 13.513%;
+		}
+		td.views-field-field-duration {
+			width: 17.117%;
+		}
+		td.views-field-body {
+			width: 38.738%;
+		}
+		td,
+		th {
+			border: none;
+			padding: rem(20px) rem(10px);
+			&:first-child {
+				padding-left: 0;
+			}
+			&:nth-child(2) {
+				padding-left: 0;
+			}
+			&:last-child {
+				@media (min-width: 992px) {
+					padding-right: rem(80px);
+				}
+			}
+		}
+		th {
+			padding-bottom: rem(15px);
+		}
+		tr {
+			border-bottom: 1px solid #e0e1ed;
+		}
+		p {
+			margin-bottom: 0;
+		}
+		td.views-field-title {
+			font-weight: 700;
+		}
+		.views-field-variations {
+			.form-actions {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+			input[type="submit"] {
+				margin: 0;
+				border-radius: rem(30px);
+				@media (max-width: $mobile-md) {
+					padding: rem(5px);
+				}
+			}
+		}
+	}
+} // cart page
+.view-commerce-cart-form {
+	@media (max-width: $mobile-xs) {
+		overflow-x: auto;
+	}
+	table.views-table {
+		margin-bottom: rem(25px);
+		border: none;
+		td,
+		th {
+			border: none;
+			padding: rem(20px) rem(10px);
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+		th {
+			padding-bottom: rem(15px);
+		}
+		tr {
+			border-bottom: 1px solid #e0e1ed;
+		}
+		p {
+			margin-bottom: 0;
+		}
+		.views-field-edit-quantity {
+			width: rem(150px);
+		}
+		td.views-field-purchased-entity {
+			font-weight: 700;
+		}
+		.views-field-remove-button {
+			text-align: center;
+		}
+		th.views-field-total-price__number,
+		td.views-field-total-price__number {
+			text-align: right;
+			font-weight: 700;
+		}
+		.field--name-product-id {
+			margin-bottom: 0;
+		}
+	}
+	input.delete-order-item {
+		background: url(../images/trash-alt.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		font-size: 0;
+		width: rem(23px);
+		height: rem(30px);
+		padding: rem(5px);
+		border: 0;
+		box-shadow: none;
+		margin: 0;
+		&:hover,
+		&:active,
+		&:focus {
+			background-image: url(../images/trash-alt-hv.png);
+		}
+	}
+	.order-total-line-label:after {
+		content: "\:";
+	}
+	.order-total-line-value {
+		font-size: rem(18px);
+		color: $red-color;
+		width: rem(100px);
+	}
+	.order-total-line {
+		@include sizeRem(padding, 0px, 2, 5px);
+		text-align: right;
+		margin-top: rem(10px);
+	}
+	.order-total-line-label {
+		font-size: 18px;
+	}
+}

@@ -1,0 +1,19 @@
+uuid: 54063772-b655-4fdd-b5bb-881eda754a5f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_telephone_contact
+    - profile.type.entreprise
+id: profile.entreprise.field_telephone_contact
+field_name: field_telephone_contact
+entity_type: profile
+bundle: entreprise
+label: 'Téléphone contact'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

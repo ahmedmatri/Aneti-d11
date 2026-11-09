@@ -1,0 +1,20 @@
+uuid: 1a672132-ef8d-41cc-867c-4bdcdb3d35bf
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_pays_experience
+field_name: field_pays_experience
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

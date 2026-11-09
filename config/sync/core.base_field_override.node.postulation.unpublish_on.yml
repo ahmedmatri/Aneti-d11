@@ -1,0 +1,18 @@
+uuid: f12235a0-46f6-4589-affd-f7b4918bbd3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.postulation
+id: node.postulation.unpublish_on
+field_name: unpublish_on
+entity_type: node
+bundle: postulation
+label: 'Unpublish on'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

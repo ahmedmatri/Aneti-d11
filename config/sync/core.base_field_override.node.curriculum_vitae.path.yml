@@ -1,0 +1,20 @@
+uuid: fcc0c67b-58db-44e2-bacb-06f780a4e357
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.curriculum_vitae
+  module:
+    - path
+id: node.curriculum_vitae.path
+field_name: path
+entity_type: node
+bundle: curriculum_vitae
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

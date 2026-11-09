@@ -1,0 +1,42 @@
+uuid: e44ab337-4c76-4bab-ba7e-3894cc75a74c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_candidat
+    - node.type.curriculum_vitae
+id: node.curriculum_vitae.field_candidat
+field_name: field_candidat
+entity_type: node
+bundle: curriculum_vitae
+label: Candidat
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: role
+      role:
+        candidat: candidat
+        entreprise: '0'
+        super_admin: '0'
+        administrator: '0'
+        referent: '0'
+        conseiller_central: '0'
+        traduction: '0'
+        chef_unite_migration: '0'
+        bureau_a_l_etranger: '0'
+        partenaire: '0'
+        webmaster: '0'
+        pdg: '0'
+        chef_de_bureau: '0'
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

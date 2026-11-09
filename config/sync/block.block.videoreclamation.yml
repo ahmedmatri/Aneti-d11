@@ -1,0 +1,31 @@
+uuid: e4b8f0d3-5bf7-40c1-bb17-621a43831719
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:dabdc4a5-4afe-4fe7-a950-76a8f5695b76'
+  module:
+    - block_content
+    - system
+  theme:
+    - job_board
+id: videoreclamation
+theme: job_board
+region: sidebar_second
+weight: -17
+provider: null
+plugin: 'block_content:dabdc4a5-4afe-4fe7-a950-76a8f5695b76'
+settings:
+  id: 'block_content:dabdc4a5-4afe-4fe7-a950-76a8f5695b76'
+  label: 'Video Reclamation'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /form/reclamation
+    negate: false
+    context_mapping: {  }

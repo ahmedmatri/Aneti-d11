@@ -1,0 +1,23 @@
+uuid: 6422b0c9-b5d1-4519-a838-0e91d8bf1b8f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lien_slider
+    - node.type.slideshow
+  module:
+    - link
+id: node.slideshow.field_lien_slider
+field_name: field_lien_slider
+entity_type: node
+bundle: slideshow
+label: 'Lien Slider'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

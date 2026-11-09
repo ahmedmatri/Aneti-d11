@@ -1,0 +1,4 @@
+conditional:
+  version: VERSION
+  js:
+    js/script.js: {}

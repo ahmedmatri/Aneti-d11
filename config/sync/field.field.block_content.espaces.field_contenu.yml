@@ -1,0 +1,21 @@
+uuid: 796e5310-09ea-4a69-9b18-c52a5a16e4ad
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.espaces
+    - field.storage.block_content.field_contenu
+  module:
+    - text
+id: block_content.espaces.field_contenu
+field_name: field_contenu
+entity_type: block_content
+bundle: espaces
+label: Contenu
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

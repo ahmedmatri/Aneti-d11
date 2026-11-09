@@ -1,0 +1,44 @@
+uuid: 960715f1-2dfd-426d-927e-9d1fb375ef82
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_referant
+    - node.type.offre
+id: node.offre.field_referant
+field_name: field_referant
+entity_type: node
+bundle: offre
+label: Referant
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: role
+      role:
+        super_admin: super_admin
+        administrator: administrator
+        referent: referent
+        conseiller_central: conseiller_central
+        webmaster: webmaster
+        candidat: '0'
+        entreprise: '0'
+        traduction: '0'
+        chef_unite_migration: '0'
+        bureau_a_l_etranger: '0'
+        partenaire: '0'
+        pdg: '0'
+        chef_de_bureau: '0'
+        mobile_application: '0'
+        personnes_ressources: '0'
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

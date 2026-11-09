@@ -1,0 +1,19 @@
+uuid: fff9a4e2-5350-4244-bcd9-e7bc966e86a3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_ville_ar
+    - profile.type.entreprise
+id: profile.entreprise.field_ville_ar
+field_name: field_ville_ar
+entity_type: profile
+bundle: entreprise
+label: المدينة
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

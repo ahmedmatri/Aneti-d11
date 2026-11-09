@@ -1,0 +1,8 @@
+uuid: 55045a83-959c-4b94-a91c-f6457df0aae5
+langcode: fr
+status: true
+dependencies: {  }
+name: 'metier par domaine'
+vid: metier_par_domaine
+description: 'metier par domaine'
+weight: 0

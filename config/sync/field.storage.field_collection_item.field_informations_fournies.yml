@@ -1,0 +1,23 @@
+uuid: 067cdb48-7c19-4006-9d67-29406ab17052
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_collection
+    - field_permissions
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: field_collection_item.field_informations_fournies
+field_name: field_informations_fournies
+entity_type: field_collection_item
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

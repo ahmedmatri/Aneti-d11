@@ -1,0 +1,25 @@
+uuid: ee8fb58e-011c-4a6c-a47b-2fd39b755843
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_q21_label
+    - field_collection.field_collection.field_checklist_apres_depart
+  module:
+    - markup
+id: field_collection_item.field_checklist_apres_depart.field_q21_label
+field_name: field_q21_label
+entity_type: field_collection_item
+bundle: field_checklist_apres_depart
+label: Q21_label
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>21. La travailleuse/Le travailleur a-t-elle/il eu la possibilité de téléphoner à sa famille pour l’informer de son arrivée&nbsp;?</p>\r\n"
+    format: basic_html
+field_type: markup

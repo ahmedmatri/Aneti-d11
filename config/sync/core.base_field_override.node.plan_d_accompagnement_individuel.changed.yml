@@ -1,0 +1,18 @@
+uuid: 16667360-003f-4020-a30d-3cf036f52502
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.plan_d_accompagnement_individuel
+id: node.plan_d_accompagnement_individuel.changed
+field_name: changed
+entity_type: node
+bundle: plan_d_accompagnement_individuel
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,23 @@
+uuid: 32bce46b-fb50-49a3-86ef-7e3c8132cf38
+langcode: fr
+status: true
+dependencies:
+  module:
+    - block_field
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_block
+field_name: field_block
+entity_type: node
+type: block_field
+settings: {  }
+module: block_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

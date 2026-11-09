@@ -1,0 +1,21 @@
+uuid: 01a7ad4e-6efd-4434-8614-e9eabfe7452f
+langcode: fr
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - job_board
+id: formulairederecherche
+theme: job_board
+region: header
+weight: -2
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Formulaire de recherche'
+  provider: search
+  label_display: '0'
+  page_id: ''
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: 6d0bdd5e-8c6d-47b7-b270-5cc3924cf10b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_q13_label
+    - field_collection.field_collection.field_checklist_avant_depart
+  module:
+    - markup
+id: field_collection_item.field_checklist_avant_depart.field_q13_label
+field_name: field_q13_label
+entity_type: field_collection_item
+bundle: field_checklist_avant_depart
+label: Q13_label
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>13. La travailleuse/Le travailleur est-elle/il informé(e) du déroulement de son itinéraire de voyage&nbsp;et des bagages qu’elle/il pourra emporter&nbsp;?</p>\r\n"
+    format: basic_html
+field_type: markup

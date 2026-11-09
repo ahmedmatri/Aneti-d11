@@ -1,0 +1,5 @@
+name: 'ANETI Migrate'
+type: module
+description: 'ANETI custom migration'
+core: 8.x
+package: 'Custom'

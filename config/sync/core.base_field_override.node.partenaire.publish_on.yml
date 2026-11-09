@@ -1,0 +1,18 @@
+uuid: 6fae4066-7b97-47e2-b7b4-1675fad6b7e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.partenaire
+id: node.partenaire.publish_on
+field_name: publish_on
+entity_type: node
+bundle: partenaire
+label: 'Publish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

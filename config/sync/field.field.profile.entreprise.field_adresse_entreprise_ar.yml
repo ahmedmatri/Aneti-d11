@@ -1,0 +1,19 @@
+uuid: f4ab26ec-1d47-4b2f-bb9b-ab982b91e4ac
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_adresse_entreprise_ar
+    - profile.type.entreprise
+id: profile.entreprise.field_adresse_entreprise_ar
+field_name: field_adresse_entreprise_ar
+entity_type: profile
+bundle: entreprise
+label: 'عنوان مقر المؤسسة'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

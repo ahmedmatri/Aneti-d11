@@ -1,0 +1,21 @@
+uuid: ba0f035a-cf1c-4688-b585-34e5bef09baa
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_requirement_langue_3
+    - node.type.offre
+  module:
+    - options
+id: node.offre.field_requirement_langue_3
+field_name: field_requirement_langue_3
+entity_type: node
+bundle: offre
+label: 'Requirement Langue 3'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

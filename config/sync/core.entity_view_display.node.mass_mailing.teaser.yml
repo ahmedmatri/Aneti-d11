@@ -1,0 +1,33 @@
+uuid: 940db64a-1d2a-4042-9a32-e5efd9a7fdab
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.mass_mailing.body
+    - field.field.node.mass_mailing.field_to
+    - node.type.mass_mailing
+  module:
+    - text
+    - user
+id: node.mass_mailing.teaser
+targetEntityType: node
+bundle: mass_mailing
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_to: true
+  langcode: true

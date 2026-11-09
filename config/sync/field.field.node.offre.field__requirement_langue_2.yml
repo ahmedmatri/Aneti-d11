@@ -1,0 +1,21 @@
+uuid: 2be51960-03be-4986-85ca-0961c86a2abc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field__requirement_langue_2
+    - node.type.offre
+  module:
+    - options
+id: node.offre.field__requirement_langue_2
+field_name: field__requirement_langue_2
+entity_type: node
+bundle: offre
+label: 'Requirement Langue 2'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

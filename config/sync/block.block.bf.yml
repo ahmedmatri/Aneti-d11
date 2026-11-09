@@ -1,0 +1,25 @@
+uuid: f6bc3aab-e758-4c19-b8a1-7e89130fd9cc
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0dafe957-573f-4299-9ceb-b1f43225aa04'
+  module:
+    - block_content
+  theme:
+    - job_board
+id: bf
+theme: job_board
+region: footer
+weight: -11
+provider: null
+plugin: 'block_content:0dafe957-573f-4299-9ceb-b1f43225aa04'
+settings:
+  id: 'block_content:0dafe957-573f-4299-9ceb-b1f43225aa04'
+  label: BF
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

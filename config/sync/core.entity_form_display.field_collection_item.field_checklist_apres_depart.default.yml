@@ -1,0 +1,302 @@
+uuid: 27196a7e-7276-4901-b10c-c1a19fd9afb4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_checklist_apres_depart.field_q19_label
+    - field.field.field_collection_item.field_checklist_apres_depart.field_q20_label
+    - field.field.field_collection_item.field_checklist_apres_depart.field_q21_label
+    - field.field.field_collection_item.field_checklist_apres_depart.field_q22_label
+    - field.field.field_collection_item.field_checklist_apres_depart.field_q23_label
+    - field.field.field_collection_item.field_checklist_apres_depart.field_q24_label
+    - field.field.field_collection_item.field_checklist_apres_depart.field_q25_label
+    - field.field.field_collection_item.field_checklist_apres_depart.field_q26_label
+    - field.field.field_collection_item.field_checklist_apres_depart.field_q27_label
+    - field.field.field_collection_item.field_checklist_apres_depart.field_q28_label
+    - field.field.field_collection_item.field_checklist_apres_depart.field_q29_label
+    - field.field.field_collection_item.field_checklist_apres_depart.field_q30_label
+    - field.field.field_collection_item.field_checklist_apres_depart.field_q30a_label
+    - field.field.field_collection_item.field_checklist_apres_depart.field_q30b_label
+    - field.field.field_collection_item.field_checklist_apres_depart.field_q30c_label
+    - field.field.field_collection_item.field_checklist_apres_depart.field_q30d_label
+    - field.field.field_collection_item.field_checklist_apres_depart.field_q30e_label
+    - field.field.field_collection_item.field_checklist_apres_depart.field_q31_label
+    - field.field.field_collection_item.field_checklist_apres_depart.field_q32_label
+    - field.field.field_collection_item.field_checklist_apres_depart.field_q33_label
+    - field.field.field_collection_item.field_checklist_apres_depart.field_q34_label
+    - field.field.field_collection_item.field_checklist_apres_depart.field_r19
+    - field.field.field_collection_item.field_checklist_apres_depart.field_r20
+    - field.field.field_collection_item.field_checklist_apres_depart.field_r21
+    - field.field.field_collection_item.field_checklist_apres_depart.field_r22
+    - field.field.field_collection_item.field_checklist_apres_depart.field_r23
+    - field.field.field_collection_item.field_checklist_apres_depart.field_r24
+    - field.field.field_collection_item.field_checklist_apres_depart.field_r25
+    - field.field.field_collection_item.field_checklist_apres_depart.field_r26
+    - field.field.field_collection_item.field_checklist_apres_depart.field_r27
+    - field.field.field_collection_item.field_checklist_apres_depart.field_r28
+    - field.field.field_collection_item.field_checklist_apres_depart.field_r29
+    - field.field.field_collection_item.field_checklist_apres_depart.field_r30
+    - field.field.field_collection_item.field_checklist_apres_depart.field_r30a
+    - field.field.field_collection_item.field_checklist_apres_depart.field_r30c
+    - field.field.field_collection_item.field_checklist_apres_depart.field_r30d
+    - field.field.field_collection_item.field_checklist_apres_depart.field_r30e
+    - field.field.field_collection_item.field_checklist_apres_depart.field_r31
+    - field.field.field_collection_item.field_checklist_apres_depart.field_r32
+    - field.field.field_collection_item.field_checklist_apres_depart.field_r33
+    - field.field.field_collection_item.field_checklist_apres_depart.field_r34
+    - field_collection.field_collection.field_checklist_apres_depart
+  module:
+    - markup
+id: field_collection_item.field_checklist_apres_depart.default
+targetEntityType: field_collection_item
+bundle: field_checklist_apres_depart
+mode: default
+content:
+  field_q19_label:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q20_label:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q21_label:
+    weight: 17
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q22_label:
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q23_label:
+    weight: 23
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q24_label:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q25_label:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q26_label:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q27_label:
+    weight: 35
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q28_label:
+    weight: 38
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q29_label:
+    weight: 41
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q30_label:
+    weight: 44
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q30a_label:
+    weight: 45
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q30b_label:
+    weight: 47
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q30c_label:
+    weight: 49
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q30d_label:
+    weight: 51
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q30e_label:
+    weight: 53
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q31_label:
+    weight: 56
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q32_label:
+    weight: 59
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q33_label:
+    weight: 62
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_q34_label:
+    weight: 65
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_r19:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_r20:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_r21:
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_r22:
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_r23:
+    weight: 24
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_r24:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_r25:
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_r26:
+    weight: 33
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_r27:
+    weight: 36
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_r28:
+    weight: 39
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_r29:
+    weight: 42
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_r30:
+    weight: 48
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_r30a:
+    weight: 46
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_r30c:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_r30d:
+    weight: 52
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_r30e:
+    weight: 54
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_r31:
+    weight: 57
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_r32:
+    weight: 60
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_r33:
+    weight: 63
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_r34:
+    weight: 66
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+hidden:
+  moderation_state: true

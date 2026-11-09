@@ -1,0 +1,14 @@
+uuid: 5a16fec1-2fda-4971-861e-2d92995ddc4e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.bureau_a_l_etranger
+  module:
+    - user
+id: user_add_role_action.bureau_a_l_etranger
+label: 'Ajouter le rôle Bureau à l&#039;Etranger aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: bureau_a_l_etranger

@@ -1,0 +1,18 @@
+uuid: f1e1e280-b19f-489b-89f1-7b38e6c784a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.complement_postulation
+id: node.complement_postulation.changed
+field_name: changed
+entity_type: node
+bundle: complement_postulation
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

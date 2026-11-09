@@ -1,0 +1,19 @@
+uuid: 9df235e8-0ada-466e-807b-11315ed7240f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_ville
+    - profile.type.entreprise
+id: profile.entreprise.field_ville
+field_name: field_ville
+entity_type: profile
+bundle: entreprise
+label: Ville
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

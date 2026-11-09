@@ -1,0 +1,20 @@
+uuid: 420841aa-ad9e-407f-a5b5-9898335e2447
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.agence_national
+  module:
+    - path
+id: node.agence_national.path
+field_name: path
+entity_type: node
+bundle: agence_national
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,8 @@
+uuid: 9756f03a-b6fa-41d4-9b6b-ded07390ae5a
+langcode: fr
+status: true
+dependencies: {  }
+name: Forums
+vid: forums
+description: 'Vocabulaire pour la navigation dans un forum'
+weight: -10

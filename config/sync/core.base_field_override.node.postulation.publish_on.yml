@@ -1,0 +1,18 @@
+uuid: f949d3bb-b347-4598-a7f7-53b65de27693
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.postulation
+id: node.postulation.publish_on
+field_name: publish_on
+entity_type: node
+bundle: postulation
+label: 'Publish on'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

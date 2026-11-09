@@ -1,0 +1,20 @@
+uuid: 920dae6c-6721-4976-92b0-ef14c3201496
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.faq
+  module:
+    - path
+id: node.faq.path
+field_name: path
+entity_type: node
+bundle: faq
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

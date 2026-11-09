@@ -1,0 +1,18 @@
+uuid: 49146261-496a-47d3-9d91-fe110f2089bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.complement_postulation
+id: node.complement_postulation.unpublish_on
+field_name: unpublish_on
+entity_type: node
+bundle: complement_postulation
+label: 'Unpublish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

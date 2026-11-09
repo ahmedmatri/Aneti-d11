@@ -1,0 +1,22 @@
+uuid: ab0f602e-b549-442a-bc04-12ef286ddf36
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.profile.partenaire.field_type_de_partenariat
+    - profile.type.partenaire
+  module:
+    - options
+id: profile.partenaire.default
+targetEntityType: profile
+bundle: partenaire
+mode: default
+content:
+  field_type_de_partenariat:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

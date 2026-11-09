@@ -1,0 +1,61 @@
+uuid: c5436140-bc50-4f9c-b3a5-7b4ffbd49d4b
+langcode: fr
+status: true
+dependencies: {  }
+id: cv_acl
+label: 'CV acl'
+events:
+  -
+    event_name: 'rules_entity_view:node'
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: 2ac25ccd-ec29-4bcd-9916-2d1236d28d53
+  conditions:
+    id: rules_and
+    uuid: c21ce9e1-4687-4f16-ad2f-f05d791058a2
+    conditions:
+      -
+        id: rules_condition
+        uuid: 3d854167-134c-4c58-b8a2-06a0afc039b2
+        context_values:
+          types:
+            - curriculum_vitae
+        context_mapping:
+          node: node
+        context_processors:
+          types:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: rules_node_is_of_type
+        negate: false
+      -
+        id: rules_condition
+        uuid: 521f6ad9-12a5-4ae6-a43f-8c03810f4980
+        context_values:
+          roles: authenticated
+        context_mapping:
+          user: '@user.current_user_context:current_user'
+        context_processors:
+          roles:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: custom_rules_user_has_role
+        negate: true
+  actions:
+    id: rules_action_set
+    uuid: 41ad26c4-a668-466b-921b-ec7f3ee8dbb0
+    actions:
+      -
+        id: rules_action
+        uuid: 94a29196-e8b6-4426-9ee8-52c05e6bfdb6
+        context_values:
+          url: /
+        context_mapping: {  }
+        context_processors:
+          url:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_page_redirect

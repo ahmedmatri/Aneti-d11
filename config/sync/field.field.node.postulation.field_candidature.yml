@@ -1,0 +1,23 @@
+uuid: e9a11ea2-3084-4b83-9e32-517911e0388b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_candidature
+    - node.type.postulation
+  module:
+    - options
+id: node.postulation.field_candidature
+field_name: field_candidature
+entity_type: node
+bundle: postulation
+label: candidature
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

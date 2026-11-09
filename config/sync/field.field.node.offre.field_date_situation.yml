@@ -1,0 +1,21 @@
+uuid: 9fce5751-4394-4073-919e-1079ddeb3871
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_situation
+    - node.type.offre
+  module:
+    - datetime
+id: node.offre.field_date_situation
+field_name: field_date_situation
+entity_type: node
+bundle: offre
+label: 'Date situation'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

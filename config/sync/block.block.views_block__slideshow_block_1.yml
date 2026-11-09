@@ -1,0 +1,34 @@
+uuid: aeeb07b7-5eb5-449d-afcd-75141580f5fe
+langcode: fr
+status: false
+dependencies:
+  config:
+    - views.view.slideshow
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - job_board
+third_party_settings:
+  block_class:
+    classes: hero_wrapper
+id: views_block__slideshow_block_1
+theme: job_board
+region: banner
+weight: -18
+provider: null
+plugin: 'views_block:slideshow-block_1'
+settings:
+  id: 'views_block:slideshow-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

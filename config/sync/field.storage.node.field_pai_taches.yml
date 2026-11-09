@@ -1,0 +1,23 @@
+uuid: 23696922-a011-4f9c-b9c8-97483cef7fb8
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_pai_taches
+field_name: field_pai_taches
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

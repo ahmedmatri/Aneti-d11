@@ -1,0 +1,21 @@
+uuid: 1cb4b8c4-beee-467b-9586-e436edcf973d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_observations
+    - node.type.offre
+  module:
+    - text
+id: node.offre.field_observations
+field_name: field_observations
+entity_type: node
+bundle: offre
+label: Observations
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

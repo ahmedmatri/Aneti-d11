@@ -1,0 +1,18 @@
+uuid: a66abf4b-a1e0-44dd-81b0-5945a962aafd
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.faq
+id: node.faq.unpublish_on
+field_name: unpublish_on
+entity_type: node
+bundle: faq
+label: 'Unpublish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

@@ -1,0 +1,20 @@
+uuid: 86b80767-7bdd-4611-add0-14d8018477ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.newletter_candidats
+  module:
+    - path
+id: node.newletter_candidats.path
+field_name: path
+entity_type: node
+bundle: newletter_candidats
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

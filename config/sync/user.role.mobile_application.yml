@@ -1,0 +1,16 @@
+uuid: f9428f40-bd84-411f-b5cf-bd1d73a8184f
+langcode: fr
+status: true
+dependencies: {  }
+id: mobile_application
+label: 'Mobile Application'
+weight: 16
+is_admin: null
+permissions:
+  - 'administer profile'
+  - 'administer users'
+  - 'bypass file access'
+  - 'download own image files'
+  - 'edit own image files'
+  - 'use candidat transition publish'
+  - 'view files'

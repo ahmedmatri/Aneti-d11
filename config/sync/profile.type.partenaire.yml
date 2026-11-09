@@ -1,0 +1,25 @@
+uuid: f792d1bc-d010-4ec8-881d-58a24e6f4af9
+langcode: fr
+status: true
+dependencies: {  }
+id: partenaire
+label: Partenaire
+registration: true
+multiple: false
+roles:
+  partenaire: partenaire
+  authenticated: '0'
+  candidat: '0'
+  entreprise: '0'
+  super_admin: '0'
+  administrator: '0'
+  referent: '0'
+  conseiller_central: '0'
+  traduction: '0'
+  chef_unite_migration: '0'
+  bureau_a_l_etranger: '0'
+  webmaster: '0'
+  pdg: '0'
+weight: 0
+use_revisions: false
+description: ''

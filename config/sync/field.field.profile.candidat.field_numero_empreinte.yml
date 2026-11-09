@@ -1,0 +1,19 @@
+uuid: f3b9ac61-b06b-40e6-8a05-24a907abaeaf
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_numero_empreinte
+    - profile.type.candidat
+id: profile.candidat.field_numero_empreinte
+field_name: field_numero_empreinte
+entity_type: profile
+bundle: candidat
+label: 'N° Empreinte'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,10 @@
+log_ignored_config: {  }
+log_destination:
+  default: default
+  mail: mail
+  custom: '0'
+_core:
+  default_config_hash: XmAs9nbCHoc6DoEAUPbXoiDvo91WF8JHqbJQfd1sHB4
+langcode: fr
+log_email_address: kamel.ghilene@emploi.nat.tn
+ignore_config_import: false

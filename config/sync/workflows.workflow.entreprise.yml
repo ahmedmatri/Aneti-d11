@@ -1,0 +1,85 @@
+uuid: 631311de-5f09-41c0-8ed7-4c26bd969970
+langcode: fr
+status: true
+dependencies:
+  config:
+    - profile.type.entreprise
+  module:
+    - content_moderation
+id: entreprise
+label: Entreprise
+type: content_moderation
+type_settings:
+  states:
+    archived:
+      published: false
+      default_revision: false
+      label: Archived
+      weight: 2
+    blacklisted:
+      published: false
+      default_revision: false
+      label: Blacklisted
+      weight: 1
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: -2
+    need_review:
+      published: false
+      default_revision: false
+      label: 'Need review'
+      weight: -1
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: 0
+  transitions:
+    archived:
+      label: Archived
+      from:
+        - archived
+        - blacklisted
+        - draft
+        - need_review
+        - published
+      to: archived
+      weight: 3
+    blacklist:
+      label: Blacklist
+      from:
+        - draft
+        - need_review
+        - published
+      to: blacklisted
+      weight: 2
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: 0
+      from:
+        - draft
+        - need_review
+        - published
+    need_review:
+      label: 'Need review'
+      from:
+        - draft
+        - need_review
+        - published
+      to: need_review
+      weight: 4
+    publish:
+      label: Publish
+      to: published
+      weight: 1
+      from:
+        - draft
+        - need_review
+        - published
+  entity_types:
+    profile:
+      - entreprise
+  default_moderation_state: draft

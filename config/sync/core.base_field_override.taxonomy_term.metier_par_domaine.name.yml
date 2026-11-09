@@ -1,0 +1,18 @@
+uuid: edef8969-16fd-449b-b706-ed16d741600f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.metier_par_domaine
+id: taxonomy_term.metier_par_domaine.name
+field_name: name
+entity_type: taxonomy_term
+bundle: metier_par_domaine
+label: Nom
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

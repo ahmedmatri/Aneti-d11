@@ -1,0 +1,23 @@
+uuid: 377953a6-6caf-42f6-af3b-9e4f33b9c018
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pag_actions
+    - node.type.plan_d_accompagnement_collectif
+  module:
+    - field_collection
+id: node.plan_d_accompagnement_collectif.field_pag_actions
+field_name: field_pag_actions
+entity_type: node
+bundle: plan_d_accompagnement_collectif
+label: Actions
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+  - {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_collection

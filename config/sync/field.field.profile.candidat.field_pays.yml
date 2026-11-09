@@ -1,0 +1,33 @@
+uuid: b8f8075f-dc3a-49f3-859d-e54da2310a82
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_pays
+    - profile.type.candidat
+    - taxonomy.vocabulary.pays
+  content:
+    - 'taxonomy_term:pays:1239dbea-517b-4c91-9cb6-6312dfcf17e6'
+id: profile.candidat.field_pays
+field_name: field_pays
+entity_type: profile
+bundle: candidat
+label: Pays
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 1239dbea-517b-4c91-9cb6-6312dfcf17e6
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      pays: pays
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,18 @@
+uuid: 467d4734-2fe9-49b4-bb89-35ff26be1f18
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.action_client
+id: node.action_client.publish_on
+field_name: publish_on
+entity_type: node
+bundle: action_client
+label: 'Publish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

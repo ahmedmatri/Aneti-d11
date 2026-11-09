@@ -1,0 +1,25 @@
+uuid: 4b52edbf-8a2c-41ea-847b-326fe5bbb026
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_q11f_label
+    - field_collection.field_collection.field_checklist_avant_depart
+  module:
+    - markup
+id: field_collection_item.field_checklist_avant_depart.field_q11f_label
+field_name: field_q11f_label
+entity_type: field_collection_item
+bundle: field_checklist_avant_depart
+label: Q11f_label
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>Protègent-elles l’employé/e contre tout abus de pouvoir et de violence survenant dans le cadre de son travail&nbsp;?</p>\r\n"
+    format: basic_html
+field_type: markup

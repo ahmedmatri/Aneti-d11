@@ -1,0 +1,42 @@
+uuid: b1d363f2-f1ad-48d8-9c75-bb52f3768f45
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.curriculum_vitae
+  module:
+    - content_moderation
+id: cv
+label: CV
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: -1
+    published:
+      published: true
+      default_revision: true
+      label: Published
+      weight: 0
+  transitions:
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: 0
+      from:
+        - draft
+        - published
+    publish:
+      label: Publish
+      to: published
+      weight: 1
+      from:
+        - draft
+        - published
+  entity_types:
+    node:
+      - curriculum_vitae
+  default_moderation_state: draft

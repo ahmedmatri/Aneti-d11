@@ -1,0 +1,72 @@
+uuid: 8306cc9c-6b65-49e6-a54e-970eaa7e1bba
+langcode: fr
+status: true
+dependencies: {  }
+id: notify_webmaster_offer_pending_review
+label: 'Notify Webmaster offer pending review'
+events:
+  -
+    event_name: 'rules_entity_presave:node'
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: c0dd0aed-8518-4b54-9964-5aec118e5256
+  conditions:
+    id: rules_and
+    uuid: bd861d09-c576-4820-a8fa-9aa914d6a78b
+    conditions:
+      -
+        id: rules_condition
+        uuid: 2b73ce91-e445-432d-a6ac-d746bf4fa3ee
+        context_values:
+          types:
+            - offre
+        context_mapping:
+          node: node
+        context_processors:
+          types:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: rules_node_is_of_type
+        negate: false
+      -
+        id: rules_condition
+        uuid: d9c25af4-90fc-4a05-ac16-a0d71f8c40db
+        context_values:
+          operation: '=='
+          value: need_review
+        context_mapping:
+          data: node.moderation_state.value
+        context_processors:
+          operation:
+            rules_tokens: {  }
+          value:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: rules_data_comparison
+        negate: false
+  actions:
+    id: rules_action_set
+    uuid: 1c13b412-e906-46ec-a97b-a319979f3704
+    actions:
+      -
+        id: rules_action
+        uuid: 260a4a63-fe9b-4bda-88b8-822631fadbd2
+        context_values:
+          roles:
+            - webmaster
+          subject: 'An offer is waiting for review'
+          message: '[node:url]'
+        context_mapping:
+          node: node
+        context_processors:
+          roles:
+            rules_tokens: {  }
+          subject:
+            rules_tokens: {  }
+          message:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: role_email_action

@@ -1,0 +1,23 @@
+uuid: 4e2fcd30-de72-4b17-8d10-3153f9aa5dc8
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_recherche_de_logement
+field_name: field_recherche_de_logement
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

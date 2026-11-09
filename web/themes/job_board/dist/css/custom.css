@@ -1,0 +1,2280 @@
+/*
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+font-family: 'Poppins', sans-serif;
+*/
+
+.a_block_header {
+    margin-bottom: 0;
+    /*font-family: 'Poppins', sans-serif;*/
+}
+
+.a_block_header * {
+    /*font-family: 'Poppins', sans-serif;*/
+}
+
+#headline {
+    background: #015486;
+}
+
+.a_block_header *, .a_block_header a {
+    color: white;
+    font-size: 12px;
+}
+
+.a_block_header h2 {
+    margin: 0;
+    font-size: 12px;
+}
+
+.a_block_header p {
+    margin: 0;
+}
+
+.a_block_header {
+    margin-top: 10px;
+}
+
+.a_block_header__republic::before {
+    content: " ";
+    width: 50px;
+    height: 100%;
+    float: left;
+    background: url('../images/flag-tn.png') no-repeat;
+}
+
+[dir="rtl"] * {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .a_block_header__republic::before {
+    float: right;
+    background-position: top right;
+    direction: rtl;
+}
+
+/* LTR */
+.a_block_header__ministere::before {
+    content: "";
+    border-left: 1px solid white;
+    height: 80%;
+    padding-top: 20%;
+    float: left;
+    margin-right: 10px;
+}
+
+[dir="rtl"] .a_block_header__ministere::before {
+    border-left: 0;
+    border-right: 1px solid white;
+    float: right;
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+/* Reset the style of language menu */
+.a_block_header__anon_user ul.menu li.menu-item,
+.a_block_header__anon_user ul.menu li.menu-item:first-child {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.a_block_header__anon_user .menu li.menu-item a {
+    padding: 5px;
+}
+
+/* LTR */
+.a_block_header__anon_user .menu li.menu-item:last-child a {
+    border-left: 1px solid white;
+}
+
+[dir="rtl"] .a_block_header__anon_user .menu li.menu-item:last-child a {
+    border-left: 0px solid white;
+    border-right: 1px solid white;
+}
+
+.a_block_header__anon_user .menu li.menu-item:last-child {
+
+}
+
+.a_block_header__anon_user ul.menu {
+    margin-top: 14px;
+}
+
+/* LTR */
+.a_block_header__langue .links li a,
+.a_block_header__anon_user .menu a {
+    float: left;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+[dir="rtl"] .a_block_header__langue .links li a,
+[dir="rtl"] .a_block_header__anon_user .menu a {
+    float: right;
+}
+
+.a_block_header__langue li.is-active a {
+    color: white;
+}
+
+/* LTR */
+.a_block_header__langue ul.links {
+    margin-top: 20px;
+    float: right;
+}
+
+[dir="rtl"] .a_block_header__langue ul.links {
+    float: left;
+}
+
+/* LTR */
+.a_block_header__langue ul.links li {
+    padding-left: 35px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url('../images/lang.png');
+    margin-left: 5px;
+}
+.a_block_header__langue ul.links li.it{background-image: url('../images/drapeau-de-litalie.jpg');
+    background-size: 28px 17px;}
+
+/*[dir="rtl"] .a_block_header__langue ul.links li{
+  padding-left: 0px;
+  padding-right: 35px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url('../images/lang.png');
+  margin-left: 5px;
+}*/
+
+.a_block_header__langue ul.links li.en {
+    background-position-y: -60px;
+}
+
+.a_block_header__langue ul.links li.fr {
+    background-position-y: -30px;
+}
+
+.region-header .search-block-form .form-search {
+    width: auto;
+    float: right;
+    background: #ff7903;
+}
+
+.region-header .search-block-form .form-search {
+    width: auto;
+    float: right;
+    background: #ff7903;
+}
+
+.region-header .search-block-form .form-search::placeholder {
+    color: white;
+}
+
+/* LTR */
+.region-header .search-block-form #edit-submit,
+#block-formulairederecherche input[type="submit"],
+.block-quicktabs-blocka-la-une .quicktabs-tabs li:last-child {
+    display: none;
+}
+
+.hero_wrapper {
+    background: #015486; /* Old browsers */
+    background: -moz-linear-gradient(top, #015486 0%, #349dde 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #015486 0%, #349dde 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #015486 0%, #349dde 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#015486', endColorstr='#349dde', GradientType=0); /* IE6-9 */
+}
+
+.hero_container {
+    height: 500px;
+    background-size: auto 500px;
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+/*    max-width: -webkit-fill-available;*/
+ /*   max-width: 50%;*/
+    margin-top:-5px;
+}
+
+.hero_content {
+    font-size: 40px;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 10%;
+}
+
+.hero_buttons {
+    margin-top: 50px;
+}
+
+.hero_buttons .btn-primary {
+    background-color: #ff7903;
+    color: white;
+    text-transform: uppercase;
+    border-color: #ff7903;
+    border-width: 2px;
+}
+
+.hero_buttons .btn-secondary {
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+    border-color: #ff7903;
+    border-width: 2px;
+}
+
+.hero_buttons .btn-primary:hover,
+.hero_buttons .btn-secondary:hover {
+    background-color: #ce6000;
+}
+
+/*
+.view-offres-a-la-une .views-row:nth-child(2n+1) {
+  background: #fcfcfc;
+}
+
+.view-offres-a-la-une .views-row:nth-child(2n+1) {
+  background: #fcfcfc;
+}
+
+.view-offres-a-la-une .views-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: .3125rem;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1.25rem .9375rem;
+}
+
+.view-offres-a-la-une .views-row>.views-field-field-image {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 80px;
+  -ms-flex: 0 0 80px;
+  flex: 0 0 80px;
+  max-width: 80px;
+}
+
+.view-offres-a-la-une .views-row>.views-field {
+  padding: .625rem .3125rem .3125rem;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -moz-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+*/
+
+@media (min-width: 992px) {
+    .we-mega-menu-ul > .we-mega-menu-li > span {
+        background-color: #fff;
+        border: 0 none;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        margin-right: 0;
+        color: #0b536d;
+        font-size: .8125rem;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 1.125rem 1.5625rem 1.125rem 1.5625rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-family: Roboto, sans-serif;
+        /*font-family: Poppin,sans-serif;*/
+        font-size: .875rem;
+        padding: 0;
+        background: 0 0;
+    }
+}
+
+.view-gird-homepage .views-row .views-row-inner .link {
+    text-transform: uppercase;
+}
+
+.view-gird-homepage .views-row:first-child .views-row-inner {
+    background: url('../images/espace-candidat.png') 30px 50% no-repeat;
+}
+
+html[dir=rtl] .view-gird-homepage .views-row:first-child .views-row-inner {
+    background-position: 90% 50%;
+}
+
+.view-gird-homepage .views-row:first-child .title a {
+    color: #ff7903;
+    text-transform: uppercase;
+}
+
+.view-gird-homepage .views-row:last-child .views-row-inner {
+    background: url('../images/espace-entreprise.png') 30px 50% no-repeat;
+}
+
+html[dir=rtl] .view-gird-homepage .views-row:last-child .views-row-inner {
+    background-position: 90% 50%;
+}
+
+html[dir=rtl] .region-content .block-quicktabs-blocka-la-une ul.quicktabs-tabs li:last-child {
+    display: none;
+}
+
+.view-gird-homepage .views-row:last-child .title a {
+    color: #015486;
+    text-transform: uppercase;
+}
+
+ul.quicktabs-tabs li.active a {
+    background: #015486 !important;
+    border-color: #015486 !important;
+}
+
+.region-content ul.quicktabs-tabs li.active a:after, form#views-exposed-form-job-page-job #edit-sort-by > div.bef-link-active a:after, form[id*=views-exposed-form-recruiter-page] #edit-sort-by > div.bef-link-active a:after {
+    background: #015486;
+}
+
+.gallery-cell {
+    margin: 5px;
+    height: 90px;
+    width: 90px;
+}
+#block-views-block-actualites-block-2 .gallery-cell {
+    height: 200px!important;
+    width: 250px!important;
+}
+
+#block-views-block-actualites-block-2 .flickity-prev-next-button.next ,
+#block-views-block-actualites-block-2 .flickity-prev-next-button.previous{
+    display: none;
+}
+#block-views-block-actualites-block-2 .flickity-page-dots {
+    bottom: 15px;
+}
+#block-views-block-entreprise-cliente-block-1 > h2,
+#block-views-block-partenaires-block-1 > h2 {
+    background: #015486;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 4px;
+}
+
+#block-views-block-entreprise-cliente-block-1 .view-entreprise-cliente {
+    border: 1px solid #efefef;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+.footer_top .block h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.footer_top .block {
+    color: #015486;
+
+}
+
+.region-footer-middle {
+    line-height: 2;
+}
+
+@media (min-width: 992px) {
+    .we-mega-menu-li .dropdown-menu {
+        background-image: none !important;
+    }
+
+    .we-mega-menu-li .dropdown-menu:hover {
+        background: #fff;
+    }
+
+    .we-mega-menu-ul .dropdown-menu > a:after, .we-mega-menu-ul .dropdown-menu > span:after {
+        background-image: none !important;
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+        opacity: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .we-mega-menu-li.dropdown-menu > span:hover {
+        background-color: transparent !important;
+    }
+
+    .we-mega-menu-li.dropdown-menu span:after,
+    .we-mega-menu-li.dropdown-menu span:before {
+        background-image: none !important;
+    }
+
+    .we-mega-menu-li.dropdown-menu .we-mega-menu-submenu li.we-mega-menu-li a {
+        border: 0
+    }
+
+    .we-mega-menu-submenu li.we-mega-menu-li {
+        display: block;
+        float: none;
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .we-mega-menu-submenu > .we-mega-menu-submenu-inner {
+        min-height: 0;
+    }
+
+    .we-mega-menu-ul .dropdown-menu > a:before, .we-mega-menu-ul .dropdown-menu > span:before {
+        background-image: none;
+    }
+}
+
+fieldset legend {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    /* background-color: rgba(0, 0, 0, 0.03); */
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.125);*/
+}
+
+fieldset {
+    border: 0;
+}
+
+.fieldset-wrapper {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 10px;
+}
+
+.field__label {
+    font-weight: bold;
+}
+
+.a_copyright .field--name-body p {
+    color: #ff7903;
+    text-transform: uppercase
+}
+
+.a_copyright a {
+    color: #ff7903;
+    text-transform: uppercase
+}
+
+[dir="rtl"] .headline .block-menu {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+}
+
+html[dir=rtl] .headline .block-menu ul.menu li:last-child {
+    border-left: 0;
+}
+
+html[dir=rtl] .region-header .search-block-form .form-search {
+    float: left;
+}
+
+.view-job .more-link {
+    margin-top: 20px;
+}
+
+.view-job .more-link a {
+    text-transform: none;
+    font-size: 18px;
+}
+
+.view-job .more-link a:after {
+    height: .75rem;
+    width: 10px;
+    content: "";
+    display: inline-block;
+    background: url(../images/caret-right.svg) no-repeat;
+    background-size: 98%;
+    margin-left: .625rem;
+    text-transform: uppercase;
+}
+
+.node__content ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+[dir=rtl] .node__content ul {
+    padding-left: 0;
+    padding-right: 20px;
+    direction: rtl;
+}
+
+[dir=rtl] * {
+    direction: rtl !important;
+}
+
+#block-views-block-slideshow-block-1 .gallery-cell {
+    width: 100% !important;
+    height: 160px !important; /* height of carousel */
+    margin-right: 10px !important;
+}
+
+#block-views-block-slideshow-block-1 .flickity-viewport {
+    height: 500px !important;
+}
+
+#block-views-block-slideshow-block-1 .hero_content p {
+    margin-right: 40%;
+    font-size: 40px;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 10%;
+}
+
+.sidebar-second .block-menu ul.menu {
+    margin: 0 !important;
+    padding: 1.875rem 2.1875rem;
+    border: 1px solid #ededed;
+    border-radius: .25rem;
+}
+
+.sidebar-second .block-menu ul.menu li {
+    list-style: disc;
+    width: 100%;
+    list-style: disc;
+}
+
+a.apply-job {
+    background-color: #37cca4;
+    padding: .8125rem 1.875rem .5625rem;
+    color: #fff;
+    border-radius: .25rem;
+    border-bottom: 2px solid #37cca4;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.left-side-feedback {
+    max-width: 30rem;
+}
+
+.left-side-feedback label {
+    color: #0C5582;
+    font-weight: bolder;
+
+}
+
+.left-side-feedback {
+    padding: 15px;
+    margin: 15px;
+    /* border: 3px solid #D9EDEB;*/
+    border: 3px solid #EEF8F9;
+    border-radius: 25px;
+}
+
+.right-side-feedback legend {
+    display: none;
+}
+
+.left-side-feedback input, textarea {
+    /*border-radius: 25px;*/
+}
+
+#map {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+
+.node-46416 .block-page-title-block {
+    text-align: center;
+    background: url(../images/employeur.jpg);
+    min-height: 12.75rem;
+}
+.node-46415 .block-page-title-block {
+    text-align: center;
+    background: url(../images/espace_candidat.jpg);
+    min-height: 12.75rem;
+}
+.path-contact .block-page-title-block {
+    text-align: center;
+    background: url(../images/Contact.jpg);
+    min-height: 12.75rem;
+}
+.path-webform .block-page-title-block {
+    text-align: center;
+    background: url(../images/reclamations.jpg);
+    min-height: 12.75rem;
+}
+
+
+.candidat.path-candidat.page-node-type-job .block-page-title-block {
+    text-align: center;
+    background: url(../images/offre-emplois.jpg);
+    min-height: 12.75rem;
+}
+
+.path-user .block-page-title-block {
+    text-align: center;
+    background: url(../images/subscribe-entreprise.jpg);
+    min-height: 12.75rem;
+}
+.node-offre .block-page-title-block {
+    text-align: center;
+    background: url(../images/offre-emplois.jpg);
+    min-height: 12.75rem;
+}
+.node-curriculum_vitae .block-page-title-block {
+    text-align: center;
+    background: url(../images/cvtheque-background.jpg);
+    min-height: 12.75rem;
+}
+.path-mon-cv .block-page-title-block {
+    text-align: center;
+    background: url(../images/cvtheque-background.jpg);
+    min-height: 12.75rem;
+}
+.path-offres .block-page-title-block , .path-search .block-page-title-block {
+    text-align: center;
+    background: url(../images/offre-emplois.jpg);
+    min-height: 12.75rem
+}
+.path-entreprise .block-page-title-block {
+    text-align: center;
+    background: url(../images/offre-emplois.jpg);
+    min-height: 12.75rem;
+}
+.mes-entreprises .block-page-title-block {
+    text-align: center;
+    background: url(../images/mes-offre.jpg);
+    min-height: 12.75rem;
+}
+.path-webmaster .block-page-title-block {
+    text-align: center;
+    background: url(../images/mes-offre.jpg);
+    min-height: 12.75rem;
+}
+.liste-de-referents .block-page-title-block, .recherche-candidat .block-page-title-block {
+    text-align: center;
+    background: url(../images/mes-offre.jpg);
+    min-height: 12.75rem;
+}
+.recherche-cv .block-page-title-block {
+    text-align: center;
+    background: url(../images/offre-emploi.jpg);
+    min-height: 12.75rem;
+}
+.node-46416 .block-page-title-block h1 ,
+.node-46415 .block-page-title-block h1 ,
+.node-44919 .block-page-title-block h1,
+.path-offres .block-page-title-block h1{
+    color: #025486;
+}
+.hero_buttons a {
+    /*****/
+
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    /*****/
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+
+    /*****/
+    background-color: #ff7903;
+    color: white;
+    text-transform: uppercase;
+    border-color: #ff7903;
+    border-width: 2px;
+
+}
+
+.page-node-type-job .webform-submission-form li {
+    list-style: disc;
+    margin-left: 30px;
+}
+
+form.webform-submission-form {
+    display: block;
+    margin: 0 auto;
+}
+
+.view-mes-offres, .view-list-offres,
+.view-mes-postulations,
+.view-mon-cv ,.view-mes-entreprises,
+.view-entreprises-en-attente,
+.view-mes-offres-entreprise,
+.view-liste-de-referents
+.view-recherche-candidat
+.view-recherche-cv{
+    margin-bottom: 90px;
+}
+
+@media (max-width: 991px) {
+    .view-mes-offres {
+        margin-bottom: 50px;
+    }
+
+    .view-list-offres {
+        margin-bottom: 50px;
+    }
+
+    .view-mes-postulations {
+        margin-bottom: 50px;
+    }
+
+    .view-mon-cv {
+        margin-bottom: 50px;
+    }
+    .view-mes-entreprises {
+        margin-bottom: 50px;
+    } .view-entreprises-en-attente {
+          margin-bottom: 50px;
+      }.view-mes-offres-entreprise {
+           margin-bottom: 50px;
+       }
+
+    .view-liste-de-referents {
+        margin-bottom: 50px;
+    }
+    .view-recherche-candidat {
+        margin-bottom: 50px;
+    }
+    .view-recherche-cv {
+        margin-bottom: 50px;
+    }
+}
+
+.view-mes-offres .view-content {
+    overflow-x: auto;
+}
+
+.view-list-offres .view-content {
+    overflow-x: auto;
+}
+
+.view-mes-postulations .view-content {
+    overflow-x: auto;
+}
+
+.view-mon-cv .view-content {
+    overflow-x: auto;
+}
+.view-mes-entreprises .view-content {
+    overflow-x: auto;
+}
+.view-entreprises-en-attente .view-content {
+    overflow-x: auto;
+}
+.view-mes-offres-entreprise .view-content {
+    overflow-x: auto;
+}
+
+.view-liste-de-referents .view-content {
+    overflow-x: auto;
+}
+.view-recherche-candidat .view-content {
+    overflow-x: auto;
+}
+.view-recherche-cv .view-content {
+    overflow-x: auto;
+}
+
+.view-mes-offres table.views-table {
+    border: none;
+}
+
+.view-list-offres table.views-table {
+    border: none;
+}
+
+.view-mes-postulations table.views-table {
+    border: none;
+}
+
+.view-mon-cv table.views-table {
+    border: none;
+}
+.view-mes-entreprises table.views-table {
+    border: none;
+}
+.view-entreprises-en-attente table.views-table {
+    border: none;
+}
+.view-mes-offres-entreprise table.views-table {
+    border: none;
+}
+
+.view-liste-de-referents table.views-table {
+    border: none;
+}
+.view-recherche-candidat table.views-table {
+    border: none;
+}
+.view-recherche-cv table.views-table {
+    border: none;
+}
+
+@media (max-width: $tablet-vt) {
+    .view-mes-offres table.views-table {
+        width: 630px;
+    }
+
+    .view-list-offres table.views-table {
+        width: 630px;
+    }
+
+    .view-mes-postulations table.views-table {
+        width: 630px;
+    }
+
+    .view-mon-cv table.views-table {
+        width: 630px;
+    }
+    .view-mes-entreprises table.views-table {
+        width: 630px;
+    }
+    .view-entreprises-en-attente table.views-table {
+        width: 630px;
+    }
+    .view-mes-offres-entreprise table.views-table {
+        width: 630px;
+    }
+
+    .view-liste-de-referents table.views-table {
+        width: 630px;
+    }
+    .view-recherche-candidat table.views-table {
+        width: 630px;
+    }
+    .view-recherche-cv table.views-table {
+        width: 630px;
+    }
+}
+
+.view-mes-offres table.views-table td,
+.view-mes-offres table.views-table th {
+    border: none;
+    padding: 20px 10px;
+}
+
+.view-list-offres table.views-table td,
+.view-list-offres table.views-table th {
+    border: none;
+    padding: 20px 10px;
+}
+
+.view-mes-postulations table.views-table td,
+.view-mes-postulations table.views-table th {
+    border: none;
+    padding: 20px 10px;
+}
+
+.view-mon-cv table.views-table td,
+.view-mon-cv table.views-table th {
+    border: none;
+    padding: 20px 10px;
+}
+.view-mes-entreprises table.views-table td,
+.view-mes-entreprises table.views-table th {
+    border: none;
+    padding: 20px 10px;
+}
+.view-entreprises-en-attente table.views-table td,
+.view-entreprises-en-attente table.views-table th {
+    border: none;
+    padding: 20px 10px;
+}
+.view-mes-offres-entreprise table.views-table td,
+.view-mes-offres-entreprise table.views-table th {
+    border: none;
+    padding: 20px 10px;
+}
+
+
+
+.view-liste-de-referents table.views-table td,
+.view-liste-de-referents table.views-table th {
+    border: none;
+    padding: 20px 10px;
+}
+.view-recherche-candidat table.views-table td,
+.view-recherche-candidat table.views-table th {
+    border: none;
+    padding: 20px 10px;
+}
+.view-recherche-cv table.views-table td,
+.view-recherche-cv table.views-table th {
+    border: none;
+    padding: 20px 10px;
+}
+.view-mes-offres table.views-table td:first-child,
+.view-mes-offres table.views-table th:first-child {
+    padding-left: 0;
+}
+
+.view-list-offres table.views-table td:first-child,
+.view-list-offres table.views-table th:first-child {
+    padding-left: 0;
+}
+
+.view-mes-postulations table.views-table td:first-child,
+.view-mes-postulations table.views-table th:first-child {
+    padding-left: 0;
+}
+
+.view-mon-cv table.views-table td:first-child,
+.view-mon-cv table.views-table th:first-child {
+    padding-left: 0;
+}
+.view-mes-entreprises table.views-table td:first-child,
+.view-mes-entreprises table.views-table th:first-child {
+    padding-left: 0;
+}
+.view-entreprises-en-attente table.views-table td:first-child,
+.view-entreprises-en-attente table.views-table th:first-child {
+    padding-left: 0;
+}
+.view-mes-offres-entreprise table.views-table td:first-child,
+.view-mes-offres-entreprise table.views-table th:first-child {
+    padding-left: 0;
+}
+
+.view-list-offres table.views-table td:nth-child(2),
+.view-list-offres table.views-table th:nth-child(2) {
+    padding-left: 0;
+}
+
+.view-mes-offres table.views-table td:nth-child(2),
+.view-mes-offres table.views-table th:nth-child(2) {
+    padding-left: 0;
+}
+
+.view-mes-postulations table.views-table td:nth-child(2),
+.view-mes-postulations table.views-table th:nth-child(2) {
+    padding-left: 0;
+}
+
+.view-mon-cv table.views-table td:nth-child(2),
+.view-mon-cv table.views-table th:nth-child(2) {
+    padding-left: 0;
+}
+
+.view-mes-entreprises table.views-table td:nth-child(2),
+.view-mes-entreprises table.views-table th:nth-child(2) {
+    padding-left: 0;
+}
+
+.view-entreprises-en-attente table.views-table td:nth-child(2),
+.view-entreprises-en-attente table.views-table th:nth-child(2) {
+    padding-left: 0;
+}
+
+.view-mes-offres-entreprise table.views-table td:nth-child(2),
+.view-mes-offres-entreprise table.views-table th:nth-child(2) {
+    padding-left: 0;
+}
+
+.view-liste-de-referents table.views-table td:nth-child(2),
+.view-liste-de-referents table.views-table th:nth-child(2) {
+    padding-left: 0;
+}
+.view-recherche-candidat table.views-table td:nth-child(2),
+.view-recherche-candidat table.views-table th:nth-child(2) {
+    padding-left: 0;
+}
+.view-recherche-cv table.views-table td:nth-child(2),
+.view-recherche-cv table.views-table th:nth-child(2) {
+    padding-left: 0;
+}
+
+@media (min-width: 992px) {
+    .view-list-offres table.views-table td:last-child,
+    .view-list-offres table.views-table th:last-child {
+        padding-right: 80px;
+    }
+
+    .view-mes-offres table.views-table td:last-child,
+    .view-mes-offres table.views-table th:last-child {
+        padding-right: 80px;
+    }
+
+    .view-mes-postulations table.views-table td:last-child,
+    .view-mes-postulations table.views-table th:last-child {
+        padding-right: 80px;
+    }
+
+    .view-mon-cv table.views-table td:last-child,
+    .view-mon-cv table.views-table th:last-child {
+        padding-right: 80px;
+    }
+    .view-mes-entreprises table.views-table td:last-child,
+    .view-mes-entreprises table.views-table th:last-child {
+        padding-right: 80px;
+    }
+    .view-entreprises-en-attente table.views-table td:last-child,
+    .view-entreprises-en-attente table.views-table th:last-child {
+        padding-right: 80px;
+    }
+    .view-mes-offres-entreprise table.views-table td:last-child,
+    .view-mes-offres-entreprise table.views-table th:last-child {
+        padding-right: 80px;
+    }
+
+    .view-liste-de-referents table.views-table td:last-child,
+    .view-liste-de-referents table.views-table th:last-child {
+        padding-right: 80px;
+    }
+    .view-recherche-candidat table.views-table td:last-child,
+    .view-recherche-candidat table.views-table th:last-child {
+        padding-right: 80px;
+    }
+    .view-recherche-cv table.views-table td:last-child,
+    .view-recherche-cv table.views-table th:last-child {
+        padding-right: 80px;
+    }
+}
+
+.view-mes-offres table.views-table th {
+    padding-bottom: 15px;
+}
+
+.view-list-offres table.views-table th {
+    padding-bottom: 15px;
+}
+
+.view-mes-postulations table.views-table th {
+    padding-bottom: 15px;
+}
+
+.view-mon-cv table.views-table th {
+    padding-bottom: 15px;
+}
+
+.view-mes-entreprises table.views-table th {
+    padding-bottom: 15px;
+}
+.view-entreprises-en-attente table.views-table th {
+    padding-bottom: 15px;
+}
+.view-mes-offres-entreprise table.views-table th {
+    padding-bottom: 15px;
+}
+
+.view-liste-de-referents table.views-table th {
+    padding-bottom: 15px;
+}
+.view-recherche-candidat table.views-table th {
+    padding-bottom: 15px;
+}
+.view-recherche-cv table.views-table th {
+    padding-bottom: 15px;
+}
+
+.view-list-offres table.views-table tr {
+    border-bottom: 1px solid #e0e1ed;
+}
+
+.view-mes-offres table.views-table tr {
+    border-bottom: 1px solid #e0e1ed;
+}
+
+.view-mes-postulations table.views-table tr {
+    border-bottom: 1px solid #e0e1ed;
+}
+
+.view-mon-cv table.views-table tr {
+    border-bottom: 1px solid #e0e1ed;
+}
+.view-mes-entreprises table.views-table tr {
+    border-bottom: 1px solid #e0e1ed;
+}
+.view-entreprises-en-attente table.views-table tr {
+    border-bottom: 1px solid #e0e1ed;
+}
+.view-mes-offres-entreprise table.views-table tr {
+    border-bottom: 1px solid #e0e1ed;
+}
+
+.view-liste-de-referents table.views-table tr {
+    border-bottom: 1px solid #e0e1ed;
+}
+.view-recherche-candidat table.views-table tr {
+    border-bottom: 1px solid #e0e1ed;
+}
+.view-recherche-cv table.views-table tr {
+    border-bottom: 1px solid #e0e1ed;
+}
+
+.view-mes-offres table.views-table p {
+    margin-bottom: 0;
+}
+
+.view-list-offres table.views-table p {
+    margin-bottom: 0;
+}
+
+.view-mes-postulations table.views-table p {
+    margin-bottom: 0;
+}
+
+.view-mon-cv table.views-table p {
+    margin-bottom: 0;
+}
+.view-mes-entreprises table.views-table p {
+    margin-bottom: 0;
+}
+.view-entreprises-en-attente table.views-table p {
+    margin-bottom: 0;
+}
+.view-mes-offres-entreprise table.views-table p {
+    margin-bottom: 0;
+}
+
+.view-liste-de-referents table.views-table p {
+    margin-bottom: 0;
+}
+.view-recherche-candidat table.views-table p {
+    margin-bottom: 0;
+}
+.view-recherche-cv table.views-table p {
+    margin-bottom: 0;
+}
+
+.view-list-offres table.views-table td.views-field-title {
+    font-weight: 700;
+}
+
+.view-mes-offres table.views-table td.views-field-title {
+    font-weight: 700;
+}
+
+.view-mes-postulations table.views-table td.views-field-title {
+    font-weight: 700;
+}
+
+.view-mon-cv table.views-table td.views-field-title {
+    font-weight: 700;
+}
+
+.view-mes-entreprises table.views-table td.views-field-title {
+    font-weight: 700;
+}
+.view-entreprises-en-attente table.views-table td.views-field-title {
+    font-weight: 700;
+}
+.view-mes-offres-entreprise table.views-table td.views-field-title {
+    font-weight: 700;
+}
+
+.view-liste-de-referents table.views-table td.views-field-title {
+    font-weight: 700;
+}
+.view-recherche-candidat table.views-table td.views-field-title {
+    font-weight: 700;
+}
+.view-recherche-cv table.views-table td.views-field-title {
+    font-weight: 700;
+}
+
+.color-header-table {
+    color: #ff7000;
+}
+
+.color-btn-postulation a,
+.view-mon-cv .views-field-edit-node a,
+.view-mes-entreprises .views-field-view-profile a ,
+.view-mes-entreprises .views-field-edit-profile a,
+.view-entreprises-en-attente  .views-field-name a,
+.view-mes-offres-entreprise  .views-field-edit-node a,
+.view-mes-offres-entreprise  .views-field-nothing-1 a,
+.view-mes-offres-entreprise  .views-field-nothing a,
+.view-mes-offres-entreprise  .views-field-field-referant a,
+
+.view-recherche-cv .views-field-field-candidat a,
+.view-recherche-candidat .views-field-name a,
+.view-liste-de-referents .views-field-field-bureau-referent a,
+.view-liste-de-referents .views-field-view-profile a
+{
+    color: #0b536d;
+    font-weight: bold;
+}
+
+
+article[data-history-node-id="44921"] {
+    padding: 15px;
+    margin: 15px;
+    border: 2px solid #f67929;
+    border-radius: 6px;
+}
+
+.node-description legend {
+    border-bottom: 1px solid rgb(255, 112, 0);
+}
+
+.node__content legend {
+    border-bottom: 1px solid rgb(255, 112, 0);
+}
+
+.node-description .fieldset-wrapper {
+    /* border-bottom: 1px solid #ff6300;*/
+}
+
+.user article {
+    padding: 15px;
+    margin: 15px;
+    border: 2px solid #f67929;
+    border-radius: 6px;
+    padding-bottom: 5%;
+}
+
+.node-curriculum_vitae .field__label {
+    width: 50%;
+}
+.node-curriculum_vitae .field__item {
+    display: flex;
+    text-align:justify;
+}
+
+/*test*//*test*//*test*/
+
+.node--type-curriculum-vitae .field:nth-child(even) {
+    background-color: #f2f2f2;
+    padding-bottom: .625rem;
+    padding-top: .625rem;
+
+}
+
+.view-cv .view-content .views-row {
+    border-bottom: 1px solid #ddd;
+}
+
+.cv .sidebar-first .region-sidebar-first:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 21.875rem;
+    width: 1px;
+    background: #f0f0f0;
+    content: "";
+}
+
+.view-cv .view-content .views-row {
+    border-bottom: 1px solid #ddd;
+}
+
+.view-offres-a-la-une .view-content .views-row {
+    border-bottom: 1px solid #ddd;
+}
+
+.view-offres-a-la-une .view-content .views-row {
+    border-bottom: 1px solid #ddd;
+}
+
+.cv .sidebar-first .region-sidebar-first:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 21.875rem;
+    width: 1px;
+    background: #f0f0f0;
+    content: "";
+}
+
+.offres .sidebar-first .region-sidebar-first:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 21.875rem;
+    width: 1px;
+    background: #f0f0f0;
+    content: "";
+}
+
+.offres .sidebar-first .region-sidebar-first .js-form-type-textfield, .cv .sidebar-first .region-sidebar-first .js-form-type-textfield {
+    width: 100%;
+}
+
+.right-form {
+    float: right;
+}
+html[dir=rtl] .right-form {
+    float: left;
+}
+
+.left-form {
+    float: left;
+}
+html[dir=rtl] .left-form {
+    float: right;
+}
+
+
+.user-form fieldset > legend {
+    color: #ff7000;
+}
+
+.card-header {
+    color: white;
+    background-color: #184b87;
+}
+
+.card {
+    border: 1px solid #184b87;
+}
+
+.block-page-title-block h1.page-title,
+#block-pagetitle h1,
+#block-pagetitle h2,
+#block-pagetitle h3,
+#block-pagetitle .h1,
+#block-pagetitle .h2,
+#block-pagetitle .h3 {
+    font-family: Poppin, Sans-Serif;
+}
+
+#entreprise-subscribe .card-body, #candidat-subscribe .card-body {
+    padding: 0rem 0rem
+}
+
+#entreprise-subscribe .card-header, #candidat-subscribe .card-header {
+    padding: 0rem 0.5rem;
+}
+
+/***********************/
+
+.view-actualites.view-actualites-list .views-field ,
+.node--type-evenement.views-field.views-field-created,
+.node--type-actualite .views-field.views-field-created{
+    margin-bottom: 1.25rem;
+}
+
+.view-actualites .views-field-created ,
+.node--type-evenement .views-field-created ,
+.node--type-actualite .views-field-created
+{
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 20%;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.view-actualites .views-row > * {
+    padding-left: .9375rem;
+    padding-right: .9375rem;
+}
+.view-actualites .views-field-created .field-content ,
+.node--type-evenement .views-field-created .field-content ,
+.node--type-actualite .views-field-created .field-content
+{
+    padding: 1.25rem .9375rem;
+    background: #025486;
+    display: inline-block;
+    width: 100%;
+}
+.node--type-actualite .views-field-title ,
+.node--type-evenement .views-field-title ,
+.view-actualites .views-field-title ,
+.body-page-blog h2 {
+    color: #025486;
+}
+.view-actualites .views-field-changed-date ,
+.node--type-evenement .views-field-changed-date,
+.node--type-actualite .views-field-changed-date {
+    font-size: 3.75rem;
+    line-height: 1;
+}
+
+.view-actualites .views-row,
+.node--type-actualite .node__content,
+.node--type-evenement .node__content,
+.view-taxonomy-term.view-blog-list .views-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -.9375rem;
+    margin-right: -.9375rem;
+}
+
+.view-actualites .views-field-field-image ,
+.node--type-evenement .views-field-field-image ,
+.node--type-actualite .views-field-field-image
+{
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.view-actualites.view-actualites-list .views-field-group {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 80%;
+    -ms-flex: 0 0 80%;
+    flex: 0 0 80%;
+    max-width: 80%;
+}
+
+.view-actualites.view-actualites-list .views-field-title {
+    font-size: 1.5rem;
+}
+
+.view-actualites.view-actualites-list .views-field-body {
+    margin-bottom: 1.875rem;
+}
+
+.view-actualites.view-actualites-list .views-field-link {
+    margin-bottom: .625rem;
+}
+
+.view-actualites .views-field-link a {
+    background-color: #f0f0f0;
+    padding: .625rem 1.25rem;
+    border-radius: 1.25rem;
+    display: inline-block;
+}
+.ref span,.etranger span, .centrale span{
+    display: none;
+}
+.ref::after{
+    content: url(../images/liste-de-réferents.jpg);
+}
+.etranger::after{
+    content: url(../images/direction-centrale.jpg);
+}
+p.central{
+    text-align: center  ;
+}
+.centrale::after{
+    content: url(../images/relais_letranger.jpg);
+}
+.centrale{
+    float:right;
+}
+.path-actualites .block-page-title-block ,
+.path-actualites-evenements  .block-page-title-block ,
+.node-actualite-fr  .block-page-title-block,
+.node-evenement  .block-page-title-block
+{
+    text-align: center;
+    background: url(../images/actualites.jpg);
+    min-height: 12.75rem;
+}
+.node-actualite-ar  .block-page-title-block
+{
+    transform: rotateY(180deg);
+    text-align: center;
+    background: url(../images/actualites.jpg);
+    min-height: 12.75rem;
+}
+.path-cv .block-page-title-block{
+    text-align: center;
+    background: url(../images/cvtheque.jpg);
+    min-height: 12.75rem;
+}
+.path-mon-cv .block-page-title-block {
+    text-align: center;
+    background: url(../images/cvtheque.jpg);
+    min-height: 12.75rem;
+}
+
+.node-44920  .block-page-title-block{
+    text-align: center;
+    background: url(../images/reseauintern.jpg);
+    min-height: 12.75rem;
+}
+.node-44919  .block-page-title-block{
+    text-align: center;
+    background: url(../images/projet-international.jpg);
+    min-height: 12.75rem;
+}
+.node-44921  .block-page-title-block{
+    text-align: center;
+    background: url(../images/accompagn.jpg);
+    min-height: 12.75rem;
+}
+
+.node-44921 .block-page-title-block h1,.path-cv .block-page-title-block h1, .node-44920  .block-page-title-block h1{
+    text-transform: uppercase;
+    color: #025486;
+}
+.node-44920  .block-page-title-block h1{
+    padding-right: 11%;
+    margin-right: 11%;
+}
+.path-actualites-evenements  h1.page-title,
+.path-contact h1.page-title ,
+.node-actualite h1.page-title{
+    text-transform: uppercase;
+    color: #025486;
+}
+
+.path-webform h1.page-title, .path-contact h1.page-title {
+    text-transform: uppercase;
+    color: #025486;
+}
+.block-page-title-block h1.page-title{
+    text-transform: uppercase;
+    color: #025486;
+}
+.path-actualites-evenements  h1.page-title::before {
+    font: normal normal normal 40px/1 FontAwesome;
+    content: "\f1ea";
+    color: #025486;
+    margin-right: 9px;
+    position: relative;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 45px;
+    display: inline-block;
+    top: 5px;
+}
+
+.path-contact h1.page-title::before {
+    font: normal normal normal 40px/1 FontAwesome;
+    content: "\f095";
+    color: #025486;
+    margin-right: 9px;
+    position: relative;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 45px;
+    display: inline-block;
+    top: 5px;
+}
+.path-user  h1.page-title{
+    color: #025486;
+    padding-right: 4%;
+}
+.path-user h1.page-title::before {
+    font: normal normal normal 40px/1 FontAwesome;
+    content: "\f2c0";
+    color: #025486;
+    position: relative;;
+    margin-right: 9px;
+    position: relative;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 45px;
+    display: inline-block;
+    top: 5px;
+}
+/*
+.path-offres h1.page-title::before {
+    font: normal normal normal 40px/1 FontAwesome;
+    content: "\f249";
+    color: #025486;
+    margin-right: 9px;
+    position: relative;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 45px;
+    display: inline-block;
+    top: 5px;
+}*/
+.user-form, .user-register-form {
+    max-width: none;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+/*.path-entreprise h1.page-title::before {
+    font: normal normal normal 40px/1 FontAwesome;
+    content: "\f249";
+    color: white;
+    margin-right: 9px;
+    position: relative;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 45px;
+    display: inline-block;
+    top: 5px;
+}*/
+.mes-entreprises h1.page-title::before,.path-webmaster h1.page-title::before{
+    font: normal normal normal 40px/1 FontAwesome;
+    content: "\f1ad";
+    color: white;
+    margin-right: 9px;
+    position: relative;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 45px;
+    display: inline-block;
+    top: 5px;
+}
+
+.liste-de-referents  h1.page-title::before,
+.recherche-candidat h1.page-title::before{
+    font: normal normal normal 40px/1 FontAwesome;
+    content: "\f007";
+    color: white;
+    margin-right: 9px;
+    position: relative;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 45px;
+    display: inline-block;
+    top: 5px;
+}
+.recherche-cv h1.page-title::before{
+    font: normal normal normal 40px/1 FontAwesome;
+    content: "\f249";
+    color: white;
+    margin-right: 9px;
+    position: relative;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 45px;
+    display: inline-block;
+    top: 5px;
+}
+
+.view-actualites p {
+    text-align: justify;
+}
+/*
+@media (max-width: 991px)
+ .view-actualites .views-field-changed .field-content {
+    padding: .9375rem .3125rem;
+    }
+
+    @media (max-width: 1199px)
+        .view-actualites .views-field-changed .field-content {
+            padding: .5rem .625rem;
+        }
+*/
+#contact-message-feedback-form{
+    max-width:30rem;
+}
+#contact-message-feedback-form label{
+    color: #0C5582;
+    font-weight : bolder;
+
+}
+#block-job-board-content form.contact-message-feedback-form{
+    padding: 15px;
+    margin: 15px;
+    /* border: 3px solid #D9EDEB;*/
+    border: 3px solid #EEF8F9;
+    border-radius: 25px;
+}
+
+#contact-message-feedback-form input,textarea{
+    border-radius: 25px;
+}
+#map{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/********************/
+
+/*  bhoechie tab */
+/*
+   border:1px solid #FF7903;*/
+.node-offre article .bhoechie-tab{
+    border-top: 15px solid #FF7903;
+}
+.node-offre article  div.bhoechie-tab-container{
+    z-index: 10;
+    background-color: #ffffff;
+    padding: 0 !important;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-top: 5px solid #FF7903;
+    border:1px solid #FF7903;
+    margin-top: 20px;
+    /*  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+      box-shadow: 0 6px 12px rgba(0,0,0,.175);
+      -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);*/
+    background-clip: padding-box;
+    opacity: 0.97;
+    filter: alpha(opacity=97);
+}
+.node-offre article  div.bhoechie-tab-menu{
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+.node-offre article  div.bhoechie-tab-menu div.list-group{
+    background-color: #ddd;
+    margin-bottom: 0;
+}
+.node-offre article  div.bhoechie-tab-menu div.list-group>a{
+    background-color: #ddd;
+    color:#FF7903 ;
+    margin-bottom: 0;
+}
+.node-offre article  div.bhoechie-tab-menu div.list-group>a h4{
+    color: #FF7903;
+}
+.node-offre article  div.bhoechie-tab-menu div.list-group>a.active h4{
+    color: white;
+}
+.node-offre article  div.bhoechie-tab-menu div.list-group>a .glyphicon,
+.node-offre article  div.bhoechie-tab-menu div.list-group>a .fa {
+    color: #5A55A3;
+}
+.node-offre article  div.bhoechie-tab-menu div.list-group>a:first-child{
+    border-top-right-radius: 0;
+    -moz-border-top-right-radius: 0;
+}
+.node-offre article  div.bhoechie-tab-menu div.list-group>a:last-child{
+    border-bottom-right-radius: 0;
+    -moz-border-bottom-right-radius: 0;
+}
+.node-offre article div.bhoechie-tab-menu div.list-group>a.active,
+.node-offre article div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
+.node-offre article div.bhoechie-tab-menu div.list-group>a.active .fa{
+    background-color: #FF7903;
+    color: #ffffff;
+}
+/*.node-offre article div.bhoechie-tab-menu div.list-group>a.active:after{
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    margin-top: -13px;
+    border-left: 0;
+    border-bottom: 13px solid transparent;
+    border-top: 13px solid transparent;
+    border-left: 10px solid #FF7903;
+}
+*/
+.node-offre article div.bhoechie-tab-content{
+    background-color: #ffffff;
+    /* border: 1px solid #eeeeee; */
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.node-offre article div.bhoechie-tab div.bhoechie-tab-content:not(.active){
+    display: none;
+}
+/*.node-offre article .bhoechie-tab{
+    border:1px solid #FF7903;
+
+}*/
+.node-offre article  div.bhoechie-tab-container{
+    z-index: 10;
+    background-color: #ffffff;
+    padding: 0 !important;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    /*   border-top: 5px solid #FF7903;
+       border:1px solid #FF7903;*/
+    margin-top: 20px;
+    /*  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+      box-shadow: 0 6px 12px rgba(0,0,0,.175);
+      -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);*/
+    background-clip: padding-box;
+    opacity: 0.97;
+    filter: alpha(opacity=97);
+}
+.node-offre article  div.bhoechie-tab-menu{
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+.node-offre article  div.bhoechie-tab-menu div.list-group{
+    background-color: #ddd;
+    margin-bottom: 0;
+}
+.node-offre article  div.bhoechie-tab-menu div.list-group>a{
+    background-color: #ddd;
+    color:#FF7903 ;
+    margin-bottom: 0;
+}
+.node-offre article  div.bhoechie-tab-menu div.list-group>a h4{
+    color: #FF7903;
+}
+.node-offre article  div.bhoechie-tab-menu div.list-group>a.active h4{
+    color: white;
+}
+.node-offre article  div.bhoechie-tab-menu div.list-group>a .glyphicon,
+.node-offre article  div.bhoechie-tab-menu div.list-group>a .fa {
+    color: #5A55A3;
+}
+.node-offre article  div.bhoechie-tab-menu div.list-group>a:first-child{
+    border-top-right-radius: 0;
+    -moz-border-top-right-radius: 0;
+}
+.node-offre article  div.bhoechie-tab-menu div.list-group>a:last-child{
+    border-bottom-right-radius: 0;
+    -moz-border-bottom-right-radius: 0;
+}
+.node-offre article div.bhoechie-tab-menu div.list-group>a.active,
+.node-offre article div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
+.node-offre article div.bhoechie-tab-menu div.list-group>a.active .fa{
+    background-color: #FF7903;
+    color: #ffffff;
+}
+/*
+.node-offre article div.bhoechie-tab-menu div.list-group>a.active:after{
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    margin-top: -13px;
+    border-left: 0;
+    border-bottom: 13px solid transparent;
+    border-top: 13px solid transparent;
+    border-left: 10px solid #FF7903;
+}*/
+
+.node-offre article div.bhoechie-tab-content{
+    background-color: #ffffff;
+    /* border: 1px solid #eeeeee; */
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.node-offre article div.bhoechie-tab div.bhoechie-tab-content:not(.active){
+    display: none;
+}
+.node-curriculum_vitae article  .bhoechie-tab {
+    border:1px solid #015486;
+}
+.node-curriculum_vitae article .bhoechie-tab{
+    padding-bottom: 15px;
+    border-top: 15px solid #015486;
+}
+
+.node-curriculum_vitae article  div.bhoechie-tab-container{
+    z-index: 10;
+    background-color: #ffffff;
+    padding: 0 !important;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    margin-top: 20px;
+    background-clip: padding-box;
+    opacity: 0.97;
+    filter: alpha(opacity=97);
+}
+.node-curriculum_vitae article  div.bhoechie-tab-menu{
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+.node-curriculum_vitae article  div.bhoechie-tab-menu div.list-group{
+    background-color: #ddd;
+    margin-bottom: 0;
+}
+.node-curriculum_vitae article  div.bhoechie-tab-menu div.list-group>a{
+    background-color: #ddd;
+    color:#015486 ;
+    margin-bottom: 0;
+}
+.node-curriculum_vitae article  div.bhoechie-tab-menu div.list-group>a h4{
+    color: #015486;
+}
+.node-curriculum_vitae article  div.bhoechie-tab-menu div.list-group>a.active h4{
+    color: white;
+}
+.node-curriculum_vitae article  div.bhoechie-tab-menu div.list-group>a .glyphicon,
+.node-curriculum_vitae article  div.bhoechie-tab-menu div.list-group>a .fa {
+    color: #5A55A3;
+}
+.node-curriculum_vitae article  div.bhoechie-tab-menu div.list-group>a:first-child{
+    border-top-right-radius: 0;
+    -moz-border-top-right-radius: 0;
+}
+.node-curriculum_vitae article  div.bhoechie-tab-menu div.list-group>a:last-child{
+    border-bottom-right-radius: 0;
+    -moz-border-bottom-right-radius: 0;
+}
+.node-curriculum_vitae article div.bhoechie-tab-menu div.list-group>a.active,
+.node-curriculum_vitae article div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
+.node-curriculum_vitae article div.bhoechie-tab-menu div.list-group>a.active .fa{
+    background-color: #015486;
+    color: #ffffff;
+}
+.node-curriculum_vitae article div.bhoechie-tab-menu div.list-group>a.active:after{
+    /*  content: '';
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      margin-top: -13px;
+      border-left: 0;
+      border-bottom: 13px solid transparent;
+      border-top: 13px solid transparent;
+      border-left: 10px solid #015486;*/
+}
+
+.node-curriculum_vitae article div.bhoechie-tab-content{
+    background-color: #ffffff;
+    /* border: 1px solid #eeeeee; */
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.node-curriculum_vitae article div.bhoechie-tab div.bhoechie-tab-content:not(.active){
+    display: none;
+}
+
+/*.node-curriculum_vitae h1.page-title::before {
+    font: normal normal normal 40px/1 FontAwesome;
+    content: "\f1ad";
+    color: white;
+    margin-right: 9px;
+    position: relative;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 45px;
+    display: inline-block;
+    top: 5px;
+}*/
+/*.candidat.path-candidat.page-node-type-job  h1.page-title::before {
+    font: normal normal normal 40px/1 FontAwesome;
+    content: "\f249";
+    color: white;
+    margin-right: 9px;
+    position: relative;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 45px;
+    display: inline-block;
+    top: 5px;
+}*/
+/*
+.node-offre h1.page-title::before {
+    font: normal normal normal 40px/1 FontAwesome;
+    content: "\f007";
+    color: white;
+    margin-right: 9px;
+    position: relative;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 45px;
+    display: inline-block;
+    top: 5px;
+}
+*/
+
+
+/*.path-webform h1.page-title::before {
+    font: normal normal normal 40px/1 FontAwesome;
+    content: "\f2c0";
+    color: #025486;
+    margin-right: 9px;
+    position: relative;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 45px;
+    display: inline-block;
+    top: 5px;
+}*//*.path-webform h1.page-title::before {
+    font: normal normal normal 40px/1 FontAwesome;
+    content: "\f2c0";
+    color: #025486;
+    margin-right: 9px;
+    position: relative;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 45px;
+    display: inline-block;
+    top: 5px;
+}*/
+
+.node-offre  .field__item p{
+    text-align:justify!important;
+}
+.offres  .sidebar-first .region-sidebar-first .js-form-type-textfield,.cv  .sidebar-first .region-sidebar-first .js-form-type-textfield{
+    width: 100%;
+}
+
+table input[type=checkbox] {
+    display: inline;
+}
+
+.without-cv .field--name-field-cv-arabe ,
+.without-cv  .field--name-field-cv-francais ,
+.without-cv  .field--name-field-cv-anglais ,
+.without-cv  .field--name-field-cv-canadien {
+    display: none;
+}
+article .view-profile .field:nth-child(even) {
+    background-color: #f2f2f2;
+    padding-bottom: .625rem;
+    padding-top: .625rem;
+
+}
+article .view-profile .field__label {
+    width: 50%;
+}
+
+
+.block-form-login .user-new-password {
+    color: #f25561;
+}
+.block-form-login .form-submit{
+    background-color: #0b536d!important;
+}
+.field--name-field-date-de-naissance .label{
+    color: #0b536d;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+
+.view-mes-entreprises form .form-item,.view-mes-offres-entreprise form .form-item{
+    margin-right: .625rem;
+}
+
+.view-mes-entreprises form .form-item label,.view-mes-offres-entreprise form .form-item label{
+    font-weight: bold;
+}
+.path-webform  form .form-type-processed-text {
+    border-radius: 15px;
+    border: 2px solid red;
+    padding: 15px;
+}
+
+.block-views-blockactualites-block-1.block h2 {
+    background-color: #ff7903;
+    display: inline-block;
+    position: relative;
+}
+.block-views-blockactualites-block-1.block h2:before {
+    background-color: #ff7903;
+    content: " ";
+    position: absolute;
+    bottom: -7px;
+    height: 15px;
+    width: 15px;
+    transform: rotate(45deg);
+}
+#block-nosmissions h2,
+#block-notrereseau h2,
+#block-videoaneti h2,
+#block-nosobjectifs h2{
+    padding: 1%;
+    color: white;
+    display: inline-block;
+    position: relative;
+    background: #015486 !important;
+    border-color: #015486 !important;
+    padding: 10px;
+}
+#block-nosmissions h2:before,
+#block-notrereseau h2:before,
+#block-videoaneti h2:before,
+#block-nosobjectifs h2:before
+{
+    background-color: #015486;
+    content: " ";
+    position: absolute;
+    bottom: -7px;
+    height: 15px;
+    width: 15px;
+    transform: rotate(45deg);
+}
+
+
+.block-views-blockactualites-block-2 h2,
+.block-views-blockactualites-block-1 h2 {
+    padding: 1%;
+    color: white;
+    background-color: #ff7903;
+    display: inline-block;
+    position: relative;
+}
+.block-views-blockactualites-block-2 h2:before,
+.block-views-blockactualites-block-1 h2:before{
+    background-color: #ff7903;
+    content: " ";
+    position: absolute;
+    bottom: -7px;
+    height: 15px;
+    width: 15px;
+    transform: rotate(45deg);
+}
+
+.block-views-blockactualites-block-1 .news_title {
+    font-size: 120%;
+}
+
+.news_created {
+    font-size: 80%;
+    color: gray;
+}
+
+h1.page-title{
+    margin: 0% 30% 0% 0%!important;
+}
+.block>h2 {
+    text-transform: none;
+}
+
+section#main{
+    background-image: url(../images/background-aneti.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.footer_top {
+    border-top: none;
+}
+
+
+
+/***************/
+
+.slide-caption__title {
+    text-transform: uppercase;
+    margin-left: 5%;
+}
+.slide-caption__soustitre {
+    font-size:26px;
+    margin-left: 7%;
+
+}
+.slide-caption__description {
+    font-size:20px;
+    margin-left: 10%;
+}
+.slide-caption__title, .slide-caption__soustitre ,.slide-caption__description{
+    color: black;
+}
+.owl-item.active .slide-caption__title{
+    animation: 1s .5s fadeInUp both;
+}
+.owl-item.active .slide-caption__soustitre{
+    animation: 3s .7s fadeInUp both;
+}
+.owl-item.active .slide-caption__description{
+    animation: 3s .7s fadeInLeftBig both;
+}
+h1.page-title{
+    animation: 1s .5s zoomIn both;
+}
+/***************/
+.owl-carousel .owl-item {
+    padding-left: 0%!important;
+    padding-right: 0%!important;
+}
+
+.views-row-inner {
+    border: 5px solid #d4d9e2!important;
+}
+#footer_top.footer_top .container{
+    padding-top: 1rem;
+}
+.content-box{
+    padding: 25px;
+    border: 5px solid #d4d9e2!important;
+    border-radius: .5rem;
+}
+
+.content-box ul {
+    list-style: circle!important;
+    padding-left: 15px;
+    margin-left: 15px;
+}
+
+.view-actualites .views-field-created{
+    flex:0 0 25%;
+    max-width: 25%;
+}
+.view-actualites .views-field-nothing {
+    flex:0 0 75%;
+}
+
+.view-actualites .main .row {
+    padding-bottom: 0rem;
+}
+.main .view-actualites .row {
+    padding-bottom: 0rem;
+
+}
+
+.paragraph--type--description .field--name-field-titre p{
+    color:#025486!important;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.user-register-form{
+    border: 2px red solid;
+    padding: 15px;
+}
+
+.color-emploi{
+    font-weight: bold;
+}
+.titre-actualites-evenements{
+    font-size: 1.0625rem;
+    padding: 1%;
+    color: white;
+    background-color: #ff7903;
+    display: inline-block;
+    position: relative;
+}
+.titre-actualites-evenements::before{
+    background-color: #ff7903;
+    content: " ";
+    position: absolute;
+    bottom: -7px;
+    height: 15px;
+    width: 15px;
+    transform: rotate(45deg);
+}
+.quicktabs-tabs a {
+    text-transform: none!important;
+}
+/*owl caroussel arabic*/
+.owl-rtl .hero_container:lang(ar){transform: scaleX(-1);}
+.owl-rtl .hero_container .hero_content:lang(ar){transform: scaleX(-1);}
+.owl-rtl .hero_container .hero_content .slide-caption__soustitre:lang(ar){position: absolute}
+.owl-rtl .hero_container .hero_content .slide-caption__description:lang(ar){position: relative;top: 40px;}

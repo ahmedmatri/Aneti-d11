@@ -1,0 +1,21 @@
+uuid: 6449d788-0dce-40cf-9236-40a4ddc19d2a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_date_naissance_referent
+    - profile.type.referent
+  module:
+    - datetime
+id: profile.referent.field_date_naissance_referent
+field_name: field_date_naissance_referent
+entity_type: profile
+bundle: referent
+label: 'Date de Naissance'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

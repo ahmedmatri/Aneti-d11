@@ -1,0 +1,24 @@
+uuid: 04a25a86-b7ad-46de-b4d5-154fbaee3692
+langcode: fr
+status: true
+dependencies:
+  module:
+    - datetime
+    - field_permissions
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_prochain_rendez_vous
+field_name: field_prochain_rendez_vous
+entity_type: paragraph
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

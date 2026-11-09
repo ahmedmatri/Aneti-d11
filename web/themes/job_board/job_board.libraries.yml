@@ -1,0 +1,36 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:      
+      assets/includes/bootstrap/css/bootstrap.css: {}
+      assets/includes/owlcarousel/dist/assets/owl.carousel.min.css : {}
+      dist/css/animate.css: {}
+      assets/includes/owlcarousel/dist/assets/owl.theme.default.min.css: {}
+      assets/includes/swiper/css/swiper.min.css: {}
+      assets/includes/font-awesome/css/font-awesome.css: {}
+      assets/includes/font-roboto/stylesheet.css: {}
+      dist/css/style.min.css: {}
+      dist/css/style-rtl.min.css: {}
+      dist/css/custom.css: {}
+  js:
+    assets/js/jquery.smooth-scroll.js: {}
+    assets/includes/bootstrap/js/bootstrap.bundle.js: {}
+    assets/includes/swiper/js/swiper.min.js: {}
+    assets/js/jquery-ui.js: {}
+    assets/js/we_megamenu_frontend.js: {}
+    assets/js/we_mobile_menu.js: {}
+    assets/includes/owlcarousel/dist/owl.carousel.min.js: {}
+    assets/js/script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+
+skins-menu:
+  version: 1.x
+
+  js:
+    assets/includes/skins-menu/skins_menu.js: {}
+    assets/js/jquery.cookie.js: {}

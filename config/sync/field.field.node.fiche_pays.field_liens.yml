@@ -1,0 +1,21 @@
+uuid: 41d6faa8-67c6-48c9-907d-3193fb2852db
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_liens
+    - node.type.fiche_pays
+  module:
+    - text
+id: node.fiche_pays.field_liens
+field_name: field_liens
+entity_type: node
+bundle: fiche_pays
+label: Liens
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,20 @@
+uuid: bda8ef97-8529-48ad-8fb4-52755b2f7853
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.newletter_entreprise
+id: node.newletter_entreprise.menu_link
+field_name: menu_link
+entity_type: node
+bundle: newletter_entreprise
+label: 'Menu link'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

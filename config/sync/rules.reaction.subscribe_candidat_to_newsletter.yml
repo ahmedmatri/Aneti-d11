@@ -1,0 +1,48 @@
+uuid: 4e88bd9a-244b-4d41-88f1-7209f85d02b2
+langcode: fr
+status: true
+dependencies: {  }
+id: subscribe_candidat_to_newsletter
+label: 'subscribe candidat to newsletter'
+events:
+  -
+    event_name: 'rules_entity_update:user'
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: f397a76c-abd6-4604-ad7b-5777c29e635d
+  conditions:
+    id: rules_and
+    uuid: 709fe1ee-50f0-4e4d-80b2-80dd4679e9df
+    conditions:
+      -
+        id: rules_condition
+        uuid: 48340341-3666-4275-af56-56cd377b0884
+        context_values:
+          roles: candidat
+        context_mapping:
+          user: user
+        context_processors:
+          roles:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: custom_rules_user_has_role
+        negate: false
+  actions:
+    id: rules_action_set
+    uuid: 54d56892-920e-453f-bf74-f92a6e263d57
+    actions:
+      -
+        id: rules_action
+        uuid: adc0d9e2-ece3-4260-97da-4a35a5dc03aa
+        context_values:
+          newsletter_id: candidat
+        context_mapping:
+          user: user
+        context_processors:
+          newsletter_id:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: role_user_subscribe_action

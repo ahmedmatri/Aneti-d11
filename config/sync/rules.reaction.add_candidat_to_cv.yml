@@ -1,0 +1,89 @@
+uuid: b3600a32-3854-4bdd-b5d6-65608bcb4ddc
+langcode: fr
+status: true
+dependencies: {  }
+id: add_candidat_to_cv
+label: 'Add candidat to cv'
+events:
+  -
+    event_name: 'rules_entity_insert:node'
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: b4bc3f42-a247-491b-b525-78e998e7a45c
+  conditions:
+    id: rules_and
+    uuid: 7dae3d2c-9a66-45bc-87fd-f03bc7f6d8b1
+    conditions:
+      -
+        id: rules_condition
+        uuid: d78e9e47-059a-4f7d-abc7-a09f309b3720
+        context_values:
+          types:
+            - curriculum_vitae
+        context_mapping:
+          node: node
+        context_processors:
+          types:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: rules_node_is_of_type
+        negate: false
+      -
+        id: rules_condition
+        uuid: 07abb804-83a2-41a6-801e-3cca59d38212
+        context_values:
+          field: field_candidat
+        context_mapping:
+          entity: node
+        context_processors:
+          field:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: rules_entity_has_field
+        negate: false
+      -
+        id: rules_condition
+        uuid: e9a4a034-1249-4d0f-b8ce-f5c2ae004f8f
+        context_values:
+          roles: candidat
+        context_mapping:
+          user: '@user.current_user_context:current_user'
+        context_processors:
+          roles:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: custom_rules_user_has_role
+        negate: false
+  actions:
+    id: rules_action_set
+    uuid: 4f106bf6-665e-42cf-b472-11c296f4d857
+    actions:
+      -
+        id: rules_action
+        uuid: 9c4d0332-6d35-4636-8344-7f8f5e31d670
+        context_values:
+          type: string
+          value: 'node:field_candidat:uid'
+        context_mapping: {  }
+        context_processors:
+          type:
+            rules_tokens: {  }
+          value:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_variable_add
+      -
+        id: rules_action
+        uuid: e6a4d43c-b5e4-4061-ae1c-1f7af6d56316
+        context_values:
+          data: 'node:field_candidat:uid'
+        context_mapping:
+          value: '@user.current_user_context:current_user.uid'
+        context_processors:
+          data:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_data_set

@@ -1,0 +1,21 @@
+uuid: a0e7d15f-9021-4198-8263-40e05a2de296
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_annuaires_d_entreprise
+    - node.type.fiche_pays
+  module:
+    - text
+id: node.fiche_pays.field_annuaires_d_entreprise
+field_name: field_annuaires_d_entreprise
+entity_type: node
+bundle: fiche_pays
+label: 'Annuaires d''entreprise'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

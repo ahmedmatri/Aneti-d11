@@ -1,0 +1,24 @@
+uuid: 30250479-c2e0-49d7-a07e-32c1fb4dddae
+langcode: fr
+status: true
+dependencies:
+  module:
+    - hal
+    - jwt
+    - node
+    - serialization
+_core:
+  default_config_hash: t_jfECmZhJqBOJuSOFn87EOi_TWi-_fRYTuJgd19vgg
+id: entity.node
+plugin_id: 'entity:node'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - PATCH
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - jwt_auth

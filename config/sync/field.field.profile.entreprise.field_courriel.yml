@@ -1,0 +1,19 @@
+uuid: 61584a56-f20d-4c22-9777-91342e008952
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_courriel
+    - profile.type.entreprise
+id: profile.entreprise.field_courriel
+field_name: field_courriel
+entity_type: profile
+bundle: entreprise
+label: Courriel
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

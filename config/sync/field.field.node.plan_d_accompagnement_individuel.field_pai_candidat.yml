@@ -1,0 +1,41 @@
+uuid: 725b689b-2c52-4b30-891b-5ea9d87ee10a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pai_candidat
+    - node.type.plan_d_accompagnement_individuel
+id: node.plan_d_accompagnement_individuel.field_pai_candidat
+field_name: field_pai_candidat
+entity_type: node
+bundle: plan_d_accompagnement_individuel
+label: Candidat
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: role
+      role:
+        candidat: candidat
+        entreprise: '0'
+        super_admin: '0'
+        administrator: '0'
+        referent: '0'
+        conseiller_central: '0'
+        traduction: '0'
+        chef_unite_migration: '0'
+        bureau_a_l_etranger: '0'
+        partenaire: '0'
+        webmaster: '0'
+        pdg: '0'
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

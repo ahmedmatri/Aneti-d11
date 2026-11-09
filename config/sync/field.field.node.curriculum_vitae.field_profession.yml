@@ -1,0 +1,29 @@
+uuid: 71e7af1a-2c8d-486d-9921-46464c64294f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profession
+    - node.type.curriculum_vitae
+    - taxonomy.vocabulary.specialite_par_domaine
+id: node.curriculum_vitae.field_profession
+field_name: field_profession
+entity_type: node
+bundle: curriculum_vitae
+label: Profession
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      specialite_par_domaine: specialite_par_domaine
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: specialite_par_domaine
+field_type: entity_reference

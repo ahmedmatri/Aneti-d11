@@ -1,0 +1,21 @@
+uuid: 5d80299e-676b-4703-b715-801f4cb2b694
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_date_de_naissance
+    - profile.type.candidat
+  module:
+    - datetime
+id: profile.candidat.field_date_de_naissance
+field_name: field_date_de_naissance
+entity_type: profile
+bundle: candidat
+label: 'Date de Naissance'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

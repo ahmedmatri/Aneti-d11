@@ -1,0 +1,25 @@
+uuid: c76370fe-0d4d-4487-8070-930e2439f67c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_q24_label
+    - field_collection.field_collection.field_checklist_apres_depart
+  module:
+    - markup
+id: field_collection_item.field_checklist_apres_depart.field_q24_label
+field_name: field_q24_label
+entity_type: field_collection_item
+bundle: field_checklist_apres_depart
+label: Q24_label
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>24. Le contrat de travail respecte-t-il les termes et conditions établis quant au montant du salaire, y compris la rémunération des heures supplémentaires&nbsp;?</p>\r\n"
+    format: basic_html
+field_type: markup

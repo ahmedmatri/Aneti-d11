@@ -1,0 +1,21 @@
+uuid: effd5550-2aa4-44cb-b650-c899a2e1fcfc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_contrat
+    - node.type.offre
+  module:
+    - datetime
+id: node.offre.field_date_contrat
+field_name: field_date_contrat
+entity_type: node
+bundle: offre
+label: 'Date du contrat (prévisionnelle)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

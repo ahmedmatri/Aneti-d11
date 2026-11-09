@@ -1,0 +1,21 @@
+uuid: 1b2b7387-034f-4b3f-af7d-6c6633912923
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type_de_logement
+    - node.type.offre
+  module:
+    - options
+id: node.offre.field_type_de_logement
+field_name: field_type_de_logement
+entity_type: node
+bundle: offre
+label: 'Type de logement'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,18 @@
+uuid: 3331d9cb-cb2c-4d0d-98c4-8a71da0e1826
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.partenaire
+id: node.partenaire.unpublish_on
+field_name: unpublish_on
+entity_type: node
+bundle: partenaire
+label: 'Unpublish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

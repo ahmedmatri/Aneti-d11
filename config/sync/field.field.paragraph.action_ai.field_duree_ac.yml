@@ -1,0 +1,23 @@
+uuid: 78accac0-e688-4f6f-9330-2ef4fb7652db
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_duree_ac
+    - paragraphs.paragraphs_type.action_ai
+id: paragraph.action_ai.field_duree_ac
+field_name: field_duree_ac
+entity_type: paragraph
+bundle: action_ai
+label: Durée
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

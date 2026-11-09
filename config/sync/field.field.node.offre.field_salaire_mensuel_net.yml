@@ -1,0 +1,23 @@
+uuid: cf164e68-b0ac-4172-b60a-54a43e8d34f7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_salaire_mensuel_net
+    - node.type.offre
+id: node.offre.field_salaire_mensuel_net
+field_name: field_salaire_mensuel_net
+entity_type: node
+bundle: offre
+label: 'Salaire mensuel net'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

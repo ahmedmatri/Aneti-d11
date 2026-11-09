@@ -1,0 +1,23 @@
+uuid: 1dce17df-7f88-4866-9c5c-5738b5d781e1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.newletter_candidats
+  module:
+    - text
+id: node.newletter_candidats.body
+field_name: body
+entity_type: node
+bundle: newletter_candidats
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

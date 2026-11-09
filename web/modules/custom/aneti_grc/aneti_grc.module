@@ -1,0 +1,231 @@
+<?php
+
+/**
+ * @file
+ * Contains aneti_grc.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\field_collection\Entity\FieldCollectionItem;
+use Drupal\node\Entity\Node;
+
+/**
+ * Implements hook_help().
+ */
+function aneti_grc_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the aneti_grc module.
+    case 'help.page.aneti_grc':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('ANETI GRC') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function aneti_grc_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'profile_entreprise_edit_form') {
+    $form['actions']['submit']['#submit'][] = 'aneti_grc_profile_entreprise_edit_form_submit';
+  }
+
+  if ($form_id == 'node_offre_edit_form') {
+    $form['actions']['submit']['#submit'][] = 'aneti_grc_node_offre_edit_form_submit';
+  }
+}
+
+/**
+ * Check id the current user has proper roles to add GRC entry.
+ * @return bool
+ */
+function _aneti_grc_allowed_roles() {
+  if (Drupal::currentUser()->id() == 1) {
+    return TRUE;
+  }
+  // Get the  current user and check proper roles
+  $user_roles = Drupal::currentUser()->getRoles();
+  // You can add other roles here.
+  $allowed_roles = [
+    'webmaster',
+    'conseiller_central',
+    'administrator',
+    'super_admin'
+  ];
+
+  foreach ($allowed_roles as $role) {
+    if (in_array($role, $user_roles)) {
+      return TRUE;
+    }
+  }
+
+  return FALSE;
+}
+
+/**
+ * Custom submit handler.
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function aneti_grc_node_offre_edit_form_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  // CHeck for roles.
+  if (!_aneti_grc_allowed_roles()) {
+    return;
+  }
+
+  $node = $form_state->getFormObject()->getEntity();
+  aneti_grc_add_offre($node->id(), t('Entreprise offer has been edited'));
+}
+
+/**
+ * Custom submit handler.
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function aneti_grc_profile_entreprise_edit_form_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  // CHeck for roles.
+  if (!_aneti_grc_allowed_roles()) {
+    return;
+  }
+
+  $profile = $form_state->getFormObject()->getEntity();
+  aneti_grc_add_profile($profile->id(), t('Entreprise profile has been edited'));
+}
+
+/**
+ * Get the owner of a profile entity.
+ *
+ * @param $profile_id
+ *
+ * @return mixed
+ */
+function aneti_grc_get_profile_owner($profile_id) {
+  $profile = Drupal\profile\Entity\Profile::load($profile_id);
+  $owner_id = $profile->getOwnerId();
+
+  return $owner_id;
+}
+
+/**
+ * Get the owner of a node entity.
+ *
+ * @param $offer_id
+ *
+ * @return mixed
+ */
+function aneti_grc_get_offer_owner($offer_id) {
+  $node = Node::load($offer_id);
+  $owner_id = $node->getOwnerId();
+
+  return $owner_id;
+}
+
+/**
+ * Find a GRC node for a given User ID
+ * @param $id
+ * @param string $type
+ *
+ * @return array|int
+ */
+function aneti_grc_find_grc_by_entreprise_id($id, $type = 'profile') {
+  // Load the entreprise profile and get owner ID
+  if ($type == 'profile') {
+    $owner_id = aneti_grc_get_profile_owner($id);
+  }
+  else {
+    $owner_id = aneti_grc_get_offer_owner($id);
+  }
+
+
+  // Search for nodes with the owner ID
+  $query = \Drupal::entityQuery('node');
+  $query->condition('field_entreprise_grc.entity.uid', $owner_id);
+
+  return $query->execute();
+}
+
+/**
+ * Add a GRC entry for an updated profile.
+ *
+ * @param $entity_id
+ * @param string $message
+ *
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function aneti_grc_add_profile($entity_id, $message = "") {
+  if (empty($message)) {
+    return;
+  }
+
+  // Search for grc with the provided id.
+  if ($grc_node = aneti_grc_find_grc_by_entreprise_id($entity_id)) {
+    $nid = array_shift($grc_node);
+    $node = Node::load($nid);
+  }
+  else {
+    $node = Node::create([
+      'type'        => 'action_client',
+      'title'       => 'Actions profile: ' . $entity_id,
+    ]);
+    $node->set('field_entreprise_grc', aneti_grc_get_profile_owner($entity_id));
+  }
+  // create entity collection item
+  $fc = _aneti_grc_create_ec_item();
+  $fc->setHostEntity($node);
+  $fc->set('field_description_grc', $message);
+  $fc->save(TRUE);
+
+  $node->save();
+}
+
+/**
+ * Add a GRC entry for an updated offer.
+ *
+ * @param $node_id
+ * @param string $message
+ *
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function aneti_grc_add_offre($node_id, $message = "") {
+  if (empty($message)) {
+    return;
+  }
+
+  // Search for grc with the provided id.
+  if ($grc_node = aneti_grc_find_grc_by_entreprise_id($node_id, 'offer')) {
+    $nid = array_shift($grc_node);
+    $node = Node::load($nid);
+  }
+  else {
+    $node = Node::create([
+      'type'        => 'action_client',
+      'title'       => 'Actions offer: ' . $node_id,
+    ]);
+    $node->set('field_entreprise_grc', aneti_grc_get_offer_owner($node_id));
+  }
+  // create entity collection item
+  $fc = _aneti_grc_create_ec_item();
+  $fc->setHostEntity($node);
+  $fc->set('field_description_grc', $message);
+  $fc->save(TRUE);
+
+  $node->save();
+}
+
+/**
+ * Helper function to create a field collection Item.
+ *
+ * @return \Drupal\Core\Entity\EntityInterface|\Drupal\field_collection\Entity\FieldCollectionItem
+ */
+function _aneti_grc_create_ec_item() {
+
+  $fieldCollectionItem = FieldCollectionItem::create([
+    'field_name' => 'field_action_grc',
+  ]);
+
+  return $fieldCollectionItem;
+}
+

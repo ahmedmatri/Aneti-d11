@@ -1,0 +1,164 @@
+// 1200
+@media (min-width: $desktop) {}
+
+// 1199
+@media (max-width: $desktop - 1) {
+
+}
+
+// 992 - 1199
+@media (min-width: $tablet-ht) and (max-width: $desktop - 1) {}
+
+//992
+@media(min-width:992px) {}
+
+// 991
+@media (max-width: $tablet-ht - 1) {
+  .block-ccount-yet {
+    margin-top: rem(20px);
+  }
+
+}
+
+// 768 - 991
+@media (min-width: $tablet-vt) and (max-width: $tablet-ht - 1) {
+  div[id*=block-postajob-],#block-postajob{
+    .post-job{
+      min-height: auto;
+    }
+    .info p{
+      font-size: rem(20px);
+    }
+  }
+
+  .path-webform,
+  .path-node,
+  .page-node-type-job,
+  .page-node-type-page,
+  .page-node-type-resumes,
+  .page-node-type-job-preferences,
+  .page-node-type-education,
+  .path-employers {
+    .row>.sidebar,
+    .row>.content {
+      @include flex-width-col-xs(100%);
+    }
+    .row>.content{
+      margin-bottom: rem(35px);
+    }
+    div[id*=block-postajob-],#block-postajob{
+      .post-job{
+        padding: rem(15px) rem(20px);
+        min-height: rem(160px);
+        .link-post-jobs{
+          margin-bottom: rem(20px);
+          a{
+            padding-top:rem(9px) ;
+            padding-bottom: rem(9px);
+          }
+        }
+        .image-bg img{
+          height:auto;
+        }
+      }
+
+      .info p{
+        font-size: rem(30px);
+      }
+    }
+  }
+
+}
+
+// 767
+@media (max-width: $tablet-vt - 1) {
+  .row>.sidebar,
+  .row>.content {
+    @include flex-width-col-xs(100%);
+  }
+  .row>.content{
+    margin-bottom: rem(35px);
+  }
+
+  .block-account{
+    .row > .content {
+      margin-bottom:0;
+    }
+  }
+
+  .path-frontpage .main .row{
+    padding-bottom: 0;
+  }
+
+  //Appliance account Page
+  .user-register-form {
+    max-width: 100%;
+    padding: rem(15px) !important;
+  } //Send profile Page
+  .webform-submission-send-profile-form {
+    max-width: 100%;
+    width: 100%;
+  }
+  .block-form-login {
+    .form-item {
+      display: block;
+      label {
+        margin-bottom: rem(10px);
+      }
+    }
+    .user-new-password {
+      margin-left: 0;
+    }
+    .form-submit {
+      margin-left: 0;
+    }
+    .form-actions {
+      text-align: center;
+    }
+  }
+
+
+}
+
+// 640
+@media (max-width: $mobile) {}
+
+@media (max-width:575px) {
+
+}
+
+// 480
+@media (max-width: $mobile-md) {
+  div[id*=block-postajob-],#block-postajob{
+    .post-job{
+      .link-post-jobs{
+        margin-bottom: rem(15px);
+      }
+    }
+  }
+
+
+  //Send profile Page
+  .webform-submission-send-profile-form {
+    #ajax-wrapper {
+      width: 100%;
+    } //Btn submit
+    .form-actions {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+// 360
+@media (max-width: $mobile-sm) {
+  div[id*=block-postajob-],#block-postajob{
+    .info p{
+      font-size: rem(20px);
+    }
+  }
+
+}
+
+// 320
+@media (max-width: $mobile-xs) {}

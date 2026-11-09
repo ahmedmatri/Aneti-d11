@@ -1,0 +1,22 @@
+uuid: fbb17c48-ccd3-48f8-90d5-10bf3597bf6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.agence_national
+id: node.agence_national.promote
+field_name: promote
+entity_type: node
+bundle: agence_national
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

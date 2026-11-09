@@ -1,0 +1,168 @@
+<?php
+
+use Drupal\Core\Template\RenderWrapper;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+use Drupal\Core\Url;
+
+$active_theme = \Drupal::theme()->getActiveTheme()->getName();
+include_once(drupal_get_path('theme', $active_theme) . '/assets/includes/skins-menu/skins_menu.inc');
+
+function job_board_preprocess_page(&$variables) {
+  _job_board_process_page($variables);
+  $node = \Drupal::request()->attributes->get('node');
+
+  // Hide tabs on first connection.
+  if (\Drupal::request()->get('pass-reset-token')) {
+    unset($variables['page']['content']['job_board_local_tasks']);
+  }
+
+  if ($node && $node->bundle() == 'offre') {
+    $variables['offre'] = 'page-node-type-job';
+  }
+
+  if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
+    $variables['attributes']['class'][] = 'layout-two-sidebars';
+    $variables['page']['main_content_width'] = 4;    
+  }
+  elseif (!empty($variables['page']['sidebar_first'])) {
+    $variables['attributes']['class'][] = 'layout-one-sidebar';
+    $variables['attributes']['class'][] = 'layout-sidebar-first';
+    $variables['page']['main_content_width'] = 8;    
+  }
+  elseif (!empty($variables['page']['sidebar_second'])) {
+    $variables['attributes']['class'][] = 'layout-one-sidebar';
+    $variables['attributes']['class'][] = 'layout-sidebar-second';
+    $variables['page']['main_content_width'] = 8;    
+  }
+  else {
+    $variables['attributes']['class'][] = 'layout-no-sidebars';
+    $variables['page']['main_content_width'] = 12;
+
+
+  }
+    $variables['route_name'] = \Drupal::routeMatch()->getRouteName();
+
+  skmn_preprocess_page($variables);
+}
+
+function job_board_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+	if ($node = \Drupal::routeMatch()->getParameter('node')) {
+		$suggestions[] = 'page__node__' . $node->getType();
+	}
+}
+function job_board_preprocess_node(&$variables) {
+  // Note: you'll probably want this only for certain content types.
+  if ($variables['node']->getType() == 'blog') {
+    $variables['comment_count'] = $variables['node']->get('comment')->comment_count;
+  }
+
+  if ($variables['node']->getType() == 'curriculum_vitae') {
+    $user = \Drupal::currentUser();
+    $admin = FALSE;
+    if (method_exists($user, 'id') && $user->id() == 1) {
+      $admin = TRUE;
+    }
+
+    if ($admin || $user->hasPermission('access europass cv')) {
+      $variables['europass_link'] = '/node/' . $variables['node']->id() . '/europass';
+    }
+  }
+    $variables['attributes']['class'][]='node-'.$variables['node']->id();
+
+}
+
+function job_board_css_alter(&$css, \Drupal\Core\Asset\AttachedAssetsInterface $assets) {
+
+  unset($css[drupal_get_path('module', 'we_megamenu') . '/assets/includes/bootstrap/css/bootstrap.min.css']);
+}
+
+function job_board_preprocess_html(&$variables) {
+
+  // Add information about the number of sidebars.
+  $is_front_page =  \Drupal::service('path.matcher')->isFrontPage();
+  if ($is_front_page) {
+    $variables['attributes']['class'][] = 'front';
+  }
+  else {
+    $variables['attributes']['class'][] = 'not-front';
+  }
+
+  if(isset($variables['node_type'])) {
+    $variables['attributes']['class'][] = 'node';
+    $variables['attributes']['class'][] = 'node-' . $variables['node_type'];
+    $variables['attributes']['class'][] = 'node-' . \Drupal::routeMatch()->getParameter('node')->id();
+
+
+  }
+  else{
+      $variables['attributes']['class'][]=$variables['root_path'];
+  }
+  skmn_preprocess_html($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for maintenance-page.html.twig.
+ */
+function job_board_preprocess_maintenance_page(&$variables) {
+  // By default, site_name is set to Drupal if no db connection is available
+  // or during site installation. Setting site_name to an empty string makes
+  // the site and update pages look cleaner.
+  // @see template_preprocess_maintenance_page
+  if (!$variables['db_is_active']) {
+    $variables['site_name'] = '';
+  }
+
+  // brainfood has custom styling for the maintenance page.
+  $variables['#attached']['library'][] = 'job_board/maintenance_page';
+
+  // Set the options that apply to both page and maintenance page.
+  _job_board_process_page($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for block.html.twig.
+ */
+function job_board_preprocess_block(&$variables) {
+  // Add a clearfix class to system branding blocks.
+  if ($variables['plugin_id'] == 'system_branding_block') {
+    $variables['attributes']['class'][] = 'clearfix';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for menu.html.twig.
+ */
+function job_board_preprocess_menu(&$variables) {
+  $variables['attributes']['class'][] = 'clearfix';
+}
+
+/**
+ * Helper function for handling the site name and slogan.
+ */
+function _job_board_process_page(&$variables) {
+  $site_config = \Drupal::config('system.site');
+  // Always print the site name and slogan, but if they are toggled off, we'll
+  // just hide them visually.
+  $variables['hide_site_name']   = theme_get_setting('features.name') ? FALSE : TRUE;
+  $variables['hide_site_slogan'] = theme_get_setting('features.slogan') ? FALSE : TRUE;
+}
+
+function job_board_form_system_theme_settings_alter(&$form, $form_state) {
+  skmn_form_system_theme_settings_alter($form, $form_state);
+}
+
+
+function job_board_form_system_theme_settings_submit($form, &$form_state) {
+  skmn_form_system_theme_settings_submit($form, $form_state);
+}
+
+function job_board_preprocess_links__language_block(&$variables) {
+  foreach ($variables['links'] as $key => $link) {
+    $variables['links'][$key]['link']['#title'] = $key;
+  }
+}
+
+function job_board_form_search_block_form_alter(&$form, FormStateInterface $form_state) {
+  $form['keys']['#attributes']['placeholder']  = t('Search ...');
+}

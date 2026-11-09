@@ -1,0 +1,26 @@
+uuid: 9d0c9605-d99f-462d-bf02-5f0a05214401
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - simplenews
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: WH-ddyUo4oWNnk6HaulK2RLdPTM4CV0xBZSj5HFqAnQ
+id: node.simplenews_issue
+field_name: simplenews_issue
+entity_type: node
+type: simplenews_issue
+settings:
+  target_type: simplenews_newsletter
+module: simplenews
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

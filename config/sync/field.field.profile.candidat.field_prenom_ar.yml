@@ -1,0 +1,19 @@
+uuid: 6a70ae75-7373-4e63-a508-77dcc6c9c7a3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_prenom_ar
+    - profile.type.candidat
+id: profile.candidat.field_prenom_ar
+field_name: field_prenom_ar
+entity_type: profile
+bundle: candidat
+label: اللقب
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

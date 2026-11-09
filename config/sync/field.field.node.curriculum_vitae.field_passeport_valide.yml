@@ -1,0 +1,23 @@
+uuid: 961f266c-2e0d-44df-85e8-f9418f6aa7c4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_passeport_valide
+    - node.type.curriculum_vitae
+id: node.curriculum_vitae.field_passeport_valide
+field_name: field_passeport_valide
+entity_type: node
+bundle: curriculum_vitae
+label: 'Passeport valide'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

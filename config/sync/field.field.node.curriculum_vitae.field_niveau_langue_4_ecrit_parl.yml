@@ -1,0 +1,21 @@
+uuid: b53eb8aa-caec-41c3-974f-301cc1d1e3a6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_niveau_langue_4_ecrit_parl
+    - node.type.curriculum_vitae
+  module:
+    - options
+id: node.curriculum_vitae.field_niveau_langue_4_ecrit_parl
+field_name: field_niveau_langue_4_ecrit_parl
+entity_type: node
+bundle: curriculum_vitae
+label: 'Niveau Langue 4(Ecrit, Parlé)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

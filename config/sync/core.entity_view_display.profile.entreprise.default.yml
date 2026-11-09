@@ -1,0 +1,289 @@
+uuid: 842b5783-22ed-441e-8731-43714b99dfba
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.profile.entreprise.field_adresse_entreprise
+    - field.field.profile.entreprise.field_adresse_entreprise_ar
+    - field.field.profile.entreprise.field_code_postal
+    - field.field.profile.entreprise.field_courriel
+    - field.field.profile.entreprise.field_courriel_contact
+    - field.field.profile.entreprise.field_date_validation
+    - field.field.profile.entreprise.field_field_groupe_filiale_ar
+    - field.field.profile.entreprise.field_fonction
+    - field.field.profile.entreprise.field_groupe_filiale
+    - field.field.profile.entreprise.field_identifiant_entreprise
+    - field.field.profile.entreprise.field_image
+    - field.field.profile.entreprise.field_nom_entreprise
+    - field.field.profile.entreprise.field_nom_entreprise_ar
+    - field.field.profile.entreprise.field_pays
+    - field.field.profile.entreprise.field_personne_contacter
+    - field.field.profile.entreprise.field_poste_resp_contact_ar
+    - field.field.profile.entreprise.field_profile_blacklisted
+    - field.field.profile.entreprise.field_raison_social
+    - field.field.profile.entreprise.field_referant
+    - field.field.profile.entreprise.field_resp_contact_ar
+    - field.field.profile.entreprise.field_secteurs_d_activite
+    - field.field.profile.entreprise.field_site_web
+    - field.field.profile.entreprise.field_telecopie
+    - field.field.profile.entreprise.field_telephone
+    - field.field.profile.entreprise.field_telephone_contact
+    - field.field.profile.entreprise.field_valider
+    - field.field.profile.entreprise.field_ville
+    - field.field.profile.entreprise.field_ville_ar
+    - field.field.profile.entreprise.field_ville_tunisie
+    - profile.type.entreprise
+  module:
+    - datetime
+    - image
+    - link
+id: profile.entreprise.default
+targetEntityType: profile
+bundle: entreprise
+mode: default
+content:
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_adresse_entreprise:
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_adresse_entreprise_ar:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_code_postal:
+    weight: 16
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_courriel:
+    weight: 19
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_courriel_contact:
+    weight: 24
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_date_validation:
+    weight: 26
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_field_groupe_filiale_ar:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_fonction:
+    weight: 21
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_groupe_filiale:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_identifiant_entreprise:
+    weight: 29
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_image:
+    weight: 5
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_nom_entreprise:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_nom_entreprise_ar:
+    weight: 9
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pays:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_personne_contacter:
+    weight: 20
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_poste_resp_contact_ar:
+    weight: 12
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_profile_blacklisted:
+    weight: 28
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_raison_social:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_referant:
+    weight: 27
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_resp_contact_ar:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_secteurs_d_activite:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_site_web:
+    weight: 17
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_telecopie:
+    weight: 23
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_telephone:
+    weight: 18
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_telephone_contact:
+    weight: 22
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_valider:
+    weight: 25
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_ville:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ville_ar:
+    weight: 14
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ville_tunisie:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

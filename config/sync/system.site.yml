@@ -1,0 +1,15 @@
+uuid: 06ed16d1-5228-4b29-a4b0-81bc8a0a5507
+name: 'Aneti internationnal'
+mail: aneti-international@emploi.nat.tn
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: fr
+default_langcode: fr
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+mail_notification: ''

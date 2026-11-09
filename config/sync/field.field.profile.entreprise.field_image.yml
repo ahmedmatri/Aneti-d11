@@ -1,0 +1,38 @@
+uuid: 216a7364-82d8-4175-a395-85bc07bc988b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_image
+    - profile.type.entreprise
+  module:
+    - image
+id: profile.entreprise.field_image
+field_name: field_image
+entity_type: profile
+bundle: entreprise
+label: LOGO
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 449c7597-6b57-4583-90a5-19849b3c698d
+    alt: ''
+    title: ''
+    width: 101
+    height: 73
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

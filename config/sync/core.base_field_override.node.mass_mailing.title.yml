@@ -1,0 +1,18 @@
+uuid: b3da84b8-fa7d-4d53-81eb-4526a8c5c8e0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.mass_mailing
+id: node.mass_mailing.title
+field_name: title
+entity_type: node
+bundle: mass_mailing
+label: Objet
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

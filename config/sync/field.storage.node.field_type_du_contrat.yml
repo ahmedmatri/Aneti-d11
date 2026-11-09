@@ -1,0 +1,33 @@
+uuid: 29a4a40b-698b-413a-b7ac-1b20ceb65f1f
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_type_du_contrat
+field_name: field_type_du_contrat
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: CDD
+    -
+      value: '1'
+      label: CDI
+    -
+      value: '2'
+      label: Saisonnier
+    -
+      value: '3'
+      label: 'Contrat jeune professionnel'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,14 @@
+uuid: a7897d4e-a3e4-498b-8999-adce62e216d3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.super_admin
+  module:
+    - user
+id: user_add_role_action.super_admin
+label: 'Ajouter le rôle Super admin aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: super_admin

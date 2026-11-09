@@ -1,0 +1,22 @@
+uuid: c5038928-bc0a-458d-ab08-9baf44f95645
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_formation_diplome_exige
+field_name: field_formation_diplome_exige
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

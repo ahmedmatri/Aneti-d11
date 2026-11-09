@@ -1,0 +1,20 @@
+uuid: 48d65994-ebc7-422d-b8d5-0c8905ee7262
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_duree_contrat
+field_name: field_duree_contrat
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

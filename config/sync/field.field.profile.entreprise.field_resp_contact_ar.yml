@@ -1,0 +1,19 @@
+uuid: b763223d-f4be-4185-834b-0c0036443844
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_resp_contact_ar
+    - profile.type.entreprise
+id: profile.entreprise.field_resp_contact_ar
+field_name: field_resp_contact_ar
+entity_type: profile
+bundle: entreprise
+label: 'المكلف بالاتصال'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

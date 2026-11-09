@@ -1,0 +1,21 @@
+uuid: a560703f-dadb-464e-86c9-74645341515e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_theme
+    - field_collection.field_collection.field_action_api
+  module:
+    - options
+id: field_collection_item.field_action_api.field_theme
+field_name: field_theme
+entity_type: field_collection_item
+bundle: field_action_api
+label: Thème
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

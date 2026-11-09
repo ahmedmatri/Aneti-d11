@@ -1,0 +1,23 @@
+uuid: 18a3b384-2f0b-4a76-befa-0374c928734d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.bloc_image
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.bloc_image.body
+field_name: body
+entity_type: block_content
+bundle: bloc_image
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

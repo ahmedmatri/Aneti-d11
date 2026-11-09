@@ -1,0 +1,38 @@
+uuid: c266070c-9e6f-4601-8da9-db35b84a4625
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.menu-entreprise
+  module:
+    - system
+    - user
+  theme:
+    - job_board
+id: menuentreprise
+theme: job_board
+region: sidebar_second
+weight: -19
+provider: null
+plugin: 'system_menu_block:menu-entreprise'
+settings:
+  id: 'system_menu_block:menu-entreprise'
+  label: 'Menu Entreprise'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    pages: '*'
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      entreprise: entreprise
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

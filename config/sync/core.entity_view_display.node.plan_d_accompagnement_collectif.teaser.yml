@@ -1,0 +1,29 @@
+uuid: f6b817d3-5a71-47d0-8682-70556543401d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.plan_d_accompagnement_collectif.field_action_ac
+    - field.field.node.plan_d_accompagnement_collectif.field_description_ac
+    - field.field.node.plan_d_accompagnement_collectif.field_pag_actions
+    - field.field.node.plan_d_accompagnement_collectif.field_pag_candidats
+    - node.type.plan_d_accompagnement_collectif
+  module:
+    - user
+id: node.plan_d_accompagnement_collectif.teaser
+targetEntityType: node
+bundle: plan_d_accompagnement_collectif
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_action_ac: true
+  field_description_ac: true
+  field_pag_actions: true
+  field_pag_candidats: true
+  langcode: true

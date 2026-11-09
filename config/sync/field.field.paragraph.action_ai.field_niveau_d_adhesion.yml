@@ -1,0 +1,23 @@
+uuid: f47d44ba-dbce-41a2-bc03-ddffde1df518
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_niveau_d_adhesion
+    - paragraphs.paragraphs_type.action_ai
+id: paragraph.action_ai.field_niveau_d_adhesion
+field_name: field_niveau_d_adhesion
+entity_type: paragraph
+bundle: action_ai
+label: 'Niveau d''adhesion'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 5
+  prefix: ''
+  suffix: ''
+field_type: integer

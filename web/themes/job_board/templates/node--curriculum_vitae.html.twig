@@ -1,0 +1,85 @@
+{%
+  set classes = [
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  'clearfix',
+]
+%}
+
+{{ attach_library('classy/node') }}
+
+<article{{ attributes.addClass(classes) }}>
+  <header>
+    {{ title_prefix }}
+    {% if not page %}
+      <h2{{ title_attributes.addClass('node__title') }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% if display_submitted %}
+
+    {#  <div class="node__meta">
+        {{ author_picture }}
+        <span{{ author_attributes }}>
+          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        </span>
+        {{ metadata }}
+      </div> #}
+    {% endif %}
+  </header>
+  <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+      <div class="content-body">
+
+          <div class="container">
+              <div class="row col-lg-12 col-md-12 col-sm-8 col-xs-9 bhoechie-tab-container">
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
+                      <div class="list-group">
+                          <a href="#" class="list-group-item active text-center">
+                              <h4>Détail CV</h4><br/>
+                          </a>
+                          <a href="#" class="list-group-item text-center">
+                              <h4>Pieces jointes</h4><br/>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab">
+                      <!-- flight section -->
+                      <div class="bhoechie-tab-content without-cv active">
+                          <center>
+
+                                  {{ content }}
+
+                          </center>
+                      </div>
+                      <!-- train section -->
+                      <div class="bhoechie-tab-content">
+                          {% if  content.field_cv_anglais %}
+                              {{ content.field_cv_anglais }}
+                          {% endif %}
+                          {% if  content.field_cv_francais %}
+                              {{ content.field_cv_francais }}
+                          {% endif %}
+                          {% if  content.field_cv_arabe %}
+                              {{ content.field_cv_arabe }}
+                          {% endif %}
+                          {% if  content.field_cv_canadien %}
+                              {{ content.field_cv_canadien }}
+                          {% endif %}
+                          {% if europass_link %}
+                              <div class="cv">
+                                  <a href="{{ europass_link }}" class="btn btn-primary">{{ 'Télécharger un cv EUROPASS'|t }}</a>
+                              </div>
+                          {% endif %}
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </div>
+</article>

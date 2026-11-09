@@ -1,0 +1,23 @@
+uuid: 5b20ab40-c670-4c55-ad36-201e8355e362
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_conaissance_de_soi
+    - node.type.plan_d_accompagnement_individuel
+id: node.plan_d_accompagnement_individuel.field_conaissance_de_soi
+field_name: field_conaissance_de_soi
+entity_type: node
+bundle: plan_d_accompagnement_individuel
+label: 'Conaissance de soi'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 5
+  prefix: ''
+  suffix: ''
+field_type: integer

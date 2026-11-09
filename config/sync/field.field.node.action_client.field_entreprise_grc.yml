@@ -1,0 +1,41 @@
+uuid: e6fbfab9-4c4c-40b9-90e0-787a9f033d57
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_entreprise_grc
+    - node.type.action_client
+id: node.action_client.field_entreprise_grc
+field_name: field_entreprise_grc
+entity_type: node
+bundle: action_client
+label: Entreprise
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: role
+      role:
+        entreprise: entreprise
+        candidat: '0'
+        super_admin: '0'
+        administrator: '0'
+        referent: '0'
+        conseiller_central: '0'
+        traduction: '0'
+        chef_unite_migration: '0'
+        bureau_a_l_etranger: '0'
+        partenaire: '0'
+        webmaster: '0'
+        pdg: '0'
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: df2985b0-4844-4a02-8c49-eff42ad641ae
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_etat
+    - node.type.entretien
+id: node.entretien.field_etat
+field_name: field_etat
+entity_type: node
+bundle: entretien
+label: Etat
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

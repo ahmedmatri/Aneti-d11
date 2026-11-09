@@ -1,0 +1,21 @@
+uuid: 4fd7dea6-4cba-4e87-ac12-c2e05b65d74a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ecrire_letter_motivation
+    - node.type.complement_postulation
+  module:
+    - text
+id: node.complement_postulation.field_ecrire_letter_motivation
+field_name: field_ecrire_letter_motivation
+entity_type: node
+bundle: complement_postulation
+label: 'Ecrie une lettre de motivation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

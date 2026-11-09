@@ -1,0 +1,18 @@
+uuid: ddf90ff8-458c-436f-b4a9-3f7e8bc5f283
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.plan_d_accompagnement_collectif
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.plan_d_accompagnement_collectif
+target_entity_type_id: node
+target_bundle: plan_d_accompagnement_collectif
+default_langcode: site_default
+language_alterable: false

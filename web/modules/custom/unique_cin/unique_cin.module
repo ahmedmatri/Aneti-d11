@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function unique_cin_entity_type_alter(array &$entity_types) {
+
+  /** @var $entity_types \Drupal\Core\Entity\EntityTypeInterface[] */
+
+  $entity = $entity_types['profile'];
+  $entity->addConstraint('UniqueCIN');
+}

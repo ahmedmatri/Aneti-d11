@@ -1,0 +1,18 @@
+uuid: 3644f547-079a-4f0a-8bbd-54b7f66e545c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.curriculum_vitae
+id: node.curriculum_vitae.created
+field_name: created
+entity_type: node
+bundle: curriculum_vitae
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

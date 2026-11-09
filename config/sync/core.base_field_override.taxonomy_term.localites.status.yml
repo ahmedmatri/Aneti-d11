@@ -1,0 +1,22 @@
+uuid: e48dc37b-d896-4165-9022-f8d7af5d4943
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.localites
+id: taxonomy_term.localites.status
+field_name: status
+entity_type: taxonomy_term
+bundle: localites
+label: Publié
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

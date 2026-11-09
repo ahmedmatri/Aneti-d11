@@ -1,0 +1,29 @@
+uuid: 51c7b70a-9004-4a1c-a691-0a1007651d3a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_diplome_exige
+    - node.type.offre
+    - taxonomy.vocabulary.diplome
+id: node.offre.field_diplome_exige
+field_name: field_diplome_exige
+entity_type: node
+bundle: offre
+label: 'Diplôme exigé'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      diplome: diplome
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

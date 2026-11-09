@@ -1,0 +1,23 @@
+uuid: f8676d4f-e1f2-467a-bfa4-bcdf030d083b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_r1
+    - field_collection.field_collection.field_checklist_avant_depart
+id: field_collection_item.field_checklist_avant_depart.field_r1
+field_name: field_r1
+entity_type: field_collection_item
+bundle: field_checklist_avant_depart
+label: R1
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Oui
+  off_label: Non
+field_type: boolean

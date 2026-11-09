@@ -1,0 +1,18 @@
+uuid: 924ec165-6ede-4f6d-86cd-4acb5a5c1cb2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.plan_d_accompagnement_individuel
+id: node.plan_d_accompagnement_individuel.unpublish_on
+field_name: unpublish_on
+entity_type: node
+bundle: plan_d_accompagnement_individuel
+label: 'Unpublish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

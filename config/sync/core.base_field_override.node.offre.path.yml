@@ -1,0 +1,20 @@
+uuid: f5705692-049b-4a2f-b7e9-4015a176c06b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.offre
+  module:
+    - path
+id: node.offre.path
+field_name: path
+entity_type: node
+bundle: offre
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

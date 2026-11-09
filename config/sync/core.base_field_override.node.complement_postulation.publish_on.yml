@@ -1,0 +1,18 @@
+uuid: aedaeff7-858d-4efd-a271-2c71ca8d004d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.complement_postulation
+id: node.complement_postulation.publish_on
+field_name: publish_on
+entity_type: node
+bundle: complement_postulation
+label: 'Publish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

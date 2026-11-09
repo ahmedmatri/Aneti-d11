@@ -1,0 +1,23 @@
+uuid: f4f88b64-c92c-4ee8-8ca3-bcb098aa01dd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_r13
+    - field_collection.field_collection.field_checklist_avant_depart
+id: field_collection_item.field_checklist_avant_depart.field_r13
+field_name: field_r13
+entity_type: field_collection_item
+bundle: field_checklist_avant_depart
+label: R13
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Oui
+  off_label: Non
+field_type: boolean

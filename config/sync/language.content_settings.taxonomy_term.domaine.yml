@@ -1,0 +1,18 @@
+uuid: 8a26bbd5-2d66-409d-8c29-b87401055dac
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.domaine
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.domaine
+target_entity_type_id: taxonomy_term
+target_bundle: domaine
+default_langcode: site_default
+language_alterable: true

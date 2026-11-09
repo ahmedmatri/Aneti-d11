@@ -1,0 +1,23 @@
+uuid: 3a80af91-ece1-418f-ad84-9a2c83a074fe
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_protection_sociale
+    - node.type.offre
+id: node.offre.field_protection_sociale
+field_name: field_protection_sociale
+entity_type: node
+bundle: offre
+label: 'Protection sociale'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

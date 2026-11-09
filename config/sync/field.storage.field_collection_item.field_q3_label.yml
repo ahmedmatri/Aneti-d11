@@ -1,0 +1,23 @@
+uuid: b9a35e42-6302-4d78-89bf-1027b8ec52ca
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_collection
+    - field_permissions
+    - markup
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: field_collection_item.field_q3_label
+field_name: field_q3_label
+entity_type: field_collection_item
+type: markup
+settings: {  }
+module: markup
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

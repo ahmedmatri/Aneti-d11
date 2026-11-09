@@ -1,0 +1,21 @@
+uuid: 8a58bcd5-d038-4cd1-897b-e0f4bc6c4f8e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metiers_en_tension
+    - node.type.fiche_pays
+  module:
+    - text
+id: node.fiche_pays.field_metiers_en_tension
+field_name: field_metiers_en_tension
+entity_type: node
+bundle: fiche_pays
+label: 'Métiers en tension'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

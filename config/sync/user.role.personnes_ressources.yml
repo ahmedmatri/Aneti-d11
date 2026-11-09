@@ -1,0 +1,17 @@
+uuid: 4e898eca-d602-4a88-9a85-123490fb68cb
+langcode: fr
+status: true
+dependencies: {  }
+id: personnes_ressources
+label: Personnes-Ressources
+weight: 17
+is_admin: null
+permissions:
+  - 'access content'
+  - 'administer nodes'
+  - 'edit any curriculum_vitae content'
+  - 'edit any postulation content'
+  - 'view curriculum_vitae revisions'
+  - 'view offre revisions'
+  - 'view own unpublished content'
+  - 'view postulation revisions'

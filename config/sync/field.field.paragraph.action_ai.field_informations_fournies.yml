@@ -1,0 +1,21 @@
+uuid: 0d13387d-a336-49f6-870c-5b2459df56a1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_informations_fournies
+    - paragraphs.paragraphs_type.action_ai
+  module:
+    - text
+id: paragraph.action_ai.field_informations_fournies
+field_name: field_informations_fournies
+entity_type: paragraph
+bundle: action_ai
+label: 'Informations fournies'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

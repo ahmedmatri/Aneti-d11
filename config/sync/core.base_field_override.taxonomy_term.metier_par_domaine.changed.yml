@@ -1,0 +1,18 @@
+uuid: b81a33cf-4b77-477f-b42a-310d9f722e1f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.metier_par_domaine
+id: taxonomy_term.metier_par_domaine.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: metier_par_domaine
+label: Modifié
+description: 'Le moment auquel le terme a été modifié pour la dernière fois.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

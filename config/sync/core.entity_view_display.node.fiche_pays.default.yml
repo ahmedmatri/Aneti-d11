@@ -1,0 +1,125 @@
+uuid: 9c014f7d-2699-4e15-923e-46ec7a40eabe
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.fiche_pays.field_annuaires_d_entreprise
+    - field.field.node.fiche_pays.field_equivalence_de_diplomes
+    - field.field.node.fiche_pays.field_fiscalite
+    - field.field.node.fiche_pays.field_informations_generale
+    - field.field.node.fiche_pays.field_informations_salariales
+    - field.field.node.fiche_pays.field_la_presse
+    - field.field.node.fiche_pays.field_liens
+    - field.field.node.fiche_pays.field_marche_d_emploi
+    - field.field.node.fiche_pays.field_metiers_en_tension
+    - field.field.node.fiche_pays.field_niveau_de_vie
+    - field.field.node.fiche_pays.field_recherche_de_logement
+    - field.field.node.fiche_pays.field_sante_protection_
+    - field.field.node.fiche_pays.field_transports
+    - node.type.fiche_pays
+  module:
+    - text
+    - user
+id: node.fiche_pays.default
+targetEntityType: node
+bundle: fiche_pays
+mode: default
+content:
+  field_annuaires_d_entreprise:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_equivalence_de_diplomes:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_fiscalite:
+    weight: 113
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_informations_generale:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_informations_salariales:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_la_presse:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_liens:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_marche_d_emploi:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_metiers_en_tension:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_niveau_de_vie:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_recherche_de_logement:
+    weight: 110
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_sante_protection_:
+    weight: 112
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_transports:
+    weight: 111
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

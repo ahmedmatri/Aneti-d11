@@ -1,0 +1,27 @@
+uuid: fe652473-ff35-4292-a095-57093ac03949
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.profile.partenaire.field_type_de_partenariat
+    - profile.type.partenaire
+  module:
+    - content_moderation
+id: profile.partenaire.default
+targetEntityType: profile
+bundle: partenaire
+mode: default
+content:
+  field_type_de_partenariat:
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+hidden: {  }

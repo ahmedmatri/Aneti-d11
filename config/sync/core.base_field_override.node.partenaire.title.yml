@@ -1,0 +1,18 @@
+uuid: 43cc762e-3c7f-4560-b578-0c3da142bd93
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.partenaire
+id: node.partenaire.title
+field_name: title
+entity_type: node
+bundle: partenaire
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

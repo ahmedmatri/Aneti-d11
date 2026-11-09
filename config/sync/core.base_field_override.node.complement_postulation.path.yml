@@ -1,0 +1,20 @@
+uuid: 2e345c14-aa6c-489c-b6a1-c464daebecce
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.complement_postulation
+  module:
+    - path
+id: node.complement_postulation.path
+field_name: path
+entity_type: node
+bundle: complement_postulation
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

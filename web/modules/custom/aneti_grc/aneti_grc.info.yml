@@ -1,0 +1,5 @@
+name: 'ANETI grc'
+type: module
+description: 'ANETI GRC'
+core_version_requirement: ^8.9 || ^9 || ^10
+package: 'Custom'

@@ -1,0 +1,18 @@
+uuid: 1a90bedb-10fd-4f26-9a13-f20060dfcf81
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.plan_d_accompagnement_collectif
+id: node.plan_d_accompagnement_collectif.title
+field_name: title
+entity_type: node
+bundle: plan_d_accompagnement_collectif
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: fefd4dc8-fda2-4514-b9bd-179fe3b4b8ba
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_langue_de_cv_exigee
+    - node.type.offre
+  module:
+    - options
+id: node.offre.field_langue_de_cv_exigee
+field_name: field_langue_de_cv_exigee
+entity_type: node
+bundle: offre
+label: 'Langue de cv exigée'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: none
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,14 @@
+{
+  "name": "drupal/aneti_candidat",
+  "type": "drupal-module",
+  "description": "My Awesome Module",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/aneti_candidat",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/aneti_candidat",
+    "source": "http://cgit.drupalcode.org/aneti_candidat"
+  },
+  "require": { }
+}

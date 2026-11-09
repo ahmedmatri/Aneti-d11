@@ -1,0 +1,18 @@
+uuid: 73591d60-75aa-4201-804a-5d1c5952a7ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.newletter_candidats
+id: node.newletter_candidats.unpublish_on
+field_name: unpublish_on
+entity_type: node
+bundle: newletter_candidats
+label: 'Unpublish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

@@ -1,0 +1,18 @@
+uuid: dc90b4a8-d4c9-40a3-96fb-481b997e74a2
+langcode: fr
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: aneti_2019_page_title
+theme: aneti_2019
+region: ''
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Titre de page'
+  provider: core
+  label_display: '0'
+visibility: {  }

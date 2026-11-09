@@ -1,0 +1,21 @@
+uuid: 662e32f2-99fa-472b-9468-e4235163e27e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_theme
+    - field_collection.field_collection.field_pag_actions
+  module:
+    - options
+id: field_collection_item.field_pag_actions.field_theme
+field_name: field_theme
+entity_type: field_collection_item
+bundle: field_pag_actions
+label: Thème
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

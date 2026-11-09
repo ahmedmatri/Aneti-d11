@@ -1,0 +1,169 @@
+uuid: fd069cae-cdcc-4710-b0fb-cab6bfa56706
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.profile.candidat.field_adresse
+    - field.field.profile.candidat.field_adresse_ar
+    - field.field.profile.candidat.field_cin
+    - field.field.profile.candidat.field_code_postal
+    - field.field.profile.candidat.field_date_de_naissance
+    - field.field.profile.candidat.field_genre
+    - field.field.profile.candidat.field_nom
+    - field.field.profile.candidat.field_nom_ar
+    - field.field.profile.candidat.field_numero_empreinte
+    - field.field.profile.candidat.field_pays
+    - field.field.profile.candidat.field_prenom
+    - field.field.profile.candidat.field_prenom_ar
+    - field.field.profile.candidat.field_referant
+    - field.field.profile.candidat.field_telephone
+    - field.field.profile.candidat.field_valider
+    - field.field.profile.candidat.field_ville
+    - field.field.profile.candidat.field_ville_tunisie
+    - profile.type.candidat
+  module:
+    - datetime
+    - options
+id: profile.candidat.default
+targetEntityType: profile
+bundle: candidat
+mode: default
+content:
+  field_adresse:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_adresse_ar:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_cin:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_code_postal:
+    weight: 7
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_date_de_naissance:
+    weight: 5
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_genre:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_nom:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_nom_ar:
+    weight: 12
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_numero_empreinte:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pays:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_prenom:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_prenom_ar:
+    weight: 13
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_referant:
+    weight: 15
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_telephone:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_valider:
+    weight: 16
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_ville:
+    weight: 9
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ville_tunisie:
+    weight: 10
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

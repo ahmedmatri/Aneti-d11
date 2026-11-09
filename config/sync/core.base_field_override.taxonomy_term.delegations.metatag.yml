@@ -1,0 +1,18 @@
+uuid: d5689423-c7bc-4916-ac97-154b47fba958
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.delegations
+id: taxonomy_term.delegations.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: delegations
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

@@ -1,0 +1,25 @@
+uuid: db72c0a8-a079-42fa-8640-85c1309767d5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_q27_label
+    - field_collection.field_collection.field_checklist_apres_depart
+  module:
+    - markup
+id: field_collection_item.field_checklist_apres_depart.field_q27_label
+field_name: field_q27_label
+entity_type: field_collection_item
+bundle: field_checklist_apres_depart
+label: Q27_label
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>27. Le contrat de travail respecte-t-il les termes et conditions établis quant aux conditions de vie et de travail&nbsp;?</p>\r\n"
+    format: basic_html
+field_type: markup

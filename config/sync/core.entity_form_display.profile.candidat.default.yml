@@ -1,0 +1,310 @@
+uuid: b02fd707-9d1a-4f5c-9ece-00833a9c3fc0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.profile.candidat.field_adresse
+    - field.field.profile.candidat.field_adresse_ar
+    - field.field.profile.candidat.field_cin
+    - field.field.profile.candidat.field_code_postal
+    - field.field.profile.candidat.field_date_de_naissance
+    - field.field.profile.candidat.field_genre
+    - field.field.profile.candidat.field_nom
+    - field.field.profile.candidat.field_nom_ar
+    - field.field.profile.candidat.field_numero_empreinte
+    - field.field.profile.candidat.field_pays
+    - field.field.profile.candidat.field_prenom
+    - field.field.profile.candidat.field_prenom_ar
+    - field.field.profile.candidat.field_referant
+    - field.field.profile.candidat.field_telephone
+    - field.field.profile.candidat.field_valider
+    - field.field.profile.candidat.field_ville
+    - field.field.profile.candidat.field_ville_tunisie
+    - profile.type.candidat
+  module:
+    - chosen_field
+    - content_moderation
+    - datetime
+    - field_group
+third_party_settings:
+  field_group:
+    group_coordonnees:
+      children:
+        - field_adresse
+        - group_right_2
+        - group_left_1
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        description: ''
+        required_fields: true
+        id: ''
+        classes: col-md-12
+      label: Coordonnées
+      region: content
+    group_right:
+      children:
+        - field_numero_empreinte
+        - field_prenom
+        - field_date_de_naissance
+      parent_name: group_identification
+      weight: 2
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'col-md-6 right-form'
+      label: right
+      region: content
+    group_left:
+      children:
+        - field_cin
+        - field_nom
+        - field_genre
+      parent_name: group_identification
+      weight: 3
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'col-md-6 left-form'
+      label: left
+      region: content
+    group_identification:
+      children:
+        - group_right
+        - group_left
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: col-md-12
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        description: ''
+      label: Identification
+      region: content
+    group_left_1:
+      children:
+        - field_code_postal
+        - field_ville
+        - field_ville_tunisie
+        - field_telephone
+      parent_name: group_coordonnees
+      weight: 24
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'col-md-6 left-form'
+        required_fields: false
+      label: left
+      region: content
+    group_right_2:
+      children:
+        - field_pays
+      parent_name: group_coordonnees
+      weight: 22
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'col-md-6 right-form'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: right
+      region: content
+    group_information_ar:
+      children:
+        - field_nom_ar
+        - field_prenom_ar
+        - field_adresse_ar
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: col-md-12
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'information ar'
+      region: content
+id: profile.candidat.default
+targetEntityType: profile
+bundle: candidat
+mode: default
+content:
+  field_adresse:
+    weight: 21
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_adresse_ar:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_cin:
+    weight: 21
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_code_postal:
+    weight: 22
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_date_de_naissance:
+    weight: 24
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_genre:
+    weight: 23
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_nom:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_nom_ar:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_numero_empreinte:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_pays:
+    weight: 24
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_prenom:
+    weight: 23
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_prenom_ar:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_referant:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+  field_telephone:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_valider:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_ville:
+    weight: 24
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ville_tunisie:
+    weight: 25
+    settings: {  }
+    third_party_settings: {  }
+    type: chosen_select
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

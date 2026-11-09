@@ -1,0 +1,19 @@
+uuid: 8ff2f942-1786-49ba-944f-c477b9b5b581
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_adresse_ar
+    - profile.type.candidat
+id: profile.candidat.field_adresse_ar
+field_name: field_adresse_ar
+entity_type: profile
+bundle: candidat
+label: العنوان
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

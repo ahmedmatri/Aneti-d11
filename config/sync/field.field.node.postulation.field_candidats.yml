@@ -1,0 +1,41 @@
+uuid: 9536a4c3-df1a-474a-9150-8e7e0b558b6b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_candidats
+    - node.type.postulation
+id: node.postulation.field_candidats
+field_name: field_candidats
+entity_type: node
+bundle: postulation
+label: candidat
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: role
+      role:
+        candidat: candidat
+        entreprise: '0'
+        super_admin: '0'
+        administrator: '0'
+        referent: '0'
+        conseiller_central: '0'
+        traduction: '0'
+        chef_unite_migration: '0'
+        bureau_a_l_etranger: '0'
+        partenaire: '0'
+        webmaster: '0'
+        pdg: '0'
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

@@ -1,0 +1,40 @@
+uuid: 41f97403-0705-4089-93e8-43768645b40e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.agence_national.body
+    - field.field.node.agence_national.field_coordonnees
+    - node.type.agence_national
+  module:
+    - geofield
+    - text
+    - user
+id: node.agence_national.default
+targetEntityType: node
+bundle: agence_national
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_coordonnees:
+    weight: 102
+    label: above
+    settings:
+      output_format: wkt
+      output_escape: true
+    third_party_settings: {  }
+    type: geofield_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,293 @@
+// menu item
+.menu-item {
+	padding-top: 0;
+}
+
+// menu
+ul.menu {
+	@include flex-row;
+	margin: 0 rem(-10px);
+	li {
+		margin: 0 rem(10px);
+		&.menu-item--expanded {
+			list-style-type: none;
+			list-style-image: none;
+		}
+	}
+}
+
+// 
+.menu--main {
+	@include flex-row;
+	justify-content: flex-end;
+	ul.menu {
+		margin: 0 rem(-15px);
+		li {
+			margin: 0 rem(15px);
+			&.menu-item--active-trail {
+				color: $link-color;
+			}
+		}
+		a {
+			text-transform: uppercase;
+			font-weight: 500;
+			&.is-active {
+				color: $link-color;
+			}
+		}
+		a[href$="/recruiters"] {
+			background-color: $button-color;
+			padding: rem(13px) rem(30px) rem(9px);
+			color: $white-color;
+			border-radius: rem(4px);
+			border-bottom: 2px solid $button-color-2;
+			font-weight: bold;
+			&:hover,
+			&:focus {
+				background-color: lighten($button-color, 10%);
+				border-bottom-color: lighten($button-color-2, 10%);
+			}
+			&.is-active {
+				color: $white-color;
+			}
+		}
+	}
+}
+
+//
+.navbar-we-mega-menu.main {
+	display: block;
+	padding: 0;
+	margin: 0;
+	@media (min-width: 992px) {
+		@include flex-row;
+		justify-content: flex-end;
+		background: none;
+		ul.we-mega-menu-ul {
+			margin: 0 rem(-15px);
+			border-bottom: none;
+			>li {
+				margin: 0 rem(15px);
+				&.active,
+				&.active-trail {
+					>a {
+						color: $link-color;
+						&[href$="/recruiters"] {
+							color: $white-color;
+							&:hover,
+							&:focus {
+								border-bottom: 2px solid $button-color-2;
+							}
+						}
+					}
+				}
+			}
+			>.we-mega-menu-li {
+				border-left: none;
+				> a {
+					text-transform: uppercase;
+					font-weight: 500;
+					color: $body-color;
+					font-family: $font-body;
+					font-size: rem(14px);
+					padding: 0;
+					background: none;
+					&:hover,
+					&:focus {
+						color: $link-color;
+					}
+				}
+				> a[href$="/recruiters"] {
+					background-color: $button-color;
+					padding: rem(13px) rem(30px) rem(9px);
+					color: $white-color;
+					border-radius: rem(4px);
+					border-bottom: 2px solid $button-color-2;
+					font-weight: bold;
+					&:hover,
+					&:focus,
+					&:active {
+						background-color: lighten($button-color, 10%);
+						border-bottom: 2px solid ($button-color-2, 10%);
+					}
+					&.is-active {
+						color: $white-color;
+						background-color: lighten($button-color, 10%);
+					}
+				}
+			}
+		}
+	}
+	ul.we-mega-menu-ul {
+		@media (max-width: 991px) {
+			display: inline-block;
+			width: 100%;
+			>li:last-child {
+				text-align: center;
+				&.active,
+				&.active-trail {
+					>a {
+						color: $link-color;
+						background-color: lighten($button-color, 10%);
+					}
+				}
+				> a[href$="/recruiters"] {
+					background-color: $button-color;
+					padding: rem(13px) rem(15px) rem(9px);
+					color: $white-color;
+					border-radius: rem(4px);
+					border-bottom: 2px solid $button-color-2;
+					font-weight: bold;
+					max-width: rem(170px);
+					margin-top: rem(30px);
+					margin-left: auto;
+					margin-right: auto;
+					&:hover,
+					&:focus,
+					&:active {
+						background-color: lighten($button-color, 10%);
+						border-bottom: 2px solid ($button-color-2, 10%);
+					}
+					&.is-active {
+						color: $white-color;
+						background-color: lighten($button-color, 10%);
+					}
+				}
+			}
+		}
+	}
+	a {
+		text-transform: uppercase;
+		font-weight: 500;
+		color: $body-color;
+		font-family: $font-body;
+		font-size: rem(14px);
+		padding: 0;
+		background: none;
+		&:hover,
+		&:focus {
+			color: $link-color;
+		}
+	}
+
+	>.container-fluid {
+		padding-top: 0;
+		padding-bottom: 0;
+		justify-content: flex-end;
+	}
+}
+
+//navbar-toggle
+.navbar-toggle {
+	position: relative;
+	float: right;
+	background-color: transparent;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: rem(4px);
+	margin: 0;
+	padding: 0;
+	display: none;
+	cursor: pointer;
+	@media (max-width: 991px){
+		display: block;
+		z-index: 20;
+	}
+	.icon-bar {
+		display: block;
+		width: rem(22px);
+		height: rem(2px);
+		border-radius: 1px;
+		background: $body-color;
+		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+			background: $body-color !important;
+		}
+		& + .icon-bar{
+			margin-top: rem(4px);
+		}
+	}
+}
+
+
+//menu--account
+.headline .block-menu {
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 0;
+	ul.menu {
+		margin-left: 0;
+		margin-right: 0;
+		li {
+			padding: rem(10px) rem(20px);
+			border-right: 1px solid $black-color;
+			margin: 0;
+			&:first-child {
+				border-left: 1px solid $black-color;
+			}
+			.menu-item--active-trail a,
+			a.is-active {
+				color: $white-color;
+			}
+		}
+	}
+}
+
+//ul.tabs
+ul.tabs {
+	margin-bottom: rem(30px);
+	li {
+		margin-bottom: rem(5px);
+	}
+	li a {
+		padding: rem(10px) rem(30px);
+		position: relative;
+		border: 1px solid $sub-color;
+		color: $sub-color;
+		border-radius: 3px;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+	li.is-active a,
+	a:hover,
+	a:focus {
+		background: $button-color;
+		color: $white-color;
+		border-color: $button-color;
+	}
+	&.primary{
+		text-align: center;
+	}
+}
+
+
+//links inline
+ul.links.inline{
+  margin-left: rem(-3px);
+  margin-right: rem(-3px);
+  li{
+    padding-left: rem(3px);
+    padding-right: rem(3px);
+  }
+  li a{
+    display: inline-block;
+    padding: rem(1px) rem(15px);
+    background-color: $bg-tag-color;
+    border-radius: rem(10px);
+    &:hover,&:focus{
+      color: $white-color;
+      background-color: $primary-color;
+    }
+  }
+}
+
+
+//menu--about-job-board
+.menu--about-job-board,.menu--tools-footer{
+	ul.menu li{
+		&.menu-item--active-trail a,
+		a.is-active {
+			color: $primary-color;
+		}
+	}
+}
+

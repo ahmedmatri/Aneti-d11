@@ -1,0 +1,20 @@
+uuid: 67bfab8d-82ca-468e-a867-ce23ad51d9f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.delegations
+  module:
+    - path
+id: taxonomy_term.delegations.path
+field_name: path
+entity_type: taxonomy_term
+bundle: delegations
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,31 @@
+uuid: 9d77bd4a-0386-4669-8f07-cf5bbdacaabe
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:bloc_image:c5418b00-22f8-4994-91f0-ffda48444c8c'
+  module:
+    - block_content
+    - system
+  theme:
+    - job_board
+id: employeur
+theme: job_board
+region: sidebar_second
+weight: -14
+provider: null
+plugin: 'block_content:c5418b00-22f8-4994-91f0-ffda48444c8c'
+settings:
+  id: 'block_content:c5418b00-22f8-4994-91f0-ffda48444c8c'
+  label: Employeur
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /Espace-employeur
+    negate: false
+    context_mapping: {  }

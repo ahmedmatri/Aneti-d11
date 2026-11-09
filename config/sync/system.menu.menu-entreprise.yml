@@ -1,0 +1,8 @@
+uuid: ac32ba1b-2c0b-4e78-b24e-fc83abd72c1e
+langcode: fr
+status: true
+dependencies: {  }
+id: menu-entreprise
+label: 'Menu Entreprise'
+description: ''
+locked: false

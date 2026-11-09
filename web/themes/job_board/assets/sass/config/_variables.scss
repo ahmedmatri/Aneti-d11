@@ -1,0 +1,61 @@
+// ====================
+// TYPOGRAPHY
+// ---
+
+$font-body:             'Roboto', sans-serif;
+		
+$size-default:		16px;
+
+// ====================
+// Colors scheme for Themes
+// ---
+$white-color:			#fff;
+$black-color:			#000;
+$link-color:			#0B536D;
+$body-color:			#333;
+$primary-color:			#0B536D;
+$secondary-color:       #ddebf0;
+$menu-color:			#686868;
+$title-color:			#0B536D;
+$button-color:			#37CCA4;
+$button-color-2:		#24B18B;
+$button-color-3:		#ee1d25;
+
+$border-color: 			#888888;
+$border-color-2:		#dbdbdb;
+$border-color-3:        #f2f2f2;
+$border-color-4:        #E2E2E2;
+$border-color-5:        #EDEDED;
+$border-color-6:        #95989A;
+$border-color-7:        #DEDEDE;
+$border-color-8:        #d4e6ec;
+$border-color-9:        #EBEBEB;
+$red-color:				#D3313D;
+$red-color-2:			#F25561;
+$red-color-3:           #E33F3F;
+$blue-color:			#B5E4F5;
+$sub-color:             #999999;
+$bg-color:              #F8F8F8;
+$bg-tag-color:			#f0f0f0;
+$row-color:             #FCFCFC;
+$light-blue:            #f0f5f7;
+$light-blue-border:     #ddebf0;
+$dark-red-color:        #6b5c5c;
+
+
+// ====================
+// Devices
+// ---
+$desktop:               1200px;
+$tablet-ht:             992px;		// Tablet Horizontal
+$tablet-vt:             768px;		// Tablet Vertical
+$mobile:                640px;
+$mobile-md:             480px;
+$mobile-sm:             360px;
+$mobile-xs:             320px;
+
+
+// ====================
+// List for space around: padding, margin 
+// ---
+$list-item: 30, 40, 50, 60; 

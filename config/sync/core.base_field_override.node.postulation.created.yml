@@ -1,0 +1,18 @@
+uuid: 7f2cde50-36ee-424b-a02d-6401173c8cd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.postulation
+id: node.postulation.created
+field_name: created
+entity_type: node
+bundle: postulation
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,14 @@
+uuid: 0ca0a2e1-5ae0-4ad0-a868-02c8ecad5b92
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.traduction
+  module:
+    - user
+id: user_add_role_action.traduction
+label: 'Ajouter le rôle Traduction aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: traduction

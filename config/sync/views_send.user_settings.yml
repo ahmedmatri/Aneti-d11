@@ -1,0 +1,54 @@
+'postulations_par_offre:page_6':
+  'uid:262':
+    bulk_form:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    from_name: 'Aneti internationnal'
+    from_mail: aneti-international@emploi.nat.tn
+    tokens:
+      nid_pos_1: nid
+      title_pos_2: title
+      field_intitul_de_l_offre_pos_3: field_intitul_de_l_offre
+      field_cin_pos_4: field_cin
+      field_nom_pos_5: field_nom
+      field_prenom_pos_6: field_prenom
+      mail_pos_7: mail
+      field_telephone_pos_8: field_telephone
+      edit_node_pos_9: edit_node
+      field_candidature_pos_10: field_candidature
+      field_accepter_pos_11: field_accepter
+      nid_pos_12: nid_1
+      nid_pos_13: nid_2
+      nothing_pos_14: nothing
+      nothing_pos_15: nothing_1
+      changed_pos_16: changed
+      field_code_postal_pos_17: field_code_postal
+      field_ville_tunisie_pos_18: field_ville_tunisie
+      field_ville_pos_19: field_ville
+      field_pays_pos_20: field_pays
+    to_name: title_pos_2
+    to_mail: mail_pos_7
+    subject: 'Résultat de votre entretien – Poste d’agent de manutention en Italie'
+    message:
+      value: "Cher/Chère candidat(e),\r\n\r\nL’équipe de l’ANETI espère que ce message vous trouve en bonne santé.\r\n\r\nNous vous remercions d’avoir participé au processus de sélection pour le poste d’agent de manutention en Italie.\r\nAprès examen attentif de votre profil et des entretiens réalisés, nous regrettons de vous informer que votre candidature n’a pas été retenue à cette étape.\r\n\r\nCette décision a été particulièrement difficile à prendre, compte tenu de la qualité des profils reçus et de la motivation des candidats.\r\n\r\nNous vous remercions sincèrement pour votre intérêt, votre implication et la confiance que vous nous avez accordée.\r\n\r\n👉 Nous vous encourageons vivement à poursuivre vos démarches et à consulter régulièrement les nouvelles opportunités publiées sur notre site :\r\n🌐 www.aneti-international.tn\r\n\r\nNous vous souhaitons beaucoup de succès dans vos projets futurs et restons à votre disposition pour vous accompagner dans votre parcours professionnel à l’international.\r\n\r\nCordialement,\r\nL’équipe ANETI"
+      format: plain_text
+    priority: '0'
+    receipt: 0
+    headers: ''
+    direct: 1
+    carbon_copy: 1
+    remember: 1

@@ -1,0 +1,18 @@
+uuid: d191c53a-ef69-44e2-a843-b02b3c485fb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.agence_national
+id: node.agence_national.unpublish_on
+field_name: unpublish_on
+entity_type: node
+bundle: agence_national
+label: 'Unpublish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

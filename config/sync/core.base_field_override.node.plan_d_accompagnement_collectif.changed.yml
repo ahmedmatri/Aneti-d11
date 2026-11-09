@@ -1,0 +1,18 @@
+uuid: 8c45e62a-c9ed-4390-a0e7-a145c383fbff
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.plan_d_accompagnement_collectif
+id: node.plan_d_accompagnement_collectif.changed
+field_name: changed
+entity_type: node
+bundle: plan_d_accompagnement_collectif
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

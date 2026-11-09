@@ -1,0 +1,14 @@
+uuid: f5d5e78f-f014-4d90-99b3-7410e2b7fb5d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.entreprise
+  module:
+    - user
+id: user_remove_role_action.entreprise
+label: 'Enlever le rôle entreprise des utilisateurs sélectionnés'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: entreprise

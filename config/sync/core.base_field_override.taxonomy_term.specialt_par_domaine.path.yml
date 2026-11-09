@@ -1,0 +1,20 @@
+uuid: 09cb0fb1-e415-4c2f-9c3a-75d68cac0f3f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.specialt_par_domaine
+  module:
+    - path
+id: taxonomy_term.specialt_par_domaine.path
+field_name: path
+entity_type: taxonomy_term
+bundle: specialt_par_domaine
+label: 'Alias d''URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

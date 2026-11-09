@@ -1,0 +1,21 @@
+uuid: be13f9e7-0caa-4f60-a852-cdaaacf23ca7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_niveau_langue_3_ecrit_parl
+    - node.type.curriculum_vitae
+  module:
+    - options
+id: node.curriculum_vitae.field_niveau_langue_3_ecrit_parl
+field_name: field_niveau_langue_3_ecrit_parl
+entity_type: node
+bundle: curriculum_vitae
+label: 'Niveau Langue 3(Ecrit, Parlé)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

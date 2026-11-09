@@ -1,0 +1,96 @@
+<?php
+
+define('ANETI_ENTREPRISE_ROLE', 'entreprise');
+// Load emails functions.
+module_load_include('inc', 'aneti_emails', 'includes/emails');
+
+/**
+ * Helper function to check if profile is entreprise
+ *
+ * @param Drupal\Core\Entity\EntityInterface $entity
+ * @return bool
+ */
+function aneti_entreprise_entity_is_profile_entreprise(Drupal\Core\Entity\EntityInterface $entity) {
+  $entity_type = $entity->getEntityType()->getBundleEntityType();
+  $bundle = $entity->bundle();
+
+  if ($entity_type == 'profile_type' && $bundle == 'entreprise') {
+    if ($entity->get('field_raison_social') !== null && $entity->get('field_raison_social')->getValue()) {
+      return TRUE;
+    }
+  }
+  return FALSE;
+}
+/**
+ * Implementation of the Entreprise Profile workflow.
+ *
+ * @param Drupal\Core\Entity\EntityInterface $entity
+ * @return void
+ */
+function aneti_entreprise_entity_insert(\Drupal\Core\Entity\EntityInterface $entity) {
+    if (aneti_entreprise_entity_is_profile_entreprise($entity)) {
+        // First, we fix the profile owner.
+        $uid = $entity->getOwnerId();
+        $entity->setOwnerId($uid);
+        $user = \Drupal\user\Entity\User::load($uid);
+        // Initial creation activate user by default.
+        if ($user && !$user->isActive()) {
+            // Activate the user and save the user.
+            $user->activate();
+            $user->addRole(ANETI_ENTREPRISE_ROLE);
+            $user->save();
+            // Publish users's profile by default.
+            /*    $entity->set('moderation_state', 'published');*/
+        }
+    }
+}
+/**
+ * Implementation of the Entreprise Profile workflow.
+ *
+ * @param Drupal\Core\Entity\EntityInterface $entity
+ * @return void
+ */
+function __aneti_entreprise_exec_entreprise_workflow(Drupal\Core\Entity\EntityInterface $entity) {
+
+  if (aneti_entreprise_entity_is_profile_entreprise($entity)) {
+    // Get the moderation state.
+    $moderation_state = $entity->get('moderation_state')->getValue();
+
+    // Profile: From draft to published.
+    if (isset($moderation_state[0]['value']) && $moderation_state[0]['value'] == 'published') {
+      $user = $entity->getOwner();
+      // Initial creation.
+      if ($user && !$user->isActive()) {
+        // Activate the user and save the user.
+        $user->activate();
+        $user->addRole(ANETI_ENTREPRISE_ROLE);
+        if ($user->save()) {
+          // subscribe to newsletter
+          $subscription_manager = \Drupal::service('simplenews.subscription_manager');
+          \Drupal::messenger()->addMessage('Add to NL.');
+          $subscription_manager->subscribe($user->get('mail')->getValue(), 'entreprise', NULL, 'auto', 'fr');
+          \Drupal::messenger()->addMessage('User activated an email has been sent.');
+          // @todo customize the message
+          //aneti_email_notify_user($user, t('Your profile has been activated'), t('Your profile has been activated'));
+        }
+      }
+      else {
+        // Updated profile is activated, we nofity the user.
+        aneti_email_notify_user($user, t('Your profile has been published'), t('Your profile has been reviewed and published'));
+      }
+    }
+    // Profile: Profile need review. Notify referant if set. Otherwise notify
+    // the webmaster.
+    if (isset($moderation_state[0]['value']) && $moderation_state[0]['value'] == 'need_review') {
+      //$is_owner = (\Drupal::currentUser()->id() == $entity->getOwnerId());
+      if (isset($entity->get('field_referant')->getValue()[0]['target_id']) && $referant_uid = $entity->get('field_referant')->getValue()[0]['target_id']) {
+        $user = \Drupal\user\Entity\User::load($referant_uid);
+        aneti_emails_notify_user($user, t('Profile to be reviewed'), t('A profile needs to be reviewed'));
+      }
+      else {
+        // No referant found, notify the webmaster
+        aneti_emails_notify_roles(['webmaster'], 'Profile to be reviewed', 'A profile needs to be reviewed');
+      }
+    }
+  }
+}

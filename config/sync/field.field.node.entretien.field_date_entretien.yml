@@ -1,0 +1,21 @@
+uuid: 1e3a36d0-943c-4c45-b8c0-1e8c3cbaf690
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_entretien
+    - node.type.entretien
+  module:
+    - datetime
+id: node.entretien.field_date_entretien
+field_name: field_date_entretien
+entity_type: node
+bundle: entretien
+label: 'Date entretien'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,14 @@
+uuid: 7a8a83d1-f0ce-487f-b389-058e0898524d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.mobile_application
+  module:
+    - user
+id: user_remove_role_action.mobile_application
+label: 'Enlever le rôle Mobile Application des utilisateurs sélectionnés'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: mobile_application

@@ -1,0 +1,8 @@
+uuid: c9583385-eb8e-4bb8-9b87-832013e65058
+langcode: fr
+status: true
+dependencies: {  }
+id: menu-statistiques
+label: 'Menu statistiques'
+description: ''
+locked: false

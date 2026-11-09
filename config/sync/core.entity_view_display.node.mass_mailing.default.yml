@@ -1,0 +1,38 @@
+uuid: 0cb6f950-ec25-4973-ad53-39b6ee08e3f2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.mass_mailing.body
+    - field.field.node.mass_mailing.field_to
+    - node.type.mass_mailing
+  module:
+    - text
+    - user
+id: node.mass_mailing.default
+targetEntityType: node
+bundle: mass_mailing
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_to:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

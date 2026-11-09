@@ -1,0 +1,22 @@
+uuid: c12095a3-d0f5-4e8e-8258-eaa6667e30c5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.newletter_candidats
+id: node.newletter_candidats.status
+field_name: status
+entity_type: node
+bundle: newletter_candidats
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

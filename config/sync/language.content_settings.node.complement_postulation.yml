@@ -1,0 +1,18 @@
+uuid: 5f70cd53-247d-419e-b22a-30a8bc7ef6e3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.complement_postulation
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.complement_postulation
+target_entity_type_id: node
+target_bundle: complement_postulation
+default_langcode: site_default
+language_alterable: false

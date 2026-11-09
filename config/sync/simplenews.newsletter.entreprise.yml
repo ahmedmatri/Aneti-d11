@@ -1,0 +1,17 @@
+uuid: d9173bf5-cd59-4260-80ff-a45d8fd43ed1
+langcode: fr
+status: true
+dependencies: {  }
+name: Entreprise
+id: entreprise
+description: ''
+format: plain
+priority: 0
+receipt: true
+from_name: 'Aneti internationnal'
+subject: '[[simplenews-newsletter:name]] [node:title]'
+from_address: tarekdj@gmail.com
+hyperlinks: true
+new_account: none
+opt_inout: double
+weight: 0

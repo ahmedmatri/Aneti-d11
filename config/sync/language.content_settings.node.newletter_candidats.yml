@@ -1,0 +1,18 @@
+uuid: 186dca43-bb0d-4d92-b76f-cfc1f550811d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.newletter_candidats
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.newletter_candidats
+target_entity_type_id: node
+target_bundle: newletter_candidats
+default_langcode: site_default
+language_alterable: false

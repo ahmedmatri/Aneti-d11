@@ -1,0 +1,23 @@
+uuid: dc48c1a5-b89f-46fc-8ecf-ceea960bf031
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_pai_duree
+    - field_collection.field_collection.field_pag_actions
+id: field_collection_item.field_pag_actions.field_pai_duree
+field_name: field_pai_duree
+entity_type: field_collection_item
+bundle: field_pag_actions
+label: Durée
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: h
+field_type: float

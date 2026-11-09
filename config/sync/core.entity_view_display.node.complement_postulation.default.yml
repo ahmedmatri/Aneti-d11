@@ -1,0 +1,57 @@
+uuid: 3fb7d538-af78-4ee1-a1af-a165d596a565
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.complement_postulation.field_ajouter_lettre__motivation
+    - field.field.node.complement_postulation.field_ajouter_un_cv
+    - field.field.node.complement_postulation.field_ecrire_letter_motivation
+    - field.field.node.complement_postulation.field_postulation
+    - node.type.complement_postulation
+  module:
+    - file
+    - text
+    - user
+id: node.complement_postulation.default
+targetEntityType: node
+bundle: complement_postulation
+mode: default
+content:
+  field_ajouter_lettre__motivation:
+    weight: 103
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_ajouter_un_cv:
+    weight: 102
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_ecrire_letter_motivation:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_postulation:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

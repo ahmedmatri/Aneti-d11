@@ -1,0 +1,4 @@
+services:
+  aneti_cv.template_processor:
+    class: Drupal\aneti_cv\AnetiTemplateProcessor
+    arguments: []

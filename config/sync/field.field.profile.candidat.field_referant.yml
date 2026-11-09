@@ -1,0 +1,41 @@
+uuid: cfce1171-4700-4942-980f-91b3c50958c0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_referant
+    - profile.type.candidat
+id: profile.candidat.field_referant
+field_name: field_referant
+entity_type: profile
+bundle: candidat
+label: Referant
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: role
+      role:
+        administrator: administrator
+        referent: referent
+        conseiller_central: conseiller_central
+        traduction: traduction
+        chef_unite_migration: chef_unite_migration
+        candidat: '0'
+        entreprise: '0'
+        super_admin: '0'
+        bureau_a_l_etranger: '0'
+        partenaire: '0'
+        webmaster: '0'
+        pdg: '0'
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

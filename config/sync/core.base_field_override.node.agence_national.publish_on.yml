@@ -1,0 +1,18 @@
+uuid: 4b045f96-a57e-43cb-ab0c-b9fa79ee04c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.agence_national
+id: node.agence_national.publish_on
+field_name: publish_on
+entity_type: node
+bundle: agence_national
+label: 'Publish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

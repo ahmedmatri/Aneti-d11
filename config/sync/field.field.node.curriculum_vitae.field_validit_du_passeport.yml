@@ -1,0 +1,21 @@
+uuid: 731aca35-b7a9-4e0e-badc-6299b704be08
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_validit_du_passeport
+    - node.type.curriculum_vitae
+  module:
+    - datetime
+id: node.curriculum_vitae.field_validit_du_passeport
+field_name: field_validit_du_passeport
+entity_type: node
+bundle: curriculum_vitae
+label: 'Validité du Passeport'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

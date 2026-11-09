@@ -1,0 +1,14 @@
+uuid: fe1ccbb4-ec79-4874-8225-c219912f7110
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.traduction
+  module:
+    - user
+id: user_remove_role_action.traduction
+label: 'Enlever le rôle Traduction des utilisateurs sélectionnés'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: traduction

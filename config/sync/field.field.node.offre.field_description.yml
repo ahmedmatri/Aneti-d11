@@ -1,0 +1,21 @@
+uuid: 6447d996-2f15-453d-a2d5-64dc5a6d9c86
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.offre
+  module:
+    - text
+id: node.offre.field_description
+field_name: field_description
+entity_type: node
+bundle: offre
+label: 'Description de poste'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

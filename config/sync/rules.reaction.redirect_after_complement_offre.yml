@@ -1,0 +1,78 @@
+uuid: 42bbb082-29d1-4ecf-98b0-6ed109750791
+langcode: fr
+status: true
+dependencies: {  }
+id: redirect_after_complement_offre
+label: 'redirect after complement offre'
+events:
+  -
+    event_name: 'rules_entity_insert:node'
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: 2823e900-8baf-4d20-bd60-5d62f26ed652
+  conditions:
+    id: rules_and
+    uuid: 3d9d9603-4f06-4886-8a6d-c33f5e67484b
+    conditions:
+      -
+        id: rules_condition
+        uuid: c95bf324-a9ca-4b31-a9e3-5e6919b603e5
+        context_values:
+          types:
+            - complement_postulation
+        context_mapping:
+          node: node
+        context_processors:
+          types:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: rules_node_is_of_type
+        negate: false
+      -
+        id: rules_condition
+        uuid: df484e32-8d1b-480a-9a2c-8de355edc2cd
+        context_values:
+          roles: candidat
+        context_mapping:
+          user: '@user.current_user_context:current_user'
+        context_processors:
+          roles:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: custom_rules_user_has_role
+        negate: false
+  actions:
+    id: rules_action_set
+    uuid: 61e07e6f-171c-4f11-938b-16abe447cd16
+    actions:
+      -
+        id: rules_action
+        uuid: 8687415c-7e34-4a5d-adaa-be8cfe88e14c
+        context_values:
+          message: 'You have applyed successfully to the offer'
+          type: status
+          repeat: true
+        context_mapping: {  }
+        context_processors:
+          message:
+            rules_tokens: {  }
+          type:
+            rules_tokens: {  }
+          repeat:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_system_message
+      -
+        id: rules_action
+        uuid: 61869273-b610-4f6f-8f2a-6df7bbdbd078
+        context_values:
+          url: /candidat/postulations
+        context_mapping: {  }
+        context_processors:
+          url:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_page_redirect

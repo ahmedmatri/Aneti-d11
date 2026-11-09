@@ -1,0 +1,21 @@
+uuid: 19c6f572-4711-4f5a-af22-0ac6d5fe5973
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_informations_salariales
+    - node.type.fiche_pays
+  module:
+    - text
+id: node.fiche_pays.field_informations_salariales
+field_name: field_informations_salariales
+entity_type: node
+bundle: fiche_pays
+label: 'Informations salariales'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

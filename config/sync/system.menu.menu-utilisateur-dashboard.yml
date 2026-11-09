@@ -1,0 +1,8 @@
+uuid: 36d8fbe3-294b-40d3-8436-bf0db54430b9
+langcode: fr
+status: true
+dependencies: {  }
+id: menu-utilisateur-dashboard
+label: '‣ Menu utilisateur'
+description: ''
+locked: false

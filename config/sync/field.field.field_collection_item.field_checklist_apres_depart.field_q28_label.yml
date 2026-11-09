@@ -1,0 +1,25 @@
+uuid: 06658cb5-1e61-45b2-9c89-5b2fb490b2f4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_q28_label
+    - field_collection.field_collection.field_checklist_apres_depart
+  module:
+    - markup
+id: field_collection_item.field_checklist_apres_depart.field_q28_label
+field_name: field_q28_label
+entity_type: field_collection_item
+bundle: field_checklist_apres_depart
+label: Q28_label
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>28. La travailleuse/Le travailleur est-elle/il en possession de ses papiers d’identité – passeport, carte de résidence, permis de travail, contrat de travail et tout autre document requis – lui permettant de circuler librement au sein du pays où il travaille et/ou de le quitter s’il le souhaite&nbsp;?</p>\r\n"
+    format: basic_html
+field_type: markup

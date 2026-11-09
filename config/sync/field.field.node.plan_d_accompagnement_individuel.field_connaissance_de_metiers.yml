@@ -1,0 +1,23 @@
+uuid: fc0d54cf-5ece-4196-bc9a-81e0b9c1402c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_connaissance_de_metiers
+    - node.type.plan_d_accompagnement_individuel
+id: node.plan_d_accompagnement_individuel.field_connaissance_de_metiers
+field_name: field_connaissance_de_metiers
+entity_type: node
+bundle: plan_d_accompagnement_individuel
+label: 'Connaissance de metiers'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 5
+  prefix: ''
+  suffix: ''
+field_type: integer

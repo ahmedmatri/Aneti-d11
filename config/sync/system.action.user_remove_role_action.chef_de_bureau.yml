@@ -1,0 +1,14 @@
+uuid: b2821598-ebff-433c-af6d-87fb1874a2da
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.chef_de_bureau
+  module:
+    - user
+id: user_remove_role_action.chef_de_bureau
+label: 'Enlever le rôle Chef de Bureau des utilisateurs sélectionnés'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: chef_de_bureau

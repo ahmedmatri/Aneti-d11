@@ -1,0 +1,19 @@
+uuid: 96e4632f-f776-4ff3-ad9c-a49f64439efd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_nom_referent
+    - profile.type.referent
+id: profile.referent.field_nom_referent
+field_name: field_nom_referent
+entity_type: profile
+bundle: referent
+label: Nom
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

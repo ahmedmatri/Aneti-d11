@@ -1,0 +1,14 @@
+uuid: e1e1fb87-1b7e-4221-aa92-4f68e789d28f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.conseiller_central
+  module:
+    - user
+id: user_add_role_action.conseiller_central
+label: 'Ajouter le rôle Conseiller Central aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: conseiller_central

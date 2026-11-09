@@ -1,0 +1,23 @@
+uuid: 99337aff-fbed-421c-b6c4-63631e948bc3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cv_valider
+    - node.type.curriculum_vitae
+id: node.curriculum_vitae.field_cv_valider
+field_name: field_cv_valider
+entity_type: node
+bundle: curriculum_vitae
+label: Valider
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

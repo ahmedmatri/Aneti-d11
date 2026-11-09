@@ -1,0 +1,18 @@
+uuid: 33f94093-cca8-4939-805a-685e2654d4c8
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Newletter (Entreprise)'
+type: newletter_entreprise
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

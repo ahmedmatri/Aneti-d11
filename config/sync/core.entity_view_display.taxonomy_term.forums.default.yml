@@ -1,0 +1,22 @@
+uuid: f7389139-058a-437e-9cb1-8b1f5b0e5494
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.forums
+  module:
+    - text
+id: taxonomy_term.forums.default
+targetEntityType: taxonomy_term
+bundle: forums
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

@@ -1,0 +1,20 @@
+uuid: d406c6bb-3880-46ab-8d52-9d8a821393a6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.localites
+  module:
+    - path
+id: taxonomy_term.localites.path
+field_name: path
+entity_type: taxonomy_term
+bundle: localites
+label: 'Alias d''URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

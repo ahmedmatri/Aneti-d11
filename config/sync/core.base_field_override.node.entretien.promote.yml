@@ -1,0 +1,22 @@
+uuid: b9405d6e-9274-4858-bd4b-531344e83cf4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.entretien
+id: node.entretien.promote
+field_name: promote
+entity_type: node
+bundle: entretien
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

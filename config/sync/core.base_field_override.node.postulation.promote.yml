@@ -1,0 +1,22 @@
+uuid: e0002624-36c5-4165-a40c-929a19a25345
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.postulation
+id: node.postulation.promote
+field_name: promote
+entity_type: node
+bundle: postulation
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,19 @@
+uuid: 75b2e3b5-92dc-4d73-adec-51a7a247fc19
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pseudo_skype
+    - node.type.curriculum_vitae
+id: node.curriculum_vitae.field_pseudo_skype
+field_name: field_pseudo_skype
+entity_type: node
+bundle: curriculum_vitae
+label: 'pseudo Skype'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

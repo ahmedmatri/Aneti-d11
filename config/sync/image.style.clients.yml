@@ -1,0 +1,15 @@
+uuid: 4e4fcae3-c35f-4c50-b894-0ae2633718c8
+langcode: fr
+status: true
+dependencies: {  }
+name: clients
+label: clients
+effects:
+  dc05965f-9186-4db7-93d5-3bba9c12b505:
+    uuid: dc05965f-9186-4db7-93d5-3bba9c12b505
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 100
+      height: 100
+      anchor: center-center

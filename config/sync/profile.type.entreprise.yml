@@ -1,0 +1,23 @@
+uuid: 26ea409f-a5b2-42fb-a6d4-8251b2b6e28a
+langcode: fr
+status: true
+dependencies: {  }
+id: entreprise
+label: Entreprise
+registration: true
+multiple: false
+roles:
+  entreprise: entreprise
+  authenticated: '0'
+  candidat: '0'
+  super_admin: '0'
+  administrator: '0'
+  referent: '0'
+  conseiller_central: '0'
+  traduction: '0'
+  chef_unite_migration: '0'
+  bureau_a_l_etranger: '0'
+  partenaire: '0'
+weight: 0
+use_revisions: true
+description: ''

@@ -1,0 +1,47 @@
+uuid: 388f659e-6995-4ef4-a72e-492f70ecd4bc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_pag_actions.field_date
+    - field.field.field_collection_item.field_pag_actions.field_informations_fournies
+    - field.field.field_collection_item.field_pag_actions.field_pai_duree
+    - field.field.field_collection_item.field_pag_actions.field_theme
+    - field_collection.field_collection.field_pag_actions
+  module:
+    - datetime
+    - text
+id: field_collection_item.field_pag_actions.default
+targetEntityType: field_collection_item
+bundle: field_pag_actions
+mode: default
+content:
+  field_date:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_informations_fournies:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_pai_duree:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_theme:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  moderation_state: true

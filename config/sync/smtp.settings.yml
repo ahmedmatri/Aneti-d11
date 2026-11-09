@@ -1,0 +1,22 @@
+smtp_on: true
+smtp_host: 192.168.1.10
+smtp_hostbackup: ''
+smtp_port: '25'
+smtp_protocol: standard
+smtp_username: ''
+smtp_password: ''
+smtp_from: aneti-international@emploi.nat.tn
+smtp_fromname: 'ANETI International'
+smtp_client_hostname: 192.168.1.10
+smtp_client_helo: 192.168.1.10
+smtp_allowhtml: '1'
+smtp_test_address: samira.bejaoui@emploi.nat.tn
+smtp_debugging: false
+prev_mail_system: php_mail
+_core:
+  default_config_hash: WEa5Ex_IeAcm6Bm0hmQ4vU_nDwJDB8hW-vxT1qpGIbM
+langcode: fr
+smtp_timeout: 30
+smtp_keepalive: false
+smtp_autotls: false
+smtp_reroute_address: ''

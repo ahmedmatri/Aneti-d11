@@ -1,0 +1,18 @@
+uuid: d6c52f2d-1cea-41ea-9e7c-300e40f37dd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.specialites
+id: taxonomy_term.specialites.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: specialites
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

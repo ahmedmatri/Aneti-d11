@@ -1,0 +1,25 @@
+uuid: 10284835-2168-4235-bac1-90821652b836
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_q10_label
+    - field_collection.field_collection.field_checklist_avant_depart
+  module:
+    - markup
+id: field_collection_item.field_checklist_avant_depart.field_q10_label
+field_name: field_q10_label
+entity_type: field_collection_item
+bundle: field_checklist_avant_depart
+label: Q10_label
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>10. Le contrat de travail est-il rédigé dans une langue comprise par le travailleur&nbsp;?</p>\r\n"
+    format: basic_html
+field_type: markup

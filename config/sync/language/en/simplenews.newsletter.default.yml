@@ -1,3 +1,0 @@
-name: 'Default newsletter'
-description: 'This is an example newsletter. Change it.'
-subject: '[[simplenews-newsletter:name]] [node:title]'

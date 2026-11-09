@@ -1,0 +1,14 @@
+uuid: f35cdf97-16af-47db-b98b-e79f26afa409
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.candidat
+  module:
+    - user
+id: user_add_role_action.candidat
+label: 'Ajouter le rôle candidat aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: candidat

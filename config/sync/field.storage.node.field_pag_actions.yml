@@ -1,0 +1,23 @@
+uuid: fc12433d-9710-4368-b647-133dcd3bf6c3
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_collection
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_pag_actions
+field_name: field_pag_actions
+entity_type: node
+type: field_collection
+settings: {  }
+module: field_collection
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

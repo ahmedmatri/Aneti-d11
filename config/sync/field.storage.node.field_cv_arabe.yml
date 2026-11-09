@@ -1,0 +1,23 @@
+uuid: 8871f9e3-4e52-471d-be80-61879d674d05
+langcode: fr
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_cv_arabe
+field_name: field_cv_arabe
+entity_type: node
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

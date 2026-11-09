@@ -1,0 +1,80 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtra
+          reset_button_label: Ripristina
+          exposed_sorts_label: 'Ordina per'
+          sort_asc_label: Asc
+          sort_desc_label: Disc
+      pager:
+        options:
+          tags:
+            previous: '‹ precedente'
+            next: 'seguente ›'
+            first: '« prima'
+            last: 'ultima »'
+      fields:
+        title:
+          label: Titolo
+        type:
+          separator: ', '
+        name:
+          label: Autore
+        status:
+          label: Stato
+          settings:
+            format_custom_true: Pubblicato
+            format_custom_false: 'Non pubblicato'
+        publish_on:
+          label: 'Pubblica il'
+        unpublish_on:
+          label: 'Rimuovi pubblicazione il'
+        operations:
+          label: Operazioni
+      filters:
+        status:
+          expose:
+            label: Stato
+          group_info:
+            label: 'Stato pubblicazione'
+            group_items:
+              1:
+                title: Pubblicato
+              2:
+                title: 'Non pubblicato'
+        type:
+          expose:
+            label: Tipo
+        title:
+          expose:
+            label: Titolo
+        langcode:
+          expose:
+            label: Lingua
+        publish_on:
+          expose:
+            label: 'Pubblica il'
+          group_info:
+            label: 'Pubblica il'
+        unpublish_on:
+          expose:
+            label: 'Rimuovi pubblicazione il'
+    display_title: Principale
+  overview:
+    display_options:
+      menu:
+        title: Pianificazioni
+      tab_options:
+        title: Contenuto
+  user_page:
+    display_options:
+      menu:
+        title: Pianificazioni
+      tab_options:
+        title: Contenuto
+      arguments:
+        uid:
+          exception:
+            title: Tutti

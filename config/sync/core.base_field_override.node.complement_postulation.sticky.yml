@@ -1,0 +1,22 @@
+uuid: 2a9403f4-6129-48e4-bca0-b998bcad3b3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.complement_postulation
+id: node.complement_postulation.sticky
+field_name: sticky
+entity_type: node
+bundle: complement_postulation
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,17 @@
+uuid: 434e71d0-22b2-4441-83fd-bfc1b2bc5ec4
+langcode: fr
+status: true
+dependencies: {  }
+name: Candidat
+id: candidat
+description: ''
+format: plain
+priority: 0
+receipt: true
+from_name: 'Aneti internationnal'
+subject: '[[simplenews-newsletter:name]] [node:title]'
+from_address: aneti-international@emploi.nat.tn
+hyperlinks: true
+new_account: none
+opt_inout: double
+weight: 0

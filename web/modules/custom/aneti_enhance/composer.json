@@ -1,0 +1,14 @@
+{
+  "name": "drupal/aneti_enhance",
+  "type": "drupal-module",
+  "description": "Aneti enhancements",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/aneti_enhance",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/aneti_enhance",
+    "source": "http://cgit.drupalcode.org/aneti_enhance"
+  },
+  "require": { }
+}

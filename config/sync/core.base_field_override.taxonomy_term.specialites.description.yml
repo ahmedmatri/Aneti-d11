@@ -1,0 +1,20 @@
+uuid: 1dc928d5-2a7d-42d0-b266-fe3e425f84d7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.specialites
+  module:
+    - text
+id: taxonomy_term.specialites.description
+field_name: description
+entity_type: taxonomy_term
+bundle: specialites
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

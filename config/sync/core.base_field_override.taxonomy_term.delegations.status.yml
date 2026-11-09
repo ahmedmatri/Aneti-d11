@@ -1,0 +1,22 @@
+uuid: 0a3f4371-2088-469d-b4b1-80f48dc22bd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.delegations
+id: taxonomy_term.delegations.status
+field_name: status
+entity_type: taxonomy_term
+bundle: delegations
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

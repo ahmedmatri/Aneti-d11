@@ -1,0 +1,20 @@
+uuid: 94a7421f-010a-4bf3-826a-0612b8b390c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.entreprise_cliente
+  module:
+    - path
+id: node.entreprise_cliente.path
+field_name: path
+entity_type: node
+bundle: entreprise_cliente
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,14 @@
+uuid: 2d8a57cc-464d-46d8-8b86-2187ae2414be
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.bureau_a_l_etranger
+  module:
+    - user
+id: user_remove_role_action.bureau_a_l_etranger
+label: 'Enlever le rôle Bureau à l&#039;Etranger des utilisateurs sélectionnés'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: bureau_a_l_etranger

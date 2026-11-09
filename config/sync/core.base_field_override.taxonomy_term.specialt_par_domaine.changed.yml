@@ -1,0 +1,18 @@
+uuid: 142169e7-323c-4610-b518-b46472c9ece7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.specialt_par_domaine
+id: taxonomy_term.specialt_par_domaine.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: specialt_par_domaine
+label: Modifié
+description: 'Le moment auquel le terme a été modifié pour la dernière fois.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

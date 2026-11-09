@@ -1,0 +1,22 @@
+uuid: 55f79798-fa94-44d3-84be-7c3a72b34c8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.plan_d_accompagnement_individuel
+id: node.plan_d_accompagnement_individuel.status
+field_name: status
+entity_type: node
+bundle: plan_d_accompagnement_individuel
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,9 @@
+uuid: 74d0621d-1eb2-4543-a0ed-c3304afc0c98
+langcode: fr
+status: true
+dependencies: {  }
+id: action_ai
+label: 'Action ai'
+icon_uuid: null
+description: 'Action Accompagnement Individuel'
+behavior_plugins: {  }

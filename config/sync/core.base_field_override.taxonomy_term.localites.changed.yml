@@ -1,0 +1,18 @@
+uuid: 0b15dd5d-572a-4ebc-a7b5-a16fb4481caa
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.localites
+id: taxonomy_term.localites.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: localites
+label: Modifié
+description: 'Le moment auquel le terme a été modifié pour la dernière fois.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

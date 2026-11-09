@@ -1,0 +1,22 @@
+uuid: 58ecfb42-05ae-47a7-8dc3-64c1d6ea3336
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.entreprise_cliente
+id: node.entreprise_cliente.status
+field_name: status
+entity_type: node
+bundle: entreprise_cliente
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

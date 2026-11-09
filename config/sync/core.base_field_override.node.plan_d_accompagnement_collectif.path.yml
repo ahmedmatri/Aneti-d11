@@ -1,0 +1,20 @@
+uuid: b7d97a9b-fb3f-4482-9c83-4fb14b9ab434
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.plan_d_accompagnement_collectif
+  module:
+    - path
+id: node.plan_d_accompagnement_collectif.path
+field_name: path
+entity_type: node
+bundle: plan_d_accompagnement_collectif
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

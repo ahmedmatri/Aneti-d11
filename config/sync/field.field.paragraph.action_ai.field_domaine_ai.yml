@@ -1,0 +1,21 @@
+uuid: 9c2e3ca7-4c30-45b1-a83e-f665aa923913
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_domaine_ai
+    - paragraphs.paragraphs_type.action_ai
+  module:
+    - options
+id: paragraph.action_ai.field_domaine_ai
+field_name: field_domaine_ai
+entity_type: paragraph
+bundle: action_ai
+label: Domaine
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

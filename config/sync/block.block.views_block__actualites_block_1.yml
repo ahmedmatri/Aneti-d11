@@ -1,0 +1,30 @@
+uuid: dba9199b-956b-4f27-9343-1b32dfe6b20b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.actualites
+  module:
+    - system
+    - views
+  theme:
+    - job_board
+id: views_block__actualites_block_1
+theme: job_board
+region: banner_bottom
+weight: -17
+provider: null
+plugin: 'views_block:actualites-block_1'
+settings:
+  id: 'views_block:actualites-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,25 @@
+uuid: ebde0eee-8ff4-41c2-89fa-582a7b73d9b1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_q33_label
+    - field_collection.field_collection.field_checklist_apres_depart
+  module:
+    - markup
+id: field_collection_item.field_checklist_apres_depart.field_q33_label
+field_name: field_q33_label
+entity_type: field_collection_item
+bundle: field_checklist_apres_depart
+label: Q33_label
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>33. La travailleuse/Le travailleur a-t-elle/il la possibilité de contacter un représentant de son gouvernement et de bénéficier d’une prise en charge personnelle en cas de besoin&nbsp;?</p>\r\n"
+    format: basic_html
+field_type: markup

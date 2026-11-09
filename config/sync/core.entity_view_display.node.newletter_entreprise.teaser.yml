@@ -1,0 +1,32 @@
+uuid: a49ac559-6803-4b85-a0a4-66d66f1371c2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.newletter_entreprise.body
+    - node.type.newletter_entreprise
+  module:
+    - text
+    - user
+id: node.newletter_entreprise.teaser
+targetEntityType: node
+bundle: newletter_entreprise
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  simplenews_issue: true

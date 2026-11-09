@@ -1,0 +1,20 @@
+uuid: 3b1dc379-71de-4e5a-ae05-3b1419a70687
+langcode: fr
+status: false
+dependencies:
+  module:
+    - system
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: aneti_2019_breadcrumbs
+theme: aneti_2019
+region: ''
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Fils d''Ariane'
+  provider: system
+  label_display: '0'
+visibility: {  }

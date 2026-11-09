@@ -1,0 +1,18 @@
+uuid: 27d8c14a-8eba-4716-82bd-16a0cee22825
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.offre
+id: node.offre.unpublish_on
+field_name: unpublish_on
+entity_type: node
+bundle: offre
+label: 'Unpublish on'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

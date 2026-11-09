@@ -1,0 +1,18 @@
+uuid: c7d1805e-2023-47c7-886d-fa08f14b3327
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.plan_d_accompagnement_collectif
+id: node.plan_d_accompagnement_collectif.metatag
+field_name: metatag
+entity_type: node
+bundle: plan_d_accompagnement_collectif
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

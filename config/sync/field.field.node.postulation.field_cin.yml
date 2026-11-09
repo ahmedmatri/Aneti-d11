@@ -1,0 +1,19 @@
+uuid: 5ce75eb7-3c9b-437a-a287-019ff8d1b6f0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cin
+    - node.type.postulation
+id: node.postulation.field_cin
+field_name: field_cin
+entity_type: node
+bundle: postulation
+label: CIN
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

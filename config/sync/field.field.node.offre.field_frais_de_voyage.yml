@@ -1,0 +1,23 @@
+uuid: e388ba82-3da5-4170-9989-145e62470828
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_frais_de_voyage
+    - node.type.offre
+id: node.offre.field_frais_de_voyage
+field_name: field_frais_de_voyage
+entity_type: node
+bundle: offre
+label: 'Frais de voyage'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

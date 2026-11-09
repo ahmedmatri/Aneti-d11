@@ -1,0 +1,21 @@
+uuid: 1c625aa9-a895-41e0-8a93-62bee5f5d20c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_prochaine_action
+    - field_collection.field_collection.field_action_api
+  module:
+    - options
+id: field_collection_item.field_action_api.field_prochaine_action
+field_name: field_prochaine_action
+entity_type: field_collection_item
+bundle: field_action_api
+label: 'Prochaine Action'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

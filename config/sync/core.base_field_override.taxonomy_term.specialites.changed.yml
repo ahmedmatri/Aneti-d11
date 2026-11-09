@@ -1,0 +1,18 @@
+uuid: e335658d-8a21-43af-8fed-e0ec0175a813
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.specialites
+id: taxonomy_term.specialites.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: specialites
+label: Modifié
+description: 'Le moment auquel le terme a été modifié pour la dernière fois.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,29 @@
+# Custom mutagen config for aneti-prod-3
+sync:
+  defaults:
+    mode: "two-way-resolved"
+    stageMode: "neighboring"
+    ignore:
+      paths:
+        # The top-level .git directory is ignored because where possible it's
+        # mounted into the container with a traditional docker bind-mount
+        - "/.git"
+        - "/.tarballs"
+        - "/.ddev/db_snapshots"
+        - "/.ddev/.importdb*"
+        - ".DS_Store"
+        - ".idea"
+        - "*.sql"
+        - "*.sql.gz"
+        - "*.tar.gz"
+        - "/web/sites/default/files"
+
+        # You can also exclude other directories from mutagen-syncing
+        # For example /var/www/html/var does not need to sync in TYPO3
+        # so you can add:
+        # - "/var"
+        # vcs like .git can be ignored for safety, but then some
+        # composer operations may fail if they use dev versions/git.
+        # vcs: true
+    symlink:
+      mode: "posix-raw"

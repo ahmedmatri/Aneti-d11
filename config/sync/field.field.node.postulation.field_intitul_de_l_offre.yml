@@ -1,0 +1,28 @@
+uuid: 5f5a6b71-afc7-4a12-acd3-cc853c9a6a81
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intitul_de_l_offre
+    - node.type.offre
+    - node.type.postulation
+id: node.postulation.field_intitul_de_l_offre
+field_name: field_intitul_de_l_offre
+entity_type: node
+bundle: postulation
+label: 'intitulé de l''offre'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      offre: offre
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

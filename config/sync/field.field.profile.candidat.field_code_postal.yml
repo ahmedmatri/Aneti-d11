@@ -1,0 +1,23 @@
+uuid: fd67875e-92fe-4a28-a33a-4f44f344027a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_code_postal
+    - profile.type.candidat
+id: profile.candidat.field_code_postal
+field_name: field_code_postal
+entity_type: profile
+bundle: candidat
+label: 'Code postal'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

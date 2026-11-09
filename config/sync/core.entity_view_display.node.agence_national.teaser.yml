@@ -1,0 +1,32 @@
+uuid: b76e45fa-29fa-4e11-963d-626472d7bcfd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.agence_national.body
+    - node.type.agence_national
+  module:
+    - text
+    - user
+id: node.agence_national.teaser
+targetEntityType: node
+bundle: agence_national
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_coordonnees: true
+  langcode: true

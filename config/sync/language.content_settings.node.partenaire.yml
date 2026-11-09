@@ -1,0 +1,18 @@
+uuid: db431e15-ea92-446a-a29a-25558446561b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.partenaire
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.partenaire
+target_entity_type_id: node
+target_bundle: partenaire
+default_langcode: site_default
+language_alterable: false

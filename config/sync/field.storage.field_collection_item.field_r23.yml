@@ -1,0 +1,22 @@
+uuid: ec96f51f-5c9c-4302-8a7a-9ce932cf2689
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_collection
+    - field_permissions
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: field_collection_item.field_r23
+field_name: field_r23
+entity_type: field_collection_item
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

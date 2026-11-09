@@ -1,0 +1,24 @@
+uuid: b0c8a562-43b8-445f-8223-3038ed514b83
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_date_ac
+    - paragraphs.paragraphs_type.action_ac
+  module:
+    - datetime
+id: paragraph.action_ac.field_date_ac
+field_name: field_date_ac
+entity_type: paragraph
+bundle: action_ac
+label: Date
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

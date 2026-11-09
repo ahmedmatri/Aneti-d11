@@ -1,0 +1,29 @@
+uuid: 30f05b58-b540-4ec1-ab9f-7ef44501a3af
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pai_destination
+    - node.type.plan_d_accompagnement_individuel
+    - taxonomy.vocabulary.pays
+id: node.plan_d_accompagnement_individuel.field_pai_destination
+field_name: field_pai_destination
+entity_type: node
+bundle: plan_d_accompagnement_individuel
+label: Destination
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      pays: pays
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

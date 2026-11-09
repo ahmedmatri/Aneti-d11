@@ -1,0 +1,29 @@
+uuid: 273c12b6-b2fc-4864-a2b5-a51f349aabaa
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_diplome
+    - node.type.curriculum_vitae
+    - taxonomy.vocabulary.diplome
+id: node.curriculum_vitae.field_diplome
+field_name: field_diplome
+entity_type: node
+bundle: curriculum_vitae
+label: Diplôme
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      diplome: diplome
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: 51cca068-9cc3-4b81-bfe4-0b54bc4acfc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.newletter_candidats
+id: node.newletter_candidats.sticky
+field_name: sticky
+entity_type: node
+bundle: newletter_candidats
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

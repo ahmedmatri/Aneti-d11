@@ -1,0 +1,23 @@
+uuid: 6fa05021-f03f-4b9b-abfe-e039b22a329a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_valider
+    - node.type.offre
+id: node.offre.field_valider
+field_name: field_valider
+entity_type: node
+bundle: offre
+label: Valider
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

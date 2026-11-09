@@ -1,0 +1,24 @@
+uuid: 2d025336-4915-48d3-8ba4-c8c3aaecf72d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_block
+    - node.type.slideshow
+  module:
+    - block_field
+id: node.slideshow.field_block
+field_name: field_block
+entity_type: node
+bundle: slideshow
+label: Block
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids: {  }
+field_type: block_field

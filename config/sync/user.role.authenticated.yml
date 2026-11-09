@@ -1,0 +1,40 @@
+uuid: e017cc97-6770-40ae-a261-fccf6d60b6ce
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'utilisateur authentifié'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access kint'
+  - 'access site map'
+  - 'access site-wide contact form'
+  - 'access user contact forms'
+  - 'cancel own vote'
+  - 'create field_candidat_retenu'
+  - 'create field_offre_entretien'
+  - 'edit field_candidat_retenu'
+  - 'edit field_offre_entretien'
+  - 'edit own field_candidat_retenu'
+  - 'edit own field_offre_entretien'
+  - 'inspect all votes'
+  - 'opt-in or out of google analytics tracking'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'subscribe to newsletters'
+  - 'use editorial transition create_new_draft'
+  - 'use text format filtered_html'
+  - 'view faq page'
+  - 'view field_candidat_retenu'
+  - 'view field_offre_entretien'
+  - 'view files'
+  - 'view media'
+  - 'view own field_candidat_retenu'
+  - 'view own field_offre_entretien'
+  - 'vote on polls'

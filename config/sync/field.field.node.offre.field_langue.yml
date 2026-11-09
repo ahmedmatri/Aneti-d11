@@ -1,0 +1,29 @@
+uuid: 660b436d-8cbd-45aa-9c9e-247ed4244eb5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_langue
+    - node.type.offre
+    - taxonomy.vocabulary.lang
+id: node.offre.field_langue
+field_name: field_langue
+entity_type: node
+bundle: offre
+label: 'Langue 1'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      lang: lang
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

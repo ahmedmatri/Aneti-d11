@@ -1,0 +1,23 @@
+uuid: 276d88c7-1efe-4ab8-a4e6-4cb70f800f36
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_connaissance_destination
+    - node.type.plan_d_accompagnement_individuel
+id: node.plan_d_accompagnement_individuel.field_connaissance_destination
+field_name: field_connaissance_destination
+entity_type: node
+bundle: plan_d_accompagnement_individuel
+label: 'Connaissance destination'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 5
+  prefix: ''
+  suffix: ''
+field_type: integer

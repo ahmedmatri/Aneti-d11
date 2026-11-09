@@ -1,0 +1,20 @@
+uuid: 93322a77-9b1e-4367-aa51-62240ec0d058
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.action_client
+  module:
+    - path
+id: node.action_client.path
+field_name: path
+entity_type: node
+bundle: action_client
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

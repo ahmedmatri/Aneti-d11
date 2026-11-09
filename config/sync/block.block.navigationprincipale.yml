@@ -1,0 +1,20 @@
+uuid: 325dd2da-812c-424d-a6ab-72dc9d021ced
+langcode: en
+status: true
+dependencies:
+  module:
+    - we_megamenu
+  theme:
+    - job_board
+id: navigationprincipale
+theme: job_board
+region: header
+weight: -3
+provider: null
+plugin: 'we_megamenu_block:main'
+settings:
+  id: 'we_megamenu_block:main'
+  label: 'Navigation principale'
+  provider: we_megamenu
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: 42ed5fcc-eb0e-4991-a70c-bc2cc40e5d59
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_q14_label
+    - field_collection.field_collection.field_checklist_avant_depart
+  module:
+    - markup
+id: field_collection_item.field_checklist_avant_depart.field_q14_label
+field_name: field_q14_label
+entity_type: field_collection_item
+bundle: field_checklist_avant_depart
+label: Q14_label
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>14. L’agence de recrutement ou l’employeur ont-ils fourni au travailleur la preuve qu’une assurance voyage a été souscrite avec le titre de transport&nbsp;?</p>\r\n"
+    format: basic_html
+field_type: markup

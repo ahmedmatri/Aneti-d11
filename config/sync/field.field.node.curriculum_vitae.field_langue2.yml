@@ -1,0 +1,29 @@
+uuid: 27981c53-f676-4a62-979e-07afd74995d2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_langue2
+    - node.type.curriculum_vitae
+    - taxonomy.vocabulary.lang
+id: node.curriculum_vitae.field_langue2
+field_name: field_langue2
+entity_type: node
+bundle: curriculum_vitae
+label: Langue2
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      lang: lang
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: lang
+field_type: entity_reference

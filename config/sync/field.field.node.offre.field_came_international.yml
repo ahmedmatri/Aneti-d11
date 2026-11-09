@@ -1,0 +1,23 @@
+uuid: 56241c5d-55a0-45f0-bfce-e8d8ff5326d9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_came_international
+    - node.type.offre
+id: node.offre.field_came_international
+field_name: field_came_international
+entity_type: node
+bundle: offre
+label: came_international
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

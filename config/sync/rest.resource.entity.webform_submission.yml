@@ -1,0 +1,22 @@
+uuid: 75008cbd-fd67-4d94-a89e-562baf816203
+langcode: fr
+status: true
+dependencies:
+  module:
+    - hal
+    - jwt
+    - serialization
+    - webform
+id: entity.webform_submission
+plugin_id: 'entity:webform_submission'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - PATCH
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - jwt_auth

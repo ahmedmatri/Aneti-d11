@@ -1,0 +1,20 @@
+uuid: c6c62cee-5906-44e1-9b48-03d62c9f9ac3
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_ville_tunisie
+field_name: field_ville_tunisie
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: a71b010a-7007-4f54-82f4-daf2d72e93d9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_n_du_passeport
+    - node.type.curriculum_vitae
+id: node.curriculum_vitae.field_n_du_passeport
+field_name: field_n_du_passeport
+entity_type: node
+bundle: curriculum_vitae
+label: 'N° du passeport'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

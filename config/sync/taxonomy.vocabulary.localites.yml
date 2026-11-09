@@ -1,0 +1,8 @@
+uuid: 5483a4fc-248a-4024-8262-a0a50e6046e5
+langcode: fr
+status: true
+dependencies: {  }
+name: localités
+vid: localites
+description: ''
+weight: 0

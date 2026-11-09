@@ -1,0 +1,20 @@
+uuid: 3ae988b1-fbfa-460b-ad3f-0bf86d8d0169
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.entreprise_cliente
+id: node.entreprise_cliente.menu_link
+field_name: menu_link
+entity_type: node
+bundle: entreprise_cliente
+label: 'Menu link'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: 3944a235-650f-49d2-8b35-4bdc2e2df28d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_nom_ar
+    - profile.type.candidat
+id: profile.candidat.field_nom_ar
+field_name: field_nom_ar
+entity_type: profile
+bundle: candidat
+label: الاسم
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

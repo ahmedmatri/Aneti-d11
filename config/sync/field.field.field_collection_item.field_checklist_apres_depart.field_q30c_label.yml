@@ -1,0 +1,25 @@
+uuid: 4baea4e6-af50-40be-a1e9-0d23fc51a8a4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_q30c_label
+    - field_collection.field_collection.field_checklist_apres_depart
+  module:
+    - markup
+id: field_collection_item.field_checklist_apres_depart.field_q30c_label
+field_name: field_q30c_label
+entity_type: field_collection_item
+bundle: field_checklist_apres_depart
+label: Q30c_label
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>c. De l’attaché consulaire en cas de litige, abus ou violations graves de droits fondamentaux au travail&nbsp;?</p>\r\n"
+    format: basic_html
+field_type: markup

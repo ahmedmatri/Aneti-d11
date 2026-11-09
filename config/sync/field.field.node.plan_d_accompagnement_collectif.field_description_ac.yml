@@ -1,0 +1,21 @@
+uuid: c13bbf9c-086d-4859-97e9-943e2d7eb1f7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description_ac
+    - node.type.plan_d_accompagnement_collectif
+  module:
+    - text
+id: node.plan_d_accompagnement_collectif.field_description_ac
+field_name: field_description_ac
+entity_type: node
+bundle: plan_d_accompagnement_collectif
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

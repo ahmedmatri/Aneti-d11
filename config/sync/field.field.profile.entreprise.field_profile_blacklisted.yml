@@ -1,0 +1,23 @@
+uuid: 48bbe04d-5e77-4dda-bbe0-fd050c6bccda
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_profile_blacklisted
+    - profile.type.entreprise
+id: profile.entreprise.field_profile_blacklisted
+field_name: field_profile_blacklisted
+entity_type: profile
+bundle: entreprise
+label: Blacklisted
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

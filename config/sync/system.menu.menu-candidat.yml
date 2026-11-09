@@ -1,0 +1,8 @@
+uuid: 288de310-6d05-4d94-98c6-f1dd38f00da9
+langcode: fr
+status: true
+dependencies: {  }
+id: menu-candidat
+label: 'Menu Candidat'
+description: ''
+locked: false

@@ -1,0 +1,5 @@
+name: 'Aneti CV'
+type: module
+description: 'My Awesome Module'
+core_version_requirement: ^8.9 || ^9 || ^10
+package: 'Custom'

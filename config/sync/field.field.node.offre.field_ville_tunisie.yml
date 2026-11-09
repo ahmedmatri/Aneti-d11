@@ -1,0 +1,29 @@
+uuid: 6e9c3dd7-9bad-46b9-85d2-45920756cea9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ville_tunisie
+    - node.type.offre
+    - taxonomy.vocabulary.ville
+id: node.offre.field_ville_tunisie
+field_name: field_ville_tunisie
+entity_type: node
+bundle: offre
+label: Ville
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ville: ville
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

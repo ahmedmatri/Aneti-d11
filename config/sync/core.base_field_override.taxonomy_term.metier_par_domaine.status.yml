@@ -1,0 +1,22 @@
+uuid: 12792987-c45a-49a7-8783-fa3dc290db0d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.metier_par_domaine
+id: taxonomy_term.metier_par_domaine.status
+field_name: status
+entity_type: taxonomy_term
+bundle: metier_par_domaine
+label: Publié
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

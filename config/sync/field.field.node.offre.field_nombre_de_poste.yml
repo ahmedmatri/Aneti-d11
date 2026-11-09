@@ -1,0 +1,23 @@
+uuid: 875bf4c4-5663-4688-8294-44217f9b7da9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nombre_de_poste
+    - node.type.offre
+id: node.offre.field_nombre_de_poste
+field_name: field_nombre_de_poste
+entity_type: node
+bundle: offre
+label: 'Nombre de poste'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,14 @@
+uuid: a7c57c55-173e-4c38-b8fc-5b18c62e5c77
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.referent
+  module:
+    - user
+id: user_add_role_action.referent
+label: 'Ajouter le rôle Référent aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: referent

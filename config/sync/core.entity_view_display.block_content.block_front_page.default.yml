@@ -1,0 +1,48 @@
+uuid: ec955044-bf4c-4d78-904e-b60c680fc710
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.block_front_page
+    - field.field.block_content.block_front_page.body
+    - field.field.block_content.block_front_page.field_body
+  module:
+    - entity_reference_revisions
+    - field_group
+third_party_settings:
+  field_group:
+    group_box:
+      children:
+        - field_body
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: content-box
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Box
+      region: content
+id: block_content.block_front_page.default
+targetEntityType: block_content
+bundle: block_front_page
+mode: default
+content:
+  field_body:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  langcode: true

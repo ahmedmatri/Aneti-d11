@@ -1,0 +1,33 @@
+uuid: 26f46af8-9b3e-49d5-8926-39ef53a6c8d0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.simplenews_issue
+    - node.type.newletter_entreprise
+    - simplenews.newsletter.entreprise
+  module:
+    - simplenews
+id: node.newletter_entreprise.simplenews_issue
+field_name: simplenews_issue
+entity_type: node
+bundle: newletter_entreprise
+label: Issue
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    handler: simplenews_all
+    handler_settings: null
+    status: 0
+    sent_count: 0
+    subscribers: 0
+    target_uuid: d9173bf5-cd59-4260-80ff-a45d8fd43ed1
+default_value_callback: ''
+settings:
+  handler: 'default:simplenews_newsletter'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: simplenews_issue

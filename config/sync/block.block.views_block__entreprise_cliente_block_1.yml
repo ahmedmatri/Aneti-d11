@@ -1,0 +1,34 @@
+uuid: f816811d-2b28-4d53-be31-4626d65f1eaf
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.entreprise_cliente
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - job_board
+third_party_settings:
+  block_class:
+    classes: col-sm-6
+id: views_block__entreprise_cliente_block_1
+theme: job_board
+region: client
+weight: -19
+provider: null
+plugin: 'views_block:entreprise_cliente-block_1'
+settings:
+  id: 'views_block:entreprise_cliente-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

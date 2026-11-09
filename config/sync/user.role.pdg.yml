@@ -1,0 +1,35 @@
+uuid: 15573219-9476-4d89-9b0b-98d43307db26
+langcode: fr
+status: true
+dependencies: {  }
+id: pdg
+label: pdg
+weight: 14
+is_admin: null
+permissions:
+  - 'create field_afficher_le_nom'
+  - 'create field_afficher_mail'
+  - 'create field_cv_valider'
+  - 'create field_mode_de_traitement'
+  - 'create field_operation_qatar'
+  - 'edit field_afficher_le_nom'
+  - 'edit field_afficher_mail'
+  - 'edit field_cv_valider'
+  - 'edit field_mode_de_traitement'
+  - 'edit field_operation_qatar'
+  - 'edit own field_afficher_le_nom'
+  - 'edit own field_afficher_mail'
+  - 'edit own field_cv_valider'
+  - 'edit own field_mode_de_traitement'
+  - 'edit own field_operation_qatar'
+  - 'view field_afficher_le_nom'
+  - 'view field_afficher_mail'
+  - 'view field_cv_valider'
+  - 'view field_mode_de_traitement'
+  - 'view field_operation_qatar'
+  - 'view files'
+  - 'view own field_afficher_le_nom'
+  - 'view own field_afficher_mail'
+  - 'view own field_cv_valider'
+  - 'view own field_mode_de_traitement'
+  - 'view own field_operation_qatar'

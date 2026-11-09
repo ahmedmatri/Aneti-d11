@@ -1,0 +1,19 @@
+uuid: d3f3ca25-5295-4edf-a53c-34677096937a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_groupe_filiale
+    - profile.type.entreprise
+id: profile.entreprise.field_groupe_filiale
+field_name: field_groupe_filiale
+entity_type: profile
+bundle: entreprise
+label: Groupe/Filiale
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

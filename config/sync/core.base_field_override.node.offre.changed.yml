@@ -1,0 +1,18 @@
+uuid: 11590885-7688-4f19-92be-2bd0cc50036f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.offre
+id: node.offre.changed
+field_name: changed
+entity_type: node
+bundle: offre
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

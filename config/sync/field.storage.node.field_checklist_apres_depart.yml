@@ -1,0 +1,23 @@
+uuid: ec03fe25-8dc7-48eb-af92-a0527d710edd
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_collection
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+id: node.field_checklist_apres_depart
+field_name: field_checklist_apres_depart
+entity_type: node
+type: field_collection
+settings: {  }
+module: field_collection
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

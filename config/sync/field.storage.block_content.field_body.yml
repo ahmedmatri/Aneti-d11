@@ -1,0 +1,25 @@
+uuid: a57bae2e-d280-4165-aa93-f3b5221f7341
+langcode: fr
+status: true
+dependencies:
+  module:
+    - block_content
+    - entity_reference_revisions
+    - field_permissions
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: block_content.field_body
+field_name: field_body
+entity_type: block_content
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

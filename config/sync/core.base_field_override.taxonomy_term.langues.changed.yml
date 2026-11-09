@@ -1,0 +1,18 @@
+uuid: 80a79dbf-6ba3-4d31-9f58-219320739110
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.langues
+id: taxonomy_term.langues.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: langues
+label: Modifié
+description: 'Le moment auquel le terme a été modifié pour la dernière fois.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

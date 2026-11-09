@@ -1,0 +1,20 @@
+uuid: e76170c2-55e2-4782-99cc-20d2b0b66b23
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.specialites
+  module:
+    - path
+id: taxonomy_term.specialites.path
+field_name: path
+entity_type: taxonomy_term
+bundle: specialites
+label: 'Alias d''URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,29 @@
+uuid: beb4d47c-a742-4f5e-ad02-f83a720c551b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_langue_maternelle
+    - node.type.curriculum_vitae
+    - taxonomy.vocabulary.lang
+id: node.curriculum_vitae.field_langue_maternelle
+field_name: field_langue_maternelle
+entity_type: node
+bundle: curriculum_vitae
+label: 'Langue maternelle'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      lang: lang
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: lang
+field_type: entity_reference

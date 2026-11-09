@@ -1,0 +1,21 @@
+uuid: 07340d2e-7321-4121-b113-f20e660cfbab
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_derniere_modification
+    - node.type.offre
+  module:
+    - datetime
+id: node.offre.field_date_derniere_modification
+field_name: field_date_derniere_modification
+entity_type: node
+bundle: offre
+label: 'date dernière modification'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

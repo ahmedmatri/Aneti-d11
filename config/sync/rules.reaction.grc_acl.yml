@@ -1,0 +1,61 @@
+uuid: 465b4224-88b5-4e38-ac24-62be7ec9e80f
+langcode: fr
+status: true
+dependencies: {  }
+id: grc_acl
+label: 'GRC acl'
+events:
+  -
+    event_name: 'rules_entity_view:node'
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: ae96c2cc-191e-4038-b642-dd75be184b11
+  conditions:
+    id: rules_and
+    uuid: 3eb91f56-719e-4894-8ef7-f7db46b32ad3
+    conditions:
+      -
+        id: rules_condition
+        uuid: f899fb53-af80-44e5-bdbe-f587854fc65c
+        context_values:
+          roles: conseiller_central
+        context_mapping:
+          user: '@user.current_user_context:current_user'
+        context_processors:
+          roles:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: custom_rules_user_has_role
+        negate: true
+      -
+        id: rules_condition
+        uuid: f16d9e19-6790-4852-9fd1-e744e316220a
+        context_values:
+          types:
+            - action_client
+        context_mapping:
+          node: node
+        context_processors:
+          types:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: rules_node_is_of_type
+        negate: false
+  actions:
+    id: rules_action_set
+    uuid: 62847217-7945-4632-8b7d-4a8f2d34d89b
+    actions:
+      -
+        id: rules_action
+        uuid: f2fb5f81-bb30-42f5-a4e6-246bc1e4569b
+        context_values:
+          url: /
+        context_mapping: {  }
+        context_processors:
+          url:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_page_redirect

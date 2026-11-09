@@ -1,0 +1,18 @@
+uuid: e9e1ee99-d08d-467f-b39b-34d4d992c8e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.newletter_entreprise
+id: node.newletter_entreprise.created
+field_name: created
+entity_type: node
+bundle: newletter_entreprise
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

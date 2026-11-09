@@ -1,0 +1,37 @@
+uuid: 99d0dc7c-9050-4008-9565-081a43b20989
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:7a1844b0-95a2-4932-8209-9f5ad57c8c03'
+  module:
+    - block_class
+    - block_content
+    - language
+  theme:
+    - job_board
+third_party_settings:
+  block_class:
+    classes: 'col-md-3 a_block_header a_block_header__ministere'
+id: blocagencetop
+theme: job_board
+region: headline
+weight: -11
+provider: null
+plugin: 'block_content:7a1844b0-95a2-4932-8209-9f5ad57c8c03'
+settings:
+  id: 'block_content:7a1844b0-95a2-4932-8209-9f5ad57c8c03'
+  label: 'Bloc agence TOP'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  language:
+    id: language
+    langcodes:
+      fr: fr
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'

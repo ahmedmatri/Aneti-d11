@@ -1,0 +1,21 @@
+uuid: a1227252-780e-4b30-a402-60df2d894b7e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pai_taches
+    - node.type.plan_d_accompagnement_individuel
+  module:
+    - text
+id: node.plan_d_accompagnement_individuel.field_pai_taches
+field_name: field_pai_taches
+entity_type: node
+bundle: plan_d_accompagnement_individuel
+label: Taches
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

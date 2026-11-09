@@ -1,0 +1,24 @@
+uuid: 4270001c-5426-4167-b40f-24b8e44aa66d
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - geofield
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_coordonnees
+field_name: field_coordonnees
+entity_type: node
+type: geofield
+settings:
+  backend: geofield_backend_default
+module: geofield
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

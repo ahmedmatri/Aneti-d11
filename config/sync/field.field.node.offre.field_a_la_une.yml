@@ -1,0 +1,23 @@
+uuid: 29c8a671-664c-43a7-b600-655f79e2faf8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_a_la_une
+    - node.type.offre
+id: node.offre.field_a_la_une
+field_name: field_a_la_une
+entity_type: node
+bundle: offre
+label: 'A la une'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

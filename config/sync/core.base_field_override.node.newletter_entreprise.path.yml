@@ -1,0 +1,20 @@
+uuid: 204edd18-7f64-4b02-8de5-3477bfd4c735
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.newletter_entreprise
+  module:
+    - path
+id: node.newletter_entreprise.path
+field_name: path
+entity_type: node
+bundle: newletter_entreprise
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

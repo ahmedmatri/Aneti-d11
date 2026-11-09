@@ -1,0 +1,20 @@
+uuid: 37b58d84-fc30-45d3-9e19-3253e44c2210
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.agence_national
+id: node.agence_national.uid
+field_name: uid
+entity_type: node
+bundle: agence_national
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

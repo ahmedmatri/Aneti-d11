@@ -1,0 +1,20 @@
+uuid: 1b5ab821-0e22-468b-8f06-971577bb515d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.postulation
+  module:
+    - path
+id: node.postulation.path
+field_name: path
+entity_type: node
+bundle: postulation
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

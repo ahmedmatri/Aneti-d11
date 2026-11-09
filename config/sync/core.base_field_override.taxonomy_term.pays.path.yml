@@ -1,0 +1,20 @@
+uuid: 7394ae90-63c1-4459-b82d-67923b4d5cde
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.pays
+  module:
+    - path
+id: taxonomy_term.pays.path
+field_name: path
+entity_type: taxonomy_term
+bundle: pays
+label: 'Alias d''URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

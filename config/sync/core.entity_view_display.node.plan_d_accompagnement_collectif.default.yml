@@ -1,0 +1,58 @@
+uuid: 6f79c641-a375-48e5-853d-a0cd8e5157dd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.plan_d_accompagnement_collectif.field_action_ac
+    - field.field.node.plan_d_accompagnement_collectif.field_description_ac
+    - field.field.node.plan_d_accompagnement_collectif.field_pag_actions
+    - field.field.node.plan_d_accompagnement_collectif.field_pag_candidats
+    - node.type.plan_d_accompagnement_collectif
+  module:
+    - entity_reference_revisions
+    - field_collection
+    - text
+    - user
+id: node.plan_d_accompagnement_collectif.default
+targetEntityType: node
+bundle: plan_d_accompagnement_collectif
+mode: default
+content:
+  field_action_ac:
+    type: entity_reference_revisions_entity_view
+    weight: 103
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_description_ac:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_pag_actions:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_list
+    region: content
+  field_pag_candidats:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

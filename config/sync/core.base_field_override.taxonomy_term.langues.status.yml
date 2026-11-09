@@ -1,0 +1,22 @@
+uuid: 7e5f690d-da22-4781-bdf6-a97074f5b5f7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.langues
+id: taxonomy_term.langues.status
+field_name: status
+entity_type: taxonomy_term
+bundle: langues
+label: Publié
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

@@ -1,0 +1,20 @@
+uuid: 0e10d193-bed1-4c1c-827f-f0715c3fedcf
+langcode: fr
+status: true
+dependencies:
+  module:
+    - profile
+    - taxonomy
+id: profile.field_specialite_referent
+field_name: field_specialite_referent
+entity_type: profile
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

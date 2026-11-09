@@ -1,0 +1,90 @@
+uuid: 307e9b09-d512-47b9-b109-b5edfbf908fc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.action_ai.field_date_ac
+    - field.field.paragraph.action_ai.field_domaine_ai
+    - field.field.paragraph.action_ai.field_duree_ac
+    - field.field.paragraph.action_ai.field_informations_fournies
+    - field.field.paragraph.action_ai.field_niveau_d_adhesion
+    - field.field.paragraph.action_ai.field_prochain_rendez_vous
+    - field.field.paragraph.action_ai.field_prochaine_action
+    - field.field.paragraph.action_ai.field_theme
+    - paragraphs.paragraphs_type.action_ai
+  module:
+    - datetime
+    - options
+    - text
+id: paragraph.action_ai.default
+targetEntityType: paragraph
+bundle: action_ai
+mode: default
+content:
+  field_date_ac:
+    weight: 0
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_domaine_ai:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_duree_ac:
+    weight: 2
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_informations_fournies:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_niveau_d_adhesion:
+    weight: 4
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_prochain_rendez_vous:
+    weight: 6
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_prochaine_action:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_theme:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

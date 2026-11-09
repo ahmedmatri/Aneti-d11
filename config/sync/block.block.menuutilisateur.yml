@@ -1,0 +1,37 @@
+uuid: af988fce-5d2f-47b8-bd96-0fdab49c8238
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.menu-utilisateur
+  module:
+    - block_class
+    - system
+    - user
+  theme:
+    - job_board
+third_party_settings:
+  block_class:
+    classes: 'a_block_header a_block_header__anon_user'
+id: menuutilisateur
+theme: job_board
+region: headline
+weight: -7
+provider: null
+plugin: 'system_menu_block:menu-utilisateur'
+settings:
+  id: 'system_menu_block:menu-utilisateur'
+  label: 'Menu utilisateur'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

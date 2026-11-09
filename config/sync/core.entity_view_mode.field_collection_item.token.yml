@@ -1,0 +1,10 @@
+uuid: 22feda7c-8dd6-4913-b428-cc7d5cc398c8
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_collection
+id: field_collection_item.token
+label: 'Jeton (token)'
+targetEntityType: field_collection_item
+cache: true

@@ -1,0 +1,18 @@
+uuid: bbaf5ea4-851d-4f30-9186-b31c308a8ff8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.agence_national
+id: node.agence_national.created
+field_name: created
+entity_type: node
+bundle: agence_national
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

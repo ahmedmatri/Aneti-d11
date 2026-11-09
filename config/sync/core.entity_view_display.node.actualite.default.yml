@@ -1,0 +1,36 @@
+uuid: 125e7dff-9fd3-4170-9996-7078dc78ffec
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.actualite.field_description_actualite
+    - field.field.node.actualite.field_image
+    - node.type.actualite
+  module:
+    - image
+    - text
+    - user
+id: node.actualite.default
+targetEntityType: node
+bundle: actualite
+mode: default
+content:
+  field_description_actualite:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  langcode: true
+  links: true

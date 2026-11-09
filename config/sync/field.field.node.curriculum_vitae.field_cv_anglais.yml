@@ -1,0 +1,27 @@
+uuid: 24d3cbff-5942-4cb5-a99a-78f9f70ca170
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cv_anglais
+    - node.type.curriculum_vitae
+  module:
+    - file
+id: node.curriculum_vitae.field_cv_anglais
+field_name: field_cv_anglais
+entity_type: node
+bundle: curriculum_vitae
+label: 'CV anglais'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'doc docx pdf'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

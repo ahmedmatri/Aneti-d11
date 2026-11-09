@@ -1,0 +1,19 @@
+uuid: a2cdd03d-843c-46b9-98ad-846eeeccb626
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_identifiant_entreprise
+    - profile.type.entreprise
+id: profile.entreprise.field_identifiant_entreprise
+field_name: field_identifiant_entreprise
+entity_type: profile
+bundle: entreprise
+label: 'Identifiant de l''entreprise'
+description: 'Numéro de SIRET, registre de commerce ou tout autre identifiant juridique de l''entreprise.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

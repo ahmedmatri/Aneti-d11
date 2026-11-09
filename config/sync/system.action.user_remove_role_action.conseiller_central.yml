@@ -1,0 +1,14 @@
+uuid: d54b6c15-39d5-4915-b5e2-6cda413f6152
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.conseiller_central
+  module:
+    - user
+id: user_remove_role_action.conseiller_central
+label: 'Enlever le rôle Conseiller Central des utilisateurs sélectionnés'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: conseiller_central

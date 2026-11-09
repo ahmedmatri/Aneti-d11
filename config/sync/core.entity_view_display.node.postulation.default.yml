@@ -1,0 +1,116 @@
+uuid: 4e683c08-af9b-4ddc-83f6-2d6d4330a539
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.postulation.field_accepter
+    - field.field.node.postulation.field_candidats
+    - field.field.node.postulation.field_candidature
+    - field.field.node.postulation.field_checklist_apres_depart
+    - field.field.node.postulation.field_checklist_avant_depart
+    - field.field.node.postulation.field_cin
+    - field.field.node.postulation.field_cv
+    - field.field.node.postulation.field_intitul_de_l_offre
+    - field.field.node.postulation.field_offre
+    - field.field.node.postulation.field_offre_id
+    - node.type.postulation
+  module:
+    - field_collection
+    - options
+    - user
+id: node.postulation.default
+targetEntityType: node
+bundle: postulation
+mode: default
+content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_accepter:
+    weight: 107
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_candidats:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_candidature:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_checklist_apres_depart:
+    weight: 110
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_list
+    region: content
+  field_checklist_avant_depart:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_list
+    region: content
+  field_cin:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cv:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_intitul_de_l_offre:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_offre:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_offre_id:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

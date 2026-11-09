@@ -1,0 +1,21 @@
+uuid: 4b4c1b36-b40f-4d1c-8543-74a69892a4a4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_fin_validit_
+    - node.type.curriculum_vitae
+  module:
+    - datetime
+id: node.curriculum_vitae.field_date_fin_validit_
+field_name: field_date_fin_validit_
+entity_type: node
+bundle: curriculum_vitae
+label: 'Date fin validité'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,22 @@
+uuid: 99ca9906-11a1-4b30-ba50-e88e20aed1c1
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - profile
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+id: profile.field_courriel
+field_name: field_courriel
+entity_type: profile
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

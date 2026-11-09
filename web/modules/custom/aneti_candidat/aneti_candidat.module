@@ -1,0 +1,147 @@
+<?php
+use Drupal\views\Views;
+define('ANETI_CANDIDAT_ROLE', 'candidat');
+// Load emails functions.
+module_load_include('inc', 'aneti_emails', 'includes/emails');
+
+/**
+ * Helper function to check if profile is candidat
+ *
+ * @param Drupal\Core\Entity\EntityInterface $entity
+ * @return bool
+ */
+function aneti_candidat_entity_is_profile_candidat(Drupal\Core\Entity\EntityInterface $entity) {
+  $entity_type = $entity->getEntityType()->getBundleEntityType();
+  $bundle = $entity->bundle();
+
+  if ($entity_type == 'profile_type' && $bundle == ANETI_CANDIDAT_ROLE) {
+    if ($entity->get('field_cin') !== null && $entity->get('field_cin')->getValue()) {
+      return TRUE;
+    }
+  }
+
+  return FALSE;
+}
+/**
+ * Implements hook_views_pre_view().
+ */
+
+/*
+function aneti_candidat_entity_bundle_field_info_alter(&$fields, EntityTypeInterface $entity_type, $bundle) {
+  if ($entity_type->id() === 'profile_type' && $bundle === ANETI_CANDIDAT_ROLE) {
+    if (isset($fields['cin'])) {
+      $fields['cin']->addConstraint('UniqueField');
+    }
+  }
+}
+*/ 
+
+
+/**
+ * Implement hook_entity_presave().
+ */
+function aneti_candidat_entity_presave(\Drupal\Core\Entity\EntityInterface $entity) {
+  if (aneti_candidat_entity_is_profile_candidat($entity)) {
+  	
+		if($entity->get('field_pays') !== null && $entity->get('field_pays')->getValue() ){
+			$pays=$entity->get('field_pays')->getString();
+			if($pays=="1343") $entity->field_referant->entity=56798;
+			if($pays=="1248") $entity->field_referant->entity=56797;
+		}
+		if($entity->get('field_pays')->getString()=='1382'){
+	    if($entity->get('field_code_postal') !== null && $entity->get('field_code_postal')->getValue() ){
+	    	$cdp=$entity->get('field_code_postal')->getString();
+	    	
+	    	$parent_tid=0;	
+	    	$parent_name="";
+				$term_name = $cdp;
+				$term = \Drupal::entityTypeManager()
+				      ->getStorage('taxonomy_term')
+				      ->loadByProperties(['name' => $term_name,'vid' => 'codepostal']);		
+				
+				$term = reset($term);
+				if(!empty($term)) $term_id = $term->id();
+				if($term_id){
+	    		$parent = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadParents($term_id);
+	    		$parent = reset($parent);
+	    		$parent_tid = $parent->id();
+	    		$parent_name= $parent->getName();
+	    		if($parent_name) {
+						$term_profile = \Drupal::entityTypeManager()
+					      ->getStorage('taxonomy_term')
+					      ->loadByProperties(['name' => $parent_name,'vid' => 'delegations']);		
+						$term_profile = reset($term_profile);
+						if(!empty($term_profile)) $term_profile_id = $term_profile->id();   		
+		    		if($term_profile_id){
+			    		$profiles = \Drupal::entityQuery('profile')
+			    				->condition('uid', 1,'>')
+			    				->condition('field_delegation_referent', $term_profile_id , 'IN')
+			    				->accessCheck(FALSE)
+			    				->execute();
+
+							$nb=array();
+							foreach($profiles as $key => $value) {
+								
+								$entity_manager = \Drupal::entityTypeManager();
+								$prfl = $entity_manager->getStorage('profile')->load($value);
+			    			
+			    			$uid=	$prfl->getOwnerId();
+								
+			    			$candidats = \Drupal::entityQuery('profile')
+			    				->condition('type', 'candidat' )
+			    				->condition('field_referant', $prfl->getOwnerId() )
+			    				->accessCheck(FALSE);
+			    				
+			    			$nbr= $candidats->count()->execute();
+			    			$nb[$uid]=$nbr;
+								
+							}
+							if(!empty($nb)){
+								asort($nb);
+								foreach($nb as $key => $value){
+									$entity->field_referant->entity = $key;
+									break;
+								}
+							}
+						}    		
+	    		}
+				}
+				
+				
+			}	
+    }  
+
+  }
+}
+
+
+/**
+ * Implement hook_entity_insert().
+ */
+function aneti_candidat_entity_insert(\Drupal\Core\Entity\EntityInterface $entity) {
+  if (aneti_candidat_entity_is_profile_candidat($entity)) {
+    // First, we fix the profile owner.
+    $uid = $entity->getOwnerId();
+    $entity->setOwnerId($uid);
+    $user = \Drupal\user\Entity\User::load($uid);
+
+    // Initial creation activate user by default.
+    if ($user && !$user->isActive()) {
+      // Activate the user and save the user.
+      $user->activate();
+      $user->addRole(ANETI_CANDIDAT_ROLE);
+      $user->save();
+      // Publish users's profile by default.
+      $entity->set('moderation_state', 'published');
+    }
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function aneti_candidat_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+//  if ($form_id == 'user_register_form') {
+//    kint($form);
+//  }
+}

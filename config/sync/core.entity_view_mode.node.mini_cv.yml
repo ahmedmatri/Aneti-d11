@@ -1,0 +1,10 @@
+uuid: f7d697cb-52d2-4fcc-95dc-f8ece572f099
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.mini_cv
+label: 'Mini CV'
+targetEntityType: node
+cache: true

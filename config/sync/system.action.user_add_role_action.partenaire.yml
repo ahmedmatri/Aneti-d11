@@ -1,0 +1,14 @@
+uuid: 3bd7487b-ea90-48b5-bea8-fadf840929a3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.partenaire
+  module:
+    - user
+id: user_add_role_action.partenaire
+label: 'Ajouter le rôle partenaire aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: partenaire

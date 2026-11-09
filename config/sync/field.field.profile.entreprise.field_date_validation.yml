@@ -1,0 +1,24 @@
+uuid: 3bcb6e83-45fa-43d6-a19b-1b56a9aa2c3d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_date_validation
+    - profile.type.entreprise
+  module:
+    - datetime
+id: profile.entreprise.field_date_validation
+field_name: field_date_validation
+entity_type: profile
+bundle: entreprise
+label: 'date validation'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

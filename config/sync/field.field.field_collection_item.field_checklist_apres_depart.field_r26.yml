@@ -1,0 +1,23 @@
+uuid: 4220623c-dc57-4d17-aacd-9868306a2a67
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_r26
+    - field_collection.field_collection.field_checklist_apres_depart
+id: field_collection_item.field_checklist_apres_depart.field_r26
+field_name: field_r26
+entity_type: field_collection_item
+bundle: field_checklist_apres_depart
+label: R26
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Oui
+  off_label: Non
+field_type: boolean

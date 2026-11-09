@@ -1,0 +1,29 @@
+uuid: 10e7a634-8888-44c6-a42a-a8bb539aa45b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_ville_tunisie
+    - profile.type.candidat
+    - taxonomy.vocabulary.ville
+id: profile.candidat.field_ville_tunisie
+field_name: field_ville_tunisie
+entity_type: profile
+bundle: candidat
+label: Ville
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ville: ville
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

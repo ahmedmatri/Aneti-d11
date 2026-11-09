@@ -1,0 +1,47 @@
+uuid: 93cfcf43-b384-4ec3-a5f3-8eff34c22f09
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_referant
+    - profile.type.entreprise
+  module:
+    - profile
+third_party_settings:
+  profile:
+    profile_private: true
+id: profile.entreprise.field_referant
+field_name: field_referant
+entity_type: profile
+bundle: entreprise
+label: Referant
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: role
+      role:
+        referent: referent
+        conseiller_central: conseiller_central
+        traduction: traduction
+        chef_unite_migration: chef_unite_migration
+        candidat: '0'
+        entreprise: '0'
+        super_admin: '0'
+        administrator: '0'
+        bureau_a_l_etranger: '0'
+        partenaire: '0'
+        webmaster: '0'
+        pdg: '0'
+        chef_de_bureau: '0'
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

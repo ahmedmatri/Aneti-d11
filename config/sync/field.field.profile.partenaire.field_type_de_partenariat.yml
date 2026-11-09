@@ -1,0 +1,21 @@
+uuid: 94eba00d-b360-41ff-a7c6-d669be0d12db
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_type_de_partenariat
+    - profile.type.partenaire
+  module:
+    - options
+id: profile.partenaire.field_type_de_partenariat
+field_name: field_type_de_partenariat
+entity_type: profile
+bundle: partenaire
+label: 'Type de partenariat'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

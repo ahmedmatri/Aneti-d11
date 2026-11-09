@@ -1,0 +1,21 @@
+uuid: e5bb5996-7203-4cc1-9273-16e430276e79
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_devise
+    - node.type.offre
+  module:
+    - options
+id: node.offre.field_devise
+field_name: field_devise
+entity_type: node
+bundle: offre
+label: Devise
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

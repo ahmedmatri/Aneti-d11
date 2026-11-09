@@ -1,0 +1,25 @@
+uuid: 10a7c396-76cb-4cc1-a070-60881273906e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_help_moderation
+    - node.type.curriculum_vitae
+  module:
+    - markup
+id: node.curriculum_vitae.field_help_moderation
+field_name: field_help_moderation
+entity_type: node
+bundle: curriculum_vitae
+label: Aide
+description: ''
+required: false
+translatable: true
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>Si vous choisissez l'état \"draft\", votre CV sera enregistré mais ne sera pas publié. Ceci est utilise pour sauvegarder votre CV afin de terminer sa saisie ultérieurement.</p>\r\n"
+    format: full_html
+field_type: markup

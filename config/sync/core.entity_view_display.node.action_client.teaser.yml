@@ -1,0 +1,23 @@
+uuid: 97da0348-276d-41e1-9175-25058a7e3335
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.action_client
+  module:
+    - user
+id: node.action_client.teaser
+targetEntityType: node
+bundle: action_client
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_action_grc: true
+  field_entreprise_grc: true
+  langcode: true

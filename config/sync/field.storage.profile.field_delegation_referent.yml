@@ -1,0 +1,20 @@
+uuid: a43aee22-8bae-47b4-88a4-960ce9e62a2a
+langcode: fr
+status: true
+dependencies:
+  module:
+    - profile
+    - taxonomy
+id: profile.field_delegation_referent
+field_name: field_delegation_referent
+entity_type: profile
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

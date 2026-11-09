@@ -1,0 +1,22 @@
+uuid: 551f5f12-5264-4fb1-8178-5681e9f13e43
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.diplome
+id: taxonomy_term.diplome.status
+field_name: status
+entity_type: taxonomy_term
+bundle: diplome
+label: Publié
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

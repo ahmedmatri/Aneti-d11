@@ -1,0 +1,35 @@
+uuid: 02e98d7f-a6e8-461a-b15f-8b12a1a51fec
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:block_front_page:9eb30c6d-0326-4baa-aa21-dde2057bb64f'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - job_board
+third_party_settings:
+  block_class:
+    classes: col-md-4
+id: nosmissions
+theme: job_board
+region: bloc_front
+weight: 0
+provider: null
+plugin: 'block_content:9eb30c6d-0326-4baa-aa21-dde2057bb64f'
+settings:
+  id: 'block_content:9eb30c6d-0326-4baa-aa21-dde2057bb64f'
+  label: 'Nos Missions'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

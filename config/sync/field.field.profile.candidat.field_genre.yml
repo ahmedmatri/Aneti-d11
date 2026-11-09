@@ -1,0 +1,21 @@
+uuid: 662038b2-3d88-4f18-b748-17efcfca78e3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_genre
+    - profile.type.candidat
+  module:
+    - options
+id: profile.candidat.field_genre
+field_name: field_genre
+entity_type: profile
+bundle: candidat
+label: Genre
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

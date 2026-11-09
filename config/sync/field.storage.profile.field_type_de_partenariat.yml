@@ -1,0 +1,31 @@
+uuid: fd15c6b2-b6d5-425c-9b93-ab9c7e277090
+langcode: fr
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - profile
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: profile.field_type_de_partenariat
+field_name: field_type_de_partenariat
+entity_type: profile
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: Public
+    -
+      value: '1'
+      label: Privé
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

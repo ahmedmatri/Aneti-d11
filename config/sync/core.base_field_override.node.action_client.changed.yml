@@ -1,0 +1,18 @@
+uuid: d606b731-bfb1-47bf-96db-c9fc1f61fde5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.action_client
+id: node.action_client.changed
+field_name: changed
+entity_type: node
+bundle: action_client
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

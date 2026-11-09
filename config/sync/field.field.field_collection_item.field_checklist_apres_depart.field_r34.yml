@@ -1,0 +1,23 @@
+uuid: 08b4676a-325c-46a2-8222-02038b9de3b1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_r34
+    - field_collection.field_collection.field_checklist_apres_depart
+id: field_collection_item.field_checklist_apres_depart.field_r34
+field_name: field_r34
+entity_type: field_collection_item
+bundle: field_checklist_apres_depart
+label: R34
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Oui
+  off_label: Non
+field_type: boolean

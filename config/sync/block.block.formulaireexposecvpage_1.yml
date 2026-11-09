@@ -1,0 +1,29 @@
+uuid: 191a7b73-c32a-4e93-859d-83f114f5d51d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.cv
+  module:
+    - system
+    - views
+  theme:
+    - job_board
+id: formulaireexposecvpage_1
+theme: job_board
+region: sidebar_first
+weight: -19
+provider: null
+plugin: 'views_exposed_filter_block:cv-page_1'
+settings:
+  id: 'views_exposed_filter_block:cv-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: 'Filtrer la recherche'
+visibility:
+  request_path:
+    id: request_path
+    pages: /cv
+    negate: false
+    context_mapping: {  }

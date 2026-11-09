@@ -1,0 +1,18 @@
+uuid: a02585bb-9a28-4139-b91f-e974db43362c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.offre
+id: node.offre.metatag
+field_name: metatag
+entity_type: node
+bundle: offre
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

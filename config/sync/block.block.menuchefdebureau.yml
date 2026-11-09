@@ -1,0 +1,33 @@
+uuid: e4dc0214-ed9d-4cdb-9b7b-6fa5ce5f267e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.menu-chef-de-bureau
+  module:
+    - system
+    - user
+  theme:
+    - job_board
+id: menuchefdebureau
+theme: job_board
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:menu-chef-de-bureau'
+settings:
+  id: 'system_menu_block:menu-chef-de-bureau'
+  label: 'Menu Chef de Bureau'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      chef_de_bureau: chef_de_bureau
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

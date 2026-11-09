@@ -1,0 +1,18 @@
+uuid: f002d8b7-3fb4-4326-9795-406dadfc8a8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.newletter_entreprise
+id: node.newletter_entreprise.title
+field_name: title
+entity_type: node
+bundle: newletter_entreprise
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

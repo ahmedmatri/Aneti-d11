@@ -1,0 +1,22 @@
+uuid: cc904e41-88cc-4f46-893e-cd07945cd7cb
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_checklist_avant_depart
+    - node.type.postulation
+  module:
+    - field_collection
+id: node.postulation.field_checklist_avant_depart
+field_name: field_checklist_avant_depart
+entity_type: node
+bundle: postulation
+label: 'Checklist avant départ'
+description: ''
+required: false
+translatable: true
+default_value:
+  - {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_collection

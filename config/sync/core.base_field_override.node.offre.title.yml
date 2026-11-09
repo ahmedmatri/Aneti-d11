@@ -1,0 +1,18 @@
+uuid: fa65d498-4c51-46f4-87d7-6b7efedde6c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.offre
+id: node.offre.title
+field_name: title
+entity_type: node
+bundle: offre
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,28 @@
+{#
+/**
+ * @fileviews-view-fields--actualite--block-1.html
+ * Default theme implementation for a views slideshow.
+ *
+ * Available variables:
+ * - bottom_widget_rendered: Widget under the slideshow with controls/data.
+ * - skin: The skin being applied to the slideshow.
+ * - slideshow: The slideshow.
+ * - top_widget_rendered: Widget above the slideshow with controls/data.
+ *
+ * @see _views_slideshow_preprocess_views_view_slideshow()
+ *
+ * @ingroup vss_templates
+ */
+#}
+
+
+
+
+{% set links = fields.field_lien_slider.content|split(';;') %}
+<div class="container hero_container" style="background-image: url('{{ file_url(fields.uri.content|striptags|trim) }}')" >
+        <div class='hero_content'>
+            <div class="slide-caption__title"> {{ fields.title.content }} </div>
+            <div class="slide-caption__soustitre"> {{ fields.field_description_slideshow.content }} </div>
+            <div class="slide-caption__description"> {{ fields.field_description_slider.content }} </div>
+        </div>
+</div>

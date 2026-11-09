@@ -1,0 +1,21 @@
+uuid: 630d201a-358a-4b5d-8632-f5de09b3e285
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_informations_generale
+    - node.type.fiche_pays
+  module:
+    - text
+id: node.fiche_pays.field_informations_generale
+field_name: field_informations_generale
+entity_type: node
+bundle: fiche_pays
+label: 'Informations générale'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

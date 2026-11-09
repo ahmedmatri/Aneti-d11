@@ -1,0 +1,21 @@
+uuid: b811b00b-b856-4d18-aa99-dd074b6ba7bc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_debut_publication
+    - node.type.offre
+  module:
+    - datetime
+id: node.offre.field_date_debut_publication
+field_name: field_date_debut_publication
+entity_type: node
+bundle: offre
+label: 'date début publication'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
