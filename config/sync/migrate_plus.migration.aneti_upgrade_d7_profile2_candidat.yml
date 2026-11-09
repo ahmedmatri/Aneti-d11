@@ -1,0 +1,90 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: aneti_upgrade_d7_profile2_candidat
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_aneti
+label: 'Profile2 (candidat)'
+source:
+  plugin: d7_profile2
+  constants:
+    status: 1
+    is_default: 1
+  bundle: candidat
+process:
+  profile_id: pid
+  type: type
+  uid: uid
+  status: constants/status
+  is_default: constants/is_default
+  created: created
+  changed: changed
+  field_cin:
+    plugin: get
+    source: field_cin
+  field_numero_empreinte:
+    plugin: get
+    source: field_numero_empreinte
+  field_nom:
+    plugin: get
+    source: field_nom
+  field_prenom:
+    plugin: get
+    source: field_prenom
+  field_genre:
+    plugin: get
+    source: field_genre
+  field_date_de_naissance:
+    plugin: sub_process
+    source: field_date_de_naissance
+    process:
+      value:
+        plugin: format_date
+        from_format: 'Y-m-d H:i:s'
+        to_format: 'Y-m-d\TH:i:s'
+        source: value
+  field_ville_tunisie:
+    plugin: sub_process
+    source: field_ville_tunisie
+    process:
+      target_id: tid
+  field_referant: field_referant
+  field_valider:
+    plugin: get
+    source: field_valider
+  field_nom_ar:
+    plugin: get
+    source: field_nom_ar
+  field_prenom_ar:
+    plugin: get
+    source: field_prenom_ar
+  field_adresse_ar:
+    plugin: get
+    source: field_adresse_ar
+  field_code_postal:
+    plugin: get
+    source: field_code_postal
+  field_ville:
+    plugin: get
+    source: field_ville
+  field_pays:
+    plugin: sub_process
+    source: field_pays
+    process:
+      target_id: tid
+  field_adresse:
+    plugin: get
+    source: field_adresse
+  field_telephone:
+    plugin: get
+    source: field_telephone
+destination:
+  plugin: 'entity:profile'
+  default_bundle: candidat
+migration_dependencies:
+  required: { }

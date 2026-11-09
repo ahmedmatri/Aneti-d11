@@ -1,0 +1,53 @@
+label: المشتركين
+display:
+  default:
+    display_title: الرئيسي
+    display_options:
+      exposed_form:
+        options:
+          submit_button: تطبيق
+          reset_button_label: 'إعادة الضبط'
+          exposed_sorts_label: 'الترتيب حسب'
+          sort_asc_label: تصاعدي
+          sort_desc_label: تنازلي
+      pager:
+        options:
+          tags:
+            previous: '‹ السابقة'
+            next: 'التالية ›'
+            first: '« الأولى'
+            last: 'الأخيرة »'
+          expose:
+            items_per_page_options_all_label: '- الكل -'
+      fields:
+        mail:
+          label: 'البريد الإلكتروني'
+        user_name:
+          label: 'اسم المستخدم'
+        subscriptions:
+          label: الاشتراكات
+        status:
+          label: نشط
+        created:
+          label: الإنشاء
+        operations:
+          label: عمليات
+      filters:
+        mail:
+          expose:
+            label: 'البريد الإلكتروني'
+        subscriptions_target_id:
+          expose:
+            label: النشرات
+        status:
+          expose:
+            label: نشط
+        subscriptions_status:
+          expose:
+            label: الحالة
+      title: المشتركين
+  page_1:
+    display_title: الصفحة
+    display_options:
+      menu:
+        title: المشتركين

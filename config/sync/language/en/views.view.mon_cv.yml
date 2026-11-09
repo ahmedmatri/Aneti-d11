@@ -1,0 +1,7 @@
+label: 'My resume'
+display:
+  default:
+    display_options:
+      empty:
+        area_text_custom:
+          content: 'Resume not found. <a href="/node/add/curriculum_vitae" class="btn btn-secondary">Enter your professional profile</a>'

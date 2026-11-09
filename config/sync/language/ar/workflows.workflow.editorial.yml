@@ -1,0 +1,9 @@
+type_settings:
+  states:
+    published:
+      label: منشور
+  transitions:
+    archive:
+      label: الأرشيف
+    publish:
+      label: انشر

@@ -1,0 +1,67 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: aneti_upgrade_d7_taxonomy_term_pays
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_aneti
+label: 'Taxonomy terms (pays)'
+source:
+  plugin: d7_taxonomy_term_fr
+  bundle: pays
+process:
+  tid: tid
+  vid:
+    plugin: migration_lookup
+    migration: aneti_upgrade_d7_taxonomy_vocabulary
+    source: vid
+  name: name
+  description/value: description
+  description/format: format
+  weight: weight
+  parent_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_taxonomy_term
+  parent:
+    plugin: default_value
+    default_value: 0
+    source: '@parent_id'
+  forum_container: is_container
+  changed: timestamp
+  langcode: 'fr'
+  code_pays:
+    plugin: get
+    source: code_pays
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: pays
+migration_dependencies:
+  required:
+    - aneti_upgrade_d7_taxonomy_vocabulary
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_taxonomy_vocabulary
+    - upgrade_d7_taxonomy_term_newsletter
+    - upgrade_d7_taxonomy_term_pays
+    - upgrade_d7_taxonomy_term_ville
+    - upgrade_d7_taxonomy_term_domaine
+    - upgrade_d7_taxonomy_term_specialites
+    - upgrade_d7_taxonomy_term_langues
+    - upgrade_d7_taxonomy_term_diplome
+    - upgrade_d7_taxonomy_term_specialt_par_domaine
+    - upgrade_d7_taxonomy_term_forums
+    - upgrade_d7_taxonomy_term_metier_par_domaine
+    - upgrade_d7_taxonomy_term_bureau_national
+    - upgrade_d7_taxonomy_term_localites
+    - upgrade_d7_taxonomy_term_delegations
+    - upgrade_d7_taxonomy_term_client
+    - upgrade_d7_taxonomy_term

@@ -1,0 +1,192 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: aneti_upgrade_d7_node_revision_curriculum_vitae
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_aneti
+label: 'Node revisions (Curriculum Vitae)'
+source:
+  plugin: d7_node_revision
+  node_type: curriculum_vitae
+process:
+  nid: nid
+  vid: vid
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: und
+  title: title
+  uid: node_uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  comment_node_curriculum_vitae/0/status: comment
+  field_cv_arabe:
+    plugin: sub_process
+    source: field_cv_arabe
+    process:
+      target_id: fid
+      display: display
+      description: description
+  field_cv_francais:
+    plugin: sub_process
+    source: field_cv_francais
+    process:
+      target_id: fid
+      display: display
+      description: description
+  field_cv_anglais:
+    plugin: sub_process
+    source: field_cv_anglais
+    process:
+      target_id: fid
+      display: display
+      description: description
+  field_cv_canadien:
+    plugin: sub_process
+    source: field_cv_canadien
+    process:
+      target_id: fid
+      display: display
+      description: description
+  field_n_du_passeport:
+    plugin: get
+    source: field_n_du_passeport
+  field_niveau:
+    plugin: get
+    source: field_niveau
+  field_diplome:
+    plugin: sub_process
+    source: field_diplome
+    process:
+      target_id: tid
+  field_date_diplome:
+    plugin: sub_process
+    source: field_date_diplome
+    process:
+      value:
+        plugin: format_date
+        from_format: 'Y-m-d H:i:s'
+        to_format: 'Y-m-d\TH:i:s'
+        source: value
+  field_nombre_d_annee_d_exercice:
+    plugin: get
+    source: field_nombre_d_annee_d_exercice
+  field_pays_experience:
+    plugin: sub_process
+    source: field_pays_experience
+    process:
+      target_id: tid
+  field_langue_maternelle:
+    plugin: sub_process
+    source: field_langue_maternelle
+    process:
+      target_id: tid
+  field_langue:
+    plugin: sub_process
+    source: field_langue
+    process:
+      target_id: tid
+  field_niveau_ecrit_parle:
+    plugin: get
+    source: field_niveau_ecrit_parle
+  field_candidat: field_candidat
+  field_langue2:
+    plugin: sub_process
+    source: field_langue2
+    process:
+      target_id: tid
+  field_niveau_langue_2_ecrit_parl:
+    plugin: get
+    source: field_niveau_langue_2_ecrit_parl
+  field_langue3:
+    plugin: sub_process
+    source: field_langue3
+    process:
+      target_id: tid
+  field_niveau_langue_3_ecrit_parl:
+    plugin: get
+    source: field_niveau_langue_3_ecrit_parl
+  field_domaine_specialite:
+    plugin: sub_process
+    source: field_domaine_specialite
+    process:
+      target_id: tid
+  field_domaine_de_profession:
+    plugin: sub_process
+    source: field_domaine_de_profession
+    process:
+      target_id: tid
+  field_langue4:
+    plugin: sub_process
+    source: field_langue4
+    process:
+      target_id: tid
+  field_niveau_langue_4_ecrit_parl:
+    plugin: get
+    source: field_niveau_langue_4_ecrit_parl
+  field_langue5:
+    plugin: sub_process
+    source: field_langue5
+    process:
+      target_id: tid
+  field_niveau_langue_5_ecrit_parl:
+    plugin: get
+    source: field_niveau_langue_5_ecrit_parl
+  field_passport_valide:
+    plugin: get
+    source: field_passport_valide
+  field_date_fin_validit_:
+    plugin: sub_process
+    source: field_date_fin_validit_
+    process:
+      value:
+        plugin: format_date
+        from_format: 'Y-m-d H:i:s'
+        to_format: 'Y-m-d\TH:i:s'
+        source: value
+  field_validit_du_passeport:
+    plugin: sub_process
+    source: field_validit_du_passeport
+    process:
+      value:
+        plugin: format_date
+        from_format: 'Y-m-d H:i:s'
+        to_format: 'Y-m-d\TH:i:s'
+        source: value
+  field_cv_valider:
+    plugin: get
+    source: field_cv_valider
+  field_score: field_score
+  field_destination:
+    plugin: sub_process
+    source: field_destination
+    process:
+      target_id: tid
+  field_operation_qatar:
+    plugin: get
+    source: field_operation_qatar
+  field_pseudo_skype:
+    plugin: get
+    source: field_pseudo_skype
+  field_profession:
+    plugin: sub_process
+    source: field_profession
+    process:
+      target_id: tid
+destination:
+  plugin: 'entity_revision:node'
+  default_bundle: curriculum_vitae
+migration_dependencies:
+  required: { }
+  optional: { }

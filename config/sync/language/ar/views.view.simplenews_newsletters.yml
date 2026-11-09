@@ -1,0 +1,37 @@
+label: النشرات
+display:
+  default:
+    display_title: الرئيسي
+    display_options:
+      exposed_form:
+        options:
+          submit_button: تطبيق
+          reset_button_label: 'إعادة الضبط'
+          exposed_sorts_label: 'الترتيب حسب'
+          sort_asc_label: تصاعدي
+          sort_desc_label: تنازلي
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- الكل -'
+          tags:
+            previous: '‹ السابقة'
+            next: 'التالية ›'
+            first: '« الأولى'
+            last: 'الأخيرة »'
+      fields:
+        simplenews_issue:
+          label: النشرة
+        status:
+          label: منشور
+        created:
+          label: التحديث
+        operations:
+          label: 'روابط العمليات'
+      filters:
+        simplenews_issue_target_id_1:
+          expose:
+            label: النشرة
+      title: النشرات
+  page_1:
+    display_title: الصفحة

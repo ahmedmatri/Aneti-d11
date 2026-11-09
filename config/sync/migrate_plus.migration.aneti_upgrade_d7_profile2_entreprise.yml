@@ -1,0 +1,138 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: aneti_upgrade_d7_profile2_entreprise
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_aneti
+label: 'Profile2 (entreprise)'
+source:
+  plugin: d7_profile2
+  constants:
+    status: 1
+    is_default: 1
+  bundle: entreprise
+process:
+  profile_id: pid
+  type: type
+  uid: uid
+  status: constants/status
+  is_default: constants/is_default
+  created: created
+  changed: changed
+  field_raison_social:
+    plugin: get
+    source: field_raison_social
+  field_nom_entreprise_ar:
+    plugin: get
+    source: field_nom_entreprise_ar
+  field_groupe_filiale:
+    plugin: get
+    source: field_groupe_filiale
+  field_field_groupe_filiale_ar:
+    plugin: get
+    source: field_field_groupe_filiale_ar
+  field_resp_contact_ar:
+    plugin: get
+    source: field_resp_contact_ar
+  field_poste_resp_contact_ar:
+    plugin: get
+    source: field_poste_resp_contact_ar
+  field_adresse_entreprise_ar:
+    plugin: get
+    source: field_adresse_entreprise_ar
+  field_ville_ar:
+    plugin: get
+    source: field_ville_ar
+  field_personne_contacter:
+    plugin: get
+    source: field_personne_contacter
+  field_fonction:
+    plugin: get
+    source: field_fonction
+  field_telephone:
+    plugin: get
+    source: field_telephone
+  field_telecopie:
+    plugin: get
+    source: field_telecopie
+  field_code_postal:
+    plugin: get
+    source: field_code_postal
+  field_ville:
+    plugin: get
+    source: field_ville
+  field_pays:
+    plugin: sub_process
+    source: field_pays
+    process:
+      target_id: tid
+  field_ville_tunisie:
+    plugin: sub_process
+    source: field_ville_tunisie
+    process:
+      target_id: tid
+  field_site_web:
+    plugin: field_link
+    source: field_site_web
+  field_telephone_contact:
+    plugin: get
+    source: field_telephone_contact
+  field_courriel_contact:
+    plugin: sub_process
+    source: field_courriel_contact
+    process:
+      value: email
+  field_valider:
+    plugin: get
+    source: field_valider
+  field_date_validation:
+    plugin: sub_process
+    source: field_date_validation
+    process:
+      value:
+        plugin: format_date
+        from_format: 'Y-m-d H:i:s'
+        to_format: 'Y-m-d\TH:i:s'
+        source: value
+  field_courriel:
+    plugin: sub_process
+    source: field_courriel
+    process:
+      value: email
+  field_referant: 
+    plugin: sub_process
+    source: field_referant
+    process:
+      value: uid
+  field_nom_entreprise:
+    plugin: get
+    source: field_nom_entreprise
+  field_image:
+    plugin: sub_process
+    source: field_image
+    process:
+      target_id: fid
+      alt: alt
+      title: title
+      width: width
+      height: height
+  field_secteurs_d_activite:
+    plugin: sub_process
+    source: field_secteurs_d_activite
+    process:
+      target_id: tid
+  field_adresse_entreprise:
+    plugin: get
+    source: field_adresse_entreprise
+destination:
+  plugin: 'entity:profile'
+  default_bundle: entreprise
+migration_dependencies:
+  required:
+    - aneti_upgrade_d7_files
+

@@ -1,0 +1,274 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: aneti_upgrade_d7_node_offre
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_aneti
+label: 'Nodes (offre)'
+source:
+  plugin: d7_node
+  node_type: offre
+process:
+  nid: tnid
+  vid: vid
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: und
+  title: title
+  uid: node_uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  comment_node_offre/0/status: comment
+  field_nombre_de_poste:
+    plugin: get
+    source: field_nombre_de_poste
+  field_competences_exigees:
+    plugin: get
+    source: field_competences_exigees
+  field_description:
+    plugin: get
+    source: field_description
+  field_experience:
+    plugin: get
+    source: field_experience
+  field_duree_experience:
+    plugin: get
+    source: field_duree_experience
+  field_domaine_experience:
+    plugin: sub_process
+    source: field_domaine_experience
+    process:
+      target_id: tid
+  field_pays:
+    plugin: sub_process
+    source: field_pays
+    process:
+      target_id: tid
+  field_ville_tunisie:
+    plugin: sub_process
+    source: field_ville_tunisie
+    process:
+      target_id: tid
+  field_ville:
+    plugin: get
+    source: field_ville
+  field_duree_contrat:
+    plugin: get
+    source: field_duree_contrat
+  field_date_contrat:
+    plugin: sub_process
+    source: field_date_contrat
+    process:
+      value:
+        plugin: format_date
+        from_format: U
+        to_format: U
+        source: value
+  field_salaire_mensuel_net:
+    plugin: get
+    source: field_salaire_mensuel_net
+  field_type_du_contrat:
+    plugin: get
+    source: field_type_du_contrat
+  # field_horaire_de_travail:
+  #   plugin: sub_process
+  #   source: field_horaire_de_travail
+  #   process:
+  #     value:
+  #       plugin: format_date
+  #       from_format: U
+  #       to_format: U
+  #       source: value
+  field_conge_annuel:
+    plugin: get
+    source: field_conge_annuel
+  field_primes:
+    plugin: get
+    source: field_primes
+  field_protection_sociale:
+    plugin: get
+    source: field_protection_sociale
+  field_frais_de_voyage:
+    plugin: get
+    source: field_frais_de_voyage
+  field_vehicule:
+    plugin: get
+    source: field_vehicule
+  field_logement:
+    plugin: get
+    source: field_logement
+  field_nourriture:
+    plugin: get
+    source: field_nourriture
+  field_autres_avantages:
+    plugin: get
+    source: field_autres_avantages
+  field_langue:
+    plugin: sub_process
+    source: field_langue
+    process:
+      target_id: tid
+  field_langue2:
+    plugin: sub_process
+    source: field_langue2
+    process:
+      target_id: tid
+  field_langue3:
+    plugin: sub_process
+    source: field_langue3
+    process:
+      target_id: tid
+  field_requirement_langue_1:
+    plugin: get
+    source: field_requirement_langue_1
+  field__requirement_langue_2:
+    plugin: get
+    source: field__requirement_langue_2
+  field_requirement_langue_3:
+    plugin: get
+    source: field_requirement_langue_3
+  field_informations_complementair:
+    plugin: get
+    source: field_informations_complementair
+  field_cv_langue:
+    plugin: sub_process
+    source: field_cv_langue
+    process:
+      target_id: tid
+  field_nombre_de_cv_poste:
+    plugin: get
+    source: field_nombre_de_cv_poste
+  field_observations:
+    plugin: get
+    source: field_observations
+  field_domaine_et_specialite:
+    plugin: sub_process
+    source: field_domaine_et_specialite
+    process:
+      target_id: tid
+  field_entreprise_id:
+    plugin: sub_process
+    source: field_entreprise_id
+    process:
+      target_id: uid
+  field_referant:
+    plugin: sub_process
+    source: field_referant
+    process:
+      target_id: uid
+  field_valider:
+    plugin: get
+    source: field_valider
+  field_date_validation:
+    plugin: sub_process
+    source: field_date_validation
+    process:
+      value:
+        plugin: format_date
+        from_format: 'Y-m-d H:i:s'
+        to_format: 'Y-m-d\TH:i:s'
+        source: value
+  field_date_d_insertion:
+    plugin: sub_process
+    source: field_date_d_insertion
+    process:
+      value:
+        plugin: format_date
+        from_format: 'Y-m-d H:i:s'
+        to_format: 'Y-m-d\TH:i:s'
+        source: value
+  field_date_derniere_modification:
+    plugin: sub_process
+    source: field_date_derniere_modification
+    process:
+      value:
+        plugin: format_date
+        from_format: 'Y-m-d H:i:s'
+        to_format: 'Y-m-d\TH:i:s'
+        source: value
+  field_code_situation:
+    plugin: get
+    source: field_code_situation
+  field_date_situation:
+    plugin: sub_process
+    source: field_date_situation
+    process:
+      value:
+        plugin: format_date
+        from_format: 'Y-m-d H:i:s'
+        to_format: 'Y-m-d\TH:i:s'
+        source: value
+  field_observation:
+    plugin: get
+    source: field_observation
+  field_date_de_suivie:
+    plugin: sub_process
+    source: field_date_de_suivie
+    process:
+      value:
+        plugin: format_date
+        from_format: 'Y-m-d H:i:s'
+        to_format: 'Y-m-d\TH:i:s'
+        source: value
+  field_date_debut_publication:
+    plugin: sub_process
+    source: field_date_debut_publication
+    process:
+      value:
+        plugin: format_date
+        from_format: 'Y-m-d H:i:s'
+        to_format: 'Y-m-d\TH:i:s'
+        source: value
+  field_date_fin_publication:
+    plugin: sub_process
+    source: field_date_fin_publication
+    process:
+      value:
+        plugin: format_date
+        from_format: 'Y-m-d H:i:s'
+        to_format: 'Y-m-d\TH:i:s'
+        source: value
+  field_afficher_le_nom:
+    plugin: get
+    source: field_afficher_le_nom
+  field_afficher_le_n_tel:
+    plugin: get
+    source: field_afficher_le_n_tel
+  field_afficher_mail:
+    plugin: get
+    source: field_afficher_mail
+  field_observation_offre:
+    plugin: get
+    source: field_observation_offre
+  field_devise:
+    plugin: get
+    source: field_devise
+  field_mode_de_traitement:
+    plugin: get
+    source: field_mode_de_traitement
+  field_mode_de_selection:
+    plugin: get
+    source: field_mode_de_selection
+  field_a_la_une:
+    plugin: get
+    source: field_a_la_une
+  field_came_international:
+    plugin: get
+    source: field_came_international
+destination:
+  plugin: 'entity:node'
+  default_bundle: offre
+migration_dependencies:
+  required: { }

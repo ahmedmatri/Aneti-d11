@@ -1,0 +1,65 @@
+label: التعليقات
+description: 'Trouver et gérer les commentaires.'
+display:
+  default:
+    display_title: الرئيسي
+    display_options:
+      exposed_form:
+        options:
+          submit_button: تطبيق
+          reset_button_label: 'إعادة الضبط'
+          exposed_sorts_label: 'الترتيب حسب'
+          sort_asc_label: تصاعدي
+          sort_desc_label: تنازلي
+      pager:
+        options:
+          tags:
+            previous: '‹ السابقة'
+            next: 'التالية ›'
+            first: '« الأولى'
+            last: 'الأخيرة »'
+          expose:
+            items_per_page_options_all_label: '- الكل -'
+      fields:
+        comment_bulk_form:
+          action_title: إجراء
+        subject:
+          label: الموضوع
+        name:
+          label: المؤلف
+        changed:
+          label: التحديث
+        operations:
+          label: عمليات
+      filters:
+        subject:
+          expose:
+            label: الموضوع
+        langcode:
+          expose:
+            label: اللغة
+      title: التعليقات
+  page_published:
+    display_options:
+      menu:
+        title: التعليقات
+  page_unapproved:
+    display_options:
+      filters:
+        subject:
+          expose:
+            label: الموضوع
+        langcode:
+          expose:
+            label: اللغة
+      fields:
+        comment_bulk_form:
+          action_title: إجراء
+        subject:
+          label: الموضوع
+        name:
+          label: المؤلف
+        changed:
+          label: التحديث
+        operations:
+          label: عمليات

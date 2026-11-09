@@ -1,0 +1,71 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: aneti_upgrade_d7_node_postulation
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_aneti
+label: 'Nodes (postulation)'
+source:
+  plugin: d7_node
+  node_type: postulation
+process:
+  nid: tnid
+  vid: vid
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: und
+  title: title
+  uid: node_uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  comment_node_postulation/0/status: comment
+  field_cin:
+    plugin: get
+    source: field_cin
+  field_offre_id:
+    plugin: get
+    source: field_offre_id
+  field_cin_offre:
+    plugin: get
+    source: field_cin_offre
+  field_candidats:
+    plugin: sub_process
+    source: field_candidats
+    process:
+      target_id: uid
+  field_offre:
+    plugin: get
+    source: field_offre
+  field_intitul_de_l_offre:
+    plugin: sub_process
+    source: field_intitul_de_l_offre
+    process:
+      target_id: nid
+  field_cv:
+    plugin: sub_process
+    source: field_cv
+    process:
+      target_id: nid
+  field_accepter:
+    plugin: get
+    source: field_accepter
+  field_candidature:
+    plugin: get
+    source: field_candidature
+destination:
+  plugin: 'entity:node'
+  default_bundle: postulation
+migration_dependencies:
+  required: { }

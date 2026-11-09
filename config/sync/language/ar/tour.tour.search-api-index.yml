@@ -1,0 +1,7 @@
+tips:
+  search-api-index-index-status:
+    label: 'Statut de l''index'
+  search-api-index-status:
+    label: الحالة
+  search-api-index-tracker:
+    label: المتتبع
