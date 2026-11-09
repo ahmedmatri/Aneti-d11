@@ -59,7 +59,7 @@ class CleanRevisionsCommand extends ContainerAwareCommand {
       return $item;
     }, $results);
 
-    $nodes = node_load_multiple($nids);
+    $nodes = \Drupal\node\Entity\Node::loadMultiple($nids);
     foreach ($nodes as $node) {
       $this->cleanupRevision($node);
     }
@@ -72,7 +72,7 @@ class CleanRevisionsCommand extends ContainerAwareCommand {
 //    try {
       $this->getIo()->info('Processing: node=>' . $node->id());
       $curent_vid = $node->get('vid')->getString();
-      $vids = \Drupal::entityManager()->getStorage('node')->revisionIds($node);
+      $vids = \Drupal::entityTypeManager()->getStorage('node')->revisionIds($node);
       //var_dump($vids);
       var_dump($curent_vid);
       if (count($vids) == 1) {

@@ -55,14 +55,14 @@ class EuropassController extends ControllerBase {
    * @throws \Exception
    */
   public function index($nid) {
-    $node = node_load($nid);
+    $node = \Drupal\node\Entity\Node::load($nid);
 
     // Early return if the node type is not correct.
-    if ($node->getType() != 'curriculum_vitae') {
+    if (!$node || $node->getType() != 'curriculum_vitae') {
       throw new NotFoundHttpException();
     }
 
-    $tempDir = file_directory_temp();
+    $tempDir = \Drupal::service('file_system')->getTempDirectory();
     // The fileName uses the changed time from node. This is used to cache
     // the created file.
     $this->fileName = "CV_EURO_" . $node->getChangedTime() . "_" . $node->id() . ".docx";
@@ -74,7 +74,7 @@ class EuropassController extends ControllerBase {
     }
 
     // Get the template file path.
-    $templatePath = drupal_get_path('module', 'aneti_cv');
+    $templatePath = \Drupal::service('extension.list.module')->getPath('aneti_cv');
     $templatePath .= "/assets/tpl.docx";
 
     if (!file_exists($templatePath)) {
@@ -138,7 +138,7 @@ class EuropassController extends ControllerBase {
     if (!$user_id) {
       throw new \Exception("Field candidat can't be empty");
     }
-    $candidat = user_load($user_id);
+    $candidat = \Drupal\user\Entity\User::load($user_id);
 
     $profile = \Drupal::entityTypeManager()
       ->getStorage('profile')

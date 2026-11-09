@@ -62,7 +62,7 @@ class ApplyBlock extends BlockBase {
       $lang = $cv->get($field)->getValue();
       if (empty($lang)) {
         $allow_application = FALSE;
-        drupal_set_message($this->t('In order to apply, you must upload a cv in the following language: @lang', ['@lang' => $langue_exigee]), 'error');
+        \Drupal::messenger()->addError($this->t('In order to apply, you must upload a cv in the following language: @lang', ['@lang' => $langue_exigee]));
       }
     }
 
@@ -121,7 +121,7 @@ class ApplyBlock extends BlockBase {
       ->execute();
 
     if ($query_result) {
-      return node_load(array_shift($query_result));
+      return \Drupal\node\Entity\Node::load(array_shift($query_result));
     }
     return FALSE;
   }

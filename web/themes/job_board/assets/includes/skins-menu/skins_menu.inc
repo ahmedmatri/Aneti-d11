@@ -446,7 +446,8 @@ function skmn_preprocess_page(&$variables){
         theme_get_setting("default_logo") && 
         theme_get_setting("toggle_logo")) {
 
-        $variables['logo'] = file_create_url(drupal_get_path('theme', $theme_key)) . "/css/colors/" . $current_skin . "/images/logo.png";
+        $theme_path = \Drupal::service('extension.list.theme')->getPath($theme_key);
+        $variables['logo'] = file_create_url($theme_path) . "/css/colors/" . $current_skin . "/images/logo.png";
     }
     if (!empty($current_skin)) {
 

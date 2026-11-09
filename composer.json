@@ -49,7 +49,6 @@
         "drupal/smtp": "^1.1",
         "drupal/taxonomy_import": "^2.0",
         "drupal/taxonomy_term_depth": "^2.5",
-        "drupal/unique_content_field_validation": "^1.0",
         "drupal/unique_entity_title": "^1.4",
         "drupal/views_send": "^1.6",
         "drupal/we_megamenu": "^1.13",

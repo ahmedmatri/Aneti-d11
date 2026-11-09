@@ -5,8 +5,8 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Template\Attribute;
 use Drupal\Core\Url;
 
-$active_theme = \Drupal::theme()->getActiveTheme()->getName();
-include_once(drupal_get_path('theme', $active_theme) . '/assets/includes/skins-menu/skins_menu.inc');
+$active_theme = \Drupal::theme()->getActiveTheme();
+include_once($active_theme->getPath() . '/assets/includes/skins-menu/skins_menu.inc');
 
 function job_board_preprocess_page(&$variables) {
   _job_board_process_page($variables);
@@ -73,8 +73,8 @@ function job_board_preprocess_node(&$variables) {
 }
 
 function job_board_css_alter(&$css, \Drupal\Core\Asset\AttachedAssetsInterface $assets) {
-
-  unset($css[drupal_get_path('module', 'we_megamenu') . '/assets/includes/bootstrap/css/bootstrap.min.css']);
+  $module_path = \Drupal::service('extension.list.module')->getPath('we_megamenu');
+  unset($css[$module_path . '/assets/includes/bootstrap/css/bootstrap.min.css']);
 }
 
 function job_board_preprocess_html(&$variables) {

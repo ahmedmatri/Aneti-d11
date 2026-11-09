@@ -40,7 +40,7 @@ class DefaultSubscriber implements EventSubscriberInterface {
     $user_role = $account->getRoles();
 
     if (\Drupal::service('path.current')->getPath() == '/node/add/curriculum_vitae' && $this->userIsCandidat() && $this->candidatHasCV($account->id())) {
-      drupal_set_message('You already have a CV.', 'status', TRUE);
+      \Drupal::messenger()->addStatus('You already have a CV.', TRUE);
       // Redirect to home page.
       $response = new RedirectResponse('/mon-cv');
       $event->setResponse($response);

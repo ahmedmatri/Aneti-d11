@@ -39,17 +39,17 @@ function aneti_enhance_theme() {
 
 function aneti_user_redirect(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
   $uid = \Drupal::currentUser()->id();
-  $user = user_load($uid);
+  $user = \Drupal\user\Entity\User::load($uid);
 
   // If candidat redirect to add CV.
-  if ($user->hasRole('candidat')) {
-    drupal_set_message(t("Please add your CV"));
+  if ($user && $user->hasRole('candidat')) {
+    \Drupal::messenger()->addStatus(t("Please add your CV"));
     $form_state->setRedirect('view.mon_cv.page_1');
   }
 
   // If entreprise add offer.
-  if ($user->hasRole('entreprise')) {
-    drupal_set_message(t("Please add your first Offer"));
+  if ($user && $user->hasRole('entreprise')) {
+    \Drupal::messenger()->addStatus(t("Please add your first Offer"));
     $form_state->setRedirect('node.add', ['node_type' => 'offre']);
   }
 }
@@ -159,17 +159,17 @@ function aneti_node_postulation_edit_form_submit(&$form, \Drupal\Core\Form\FormS
       $field_candidats = $form_state->getValue('field_candidats');
       $field_candidats = array_shift($field_candidats);
 
-      $user = user_load($field_candidats['target_id']);
+      $user = \Drupal\user\Entity\User::load($field_candidats['target_id']);
       // notify user by email
       $subject = $message = t('Your postulation has been validated');
       aneti_enhance_notify($user->getEmail(), $subject, $message);
       // Notify the entreprise
       $field_offre = $form_state->getValue('field_intitul_de_l_offre');
       $field_offre = array_shift($field_offre);
-      if ($offre = node_load($field_offre['target_id'])) {
+      if ($offre = \Drupal\node\Entity\Node::load($field_offre['target_id'])) {
         $entreprise_id = $offre->get('field_entreprise_id')->getString();
         // load the user and notify.
-        if ($entreprise = user_load($entreprise_id)) {
+        if ($entreprise = \Drupal\user\Entity\User::load($entreprise_id)) {
           $subject = $message = t('An application has been validated (Preselected)');
           aneti_enhance_notify($entreprise->getEmail(), $subject, $message);
         }
@@ -181,17 +181,17 @@ function aneti_node_postulation_edit_form_submit(&$form, \Drupal\Core\Form\FormS
       $field_candidats = $form_state->getValue('field_candidats');
       $field_candidats = array_shift($field_candidats);
 
-      $user = user_load($field_candidats['target_id']);
+      $user = \Drupal\user\Entity\User::load($field_candidats['target_id']);
       // notify user by email
       $subject = $message = t('Your application has been selected by the company');
       aneti_enhance_notify($user->getEmail(), $subject, $message);
       // Notify the referant
       $field_offre = $form_state->getValue('field_intitul_de_l_offre');
       $field_offre = array_shift($field_offre);
-      if ($offre = node_load($field_offre['target_id'])) {
+      if ($offre = \Drupal\node\Entity\Node::load($field_offre['target_id'])) {
         $ref_id = $offre->get('field_referant')->getString();
         // load the user and notify.
-        if ($entreprise = user_load($ref_id)) {
+        if ($entreprise = \Drupal\user\Entity\User::load($ref_id)) {
           $subject = $message = t('An application has been validated (Selected)');
           aneti_enhance_notify($entreprise->getEmail(), $subject, $message);
         }
@@ -530,7 +530,7 @@ function aneti_enhance_exec_offre_workflow(Drupal\Core\Entity\EntityInterface $e
           $queue->createItem($item);
         }
         // Inform the webmaster about notifiaction.
-        drupal_set_message(t('%count users will be notified', ['%count' => count($users)]));
+        \Drupal::messenger()->addStatus(t('%count users will be notified', ['%count' => count($users)]));
       }
     }
     // 4- offre dépubliée alerter le webmaster.
@@ -559,7 +559,7 @@ function aneti_get_notifiable_users($tid, $exp) {
     }
 
     // Load nodes
-    if ($nodes = node_load_multiple($nids)) {
+    if ($nodes = \Drupal\node\Entity\Node::loadMultiple($nids)) {
       $uids = [];
       foreach ($nodes as $node) {
         if ($uid = $node->get('field_candidat')->getString()) {
@@ -567,7 +567,7 @@ function aneti_get_notifiable_users($tid, $exp) {
         }
       }
       // get the candidat users
-      $users = entity_load_multiple('user', $uids);
+      $users = \Drupal::entityTypeManager()->getStorage('user')->loadMultiple($uids);
       return $users;
     }
   }
@@ -622,10 +622,10 @@ function aneti_enhance_notify($to, $subject, $message) {
   $send = true;
   $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
   if ($result['result'] !== true) {
-    drupal_set_message(t('There was a problem sending your message and it was not sent.'), 'error');
+    \Drupal::messenger()->addError(t('There was a problem sending your message and it was not sent.'));
   }
   else {
-    drupal_set_message(t('Your message has been sent.'));
+    \Drupal::messenger()->addStatus(t('Your message has been sent.'));
   }
 }
 

@@ -30,11 +30,11 @@ class AnetiApplyController extends ControllerBase {
           return $this->redirect('aneti_enhance.aneti_apply_controller_finsh', ['nid' => $application->id()]);
         }
       }
-      drupal_set_message($this->t('You have applyed successfully to the offer'));
+      \Drupal::messenger()->addStatus($this->t('You have applyed successfully to the offer'));
       return $this->redirect('view.mes_postulations.page_1');
     }
     else {
-      drupal_set_message($this->t('You have to add a CV before applying'));
+      \Drupal::messenger()->addWarning($this->t('You have to add a CV before applying'));
       return $this->redirect('view.mon_cv.page_1');
     }
 

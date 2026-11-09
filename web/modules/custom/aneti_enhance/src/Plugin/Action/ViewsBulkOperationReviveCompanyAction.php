@@ -88,7 +88,7 @@ class ViewsBulkOperationReviveCompanyAction extends ViewsBulkOperationsActionBas
 
   protected function sendMails($uid, $subject, $message) {
     // @todo custimize this email.
-    if ($user = \user_load($uid)) {
+    if ($user = \Drupal\user\Entity\User::load($uid)) {
       // Set a unique key for this mail.
       $key = 'aneti_enhance_notify';
       $langcode = $user->getPreferredLangcode();
