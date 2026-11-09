@@ -134,3 +134,24 @@ node_modules
 
 .lando.yml
 *storybook.log
+
+
+# Ignore Drupal's file directory
+web/sites/*/files
+web/sites/*/files_private
+/files_private
+web/sites/development.services.yml
+web/sites/default/services.local.yml
+
+
+phing/build.properties.local
+
+# Ignore sensitive information
+.env
+
+# Ignore database-dumps dedicated for rollback
+db-dump/*
+
+# OS relevant files
+.DS_Store?
+.DS_Store
