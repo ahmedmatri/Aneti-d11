@@ -142,8 +142,7 @@ web/sites/*/files_private
 /files_private
 web/sites/development.services.yml
 web/sites/default/services.local.yml
-
-
+web/sites/*
 phing/build.properties.local
 
 # Ignore sensitive information
@@ -155,3 +154,4 @@ db-dump/*
 # OS relevant files
 .DS_Store?
 .DS_Store
+
