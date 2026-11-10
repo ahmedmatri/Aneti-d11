@@ -1,7 +1,0 @@
-name: ANETI 201
-type: theme
-base theme: classy
-description: 'A flexible, recolorable theme with many regions and a responsive, mobile-first layout.'
-package: Custom
-version: VERSION
-core: 8.x
