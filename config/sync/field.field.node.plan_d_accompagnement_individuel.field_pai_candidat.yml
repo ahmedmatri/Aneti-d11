@@ -18,7 +18,10 @@ default_value_callback: ''
 settings:
   handler: 'default:user'
   handler_settings:
-    include_anonymous: true
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
     filter:
       type: role
       role:
@@ -34,8 +37,5 @@ settings:
         partenaire: '0'
         webmaster: '0'
         pdg: '0'
-    target_bundles: null
-    sort:
-      field: _none
-    auto_create: false
+    include_anonymous: true
 field_type: entity_reference

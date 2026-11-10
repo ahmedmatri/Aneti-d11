@@ -91,290 +91,294 @@ content:
     settings: {  }
     third_party_settings: {  }
   field__requirement_langue_2:
+    type: options_select
     weight: 36
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_a_la_une:
+    type: boolean_checkbox
     weight: 65
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_afficher_le_n_tel:
+    type: boolean_checkbox
     weight: 51
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_afficher_le_nom:
+    type: boolean_checkbox
     weight: 50
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_afficher_mail:
+    type: boolean_checkbox
     weight: 52
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_autres_avantages:
+    type: text_textarea
     weight: 30
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_came_international:
+    type: boolean_checkbox
     weight: 66
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_code_situation:
+    type: string_textfield
     weight: 53
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_competences_exigees:
+    type: text_textarea
     weight: 7
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_conge_annuel:
+    type: number
     weight: 21
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_cv_langue:
-    weight: 40
-    settings: {  }
-    third_party_settings: {  }
     type: chosen_select
+    weight: 40
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_date_contrat:
+    type: datetime_default
     weight: 17
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_date_d_insertion:
+    type: datetime_default
     weight: 55
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_date_de_suivie:
+    type: datetime_default
     weight: 61
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_date_debut_publication:
+    type: datetime_default
     weight: 59
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_date_derniere_modification:
+    type: datetime_default
     weight: 56
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_date_fin_publication:
+    type: datetime_default
     weight: 60
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_date_situation:
+    type: datetime_default
     weight: 54
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_date_validation_:
+    type: datetime_default
     weight: 58
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_description:
+    type: text_textarea
     weight: 6
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_devise:
+    type: options_select
     weight: 19
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_diplome_exige:
+    type: options_select
     weight: 43
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_domaine_et_specialite:
+    type: options_shs
     weight: 3
+    region: content
     settings:
       display_node_count: false
       create_new_items: false
       create_new_levels: false
       force_deepest: false
     third_party_settings: {  }
-    type: options_shs
-    region: content
   field_domaine_experience:
+    type: chosen_select
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_duree_contrat:
+    type: number
     weight: 16
+    region: content
     settings:
       placeholder: ''
     third_party_settings:
       conditional_fields: {  }
-    type: number
-    region: content
   field_duree_experience:
+    type: number
     weight: 9
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_entreprise_id:
+    type: entity_reference_autocomplete
     weight: 0
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_exiger_lettre_motivation:
+    type: boolean_checkbox
     weight: 44
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_experience:
-    weight: 8
-    settings: {  }
-    third_party_settings: {  }
     type: options_select
+    weight: 8
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_formation_diplome_exige:
+    type: boolean_checkbox
     weight: 45
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_frais_de_voyage:
+    type: boolean_checkbox
     weight: 25
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_help_offer:
-    weight: 67
-    settings: {  }
-    third_party_settings: {  }
     type: markup
+    weight: 67
     region: content
-  field_horaire_de_travail:
-    weight: 20
     settings: {  }
     third_party_settings: {  }
+  field_horaire_de_travail:
     type: daterange_default
+    weight: 20
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_informations_complementair:
+    type: text_textarea
     weight: 39
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_langue:
+    type: chosen_select
     weight: 31
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_langue2:
+    type: chosen_select
     weight: 33
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_langue3:
-    weight: 37
-    settings: {  }
-    third_party_settings: {  }
     type: chosen_select
+    weight: 37
     region: content
-  field_langue_de_cv_exigee:
-    weight: 42
     settings: {  }
     third_party_settings: {  }
+  field_langue_de_cv_exigee:
     type: options_select
+    weight: 42
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_logement:
+    type: boolean_checkbox
     weight: 28
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_mode_de_selection:
+    type: options_select
     weight: 48
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_mode_de_traitement:
+    type: options_select
     weight: 49
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_motifs_de_depublication:
+    type: text_textarea
     weight: 75
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings:
       conditional_fields:
         9dc05711-d404-49c2-8b1e-8b99e012c8c7:
+          entity_type: node
+          bundle: offre
           dependee: moderation_state
           settings:
             state: '!visible'
@@ -389,9 +393,9 @@ content:
             effect: show
             effect_options: {  }
             selector: ''
+        64330bb8-b671-4ba7-a729-99a075066ab2:
           entity_type: node
           bundle: offre
-        64330bb8-b671-4ba7-a729-99a075066ab2:
           dependee: moderation_state
           settings:
             state: visible
@@ -406,151 +410,147 @@ content:
             effect: show
             effect_options: {  }
             selector: ''
-          entity_type: node
-          bundle: offre
-    type: text_textarea
-    region: content
   field_nombre_de_cv_poste:
+    type: number
     weight: 46
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_nombre_de_poste:
+    type: number
     weight: 5
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_nourriture:
+    type: boolean_checkbox
     weight: 27
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_observation:
+    type: text_textarea
     weight: 62
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_observations:
+    type: text_textarea
     weight: 47
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_pays:
+    type: options_select
     weight: 11
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_primes:
+    type: boolean_checkbox
     weight: 22
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_profession_offre:
+    type: chosen_select
     weight: 4
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_protection_sociale:
+    type: boolean_checkbox
     weight: 24
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_referant:
-    weight: 64
-    settings: {  }
-    third_party_settings: {  }
     type: chosen_select
+    weight: 64
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_requirement_langue_1:
+    type: options_select
     weight: 32
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_requirement_langue_3:
+    type: options_select
     weight: 38
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_salaire_mensuel_net:
+    type: number
     weight: 18
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_source_de_l_offre:
+    type: options_select
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_type_cv_exige:
+    type: options_select
     weight: 41
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_type_de_logement:
+    type: options_select
     weight: 29
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_type_du_contrat:
+    type: options_select
     weight: 15
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_valider:
+    type: boolean_checkbox
     weight: 57
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_vehicule:
+    type: boolean_checkbox
     weight: 26
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_ville:
+    type: string_textfield
     weight: 14
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_ville_tunisie:
+    type: chosen_select
     weight: 13
+    region: content
     settings: {  }
     third_party_settings:
       conditional_fields: {  }
-    type: chosen_select
-    region: content
   langcode:
     type: language_select
     weight: 63
@@ -561,8 +561,8 @@ content:
   moderation_state:
     type: moderation_state_default
     weight: 68
-    settings: {  }
     region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -572,10 +572,10 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 71
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
@@ -590,17 +590,17 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 74
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 72
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -618,12 +618,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 69
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default

@@ -20,6 +20,8 @@ expression:
       -
         id: rules_condition
         uuid: 48340341-3666-4275-af56-56cd377b0884
+        condition_id: custom_rules_user_has_role
+        negate: false
         context_values:
           roles: candidat
         context_mapping:
@@ -28,8 +30,6 @@ expression:
           roles:
             rules_tokens: {  }
         provides_mapping: {  }
-        condition_id: custom_rules_user_has_role
-        negate: false
   actions:
     id: rules_action_set
     uuid: 54d56892-920e-453f-bf74-f92a6e263d57
@@ -37,6 +37,7 @@ expression:
       -
         id: rules_action
         uuid: adc0d9e2-ece3-4260-97da-4a35a5dc03aa
+        action_id: role_user_subscribe_action
         context_values:
           newsletter_id: candidat
         context_mapping:
@@ -45,4 +46,3 @@ expression:
           newsletter_id:
             rules_tokens: {  }
         provides_mapping: {  }
-        action_id: role_user_subscribe_action

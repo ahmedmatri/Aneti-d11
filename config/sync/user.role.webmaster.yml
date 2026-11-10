@@ -1,7 +1,65 @@
 uuid: 2d6a95b8-62ee-4c6b-8e00-781808e51c1f
 langcode: fr
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - node.type.article
+    - node.type.complement_postulation
+    - node.type.curriculum_vitae
+    - node.type.entreprise_cliente
+    - node.type.faq
+    - node.type.newletter_candidats
+    - node.type.newletter_entreprise
+    - node.type.offre
+    - node.type.page
+    - node.type.partenaire
+    - node.type.postulation
+    - node.type.simplenews_issue
+    - node.type.slideshow
+    - taxonomy.vocabulary.bureau
+    - taxonomy.vocabulary.client
+    - taxonomy.vocabulary.delegations
+    - taxonomy.vocabulary.diplome
+    - taxonomy.vocabulary.domaine
+    - taxonomy.vocabulary.forums
+    - taxonomy.vocabulary.lang
+    - taxonomy.vocabulary.langues
+    - taxonomy.vocabulary.localites
+    - taxonomy.vocabulary.metier_p_domaine
+    - taxonomy.vocabulary.metier_par_domaine
+    - taxonomy.vocabulary.newsletter
+    - taxonomy.vocabulary.pays
+    - taxonomy.vocabulary.secteur_d_activite
+    - taxonomy.vocabulary.specialite_par_domaine
+    - taxonomy.vocabulary.specialites
+    - taxonomy.vocabulary.specialt_par_domaine
+    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.ville
+    - workflows.workflow.candidat
+    - workflows.workflow.cv
+    - workflows.workflow.editorial
+    - workflows.workflow.entreprise
+    - workflows.workflow.offre
+    - workflows.workflow.postulation
+  module:
+    - aneti_cv
+    - contact
+    - content_moderation
+    - field_permissions
+    - file_entity
+    - filter
+    - locale
+    - node
+    - profile
+    - search
+    - simplenews
+    - system
+    - taxonomy
+    - toolbar
+    - webform
 id: webmaster
 label: Webmaster
 weight: 13

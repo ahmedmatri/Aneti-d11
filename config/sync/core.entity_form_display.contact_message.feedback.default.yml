@@ -15,62 +15,62 @@ third_party_settings:
         - mail
         - subject
         - message
+      label: Left
+      region: content
       parent_name: group_container
       weight: 6
       format_type: html_element
       format_settings:
         label: Left
+        classes: ''
+        id: ''
         element: div
         show_label: false
         label_element: h3
         label_element_classes: ''
-        required_fields: true
         attributes: ''
         effect: none
         speed: fast
-        id: ''
-        classes: ''
-      label: Left
-      region: content
+        required_fields: true
     group_right:
       children:
         - field_map
+      label: Right
+      region: hidden
       parent_name: ''
       weight: 3
       format_type: html_element
       format_settings:
-        id: ''
         classes: col-md-6
+        id: ''
         element: div
         show_label: false
         label_element: h3
         label_element_classes: ''
-        required_fields: true
         attributes: ''
         effect: none
         speed: fast
-      label: Right
-      region: hidden
+        required_fields: true
     group_container:
       children:
         - group_left
+      label: Container
+      region: content
       parent_name: ''
       weight: 0
       format_type: html_element
       format_settings:
         label: Container
+        classes: col-md-12
+        id: ''
         element: div
         show_label: false
         label_element: h3
         label_element_classes: ''
-        required_fields: true
         attributes: ''
         effect: none
         speed: fast
-        id: ''
-        classes: col-md-12
-      label: Container
-      region: content
+        required_fields: true
 id: contact_message.feedback.default
 targetEntityType: contact_message
 bundle: feedback
@@ -84,10 +84,10 @@ content:
   message:
     type: string_textarea
     weight: 6
+    region: content
     settings:
       rows: 12
       placeholder: ''
-    region: content
     third_party_settings: {  }
   name:
     weight: 3

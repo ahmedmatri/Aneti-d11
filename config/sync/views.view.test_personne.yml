@@ -16,90 +16,12 @@ base_table: users_field_data
 base_field: uid
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: perm
-        options:
-          perm: 'access user profiles'
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_comment: ''
-          query_tags: {  }
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: some
-        options:
-          items_per_page: 10
-          offset: 0
-      style:
-        type: table
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          override: true
-          sticky: true
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            name: name
-            created: created
-            mail: mail
-            roles_target_id: roles_target_id
-          info:
-            name:
-              sortable: false
-              default_sort_order: asc
-              align: views-align-center
-              separator: ''
-              empty_column: false
-              responsive: ''
-            created:
-              sortable: false
-              default_sort_order: asc
-              align: views-align-center
-              separator: ''
-              empty_column: false
-              responsive: ''
-            mail:
-              sortable: false
-              default_sort_order: asc
-              align: views-align-center
-              separator: ''
-              empty_column: false
-              responsive: ''
-            roles_target_id:
-              sortable: false
-              default_sort_order: asc
-              align: views-align-center
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: created
-          empty_table: false
-      row:
-        type: fields
+      title: 'Test personne'
       fields:
         name:
           id: name
@@ -108,6 +30,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: name
+          plugin_id: field
           label: Nom
           exclude: false
           alter:
@@ -163,9 +88,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: user
-          entity_field: name
-          plugin_id: field
         created:
           id: created
           table: users_field_data
@@ -173,6 +95,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: created
+          plugin_id: field
           label: 'Écrit le'
           exclude: false
           alter:
@@ -230,9 +155,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: user
-          entity_field: created
-          plugin_id: field
         mail:
           id: mail
           table: users_field_data
@@ -240,6 +162,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: mail
+          plugin_id: field
           label: Email
           exclude: false
           alter:
@@ -294,9 +219,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: user
-          entity_field: mail
-          plugin_id: field
         roles_target_id:
           id: roles_target_id
           table: user__roles
@@ -304,6 +226,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: roles
+          plugin_id: user_roles
           label: Rôle
           exclude: false
           alter:
@@ -347,9 +272,6 @@ display:
           hide_alter_empty: true
           type: ol
           separator: ', '
-          entity_type: user
-          entity_field: roles
-          plugin_id: user_roles
         uid:
           id: uid
           table: users_field_data
@@ -357,6 +279,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: uid
+          plugin_id: field
           label: 'Identifiant (ID) utilisateur'
           exclude: false
           alter:
@@ -413,9 +338,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: user
-          entity_field: uid
-          plugin_id: field
         view:
           id: view
           table: views
@@ -423,6 +345,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: view
           label: Voir
           exclude: false
           alter:
@@ -467,108 +390,46 @@ display:
           view: test_personne
           display: block_1
           arguments: '{{ raw_fields.uid }}'
-          plugin_id: view
-      filters:
-        status:
-          value: '1'
-          table: users_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: user
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        roles_target_id:
-          id: roles_target_id
-          table: user__roles
-          field: roles_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            candidat: candidat
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          entity_type: user
-          entity_field: roles
-          plugin_id: user_roles
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 10
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access user profiles'
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
       sorts:
         created:
           id: created
           table: users_field_data
           field: created
-          order: DESC
+          relationship: none
+          group_type: group
+          admin_label: ''
           entity_type: user
           entity_field: created
           plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
+          order: DESC
           expose:
             label: ''
+            field_identifier: created
+          exposed: false
           granularity: second
-      title: 'Test personne'
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: 'Le header de la page'
-            format: basic_html
-          plugin_id: text
-        result:
-          id: result
-          table: views
-          field: result
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          content: "@total \r\n<br>\r\n@page_count\r\n<br>\r\n@start\r\n"
-          plugin_id: result
-      footer: {  }
-      empty: {  }
-      relationships: {  }
       arguments:
         uid:
           id: uid
@@ -577,6 +438,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: uid
+          plugin_id: user_uid
           default_action: default
           exception:
             value: all
@@ -590,8 +454,8 @@ display:
           summary_options:
             base_path: ''
             count: true
-            items_per_page: 25
             override: false
+            items_per_page: 25
           summary:
             sort_order: asc
             number_of_records: 0
@@ -603,9 +467,146 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
+      filters:
+        status:
+          id: status
+          table: users_field_data
+          field: status
           entity_type: user
-          entity_field: uid
-          plugin_id: user_uid
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        roles_target_id:
+          id: roles_target_id
+          table: user__roles
+          field: roles_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: user
+          entity_field: roles
+          plugin_id: user_roles
+          operator: or
+          value:
+            candidat: candidat
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          columns:
+            name: name
+            created: created
+            mail: mail
+            roles_target_id: roles_target_id
+          default: created
+          info:
+            name:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              responsive: ''
+            created:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              responsive: ''
+            mail:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              responsive: ''
+            roles_target_id:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: true
+          summary: ''
+          empty_table: false
+          caption: ''
+          description: ''
+      row:
+        type: fields
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+      relationships: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: 'Le header de la page'
+            format: basic_html
+          tokenize: false
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: result
+          empty: false
+          content: "@total \r\n<br>\r\n@page_count\r\n<br>\r\n@start\r\n"
+      footer: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -616,17 +617,12 @@ display:
         - user.permissions
       tags: {  }
   block_1:
-    display_plugin: block
     id: block_1
     display_title: 'Block Etude'
+    display_plugin: block
     position: 2
     display_options:
-      display_extenders: {  }
-      display_description: ''
       title: 'Block Test personne'
-      defaults:
-        title: false
-        fields: false
       fields:
         name:
           id: name
@@ -635,6 +631,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: name
+          plugin_id: field
           label: Nom
           exclude: false
           alter:
@@ -690,9 +689,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: user
-          entity_field: name
-          plugin_id: field
         roles_target_id:
           id: roles_target_id
           table: user__roles
@@ -700,6 +696,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: roles
+          plugin_id: user_roles
           label: Rôle
           exclude: false
           alter:
@@ -743,9 +742,6 @@ display:
           hide_alter_empty: true
           type: ol
           separator: ', '
-          entity_type: user
-          entity_field: roles
-          plugin_id: user_roles
         uid:
           id: uid
           table: users_field_data
@@ -753,6 +749,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: uid
+          plugin_id: field
           label: 'Identifiant (ID) utilisateur'
           exclude: false
           alter:
@@ -809,9 +808,11 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: user
-          entity_field: uid
-          plugin_id: field
+      defaults:
+        title: false
+        fields: false
+      display_description: ''
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -821,16 +822,16 @@ display:
         - user.permissions
       tags: {  }
   page_1:
-    display_plugin: page
     id: page_1
     display_title: Page
+    display_plugin: page
     position: 1
     display_options:
-      display_extenders: {  }
-      path: test-personne
       arguments: {  }
       defaults:
         arguments: false
+      display_extenders: {  }
+      path: test-personne
     cache_metadata:
       max-age: -1
       contexts:

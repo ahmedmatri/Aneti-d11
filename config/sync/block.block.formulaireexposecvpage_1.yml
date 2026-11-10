@@ -18,12 +18,12 @@ plugin: 'views_exposed_filter_block:cv-page_1'
 settings:
   id: 'views_exposed_filter_block:cv-page_1'
   label: ''
-  provider: views
   label_display: '0'
+  provider: views
   views_label: 'Filtrer la recherche'
 visibility:
   request_path:
     id: request_path
-    pages: /cv
     negate: false
     context_mapping: {  }
+    pages: /cv

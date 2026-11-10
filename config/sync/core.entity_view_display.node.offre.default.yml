@@ -79,417 +79,417 @@ bundle: offre
 mode: default
 content:
   content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
     weight: 52
     region: content
-    settings: {  }
-    third_party_settings: {  }
   field__requirement_langue_2:
-    weight: 27
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 27
     region: content
   field_afficher_le_n_tel:
-    weight: 40
+    type: boolean
     label: above
     settings:
       format: unicode-yes-no
-      format_custom_true: ''
       format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 40
     region: content
   field_afficher_le_nom:
-    weight: 39
+    type: boolean
     label: above
     settings:
       format: unicode-yes-no
-      format_custom_true: ''
       format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 39
     region: content
   field_afficher_mail:
-    weight: 41
+    type: boolean
     label: above
     settings:
       format: unicode-yes-no
-      format_custom_true: ''
       format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 41
     region: content
   field_autres_avantages:
-    weight: 23
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 23
     region: content
   field_code_situation:
-    weight: 42
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 42
     region: content
   field_competences_exigees:
-    weight: 4
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 4
     region: content
   field_conge_annuel:
-    weight: 16
+    type: number_integer
     label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_integer
+    weight: 16
     region: content
   field_cv_langue:
-    weight: 31
+    type: entity_reference_label
     label: above
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 31
     region: content
   field_date_contrat:
-    weight: 12
+    type: datetime_default
     label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: medium
     third_party_settings: {  }
-    type: datetime_default
+    weight: 12
     region: content
   field_date_d_insertion:
-    weight: 44
+    type: datetime_default
     label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: medium
     third_party_settings: {  }
-    type: datetime_default
+    weight: 44
     region: content
   field_date_de_suivie:
-    weight: 50
+    type: datetime_default
     label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: medium
     third_party_settings: {  }
-    type: datetime_default
+    weight: 50
     region: content
   field_date_debut_publication:
-    weight: 48
+    type: datetime_default
     label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: medium
     third_party_settings: {  }
-    type: datetime_default
+    weight: 48
     region: content
   field_date_derniere_modification:
-    weight: 45
+    type: datetime_default
     label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: medium
     third_party_settings: {  }
-    type: datetime_default
+    weight: 45
     region: content
   field_date_fin_publication:
-    weight: 49
+    type: datetime_default
     label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: medium
     third_party_settings: {  }
-    type: datetime_default
+    weight: 49
     region: content
   field_date_situation:
-    weight: 43
+    type: datetime_default
     label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: medium
     third_party_settings: {  }
-    type: datetime_default
+    weight: 43
     region: content
   field_date_validation_:
-    weight: 47
+    type: datetime_default
     label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: medium
     third_party_settings: {  }
-    type: datetime_default
+    weight: 47
     region: content
   field_description:
-    weight: 3
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 3
     region: content
   field_devise:
-    weight: 14
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 14
     region: content
   field_diplome_exige:
-    weight: 55
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 55
     region: content
   field_domaine_et_specialite:
-    weight: 1
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 1
     region: content
   field_domaine_experience:
-    weight: 7
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 7
     region: content
   field_duree_contrat:
-    weight: 11
+    type: number_integer
     label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_integer
+    weight: 11
     region: content
   field_duree_experience:
-    weight: 6
+    type: number_integer
     label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_integer
+    weight: 6
     region: content
   field_entreprise_id:
-    weight: 0
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 0
     region: content
   field_exiger_lettre_motivation:
-    weight: 34
+    type: boolean
     label: above
     settings:
       format: unicode-yes-no
-      format_custom_true: ''
       format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 34
     region: content
   field_experience:
-    weight: 5
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 5
     region: content
   field_formation_diplome_exige:
-    weight: 56
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 56
     region: content
   field_frais_de_voyage:
-    weight: 19
+    type: boolean
     label: above
     settings:
       format: unicode-yes-no
-      format_custom_true: ''
       format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 19
     region: content
   field_horaire_de_travail:
-    weight: 15
+    type: daterange_default
     label: above
     settings:
-      separator: '-'
-      format_type: medium
       timezone_override: ''
+      format_type: medium
+      separator: '-'
     third_party_settings: {  }
-    type: daterange_default
+    weight: 15
     region: content
   field_informations_complementair:
-    weight: 30
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 30
     region: content
   field_langue:
-    weight: 24
+    type: entity_reference_label
     label: above
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 24
     region: content
   field_langue2:
-    weight: 26
+    type: entity_reference_label
     label: above
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 26
     region: content
   field_langue3:
-    weight: 28
+    type: entity_reference_label
     label: above
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 28
     region: content
   field_langue_de_cv_exigee:
-    weight: 32
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 32
     region: content
   field_logement:
-    weight: 21
+    type: boolean
     label: above
     settings:
       format: unicode-yes-no
-      format_custom_true: ''
       format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 21
     region: content
   field_mode_de_selection:
-    weight: 37
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 37
     region: content
   field_mode_de_traitement:
-    weight: 38
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 38
     region: content
   field_nombre_de_cv_poste:
-    weight: 33
+    type: number_integer
     label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_integer
+    weight: 33
     region: content
   field_nombre_de_poste:
-    weight: 2
+    type: number_integer
     label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_integer
+    weight: 2
     region: content
   field_nourriture:
-    weight: 22
+    type: boolean
     label: above
     settings:
       format: unicode-yes-no
-      format_custom_true: ''
       format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 22
     region: content
   field_observation:
-    weight: 51
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 51
     region: content
   field_observations:
-    weight: 36
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 36
     region: content
   field_pays:
-    weight: 8
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 8
     region: content
   field_primes:
-    weight: 17
+    type: boolean
     label: above
     settings:
       format: unicode-yes-no
-      format_custom_true: ''
       format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 17
     region: content
   field_protection_sociale:
-    weight: 18
+    type: boolean
     label: above
     settings:
       format: unicode-yes-no
-      format_custom_true: ''
       format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 18
     region: content
   field_requirement_langue_1:
-    weight: 25
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 25
     region: content
   field_requirement_langue_3:
-    weight: 29
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 29
     region: content
   field_salaire_mensuel_net:
-    weight: 13
+    type: number_decimal
     label: above
     settings:
       thousand_separator: ''
@@ -497,69 +497,69 @@ content:
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_decimal
+    weight: 13
     region: content
   field_source_de_l_offre:
-    weight: 54
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 54
     region: content
   field_type_cv_exige:
-    weight: 35
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 35
     region: content
   field_type_de_logement:
-    weight: 57
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 57
     region: content
   field_type_du_contrat:
-    weight: 10
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 10
     region: content
   field_valider:
-    weight: 46
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 46
     region: content
   field_vehicule:
-    weight: 20
+    type: boolean
     label: above
     settings:
       format: unicode-yes-no
-      format_custom_true: ''
       format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 20
     region: content
   field_ville:
-    weight: 9
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 9
     region: content
   links:
-    weight: 53
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 53
+    region: content
 hidden:
   field_a_la_une: true
   field_came_international: true

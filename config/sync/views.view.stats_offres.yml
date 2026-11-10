@@ -22,79 +22,12 @@ base_table: node_field_data
 base_field: nid
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: perm
-        options:
-          perm: 'access content'
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_comment: ''
-          query_tags: {  }
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: mini
-        options:
-          items_per_page: 0
-          offset: 0
-          id: 0
-          total_pages: null
-          tags:
-            previous: ‹‹
-            next: ››
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-      style:
-        type: table
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          override: true
-          sticky: false
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            field_pays: field_pays
-          info:
-            field_pays:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: '-1'
-          empty_table: false
-      row:
-        type: fields
+      title: 'Offres déposées par pays'
       fields:
         name:
           id: name
@@ -103,6 +36,9 @@ display:
           relationship: field_pays
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
           label: Pays
           exclude: false
           alter:
@@ -159,9 +95,6 @@ display:
           separator: ', '
           field_api_classes: false
           convert_spaces: false
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
         name_1:
           id: name_1
           table: taxonomy_term_field_data
@@ -169,6 +102,9 @@ display:
           relationship: field_pays
           group_type: count
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
           label: Nom
           exclude: false
           alter:
@@ -210,14 +146,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          set_precision: false
-          precision: 0
-          decimal: .
-          separator: ', '
-          format_plural: 0
-          format_plural_string: !!binary MQNAY291bnQ=
-          prefix: ''
-          suffix: ''
           click_sort_column: value
           type: string
           settings: {  }
@@ -229,11 +157,69 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
+          separator: ', '
           field_api_classes: false
           convert_spaces: false
+          set_precision: false
+          precision: 0
+          decimal: .
+          format_plural: 0
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
+      pager:
+        type: mini
+        options:
+          offset: 0
+          items_per_page: 0
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
+      sorts:
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: field_pays
+          group_type: group
+          admin_label: ''
           entity_type: taxonomy_term
           entity_field: name
-          plugin_id: term_name
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: name
+          exposed: false
+      arguments: {  }
       filters:
         type:
           id: type
@@ -242,6 +228,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
           operator: in
           value:
             offre: offre
@@ -253,6 +242,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -260,8 +251,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -274,28 +263,43 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-      sorts:
-        name:
-          id: name
-          table: taxonomy_term_field_data
-          field: name
-          relationship: field_pays
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: standard
-      title: 'Offres déposées par pays'
-      header: {  }
-      footer: {  }
-      empty: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          columns:
+            field_pays: field_pays
+          default: '-1'
+          info:
+            field_pays:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: false
+          summary: ''
+          empty_table: false
+          caption: ''
+          description: ''
+      row:
+        type: fields
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
       relationships:
         field_pays:
           id: field_pays
@@ -304,8 +308,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_pays : Terme de taxonomie'
-          required: false
           plugin_id: standard
+          required: false
         uid:
           id: uid
           table: node_field_data
@@ -313,10 +317,10 @@ display:
           relationship: none
           group_type: group
           admin_label: auteur
-          required: false
           entity_type: node
           entity_field: uid
           plugin_id: standard
+          required: false
         profile:
           id: profile
           table: users_field_data
@@ -324,16 +328,13 @@ display:
           relationship: uid
           group_type: group
           admin_label: Profil
-          required: false
           entity_type: user
           plugin_id: standard
-      arguments: {  }
-      display_extenders: {  }
+          required: false
       group_by: true
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
+      header: {  }
+      footer: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -344,13 +345,11 @@ display:
         - user.permissions
       tags: {  }
   page_1:
-    display_plugin: page
     id: page_1
     display_title: Page
+    display_plugin: page
     position: 1
     display_options:
-      display_extenders: {  }
-      path: admin/stats/offres/pays
       filters:
         type:
           id: type
@@ -359,6 +358,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
           operator: in
           value:
             offre: offre
@@ -370,6 +372,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -377,8 +381,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -391,9 +393,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
         langcode:
           id: langcode
           table: taxonomy_term_field_data
@@ -401,6 +400,9 @@ display:
           relationship: field_pays
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
           operator: in
           value:
             fr: fr
@@ -412,6 +414,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -419,8 +423,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -433,9 +435,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: taxonomy_term
-          entity_field: langcode
-          plugin_id: language
         roles_target_id:
           id: roles_target_id
           table: user__roles
@@ -443,6 +442,9 @@ display:
           relationship: uid
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: roles
+          plugin_id: user_roles
           operator: or
           value: {  }
           group: 1
@@ -453,6 +455,8 @@ display:
             description: ''
             use_operator: false
             operator: roles_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: roles_target_id
             required: false
             remember: false
@@ -473,8 +477,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -488,9 +490,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          entity_type: user
-          entity_field: roles
-          plugin_id: user_roles
         field_type_de_partenariat_value:
           id: field_type_de_partenariat_value
           table: profile__field_type_de_partenariat
@@ -498,6 +497,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: list_field
           operator: or
           value: {  }
           group: 1
@@ -508,6 +508,8 @@ display:
             description: ''
             use_operator: false
             operator: field_type_de_partenariat_value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_type_de_partenariat_value
             required: false
             remember: false
@@ -528,8 +530,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -543,14 +543,15 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          plugin_id: list_field
-      defaults:
-        filters: false
-        filter_groups: false
       filter_groups:
         operator: AND
         groups:
           1: AND
+      defaults:
+        filters: false
+        filter_groups: false
+      display_extenders: {  }
+      path: admin/stats/offres/pays
     cache_metadata:
       max-age: -1
       contexts:
@@ -562,22 +563,12 @@ display:
         - user.permissions
       tags: {  }
   page_2:
-    display_plugin: page
     id: page_2
     display_title: 'Page 1'
+    display_plugin: page
     position: 1
     display_options:
-      display_extenders: {  }
-      path: admin/stats/offres/profession
-      display_description: ''
       title: 'Offres déposées par profession'
-      defaults:
-        title: false
-        fields: false
-        sorts: false
-        relationships: false
-        filters: false
-        filter_groups: false
       fields:
         name:
           id: name
@@ -586,6 +577,9 @@ display:
           relationship: field_domaine_experience
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
           label: Profession
           exclude: false
           alter:
@@ -642,9 +636,6 @@ display:
           separator: ', '
           field_api_classes: false
           convert_spaces: false
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
         name_1:
           id: name_1
           table: taxonomy_term_field_data
@@ -652,6 +643,9 @@ display:
           relationship: field_domaine_experience
           group_type: count
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
           label: Nombre
           exclude: false
           alter:
@@ -708,50 +702,7 @@ display:
           separator: ', '
           field_api_classes: false
           convert_spaces: false
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
       sorts: {  }
-      relationships:
-        field_pays:
-          id: field_pays
-          table: node__field_pays
-          field: field_pays
-          relationship: none
-          group_type: group
-          admin_label: 'field_pays : Terme de taxonomie'
-          required: false
-          plugin_id: standard
-        field_domaine_experience:
-          id: field_domaine_experience
-          table: node__field_domaine_experience
-          field: field_domaine_experience
-          relationship: none
-          group_type: group
-          admin_label: 'field_domaine_experience : Terme de taxonomie'
-          required: false
-          plugin_id: standard
-        uid:
-          id: uid
-          table: node_field_data
-          field: uid
-          relationship: none
-          group_type: group
-          admin_label: auteur
-          required: false
-          entity_type: node
-          entity_field: uid
-          plugin_id: standard
-        profile:
-          id: profile
-          table: users_field_data
-          field: profile
-          relationship: uid
-          group_type: group
-          admin_label: Profil
-          required: false
-          entity_type: user
-          plugin_id: standard
       filters:
         type:
           id: type
@@ -760,6 +711,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
           operator: in
           value:
             offre: offre
@@ -771,6 +725,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -778,8 +734,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -792,9 +746,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
         langcode:
           id: langcode
           table: taxonomy_term_field_data
@@ -802,6 +753,9 @@ display:
           relationship: field_domaine_experience
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
           operator: in
           value:
             fr: fr
@@ -813,6 +767,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -820,8 +776,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -834,9 +788,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: taxonomy_term
-          entity_field: langcode
-          plugin_id: language
         roles_target_id:
           id: roles_target_id
           table: user__roles
@@ -844,6 +795,9 @@ display:
           relationship: uid
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: roles
+          plugin_id: user_roles
           operator: or
           value: {  }
           group: 1
@@ -854,6 +808,8 @@ display:
             description: ''
             use_operator: false
             operator: roles_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: roles_target_id
             required: false
             remember: false
@@ -874,8 +830,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -889,9 +843,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          entity_type: user
-          entity_field: roles
-          plugin_id: user_roles
         field_type_de_partenariat_value:
           id: field_type_de_partenariat_value
           table: profile__field_type_de_partenariat
@@ -899,6 +850,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: list_field
           operator: or
           value: {  }
           group: 1
@@ -909,6 +861,8 @@ display:
             description: ''
             use_operator: false
             operator: field_type_de_partenariat_value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_type_de_partenariat_value
             required: false
             remember: false
@@ -929,8 +883,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -944,11 +896,60 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          plugin_id: list_field
       filter_groups:
         operator: AND
         groups:
           1: AND
+      defaults:
+        title: false
+        relationships: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+      relationships:
+        field_pays:
+          id: field_pays
+          table: node__field_pays
+          field: field_pays
+          relationship: none
+          group_type: group
+          admin_label: 'field_pays : Terme de taxonomie'
+          plugin_id: standard
+          required: false
+        field_domaine_experience:
+          id: field_domaine_experience
+          table: node__field_domaine_experience
+          field: field_domaine_experience
+          relationship: none
+          group_type: group
+          admin_label: 'field_domaine_experience : Terme de taxonomie'
+          plugin_id: standard
+          required: false
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: auteur
+          entity_type: node
+          entity_field: uid
+          plugin_id: standard
+          required: false
+        profile:
+          id: profile
+          table: users_field_data
+          field: profile
+          relationship: uid
+          group_type: group
+          admin_label: Profil
+          entity_type: user
+          plugin_id: standard
+          required: false
+      display_description: ''
+      display_extenders: {  }
+      path: admin/stats/offres/profession
     cache_metadata:
       max-age: -1
       contexts:
@@ -960,22 +961,12 @@ display:
         - user.permissions
       tags: {  }
   page_3:
-    display_plugin: page
     id: page_3
     display_title: 'Page 2'
+    display_plugin: page
     position: 1
     display_options:
-      display_extenders: {  }
-      path: admin/stats/offres/domaine
-      display_description: ''
       title: 'Offres déposées par domaine'
-      defaults:
-        title: false
-        fields: false
-        sorts: false
-        relationships: false
-        filters: false
-        filter_groups: false
       fields:
         name:
           id: name
@@ -984,6 +975,9 @@ display:
           relationship: field_domaine_et_specialite
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
           label: Domaine
           exclude: false
           alter:
@@ -1040,9 +1034,6 @@ display:
           separator: ', '
           field_api_classes: false
           convert_spaces: false
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
         name_1:
           id: name_1
           table: taxonomy_term_field_data
@@ -1050,6 +1041,9 @@ display:
           relationship: field_pays
           group_type: count
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
           label: Nombre
           exclude: false
           alter:
@@ -1091,14 +1085,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          set_precision: false
-          precision: 0
-          decimal: .
-          separator: ', '
-          format_plural: 0
-          format_plural_string: !!binary MQNAY291bnQ=
-          prefix: ''
-          suffix: ''
           click_sort_column: value
           type: string
           settings: {  }
@@ -1110,61 +1096,17 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
+          separator: ', '
           field_api_classes: false
           convert_spaces: false
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
+          set_precision: false
+          precision: 0
+          decimal: .
+          format_plural: 0
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
       sorts: {  }
-      relationships:
-        field_pays:
-          id: field_pays
-          table: node__field_pays
-          field: field_pays
-          relationship: none
-          group_type: group
-          admin_label: 'field_pays : Terme de taxonomie'
-          required: false
-          plugin_id: standard
-        field_domaine_experience:
-          id: field_domaine_experience
-          table: node__field_domaine_experience
-          field: field_domaine_experience
-          relationship: none
-          group_type: group
-          admin_label: 'field_domaine_experience : Terme de taxonomie'
-          required: false
-          plugin_id: standard
-        field_domaine_et_specialite:
-          id: field_domaine_et_specialite
-          table: node__field_domaine_et_specialite
-          field: field_domaine_et_specialite
-          relationship: none
-          group_type: group
-          admin_label: 'field_domaine_et_specialite : Terme de taxonomie'
-          required: false
-          plugin_id: standard
-        uid:
-          id: uid
-          table: node_field_data
-          field: uid
-          relationship: none
-          group_type: group
-          admin_label: auteur
-          required: false
-          entity_type: node
-          entity_field: uid
-          plugin_id: standard
-        profile:
-          id: profile
-          table: users_field_data
-          field: profile
-          relationship: uid
-          group_type: group
-          admin_label: Profil
-          required: false
-          entity_type: user
-          plugin_id: standard
       filters:
         type:
           id: type
@@ -1173,6 +1115,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
           operator: in
           value:
             offre: offre
@@ -1184,6 +1129,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -1191,8 +1138,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1205,9 +1150,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
         langcode:
           id: langcode
           table: taxonomy_term_field_data
@@ -1215,6 +1157,9 @@ display:
           relationship: field_domaine_et_specialite
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
           operator: in
           value:
             fr: fr
@@ -1226,6 +1171,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -1233,8 +1180,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1247,9 +1192,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: taxonomy_term
-          entity_field: langcode
-          plugin_id: language
         field_type_de_partenariat_value:
           id: field_type_de_partenariat_value
           table: profile__field_type_de_partenariat
@@ -1257,6 +1199,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: list_field
           operator: or
           value: {  }
           group: 1
@@ -1267,6 +1210,8 @@ display:
             description: ''
             use_operator: false
             operator: field_type_de_partenariat_value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_type_de_partenariat_value
             required: false
             remember: false
@@ -1287,8 +1232,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1302,7 +1245,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          plugin_id: list_field
         roles_target_id:
           id: roles_target_id
           table: user__roles
@@ -1310,6 +1252,9 @@ display:
           relationship: uid
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: roles
+          plugin_id: user_roles
           operator: or
           value: {  }
           group: 1
@@ -1320,6 +1265,8 @@ display:
             description: ''
             use_operator: false
             operator: roles_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: roles_target_id
             required: false
             remember: false
@@ -1340,8 +1287,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1355,13 +1300,69 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          entity_type: user
-          entity_field: roles
-          plugin_id: user_roles
       filter_groups:
         operator: AND
         groups:
           1: AND
+      defaults:
+        title: false
+        relationships: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+      relationships:
+        field_pays:
+          id: field_pays
+          table: node__field_pays
+          field: field_pays
+          relationship: none
+          group_type: group
+          admin_label: 'field_pays : Terme de taxonomie'
+          plugin_id: standard
+          required: false
+        field_domaine_experience:
+          id: field_domaine_experience
+          table: node__field_domaine_experience
+          field: field_domaine_experience
+          relationship: none
+          group_type: group
+          admin_label: 'field_domaine_experience : Terme de taxonomie'
+          plugin_id: standard
+          required: false
+        field_domaine_et_specialite:
+          id: field_domaine_et_specialite
+          table: node__field_domaine_et_specialite
+          field: field_domaine_et_specialite
+          relationship: none
+          group_type: group
+          admin_label: 'field_domaine_et_specialite : Terme de taxonomie'
+          plugin_id: standard
+          required: false
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: auteur
+          entity_type: node
+          entity_field: uid
+          plugin_id: standard
+          required: false
+        profile:
+          id: profile
+          table: users_field_data
+          field: profile
+          relationship: uid
+          group_type: group
+          admin_label: Profil
+          entity_type: user
+          plugin_id: standard
+          required: false
+      display_description: ''
+      display_extenders: {  }
+      path: admin/stats/offres/domaine
     cache_metadata:
       max-age: -1
       contexts:
@@ -1373,22 +1374,12 @@ display:
         - user.permissions
       tags: {  }
   page_4:
-    display_plugin: page
     id: page_4
     display_title: 'Page 3'
+    display_plugin: page
     position: 1
     display_options:
-      display_extenders: {  }
-      path: admin/stats/offres/source
-      display_description: ''
       title: 'Offres déposées par source'
-      defaults:
-        title: false
-        fields: false
-        sorts: false
-        relationships: false
-        filters: false
-        filter_groups: false
       fields:
         type:
           id: type
@@ -1397,6 +1388,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: field
           label: Offres
           exclude: false
           alter:
@@ -1452,9 +1446,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: type
-          plugin_id: field
         type_1:
           id: type_1
           table: node_field_data
@@ -1462,6 +1453,9 @@ display:
           relationship: none
           group_type: count
           admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: field
           label: Nombre
           exclude: false
           alter:
@@ -1503,14 +1497,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          set_precision: false
-          precision: 0
-          decimal: .
-          separator: ', '
-          format_plural: 0
-          format_plural_string: !!binary MQNAY291bnQ=
-          prefix: ''
-          suffix: ''
           click_sort_column: target_id
           type: entity_reference_label
           settings: {  }
@@ -1522,33 +1508,16 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
+          separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: type
-          plugin_id: field
+          set_precision: false
+          precision: 0
+          decimal: .
+          format_plural: 0
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
       sorts: {  }
-      relationships:
-        uid:
-          id: uid
-          table: node_field_data
-          field: uid
-          relationship: none
-          group_type: group
-          admin_label: auteur
-          required: false
-          entity_type: node
-          entity_field: uid
-          plugin_id: standard
-        profile:
-          id: profile
-          table: users_field_data
-          field: profile
-          relationship: uid
-          group_type: group
-          admin_label: Profil
-          required: false
-          entity_type: user
-          plugin_id: standard
       filters:
         type:
           id: type
@@ -1557,6 +1526,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
           operator: in
           value:
             offre: offre
@@ -1568,6 +1540,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -1575,8 +1549,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1589,9 +1561,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
         roles_target_id:
           id: roles_target_id
           table: user__roles
@@ -1599,6 +1568,9 @@ display:
           relationship: uid
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: roles
+          plugin_id: user_roles
           operator: or
           value:
             entreprise: entreprise
@@ -1612,6 +1584,8 @@ display:
             description: ''
             use_operator: false
             operator: roles_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: roles_target_id
             required: false
             remember: false
@@ -1632,8 +1606,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1647,9 +1619,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          entity_type: user
-          entity_field: roles
-          plugin_id: user_roles
         field_type_de_partenariat_value:
           id: field_type_de_partenariat_value
           table: profile__field_type_de_partenariat
@@ -1657,6 +1626,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: list_field
           operator: or
           value: {  }
           group: 1
@@ -1667,6 +1637,8 @@ display:
             description: ''
             use_operator: false
             operator: field_type_de_partenariat_value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_type_de_partenariat_value
             required: false
             remember: false
@@ -1687,8 +1659,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1702,11 +1672,42 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          plugin_id: list_field
       filter_groups:
         operator: AND
         groups:
           1: AND
+      defaults:
+        title: false
+        relationships: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+      relationships:
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: auteur
+          entity_type: node
+          entity_field: uid
+          plugin_id: standard
+          required: false
+        profile:
+          id: profile
+          table: users_field_data
+          field: profile
+          relationship: uid
+          group_type: group
+          admin_label: Profil
+          entity_type: user
+          plugin_id: standard
+          required: false
+      display_description: ''
+      display_extenders: {  }
+      path: admin/stats/offres/source
     cache_metadata:
       max-age: -1
       contexts:

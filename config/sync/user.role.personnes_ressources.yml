@@ -1,7 +1,14 @@
 uuid: 4e898eca-d602-4a88-9a85-123490fb68cb
 langcode: fr
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.curriculum_vitae
+    - node.type.offre
+    - node.type.postulation
+  module:
+    - node
+    - system
 id: personnes_ressources
 label: Personnes-Ressources
 weight: 17

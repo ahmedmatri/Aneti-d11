@@ -5,31 +5,31 @@ dependencies: {  }
 id: a_la_une
 label: 'A la une'
 renderer: quick_tabs
+hide_empty_tabs: false
+default_tab: 9999
 options:
   accordion_tabs:
     jquery_ui:
-      collapsible: 0
+      collapsible: false
       heightStyle: auto
   quick_tabs:
-    ajax: '0'
-hide_empty_tabs: 0
-default_tab: '9999'
+    ajax: false
 configuration_data:
   -
     title: Highlights
-    weight: '0'
+    weight: 0
     type: view_content
     content:
       block_content:
         options:
           bid: local_actions_block
           block_title: ''
-          display_title: 0
+          display_title: false
       node_content:
         options:
           nid: ''
           view_mode: full
-          hide_title: '1'
+          hide_title: true
       view_content:
         options:
           vid: offres_a_la_une
@@ -40,19 +40,19 @@ configuration_data:
           machine_name: ''
   -
     title: ''
-    weight: '0'
+    weight: 0
     type: block_content
     content:
       block_content:
         options:
           bid: local_actions_block
           block_title: ''
-          display_title: 0
+          display_title: false
       node_content:
         options:
           nid: ''
           view_mode: full
-          hide_title: '1'
+          hide_title: true
       view_content:
         options:
           vid: block_content

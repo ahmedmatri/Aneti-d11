@@ -27,6 +27,12 @@ display:
         operations:
           label: عمليات
       filters:
+        title:
+          expose:
+            label: العنوان
+        type:
+          expose:
+            label: 'نوع المحتوى'
         status:
           expose:
             label: الحالة
@@ -34,12 +40,6 @@ display:
             group_items:
               1:
                 title: منشور
-        type:
-          expose:
-            label: النوع
-        title:
-          expose:
-            label: العنوان
         langcode:
           expose:
             label: اللغة

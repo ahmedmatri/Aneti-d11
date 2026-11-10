@@ -4,8 +4,8 @@ status: true
 dependencies: {  }
 id: partenaire
 label: Partenaire
-registration: true
 multiple: false
+registration: true
 roles:
   partenaire: partenaire
   authenticated: '0'

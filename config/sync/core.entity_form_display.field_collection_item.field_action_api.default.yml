@@ -21,56 +21,56 @@ bundle: field_action_api
 mode: default
 content:
   field_date:
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
     type: datetime_default
+    weight: 0
     region: content
-  field_domaine:
-    weight: 3
     settings: {  }
     third_party_settings: {  }
+  field_domaine:
     type: options_select
+    weight: 3
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_informations_fournies:
+    type: text_textarea
     weight: 4
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_niveau_d_adhesion:
+    type: number
     weight: 5
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_pai_duree:
+    type: number
     weight: 1
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_prochaine_action:
+    type: options_select
     weight: 7
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_rendez_vous:
-    weight: 6
-    settings: {  }
-    third_party_settings: {  }
     type: datetime_default
+    weight: 6
     region: content
-  field_theme:
-    weight: 2
     settings: {  }
     third_party_settings: {  }
+  field_theme:
     type: options_select
+    weight: 2
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   moderation_state: true

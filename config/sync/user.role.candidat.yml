@@ -1,34 +1,40 @@
 uuid: 48835943-2017-4a4f-8027-e563859c8e26
 langcode: fr
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.complement_postulation
+    - node.type.curriculum_vitae
+    - node.type.entretien
+    - node.type.postulation
+    - rest.resource.webform_rest_submit
+    - workflows.workflow.candidat
+    - workflows.workflow.cv
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - field_permissions
+    - file_entity
+    - node
+    - profile
+    - rest
+    - search
+    - system
 id: candidat
 label: candidat
 weight: 2
 is_admin: null
 permissions:
   - 'access content'
-  - 'access google analytics reports'
   - 'change own username'
   - 'create complement_postulation content'
   - 'create curriculum_vitae content'
   - 'create entretien content'
   - 'create field_candidats'
-  - 'create field_langue'
-  - 'create field_langue2'
-  - 'create field_langue3'
   - 'create postulation content'
   - 'edit any entretien content'
-  - 'edit field_langue'
-  - 'edit field_langue2'
-  - 'edit field_langue3'
-  - 'edit own candidat profile'
   - 'edit own curriculum_vitae content'
   - 'edit own entretien content'
-  - 'edit own field_langue'
-  - 'edit own field_langue2'
-  - 'edit own field_langue3'
-  - 'import media'
   - 'restful post webform_rest_submit'
   - 'search content'
   - 'update own candidat profile'
@@ -39,17 +45,7 @@ permissions:
   - 'use editorial transition create_new_draft'
   - 'use editorial transition need_review'
   - 'view entretien revisions'
-  - 'view field_langue'
-  - 'view field_langue2'
-  - 'view field_langue3'
   - 'view files'
-  - 'view media'
   - 'view own candidat profile'
   - 'view own field_candidature'
-  - 'view own field_langue'
-  - 'view own field_langue2'
-  - 'view own field_langue3'
   - 'view own unpublished content'
-  - 'view revisions'
-  - 'view workbench access information'
-  - 'view workbench taxonomy pages'

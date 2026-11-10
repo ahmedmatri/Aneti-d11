@@ -1,3 +1,6 @@
+_core:
+  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
+langcode: fr
 module:
   admin_toolbar: 0
   aneti_candidat: 0
@@ -28,14 +31,12 @@ module:
   config_log_views: 0
   config_translation: 0
   contact: 0
-  contact_message_rest: 0
   content_moderation: 0
   contextual: 0
   csv_serialization: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
-  dbug: 0
   devel: 0
   dynamic_page_cache: 0
   editor: 0
@@ -55,6 +56,7 @@ module:
   flickity_views: 0
   geofield: 0
   geolocation: 0
+  geolocation_google_maps: 0
   getjwtonlogin: 0
   google_analytics: 0
   hal: 0
@@ -62,7 +64,10 @@ module:
   history: 0
   image: 0
   jquery_ui: 0
+  jquery_ui_accordion: 0
+  jquery_ui_autocomplete: 0
   jquery_ui_datepicker: 0
+  jquery_ui_menu: 0
   jquery_ui_slider: 0
   jquery_ui_touch_punch: 0
   jwt: 0
@@ -80,6 +85,7 @@ module:
   menu_ui: 0
   metatag: 0
   multiple_registration: 0
+  mysql: 0
   node: 0
   node_action_log: 0
   node_revision_delete: 0
@@ -135,6 +141,7 @@ module:
   views_ui: 0
   we_megamenu: 0
   webform: 0
+  webform_jqueryui_datepicker: 0
   webform_remote_handlers: 0
   webform_rest: 0
   webform_submission_log: 0
@@ -149,9 +156,6 @@ theme:
   stable: 0
   classy: 0
   bartik: 0
-  seven: 0
   job_board: 0
+  claro: 0
 profile: standard
-_core:
-  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
-langcode: fr

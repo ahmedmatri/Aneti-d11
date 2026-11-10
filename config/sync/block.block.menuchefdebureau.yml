@@ -18,16 +18,16 @@ plugin: 'system_menu_block:menu-chef-de-bureau'
 settings:
   id: 'system_menu_block:menu-chef-de-bureau'
   label: 'Menu Chef de Bureau'
-  provider: system
   label_display: visible
+  provider: system
   level: 1
   depth: 0
   expand_all_items: false
 visibility:
   user_role:
     id: user_role
-    roles:
-      chef_de_bureau: chef_de_bureau
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
+    roles:
+      chef_de_bureau: chef_de_bureau

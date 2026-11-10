@@ -53,250 +53,250 @@ bundle: field_checklist_apres_depart
 mode: default
 content:
   field_q19_label:
+    type: markup
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: markup
-    region: content
   field_q20_label:
+    type: markup
     weight: 14
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: markup
-    region: content
   field_q21_label:
+    type: markup
     weight: 17
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: markup
-    region: content
   field_q22_label:
+    type: markup
     weight: 20
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: markup
-    region: content
   field_q23_label:
+    type: markup
     weight: 23
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: markup
-    region: content
   field_q24_label:
+    type: markup
     weight: 26
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: markup
-    region: content
   field_q25_label:
+    type: markup
     weight: 29
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: markup
-    region: content
   field_q26_label:
+    type: markup
     weight: 32
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: markup
-    region: content
   field_q27_label:
+    type: markup
     weight: 35
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: markup
-    region: content
   field_q28_label:
+    type: markup
     weight: 38
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: markup
-    region: content
   field_q29_label:
+    type: markup
     weight: 41
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: markup
-    region: content
   field_q30_label:
+    type: markup
     weight: 44
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: markup
-    region: content
   field_q30a_label:
+    type: markup
     weight: 45
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: markup
-    region: content
   field_q30b_label:
+    type: markup
     weight: 47
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: markup
-    region: content
   field_q30c_label:
+    type: markup
     weight: 49
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: markup
-    region: content
   field_q30d_label:
+    type: markup
     weight: 51
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: markup
-    region: content
   field_q30e_label:
+    type: markup
     weight: 53
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: markup
-    region: content
   field_q31_label:
+    type: markup
     weight: 56
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: markup
-    region: content
   field_q32_label:
+    type: markup
     weight: 59
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: markup
-    region: content
   field_q33_label:
+    type: markup
     weight: 62
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: markup
-    region: content
   field_q34_label:
-    weight: 65
-    settings: {  }
-    third_party_settings: {  }
     type: markup
+    weight: 65
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_r19:
+    type: options_buttons
     weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_r20:
+    type: options_buttons
     weight: 15
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_r21:
+    type: options_buttons
     weight: 18
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_r22:
+    type: options_buttons
     weight: 21
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_r23:
+    type: options_buttons
     weight: 24
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_r24:
+    type: options_buttons
     weight: 27
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_r25:
+    type: options_buttons
     weight: 30
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_r26:
+    type: options_buttons
     weight: 33
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_r27:
+    type: options_buttons
     weight: 36
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_r28:
+    type: options_buttons
     weight: 39
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_r29:
+    type: options_buttons
     weight: 42
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_r30:
+    type: options_buttons
     weight: 48
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_r30a:
+    type: options_buttons
     weight: 46
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_r30c:
+    type: options_buttons
     weight: 50
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_r30d:
+    type: options_buttons
     weight: 52
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_r30e:
+    type: options_buttons
     weight: 54
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_r31:
+    type: options_buttons
     weight: 57
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_r32:
+    type: options_buttons
     weight: 60
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_r33:
+    type: options_buttons
     weight: 63
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_r34:
+    type: options_buttons
     weight: 66
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
 hidden:
   moderation_state: true

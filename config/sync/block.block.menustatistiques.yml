@@ -18,14 +18,17 @@ plugin: 'system_menu_block:menu-statistiques'
 settings:
   id: 'system_menu_block:menu-statistiques'
   label: Statistiques
-  provider: system
   label_display: visible
+  provider: system
   level: 1
   depth: 0
   expand_all_items: false
 visibility:
   user_role:
     id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
     roles:
       super_admin: super_admin
       administrator: administrator
@@ -33,11 +36,8 @@ visibility:
       conseiller_central: conseiller_central
       chef_unite_migration: chef_unite_migration
       bureau_a_l_etranger: bureau_a_l_etranger
-    negate: false
-    context_mapping:
-      user: '@user.current_user_context:current_user'
   request_path:
     id: request_path
-    pages: /dash-board
     negate: false
     context_mapping: {  }
+    pages: /dash-board

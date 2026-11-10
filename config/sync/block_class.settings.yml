@@ -1,3 +1,4 @@
+langcode: fr
 maxlength_block_class_field: 255
 field_type: multiple_textfields
 default_case: standard
@@ -13,4 +14,3 @@ enable_id_replacement: true
 weight_attributes: null
 weight_class: null
 weight_id: null
-langcode: fr

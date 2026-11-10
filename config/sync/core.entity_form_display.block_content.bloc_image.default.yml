@@ -18,21 +18,21 @@ content:
   body:
     type: text_textarea_with_summary
     weight: 101
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   field_image_de_bg:
+    type: image_image
     weight: 102
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
-    region: content
   info:
     type: string_textfield
     weight: -5
@@ -50,7 +50,7 @@ content:
     third_party_settings: {  }
   translation:
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

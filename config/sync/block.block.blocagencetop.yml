@@ -22,16 +22,16 @@ plugin: 'block_content:7a1844b0-95a2-4932-8209-9f5ad57c8c03'
 settings:
   id: 'block_content:7a1844b0-95a2-4932-8209-9f5ad57c8c03'
   label: 'Bloc agence TOP'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   language:
     id: language
-    langcodes:
-      fr: fr
     negate: false
     context_mapping:
       language: '@language.current_language_context:language_interface'
+    langcodes:
+      fr: fr

@@ -22,14 +22,14 @@ plugin: 'block_content:aae432a4-081d-4b5c-b313-64d5153699a5'
 settings:
   id: 'block_content:aae432a4-081d-4b5c-b313-64d5153699a5'
   label: 'Notre réseau'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
     context_mapping: {  }
+    pages: '<front>'

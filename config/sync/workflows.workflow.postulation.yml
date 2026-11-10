@@ -10,35 +10,35 @@ type: content_moderation
 type_settings:
   states:
     archived:
-      published: false
-      default_revision: false
       label: Archived
       weight: 2
+      published: false
+      default_revision: false
     draft:
       label: Draft
-      published: false
-      default_revision: false
       weight: -3
-    pending:
       published: false
       default_revision: false
+    pending:
       label: Pending
       weight: -2
-    preselect_referent:
       published: false
       default_revision: false
+    preselect_referent:
       label: PreselectReferent
       weight: -1
-    preselected:
       published: false
       default_revision: false
+    preselected:
       label: Preselected
       weight: 0
+      published: false
+      default_revision: false
     published:
-      published: true
-      default_revision: true
       label: Accepted
       weight: 1
+      published: true
+      default_revision: true
   transitions:
     archive:
       label: Archive
@@ -53,13 +53,13 @@ type_settings:
       weight: 1
     create_new_draft:
       label: 'Create New Draft'
-      to: draft
-      weight: -3
       from:
         - draft
         - pending
         - preselected
         - published
+      to: draft
+      weight: -3
     pending:
       label: Pending
       from:
@@ -90,13 +90,13 @@ type_settings:
       weight: 2
     publish:
       label: Publish
-      to: published
-      weight: -1
       from:
         - draft
         - pending
         - preselect_referent
         - preselected
         - published
+      to: published
+      weight: -1
   entity_types: {  }
   default_moderation_state: draft

@@ -20,11 +20,11 @@ plugin: 'quicktabs_block:a_la_une'
 settings:
   id: 'quicktabs_block:a_la_une'
   label: 'QuickTabs - A la une'
-  provider: quicktabs
   label_display: '0'
+  provider: quicktabs
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
     context_mapping: {  }
+    pages: '<front>'

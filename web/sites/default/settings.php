@@ -89,7 +89,7 @@
  * @endcode
  */
 $databases = [];
- ini_set('memory_limit', '2048M');
+ini_set('memory_limit', '2048M');
 /**
  * Customizing database settings.
  *
@@ -356,12 +356,12 @@ $settings['update_free_access'] = FALSE;
  * Be aware, however, that it is likely that this would allow IP
  * address spoofing unless more advanced precautions are taken.
  */
- $settings['reverse_proxy'] = TRUE;
+$settings['reverse_proxy'] = TRUE;
 
- #$settings['update_free_access'] = TRUE;
- #$config['system.logging']['error_level']='verbose';
- #$conf['advagg_resource_hints_preload_max_size'] = 1024;
- $config['file.settings']['make_unused_managed_files_temporary'] = TRUE;
+#$settings['update_free_access'] = TRUE;
+#$config['system.logging']['error_level']='verbose';
+#$conf['advagg_resource_hints_preload_max_size'] = 1024;
+$config['file.settings']['make_unused_managed_files_temporary'] = TRUE;
 
 /**
  * Specify every reverse proxy IP address in your environment.
@@ -369,7 +369,7 @@ $settings['update_free_access'] = FALSE;
  */
 # $settings['reverse_proxy_addresses'] = ['a.b.c.d', ...];
 
- $settings['reverse_proxy_addresses'] = ['172.28.20.251'];
+$settings['reverse_proxy_addresses'] = ['172.28.20.251'];
 
 /**
  * Set this value if your proxy server sends the client IP in a header
@@ -775,9 +775,9 @@ $settings['entity_update_batch_size'] = 50;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
-$config_directories['sync'] = '../config/sync';
+$settings['config_sync_directory'] = '../config/sync';
 
-$databases['default']['default'] = array (
+$databases['default']['default'] = array(
   'database' => 'aneti_fev020520',
   'username' => 'root',
   'password' => 'Aneti2018**#',
@@ -793,4 +793,3 @@ $databases['default']['default'] = array (
 if (file_exists($app_root . '/' . $site_path . '/settings.ddev.php')) {
   include $app_root . '/' . $site_path . '/settings.ddev.php';
 }
-

@@ -18,21 +18,21 @@ plugin: 'system_menu_block:menu-candidat'
 settings:
   id: 'system_menu_block:menu-candidat'
   label: 'Menu Candidat'
-  provider: system
   label_display: visible
+  provider: system
   level: 1
   depth: 0
   expand_all_items: false
 visibility:
   user_role:
     id: user_role
-    roles:
-      candidat: candidat
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
+    roles:
+      candidat: candidat
   request_path:
     id: request_path
-    pages: '*'
     negate: false
     context_mapping: {  }
+    pages: '*'

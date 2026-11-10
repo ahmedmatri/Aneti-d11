@@ -4,8 +4,9 @@ status: true
 dependencies: {  }
 id: candidat
 label: candidat
-registration: true
+display_label: null
 multiple: false
+registration: true
 roles:
   candidat: candidat
   authenticated: '0'
@@ -21,6 +22,5 @@ roles:
   webmaster: '0'
   pdg: '0'
   chef_de_bureau: '0'
-weight: 0
-use_revisions: true
-description: ''
+allow_revisions: true
+new_revision: true

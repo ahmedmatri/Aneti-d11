@@ -18,21 +18,21 @@ plugin: 'system_menu_block:menu-entreprise'
 settings:
   id: 'system_menu_block:menu-entreprise'
   label: 'Menu Entreprise'
-  provider: system
   label_display: visible
+  provider: system
   level: 1
   depth: 0
   expand_all_items: false
 visibility:
   request_path:
     id: request_path
-    pages: '*'
     negate: false
     context_mapping: {  }
+    pages: '*'
   user_role:
     id: user_role
-    roles:
-      entreprise: entreprise
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
+    roles:
+      entreprise: entreprise

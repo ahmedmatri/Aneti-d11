@@ -12,30 +12,30 @@ type: content_moderation
 type_settings:
   states:
     archived:
-      published: false
-      default_revision: false
       label: Archived
       weight: 2
-    blacklisted:
       published: false
       default_revision: false
+    blacklisted:
       label: Blacklisted
       weight: 1
+      published: false
+      default_revision: false
     draft:
       label: Draft
-      published: false
-      default_revision: false
       weight: -2
-    need_review:
       published: false
       default_revision: false
+    need_review:
       label: 'Need review'
       weight: -1
+      published: false
+      default_revision: false
     published:
       label: Published
+      weight: 0
       published: true
       default_revision: true
-      weight: 0
   transitions:
     archived:
       label: Archived
@@ -57,12 +57,12 @@ type_settings:
       weight: 2
     create_new_draft:
       label: 'Create New Draft'
-      to: draft
-      weight: 0
       from:
         - draft
         - need_review
         - published
+      to: draft
+      weight: 0
     need_review:
       label: 'Need review'
       from:
@@ -73,12 +73,12 @@ type_settings:
       weight: 4
     publish:
       label: Publish
-      to: published
-      weight: 1
       from:
         - draft
         - need_review
         - published
+      to: published
+      weight: 1
   entity_types:
     profile:
       - entreprise

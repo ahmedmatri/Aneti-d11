@@ -14,18 +14,21 @@ bundle: entreprise_cliente
 mode: default
 content:
   field_logo_partenaire:
-    weight: 101
+    type: image
     label: above
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
-    type: image
+    weight: 101
     region: content
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
 hidden:
   langcode: true
+  search_api_excerpt: true

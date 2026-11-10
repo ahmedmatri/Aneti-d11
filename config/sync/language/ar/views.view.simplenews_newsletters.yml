@@ -1,4 +1,3 @@
-label: النشرات
 display:
   default:
     display_title: الرئيسي
@@ -32,6 +31,5 @@ display:
         simplenews_issue_target_id_1:
           expose:
             label: النشرة
-      title: النشرات
   page_1:
     display_title: الصفحة

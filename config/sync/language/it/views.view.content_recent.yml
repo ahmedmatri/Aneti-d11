@@ -2,8 +2,12 @@ label: 'Contenuti recenti'
 description: 'Contenuti recenti.'
 display:
   default:
-    display_title: Principale
+    display_title: Predefinito
     display_options:
+      title: 'Contenuti recenti'
+      fields:
+        changed:
+          separator: ', '
       exposed_form:
         options:
           submit_button: Applica
@@ -11,10 +15,6 @@ display:
           exposed_sorts_label: 'Ordina per'
           sort_asc_label: Asc
           sort_desc_label: Disc
-      fields:
-        changed:
-          separator: ', '
-      title: 'Contenuti recenti'
       empty:
         area_text_custom:
           content: 'Nessun contenuto disponibile.'

@@ -1,5 +1,9 @@
-label: المشتركين
 display:
+  page_1:
+    display_options:
+      menu:
+        title: المشتركين
+    display_title: الصفحة
   default:
     display_title: الرئيسي
     display_options:
@@ -24,8 +28,8 @@ display:
           label: 'البريد الإلكتروني'
         user_name:
           label: 'اسم المستخدم'
-        subscriptions:
-          label: الاشتراكات
+        subscriptions_target_id:
+          label: Subscriptions
         status:
           label: نشط
         created:
@@ -46,8 +50,4 @@ display:
           expose:
             label: الحالة
       title: المشتركين
-  page_1:
-    display_title: الصفحة
-    display_options:
-      menu:
-        title: المشتركين
+label: المشتركين

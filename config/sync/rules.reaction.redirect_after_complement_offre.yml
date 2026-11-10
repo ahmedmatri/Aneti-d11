@@ -20,6 +20,8 @@ expression:
       -
         id: rules_condition
         uuid: c95bf324-a9ca-4b31-a9e3-5e6919b603e5
+        condition_id: rules_node_is_of_type
+        negate: false
         context_values:
           types:
             - complement_postulation
@@ -29,11 +31,11 @@ expression:
           types:
             rules_tokens: {  }
         provides_mapping: {  }
-        condition_id: rules_node_is_of_type
-        negate: false
       -
         id: rules_condition
         uuid: df484e32-8d1b-480a-9a2c-8de355edc2cd
+        condition_id: custom_rules_user_has_role
+        negate: false
         context_values:
           roles: candidat
         context_mapping:
@@ -42,8 +44,6 @@ expression:
           roles:
             rules_tokens: {  }
         provides_mapping: {  }
-        condition_id: custom_rules_user_has_role
-        negate: false
   actions:
     id: rules_action_set
     uuid: 61e07e6f-171c-4f11-938b-16abe447cd16
@@ -51,6 +51,7 @@ expression:
       -
         id: rules_action
         uuid: 8687415c-7e34-4a5d-adaa-be8cfe88e14c
+        action_id: rules_system_message
         context_values:
           message: 'You have applyed successfully to the offer'
           type: status
@@ -64,10 +65,10 @@ expression:
           repeat:
             rules_tokens: {  }
         provides_mapping: {  }
-        action_id: rules_system_message
       -
         id: rules_action
         uuid: 61869273-b610-4f6f-8f2a-6df7bbdbd078
+        action_id: rules_page_redirect
         context_values:
           url: /candidat/postulations
         context_mapping: {  }
@@ -75,4 +76,3 @@ expression:
           url:
             rules_tokens: {  }
         provides_mapping: {  }
-        action_id: rules_page_redirect

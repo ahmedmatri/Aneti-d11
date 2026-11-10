@@ -7,16 +7,14 @@ _core:
 id: default_group
 label: Default
 settings:
+  images_loaded: true
   cell_selector: .gallery-cell
   initial_index: 2
-  cell_align: center
-  prev_next_buttons: true
-  page_dots: false
   accessibility: false
   set_gallery_size: true
   resize: true
+  cell_align: center
   contain: true
-  images_loaded: true
   percent_position: true
   right_to_left: true
   draggable: true
@@ -24,11 +22,13 @@ settings:
   lazy_load: 0
   auto_play: 3000
   wrap_around: null
-  group_cells: false
+  group_cells: 0
   adaptive_height: false
   watch_css: null
   as_nav_for: null
   drag_threshold: 3
-  free_scroll_friction: 0.075
-  friction: 0.28
   selected_attraction: 0.025
+  friction: 0.28
+  free_scroll_friction: 0.075
+  prev_next_buttons: true
+  page_dots: false

@@ -64,442 +64,442 @@ bundle: field_checklist_avant_depart
 mode: default
 content:
   field_q10_label:
-    weight: 10
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 10
     region: content
   field_q11_label:
-    weight: 11
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 11
     region: content
   field_q11a_label:
-    weight: 29
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 29
     region: content
   field_q11b_label:
-    weight: 30
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 30
     region: content
   field_q11c_label:
-    weight: 31
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 31
     region: content
   field_q11d_label:
-    weight: 32
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 32
     region: content
   field_q11e_label:
-    weight: 33
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 33
     region: content
   field_q11f_label:
-    weight: 34
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 34
     region: content
   field_q12_label:
-    weight: 12
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 12
     region: content
   field_q13_label:
-    weight: 13
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 13
     region: content
   field_q14_label:
-    weight: 14
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 14
     region: content
   field_q15_label:
-    weight: 15
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 15
     region: content
   field_q16_label:
-    weight: 16
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 16
     region: content
   field_q17_label:
-    weight: 17
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 17
     region: content
   field_q17a_label:
-    weight: 35
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 35
     region: content
   field_q17b_label:
-    weight: 36
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 36
     region: content
   field_q17c_label:
-    weight: 37
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 37
     region: content
   field_q18_label:
-    weight: 28
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 28
     region: content
   field_q1_label:
-    weight: 1
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 1
     region: content
   field_q2_label:
-    weight: 2
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 2
     region: content
   field_q3_label:
-    weight: 3
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 3
     region: content
   field_q4_label:
-    weight: 4
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 4
     region: content
   field_q5_label:
-    weight: 5
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 5
     region: content
   field_q6_label:
-    weight: 6
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 6
     region: content
   field_q7_label:
-    weight: 7
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 7
     region: content
   field_q8_label:
-    weight: 8
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 8
     region: content
   field_q9_label:
-    weight: 9
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 9
     region: content
   field_r1:
-    weight: 18
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 18
     region: content
   field_r10:
-    weight: 27
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 27
     region: content
   field_r11a:
-    weight: 38
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 38
     region: content
   field_r11b:
-    weight: 39
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 39
     region: content
   field_r11c:
-    weight: 40
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 40
     region: content
   field_r11d:
-    weight: 41
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 41
     region: content
   field_r11e:
-    weight: 42
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 42
     region: content
   field_r11f:
-    weight: 43
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 43
     region: content
   field_r12:
-    weight: 44
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 44
     region: content
   field_r13:
-    weight: 45
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 45
     region: content
   field_r14:
-    weight: 46
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 46
     region: content
   field_r15:
-    weight: 47
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 47
     region: content
   field_r16:
-    weight: 48
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 48
     region: content
   field_r17a:
-    weight: 49
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 49
     region: content
   field_r17b:
-    weight: 50
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 50
     region: content
   field_r17c:
-    weight: 51
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 51
     region: content
   field_r18:
-    weight: 52
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 52
     region: content
   field_r2:
-    weight: 19
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 19
     region: content
   field_r3:
-    weight: 20
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 20
     region: content
   field_r4:
-    weight: 21
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 21
     region: content
   field_r5:
-    weight: 22
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 22
     region: content
   field_r6:
-    weight: 23
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 23
     region: content
   field_r7:
-    weight: 24
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 24
     region: content
   field_r8:
-    weight: 25
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 25
     region: content
   field_r9:
-    weight: 26
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 26
     region: content
 hidden: {  }

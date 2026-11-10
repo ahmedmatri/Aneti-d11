@@ -20,6 +20,8 @@ expression:
       -
         id: rules_condition
         uuid: ee2af36b-bdfd-44eb-88ab-0eb7ec63760e
+        condition_id: rules_entity_has_field
+        negate: false
         context_values:
           field: field_entreprise_id
         context_mapping:
@@ -28,11 +30,11 @@ expression:
           field:
             rules_tokens: {  }
         provides_mapping: {  }
-        condition_id: rules_entity_has_field
-        negate: false
       -
         id: rules_condition
         uuid: c5b76f9e-7303-4ce1-9e74-058c68ce9c36
+        condition_id: custom_rules_user_has_role
+        negate: false
         context_values:
           roles: entreprise
         context_mapping:
@@ -41,11 +43,11 @@ expression:
           roles:
             rules_tokens: {  }
         provides_mapping: {  }
-        condition_id: custom_rules_user_has_role
-        negate: false
       -
         id: rules_condition
         uuid: 5f9258ca-1486-4de5-bc6b-18ce4c8eac1c
+        condition_id: rules_node_is_of_type
+        negate: false
         context_values:
           types:
             - offre
@@ -55,8 +57,6 @@ expression:
           types:
             rules_tokens: {  }
         provides_mapping: {  }
-        condition_id: rules_node_is_of_type
-        negate: false
   actions:
     id: rules_action_set
     uuid: cedfa3f1-cd85-4e6d-bf34-649851e937e2
@@ -64,6 +64,7 @@ expression:
       -
         id: rules_action
         uuid: f7773315-2466-4263-87e6-7a119c5d5c44
+        action_id: rules_variable_add
         context_values:
           type: string
           value: 'node:field_entreprise_id:uid'
@@ -74,10 +75,10 @@ expression:
           value:
             rules_tokens: {  }
         provides_mapping: {  }
-        action_id: rules_variable_add
       -
         id: rules_action
         uuid: 9f6b17a5-a7ff-483c-be54-ffe376c23bf8
+        action_id: rules_data_set
         context_values:
           data: 'node:field_entreprise_id:uid'
           value: '@user.current_user_context:current_user.uid'
@@ -88,4 +89,3 @@ expression:
           value:
             rules_tokens: {  }
         provides_mapping: {  }
-        action_id: rules_data_set

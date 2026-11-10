@@ -21,37 +21,39 @@ bundle: slideshow
 mode: default
 content:
   field_block:
-    weight: 104
+    type: block_field
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: block_field
+    weight: 104
     region: content
   field_description_slider:
-    weight: 101
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 101
     region: content
   field_description_slideshow:
-    weight: 105
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 105
     region: content
   field_image_slider:
-    weight: 103
+    type: image
     label: above
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
-    type: image
+    weight: 103
     region: content
   field_lien_slider:
-    weight: 102
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -60,12 +62,13 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 102
     region: content
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
 hidden:
   langcode: true
+  search_api_excerpt: true

@@ -1,7 +1,16 @@
 display:
   default:
-    display_title: الرئيسي
+    display_title: الافتراضي
     display_options:
+      fields:
+        changed:
+          label: التحديث
+        operations:
+          label: عمليات
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- الكل -'
       exposed_form:
         options:
           submit_button: تطبيق
@@ -9,14 +18,5 @@ display:
           exposed_sorts_label: 'الترتيب حسب'
           sort_asc_label: تصاعدي
           sort_desc_label: تنازلي
-      pager:
-        options:
-          expose:
-            items_per_page_options_all_label: '- الكل -'
-      fields:
-        changed:
-          label: التحديث
-        operations:
-          label: عمليات
   page_1:
     display_title: الصفحة

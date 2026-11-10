@@ -17,22 +17,22 @@ plugin: apply_block
 settings:
   id: apply_block
   label: 'Apply block'
-  provider: aneti_enhance
   label_display: '0'
+  provider: aneti_enhance
   context_mapping:
     node: '@node.node_route_context:node'
 visibility:
-  node_type:
-    id: node_type
-    bundles:
-      offre: offre
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
   user_role:
     id: user_role
-    roles:
-      candidat: candidat
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
+    roles:
+      candidat: candidat
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      offre: offre

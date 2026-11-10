@@ -1,0 +1,5 @@
+_core:
+  default_config_hash: UBYL0MP6KJ4KX-C6L0MwqZF8lb74mSkLQJ_kO9saf0c
+langcode: fr
+maximum_lifetime: 2592000
+include_same_host: true

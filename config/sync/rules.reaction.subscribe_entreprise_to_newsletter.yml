@@ -20,6 +20,8 @@ expression:
       -
         id: rules_condition
         uuid: f4504fb8-7e42-4e55-a091-9183830d66fc
+        condition_id: custom_rules_user_has_role
+        negate: false
         context_values:
           roles: entreprise
         context_mapping:
@@ -28,8 +30,6 @@ expression:
           roles:
             rules_tokens: {  }
         provides_mapping: {  }
-        condition_id: custom_rules_user_has_role
-        negate: false
   actions:
     id: rules_action_set
     uuid: f06a6f5a-2c45-4078-8a92-c8fa62a1d645
@@ -37,6 +37,7 @@ expression:
       -
         id: rules_action
         uuid: e36c433e-4cb0-4bb1-b993-68a1a366649c
+        action_id: role_user_subscribe_action
         context_values:
           newsletter_id: entreprise
         context_mapping:
@@ -45,4 +46,3 @@ expression:
           newsletter_id:
             rules_tokens: {  }
         provides_mapping: {  }
-        action_id: role_user_subscribe_action

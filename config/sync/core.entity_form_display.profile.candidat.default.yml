@@ -33,89 +33,93 @@ third_party_settings:
         - field_adresse
         - group_right_2
         - group_left_1
+      label: Coordonnées
+      region: content
       parent_name: ''
       weight: 1
       format_type: fieldset
       format_settings:
+        classes: col-md-12
+        id: ''
         description: ''
         required_fields: true
-        id: ''
-        classes: col-md-12
-      label: Coordonnées
-      region: content
     group_right:
       children:
         - field_numero_empreinte
         - field_prenom
         - field_date_de_naissance
+      label: right
+      region: content
       parent_name: group_identification
       weight: 2
       format_type: html_element
       format_settings:
+        classes: 'col-md-6 right-form'
+        id: ''
         element: div
         show_label: false
         label_element: h3
         label_element_classes: ''
-        required_fields: true
         attributes: ''
         effect: none
         speed: fast
-        id: ''
-        classes: 'col-md-6 right-form'
-      label: right
-      region: content
+        required_fields: true
     group_left:
       children:
         - field_cin
         - field_nom
         - field_genre
+      label: left
+      region: content
       parent_name: group_identification
       weight: 3
       format_type: html_element
       format_settings:
+        classes: 'col-md-6 left-form'
+        id: ''
         element: div
         show_label: false
         label_element: h3
         label_element_classes: ''
-        required_fields: true
         attributes: ''
         effect: none
         speed: fast
-        id: ''
-        classes: 'col-md-6 left-form'
-      label: left
-      region: content
+        required_fields: true
     group_identification:
       children:
         - group_right
         - group_left
+      label: Identification
+      region: content
       parent_name: ''
       weight: 0
       format_type: fieldset
       format_settings:
-        id: ''
         classes: col-md-12
+        id: ''
+        description: ''
+        required_fields: true
         element: div
         show_label: false
         label_element: h3
         label_element_classes: ''
-        required_fields: true
         attributes: ''
         effect: none
         speed: fast
-        description: ''
-      label: Identification
-      region: content
     group_left_1:
       children:
         - field_code_postal
         - field_ville
         - field_ville_tunisie
         - field_telephone
+      label: left
+      region: content
       parent_name: group_coordonnees
       weight: 24
       format_type: html_element
       format_settings:
+        classes: 'col-md-6 left-form'
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -123,163 +127,159 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-        id: ''
-        classes: 'col-md-6 left-form'
         required_fields: false
-      label: left
-      region: content
     group_right_2:
       children:
         - field_pays
+      label: right
+      region: content
       parent_name: group_coordonnees
       weight: 22
       format_type: html_element
       format_settings:
-        id: ''
         classes: 'col-md-6 right-form'
+        id: ''
         element: div
         show_label: false
         label_element: h3
         label_element_classes: ''
-        required_fields: true
         attributes: ''
         effect: none
         speed: fast
-      label: right
-      region: content
+        required_fields: true
     group_information_ar:
       children:
         - field_nom_ar
         - field_prenom_ar
         - field_adresse_ar
+      label: 'information ar'
+      region: content
       parent_name: ''
       weight: 2
       format_type: html_element
       format_settings:
-        id: ''
         classes: col-md-12
+        id: ''
         element: div
         show_label: false
         label_element: h3
         label_element_classes: ''
-        required_fields: true
         attributes: ''
         effect: none
         speed: fast
-      label: 'information ar'
-      region: content
+        required_fields: true
 id: profile.candidat.default
 targetEntityType: profile
 bundle: candidat
 mode: default
 content:
   field_adresse:
+    type: string_textarea
     weight: 21
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_adresse_ar:
+    type: string_textarea
     weight: 5
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_cin:
+    type: string_textfield
     weight: 21
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_code_postal:
-    weight: 22
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
     type: number
+    weight: 22
     region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   field_date_de_naissance:
-    weight: 24
-    settings: {  }
-    third_party_settings: {  }
     type: datetime_default
-    region: content
-  field_genre:
-    weight: 23
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_nom:
-    weight: 22
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_nom_ar:
-    weight: 3
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_numero_empreinte:
-    weight: 22
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_pays:
     weight: 24
+    region: content
     settings: {  }
     third_party_settings: {  }
+  field_genre:
     type: options_select
-    region: content
-  field_prenom:
     weight: 23
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_nom:
+    type: string_textfield
+    weight: 22
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_nom_ar:
     type: string_textfield
+    weight: 3
     region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_numero_empreinte:
+    type: string_textfield
+    weight: 22
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_pays:
+    type: options_select
+    weight: 24
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_prenom:
+    type: string_textfield
+    weight: 23
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_prenom_ar:
+    type: string_textfield
     weight: 4
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_referant:
     type: entity_reference_autocomplete
     weight: 3
     region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
   field_telephone:
+    type: string_textfield
     weight: 26
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_valider:
     type: boolean_checkbox
     weight: 4
@@ -288,19 +288,19 @@ content:
       display_label: true
     third_party_settings: {  }
   field_ville:
+    type: string_textfield
     weight: 24
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_ville_tunisie:
+    type: chosen_select
     weight: 25
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   moderation_state:
     type: moderation_state_default
     weight: 5

@@ -2,8 +2,7 @@ uuid: a7fa466b-97d5-4f9e-ba0b-73c6934eaa18
 langcode: fr
 status: true
 dependencies:
-  config:
-    - field.field.simplenews_subscriber.simplenews_subscriber.subscriptions
+  config: {  }
   module:
     - simplenews
 _core:
@@ -16,15 +15,15 @@ content:
   mail:
     type: email_default
     weight: 5
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    region: content
   subscriptions:
     type: simplenews_subscription_select
     weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   uid: true

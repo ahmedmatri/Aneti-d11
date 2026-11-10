@@ -1,3 +1,6 @@
+_core:
+  default_config_hash: cy-hJPYCnfCsuUZA7VDoAwssKhRJCa8N88iJTaWiims
+langcode: fr
 hash_expiration: 86400
 newsletter:
   format: plain
@@ -8,9 +11,13 @@ newsletter:
 subscriber:
   sync_fields: true
 subscription:
+  tidy_unconfirmed: 0
   use_combined: multiple
   confirm_subscribe_subject: 'Confirmation for [simplenews-newsletter:name] from [site:name]'
-  confirm_subscribe_unsubscribed: "We have received a request to subscribe [simplenews-subscriber:mail] to the [simplenews-newsletter:name] newsletter on [site:name] website at [site:url]. To confirm please use the link below. \n\n [simplenews-subscriber:subscribe-url]"
+  confirm_subscribe_unsubscribed: |-
+    We have received a request to subscribe [simplenews-subscriber:mail] to the [simplenews-newsletter:name] newsletter on [site:name] website at [site:url]. To confirm please use the link below. 
+
+     [simplenews-subscriber:subscribe-url]
   confirm_subscribe_subscribed: 'We have received a request to subscribe [simplenews-subscriber:mail] to the [simplenews-newsletter:name]  newsletter on [site:name] website at [site:url]. However, this email is already subscribed to this newsletter. If you intended to unsubscribe please visit our site: [site:url]'
   confirm_unsubscribe_subscribed: "We have received a request to remove the [simplenews-subscriber:mail] from the [simplenews-newsletter:name] mailing list on [site:name] website at [site:url]. To confirm please use the link below.\r\n\r\n[simplenews-subscriber:unsubscribe-url]"
   confirm_unsubscribe_unsubscribed: 'We have received a request to remove the [simplenews-subscriber:mail] from the [simplenews-newsletter:name] mailing list on [site:name] website at [site:url]. However, this email is not subscribed to this mailing list. If you intended to subscribe please visit our site at [site:url]'
@@ -29,6 +36,3 @@ mail:
   spool_progress_expiration: 3600
   spool_expire: 0
   debug: false
-_core:
-  default_config_hash: cy-hJPYCnfCsuUZA7VDoAwssKhRJCa8N88iJTaWiims
-langcode: fr

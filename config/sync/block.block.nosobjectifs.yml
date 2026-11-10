@@ -22,14 +22,14 @@ plugin: 'block_content:57ed7c75-9298-4a49-ad07-977e69be1279'
 settings:
   id: 'block_content:57ed7c75-9298-4a49-ad07-977e69be1279'
   label: 'Nos objectifs'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
     context_mapping: {  }
+    pages: '<front>'

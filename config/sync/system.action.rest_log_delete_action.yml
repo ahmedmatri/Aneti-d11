@@ -1,0 +1,13 @@
+uuid: 730b5c88-9a13-4ce4-8ab8-116aea607285
+langcode: fr
+status: true
+dependencies:
+  module:
+    - rest_log
+_core:
+  default_config_hash: fZC9LCPV2zerGx8C1-TpBRXbxgEeXZqH7vngjLWOWcQ
+id: rest_log_delete_action
+label: 'Delete selected rest logs'
+type: rest_log
+plugin: 'entity:delete_action:rest_log'
+configuration: {  }

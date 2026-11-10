@@ -13,10 +13,10 @@ bundle: partenaire
 mode: default
 content:
   field_type_de_partenariat:
-    weight: 0
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 0
     region: content
 hidden: {  }

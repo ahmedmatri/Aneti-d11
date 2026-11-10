@@ -1,7 +1,10 @@
 uuid: 15573219-9476-4d89-9b0b-98d43307db26
 langcode: fr
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - field_permissions
+    - file_entity
 id: pdg
 label: pdg
 weight: 14

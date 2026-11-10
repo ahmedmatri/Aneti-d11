@@ -22,21 +22,21 @@ plugin: 'system_menu_block:menu-referent'
 settings:
   id: 'system_menu_block:menu-referent'
   label: 'Menu référent'
-  provider: system
   label_display: visible
+  provider: system
   level: 1
   depth: 0
   expand_all_items: false
 visibility:
   user_role:
     id: user_role
-    roles:
-      referent: referent
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
+    roles:
+      referent: referent
   request_path:
     id: request_path
-    pages: "/administration/offre/postulation/*\r\n/webmaster/entreprise/postulations/*\r\n/referent/validation-candidat/*\r\n/referent/validation-cv/*\r\n/referent/validation-postulation/*\r\n/referent/validation-candidat\r\n/referent/validation-cv\r\n/referent/validation-postulation\r\n/administration/offre/postulation-mail/*\r\n/webmaster/offers\r\n/stats-upi-postulations-an\r\n/recherche-cv"
     negate: true
     context_mapping: {  }
+    pages: "/administration/offre/postulation/*\r\n/webmaster/entreprise/postulations/*\r\n/referent/validation-candidat/*\r\n/referent/validation-cv/*\r\n/referent/validation-postulation/*\r\n/referent/validation-candidat\r\n/referent/validation-cv\r\n/referent/validation-postulation\r\n/administration/offre/postulation-mail/*\r\n/webmaster/offers\r\n/stats-upi-postulations-an\r\n/recherche-cv"

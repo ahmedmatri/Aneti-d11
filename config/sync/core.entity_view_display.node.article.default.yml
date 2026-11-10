@@ -18,17 +18,17 @@ mode: default
 content:
   comment:
     type: comment_default
-    weight: 110
-    region: content
     label: above
     settings:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-  links:
-    weight: 100
+    weight: 110
     region: content
+  links:
     settings: {  }
     third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
   langcode: true

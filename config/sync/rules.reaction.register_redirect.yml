@@ -24,6 +24,7 @@ expression:
       -
         id: rules_action
         uuid: 112ea45d-7198-473f-bfa9-12688233bec3
+        action_id: rules_page_redirect
         context_values:
           url: /user/login
         context_mapping: {  }
@@ -31,4 +32,3 @@ expression:
           url:
             rules_tokens: {  }
         provides_mapping: {  }
-        action_id: rules_page_redirect

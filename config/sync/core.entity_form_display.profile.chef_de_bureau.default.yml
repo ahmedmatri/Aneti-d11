@@ -17,39 +17,39 @@ bundle: chef_de_bureau
 mode: default
 content:
   field_bureau_cb:
+    type: chosen_select
     weight: 103
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_nom_cb:
+    type: string_textfield
     weight: 101
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_prenom_cb:
+    type: string_textfield
     weight: 102
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_telephone_gsm_cb:
+    type: string_textfield
     weight: 104
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   moderation_state:
     type: moderation_state_default
     weight: 100
-    settings: {  }
     region: content
+    settings: {  }
     third_party_settings: {  }
 hidden: {  }

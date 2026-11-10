@@ -31,62 +31,11 @@ base_table: node_field_data
 base_field: nid
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: none
-        options: {  }
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_comment: ''
-          query_tags: {  }
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: mini
-        options:
-          items_per_page: 10
-          offset: 0
-          id: 0
-          total_pages: null
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
-      style:
-        type: serializer
-      row:
-        type: fields
-        options:
-          inline: {  }
-          separator: ''
-          hide_empty: false
-          default_field_elements: true
       fields:
         title:
           id: title
@@ -95,6 +44,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -150,9 +102,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         nid:
           id: nid
           table: node_field_data
@@ -160,6 +109,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -216,9 +168,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         field_candidat:
           id: field_candidat
           table: node__field_candidat
@@ -226,6 +175,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -281,7 +231,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         uid:
           id: uid
           table: users_field_data
@@ -289,6 +238,9 @@ display:
           relationship: field_candidat
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: uid
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -345,9 +297,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: user
-          entity_field: uid
-          plugin_id: field
         profile_id:
           id: profile_id
           table: profile
@@ -355,6 +304,9 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          entity_type: profile
+          entity_field: profile_id
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -411,9 +363,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: profile
-          entity_field: profile_id
-          plugin_id: field
         field_date_diplome:
           id: field_date_diplome
           table: node__field_date_diplome
@@ -421,6 +370,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -477,7 +427,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_niveau:
           id: field_niveau
           table: node__field_niveau
@@ -485,6 +434,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -539,7 +489,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_diplome:
           id: field_diplome
           table: node__field_diplome
@@ -547,6 +496,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -602,7 +552,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_domaine_specialite:
           id: field_domaine_specialite
           table: node__field_domaine_specialite
@@ -610,6 +559,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -665,7 +615,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         name:
           id: name
           table: taxonomy_term_field_data
@@ -673,6 +622,9 @@ display:
           relationship: field_domaine_specialite
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
           label: ''
           exclude: false
           alter:
@@ -729,9 +681,6 @@ display:
           separator: ', '
           field_api_classes: false
           convert_spaces: false
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
         parent_target_id:
           id: parent_target_id
           table: taxonomy_term__parent
@@ -739,6 +688,9 @@ display:
           relationship: field_domaine_specialite
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: parent
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -794,9 +746,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: taxonomy_term
-          entity_field: parent
-          plugin_id: field
         field_domaine_de_profession:
           id: field_domaine_de_profession
           table: node__field_domaine_de_profession
@@ -804,6 +753,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -859,7 +809,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         name_1:
           id: name_1
           table: taxonomy_term_field_data
@@ -867,6 +816,9 @@ display:
           relationship: field_domaine_de_profession
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
           label: ''
           exclude: false
           alter:
@@ -923,9 +875,6 @@ display:
           separator: ', '
           field_api_classes: false
           convert_spaces: false
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
         parent_target_id_1:
           id: parent_target_id_1
           table: taxonomy_term__parent
@@ -933,6 +882,9 @@ display:
           relationship: field_domaine_de_profession
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: parent
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -988,9 +940,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: taxonomy_term
-          entity_field: parent
-          plugin_id: field
         uid_1:
           id: uid_1
           table: node_field_data
@@ -998,6 +947,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: uid
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -1053,9 +1005,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: uid
-          plugin_id: field
         uid_2:
           id: uid_2
           table: users_field_data
@@ -1063,6 +1012,9 @@ display:
           relationship: uid
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: uid
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -1119,9 +1071,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: user
-          entity_field: uid
-          plugin_id: field
         field_niveau_1:
           id: field_niveau_1
           table: node__field_niveau
@@ -1129,6 +1078,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -1183,7 +1133,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_diplome_1:
           id: field_diplome_1
           table: node__field_diplome
@@ -1191,6 +1140,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -1245,7 +1195,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         tid:
           id: tid
           table: taxonomy_term_field_data
@@ -1253,6 +1202,9 @@ display:
           relationship: field_domaine_specialite
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: tid
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -1309,9 +1261,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: taxonomy_term
-          entity_field: tid
-          plugin_id: field
         parent_target_id_2:
           id: parent_target_id_2
           table: taxonomy_term__parent
@@ -1319,6 +1268,9 @@ display:
           relationship: field_domaine_de_profession
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: parent
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -1373,9 +1325,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: taxonomy_term
-          entity_field: parent
-          plugin_id: field
         tid_1:
           id: tid_1
           table: taxonomy_term_field_data
@@ -1383,6 +1332,9 @@ display:
           relationship: field_domaine_de_profession
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: tid
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -1439,9 +1391,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: taxonomy_term
-          entity_field: tid
-          plugin_id: field
         parent_target_id_3:
           id: parent_target_id_3
           table: taxonomy_term__parent
@@ -1449,6 +1398,9 @@ display:
           relationship: field_domaine_de_profession
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: parent
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -1503,9 +1455,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: taxonomy_term
-          entity_field: parent
-          plugin_id: field
         created:
           id: created
           table: node_field_data
@@ -1513,6 +1462,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -1570,9 +1522,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: created
-          plugin_id: field
         field_profession:
           id: field_profession
           table: node__field_profession
@@ -1580,6 +1529,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -1634,7 +1584,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_profession_1:
           id: field_profession_1
           table: node__field_profession
@@ -1642,6 +1591,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -1697,17 +1647,99 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
+      pager:
+        type: mini
+        options:
+          offset: 0
+          items_per_page: 10
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: none
+        options: {  }
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
+        uid:
+          id: uid
+          table: users_field_data
+          field: uid
+          relationship: field_candidat
+          group_type: group
+          admin_label: ''
+          entity_type: user
+          entity_field: uid
+          plugin_id: standard
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: uid
+          exposed: false
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: standard
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: nid
+          exposed: false
+      arguments: {  }
       filters:
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            curriculum_vitae: curriculum_vitae
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            curriculum_vitae: curriculum_vitae
           expose:
             operator_limit_selection: false
             operator_list: {  }
@@ -1718,6 +1750,9 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          entity_type: profile
+          entity_field: profile_id
+          plugin_id: numeric
           operator: '>'
           value:
             min: ''
@@ -1731,17 +1766,17 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-            placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1754,9 +1789,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: profile
-          entity_field: profile_id
-          plugin_id: numeric
         type_1:
           id: type_1
           table: profile
@@ -1764,6 +1796,9 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          entity_type: profile
+          entity_field: type
+          plugin_id: bundle
           operator: in
           value:
             candidat: candidat
@@ -1775,6 +1810,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -1782,8 +1819,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1796,56 +1831,23 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: profile
-          entity_field: type
-          plugin_id: bundle
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-        uid:
-          id: uid
-          table: users_field_data
-          field: uid
-          relationship: field_candidat
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: user
-          entity_field: uid
-          plugin_id: standard
-        nid:
-          id: nid
-          table: node_field_data
-          field: nid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: node
-          entity_field: nid
-          plugin_id: standard
-      header: {  }
-      footer: {  }
-      empty: {  }
+      style:
+        type: serializer
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
       relationships:
         field_candidat:
           id: field_candidat
@@ -1854,8 +1856,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_candidat : User'
-          required: false
           plugin_id: standard
+          required: false
         profile:
           id: profile
           table: users_field_data
@@ -1863,9 +1865,9 @@ display:
           relationship: field_candidat
           group_type: group
           admin_label: Profil
-          required: false
           entity_type: user
           plugin_id: standard
+          required: false
         field_domaine_de_profession:
           id: field_domaine_de_profession
           table: node__field_domaine_de_profession
@@ -1873,8 +1875,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_domaine_de_profession : Taxonomy term'
-          required: false
           plugin_id: standard
+          required: false
         field_domaine_specialite:
           id: field_domaine_specialite
           table: node__field_domaine_specialite
@@ -1882,8 +1884,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_domaine_specialite : Taxonomy term'
-          required: false
           plugin_id: standard
+          required: false
         uid:
           id: uid
           table: node_field_data
@@ -1891,10 +1893,10 @@ display:
           relationship: none
           group_type: group
           admin_label: auteur
-          required: false
           entity_type: node
           entity_field: uid
           plugin_id: standard
+          required: false
         uid_1:
           id: uid_1
           table: users_field_data
@@ -1902,11 +1904,12 @@ display:
           relationship: uid
           group_type: group
           admin_label: nœuds
-          required: false
           entity_type: user
           entity_field: uid
           plugin_id: standard
-      arguments: {  }
+          required: false
+      header: {  }
+      footer: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -1925,23 +1928,21 @@ display:
         - 'config:field.storage.node.field_niveau'
         - 'config:field.storage.node.field_profession'
   rest_export_1:
-    display_plugin: rest_export
     id: rest_export_1
     display_title: 'REST export'
+    display_plugin: rest_export
     position: 1
     display_options:
-      display_extenders: {  }
-      path: rest/cv
       pager:
         type: mini
         options:
-          items_per_page: 25
           offset: 0
-          id: 0
+          items_per_page: 25
           total_pages: null
+          id: 0
           tags:
-            previous: ‹‹
             next: ››
+            previous: ‹‹
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -1983,6 +1984,8 @@ display:
               alias: title
               raw_output: false
       rendering_language: fr
+      display_extenders: {  }
+      path: rest/cv
     cache_metadata:
       max-age: -1
       contexts:

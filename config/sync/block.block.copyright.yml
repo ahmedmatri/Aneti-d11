@@ -21,8 +21,8 @@ plugin: 'block_content:441a5021-be9a-45ec-bc04-2b8249ed66de'
 settings:
   id: 'block_content:441a5021-be9a-45ec-bc04-2b8249ed66de'
   label: Copyright
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

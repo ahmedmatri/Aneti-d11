@@ -24,110 +24,12 @@ base_table: node_field_data
 base_field: nid
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: perm
-        options:
-          perm: 'access content'
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_comment: ''
-          query_tags: {  }
-      exposed_form:
-        type: bef
-        options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-          input_required: false
-          text_input_required: 'Sélectionnez n''importe quel filtre et cliquez sur Appliquer pour voir les résultats'
-          bef:
-            general:
-              autosubmit: false
-              autosubmit_exclude_textfield: false
-              autosubmit_hide: false
-              input_required: false
-              text_input_required: 'Sélectionnez n''importe quel filtre et cliquez sur Appliquer pour voir les résultats'
-              text_input_required_format: basic_html
-              allow_secondary: false
-              secondary_label: 'Options avancées'
-            filter:
-              roles_target_id:
-                plugin_id: default
-                advanced:
-                  collapsible: false
-                  is_secondary: false
-                  placeholder_text: ''
-                  rewrite:
-                    filter_rewrite_values: ''
-                  sort_options: false
-          text_input_required_format: basic_html
-      pager:
-        type: mini
-        options:
-          items_per_page: 500
-          offset: 0
-          id: 0
-          total_pages: null
-          tags:
-            previous: ‹‹
-            next: ››
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-      style:
-        type: table
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          override: true
-          sticky: false
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            name: name
-            field_ville_tunisie: field_ville_tunisie
-          info:
-            name:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_ville_tunisie:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: '-1'
-          empty_table: false
-      row:
-        type: fields
+      title: 'Stats postulations déposées par candidats par profession'
       fields:
         name:
           id: name
@@ -136,6 +38,9 @@ display:
           relationship: field_ville_tunisie
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
           label: Ville
           exclude: false
           alter:
@@ -192,9 +97,6 @@ display:
           separator: ', '
           field_api_classes: false
           convert_spaces: false
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
         name_1:
           id: name_1
           table: taxonomy_term_field_data
@@ -202,6 +104,9 @@ display:
           relationship: field_ville_tunisie
           group_type: count
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
           label: Nombre
           exclude: false
           alter:
@@ -243,14 +148,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          set_precision: false
-          precision: 0
-          decimal: .
-          separator: ', '
-          format_plural: 0
-          format_plural_string: !!binary MQNAY291bnQ=
-          prefix: ''
-          suffix: ''
           click_sort_column: value
           type: string
           settings: {  }
@@ -262,21 +159,102 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
+          separator: ', '
           field_api_classes: false
           convert_spaces: false
+          set_precision: false
+          precision: 0
+          decimal: .
+          format_plural: 0
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
+      pager:
+        type: mini
+        options:
+          offset: 0
+          items_per_page: 500
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          input_required: false
+          text_input_required: 'Sélectionnez n''importe quel filtre et cliquez sur Appliquer pour voir les résultats'
+          text_input_required_format: basic_html
+          bef:
+            general:
+              autosubmit: false
+              autosubmit_exclude_textfield: false
+              autosubmit_hide: false
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Options avancées'
+              text_input_required: 'Sélectionnez n''importe quel filtre et cliquez sur Appliquer pour voir les résultats'
+              text_input_required_format: basic_html
+            filter:
+              roles_target_id:
+                plugin_id: default
+                advanced:
+                  sort_options: false
+                  placeholder_text: ''
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
+      sorts:
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: field_ville_tunisie
+          group_type: group
+          admin_label: ''
           entity_type: taxonomy_term
           entity_field: name
-          plugin_id: term_name
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: name
+          exposed: false
+      arguments: {  }
       filters:
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            postulation: postulation
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            postulation: postulation
           group: 1
           expose:
             operator_limit_selection: false
@@ -288,6 +266,9 @@ display:
           relationship: field_ville_tunisie
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
           operator: in
           value:
             fr: fr
@@ -299,6 +280,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -306,8 +289,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -320,28 +301,51 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: taxonomy_term
-          entity_field: langcode
-          plugin_id: language
-      sorts:
-        name:
-          id: name
-          table: taxonomy_term_field_data
-          field: name
-          relationship: field_ville_tunisie
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: standard
-      title: 'Stats postulations déposées par candidats par profession'
-      header: {  }
-      footer: {  }
-      empty: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          columns:
+            name: name
+            field_ville_tunisie: field_ville_tunisie
+          default: '-1'
+          info:
+            name:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_ville_tunisie:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: false
+          summary: ''
+          empty_table: false
+          caption: ''
+          description: ''
+      row:
+        type: fields
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
       relationships:
         field_candidats:
           id: field_candidats
@@ -350,8 +354,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_candidats : Utilisateur'
-          required: false
           plugin_id: standard
+          required: false
         profile:
           id: profile
           table: users_field_data
@@ -359,9 +363,9 @@ display:
           relationship: field_candidats
           group_type: group
           admin_label: Profil
-          required: false
           entity_type: user
           plugin_id: standard
+          required: false
         field_ville_tunisie:
           id: field_ville_tunisie
           table: profile__field_ville_tunisie
@@ -369,15 +373,12 @@ display:
           relationship: profile
           group_type: group
           admin_label: 'field_ville_tunisie : Terme de taxonomie'
-          required: true
           plugin_id: standard
-      arguments: {  }
-      display_extenders: {  }
+          required: true
       group_by: true
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
+      header: {  }
+      footer: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -388,9 +389,9 @@ display:
         - user.permissions
       tags: {  }
   page_1:
-    display_plugin: page
     id: page_1
     display_title: Page
+    display_plugin: page
     position: 1
     display_options:
       display_extenders: {  }
@@ -405,21 +406,12 @@ display:
         - user.permissions
       tags: {  }
   page_2:
-    display_plugin: page
     id: page_2
     display_title: 'Page 2'
+    display_plugin: page
     position: 2
     display_options:
-      display_extenders: {  }
-      path: admin/stats/postulations/candidats/diplome
       title: 'Stats postulations déposées par candidats par diplome'
-      defaults:
-        title: false
-        fields: false
-        filters: false
-        filter_groups: false
-        sorts: false
-        relationships: false
       fields:
         name:
           id: name
@@ -428,6 +420,9 @@ display:
           relationship: field_diplome
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
           label: Diplome
           exclude: false
           alter:
@@ -484,9 +479,6 @@ display:
           separator: ', '
           field_api_classes: false
           convert_spaces: false
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
         name_1:
           id: name_1
           table: taxonomy_term_field_data
@@ -494,6 +486,9 @@ display:
           relationship: field_diplome
           group_type: count
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
           label: Nombre
           exclude: false
           alter:
@@ -535,14 +530,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          set_precision: false
-          precision: 0
-          decimal: .
-          separator: ', '
-          format_plural: 0
-          format_plural_string: !!binary MQNAY291bnQ=
-          prefix: ''
-          suffix: ''
           click_sort_column: value
           type: string
           settings: {  }
@@ -554,21 +541,27 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
+          separator: ', '
           field_api_classes: false
           convert_spaces: false
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
+          set_precision: false
+          precision: 0
+          decimal: .
+          format_plural: 0
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
+      sorts: {  }
       filters:
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            postulation: postulation
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            postulation: postulation
           group: 1
           expose:
             operator_limit_selection: false
@@ -580,6 +573,9 @@ display:
           relationship: field_diplome
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: string
           operator: 'not empty'
           value: ''
           group: 1
@@ -590,6 +586,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -597,8 +595,6 @@ display:
             remember_roles:
               authenticated: authenticated
             placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -611,14 +607,17 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: string
       filter_groups:
         operator: AND
         groups:
           1: AND
-      sorts: {  }
+      defaults:
+        title: false
+        relationships: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
       relationships:
         field_candidats:
           id: field_candidats
@@ -627,8 +626,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_candidats : Utilisateur'
-          required: false
           plugin_id: standard
+          required: false
         reverse__node__field_candidat:
           id: reverse__node__field_candidat
           table: users_field_data
@@ -636,9 +635,9 @@ display:
           relationship: field_candidats
           group_type: group
           admin_label: field_candidat
-          required: false
           entity_type: user
           plugin_id: entity_reverse
+          required: false
         field_diplome:
           id: field_diplome
           table: node__field_diplome
@@ -646,8 +645,10 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: 'field_diplome : Terme de taxonomie'
-          required: false
           plugin_id: standard
+          required: false
+      display_extenders: {  }
+      path: admin/stats/postulations/candidats/diplome
     cache_metadata:
       max-age: -1
       contexts:
@@ -658,20 +659,12 @@ display:
         - user.permissions
       tags: {  }
   page_3:
-    display_plugin: page
     id: page_3
     display_title: 'Page 3'
+    display_plugin: page
     position: 3
     display_options:
-      display_extenders: {  }
       title: 'Stats postulations déposées par candidats par genre'
-      defaults:
-        title: false
-        fields: false
-        filters: false
-        filter_groups: false
-        sorts: false
-        relationships: false
       fields:
         field_genre:
           id: field_genre
@@ -680,6 +673,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Genre
           exclude: false
           alter:
@@ -734,7 +728,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_genre_1:
           id: field_genre_1
           table: profile__field_genre
@@ -742,6 +735,7 @@ display:
           relationship: profile
           group_type: count
           admin_label: ''
+          plugin_id: field
           label: Genre
           exclude: false
           alter:
@@ -783,14 +777,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          set_precision: false
-          precision: 0
-          decimal: .
-          separator: ', '
-          format_plural: 0
-          format_plural_string: !!binary MQNAY291bnQ=
-          prefix: ''
-          suffix: ''
           click_sort_column: value
           type: list_default
           settings: {  }
@@ -802,18 +788,26 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
+          separator: ', '
           field_api_classes: false
-          plugin_id: field
+          set_precision: false
+          precision: 0
+          decimal: .
+          format_plural: 0
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
+      sorts: {  }
       filters:
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            postulation: postulation
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            postulation: postulation
           group: 1
           expose:
             operator_limit_selection: false
@@ -825,6 +819,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: list_field
           operator: 'not empty'
           value: {  }
           group: 1
@@ -835,6 +830,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -842,8 +839,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -857,12 +852,17 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          plugin_id: list_field
       filter_groups:
         operator: AND
         groups:
           1: AND
-      sorts: {  }
+      defaults:
+        title: false
+        relationships: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
       relationships:
         field_candidats:
           id: field_candidats
@@ -871,8 +871,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_candidats : Utilisateur'
-          required: false
           plugin_id: standard
+          required: false
         profile:
           id: profile
           table: users_field_data
@@ -880,9 +880,10 @@ display:
           relationship: field_candidats
           group_type: group
           admin_label: Profil
-          required: false
           entity_type: user
           plugin_id: standard
+          required: false
+      display_extenders: {  }
       path: admin/stats/postulations/candidats/genre
     cache_metadata:
       max-age: -1
@@ -895,13 +896,11 @@ display:
       tags:
         - 'config:field.storage.profile.field_genre'
   page_4:
-    display_plugin: page
     id: page_4
     display_title: 'Page 4'
+    display_plugin: page
     position: 4
     display_options:
-      display_extenders: {  }
-      path: admin/stats/postulations/candidats/profession
       fields:
         name:
           id: name
@@ -910,6 +909,9 @@ display:
           relationship: field_profession
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
           label: Profession
           exclude: false
           alter:
@@ -966,9 +968,6 @@ display:
           separator: ', '
           field_api_classes: false
           convert_spaces: false
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
         name_1:
           id: name_1
           table: taxonomy_term_field_data
@@ -976,6 +975,9 @@ display:
           relationship: field_profession
           group_type: count
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
           label: Nombre
           exclude: false
           alter:
@@ -1017,14 +1019,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          set_precision: false
-          precision: 0
-          decimal: .
-          separator: ', '
-          format_plural: 0
-          format_plural_string: !!binary MQNAY291bnQ=
-          prefix: ''
-          suffix: ''
           click_sort_column: value
           type: string
           settings: {  }
@@ -1036,27 +1030,42 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
+          separator: ', '
           field_api_classes: false
           convert_spaces: false
+          set_precision: false
+          precision: 0
+          decimal: .
+          format_plural: 0
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
+      sorts:
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: field_profession
+          group_type: group
+          admin_label: ''
           entity_type: taxonomy_term
           entity_field: name
-          plugin_id: term_name
-      defaults:
-        fields: false
-        filters: false
-        filter_groups: false
-        sorts: false
-        relationships: false
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: name
+          exposed: false
       filters:
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            postulation: postulation
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            postulation: postulation
           group: 1
           expose:
             operator_limit_selection: false
@@ -1068,6 +1077,9 @@ display:
           relationship: field_profession
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
           operator: in
           value:
             fr: fr
@@ -1079,6 +1091,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -1086,8 +1100,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1100,28 +1112,16 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: taxonomy_term
-          entity_field: langcode
-          plugin_id: language
       filter_groups:
         operator: AND
         groups:
           1: AND
-      sorts:
-        name:
-          id: name
-          table: taxonomy_term_field_data
-          field: name
-          relationship: field_profession
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: standard
+      defaults:
+        relationships: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
       relationships:
         field_candidats:
           id: field_candidats
@@ -1130,8 +1130,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_candidats : Utilisateur'
-          required: false
           plugin_id: standard
+          required: false
         reverse__node__field_candidat:
           id: reverse__node__field_candidat
           table: users_field_data
@@ -1139,9 +1139,9 @@ display:
           relationship: field_candidats
           group_type: group
           admin_label: field_candidat
-          required: false
           entity_type: user
           plugin_id: entity_reverse
+          required: false
         field_profession:
           id: field_profession
           table: node__field_profession
@@ -1149,8 +1149,10 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: 'field_profession : Terme de taxonomie'
-          required: false
           plugin_id: standard
+          required: false
+      display_extenders: {  }
+      path: admin/stats/postulations/candidats/profession
     cache_metadata:
       max-age: -1
       contexts:
@@ -1161,21 +1163,12 @@ display:
         - user.permissions
       tags: {  }
   page_5:
-    display_plugin: page
     id: page_5
     display_title: 'Page 5'
+    display_plugin: page
     position: 5
     display_options:
-      display_extenders: {  }
-      path: admin/stats/postulations/uip/pays
       title: 'Stats postulations validée par UIP et envoyée par pays'
-      defaults:
-        title: false
-        fields: false
-        filters: false
-        filter_groups: false
-        sorts: false
-        relationships: false
       fields:
         name:
           id: name
@@ -1184,6 +1177,9 @@ display:
           relationship: field_pays
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
           label: Nom
           exclude: false
           alter:
@@ -1240,9 +1236,6 @@ display:
           separator: ', '
           field_api_classes: false
           convert_spaces: false
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
         name_1:
           id: name_1
           table: taxonomy_term_field_data
@@ -1250,6 +1243,9 @@ display:
           relationship: field_pays
           group_type: count
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
           label: Nombre
           exclude: false
           alter:
@@ -1306,19 +1302,32 @@ display:
           separator: ', '
           field_api_classes: false
           convert_spaces: false
+      sorts:
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: field_pays
+          group_type: group
+          admin_label: ''
           entity_type: taxonomy_term
           entity_field: name
-          plugin_id: term_name
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: name
+          exposed: false
       filters:
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            postulation: postulation
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            postulation: postulation
           group: 1
           expose:
             operator_limit_selection: false
@@ -1330,6 +1339,9 @@ display:
           relationship: uid
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: roles
+          plugin_id: user_roles
           operator: or
           value:
             entreprise: entreprise
@@ -1343,6 +1355,8 @@ display:
             description: ''
             use_operator: false
             operator: roles_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: roles_target_id
             required: false
             remember: false
@@ -1363,8 +1377,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: true
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1378,9 +1390,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          entity_type: user
-          entity_field: roles
-          plugin_id: user_roles
         langcode:
           id: langcode
           table: taxonomy_term_field_data
@@ -1388,6 +1397,9 @@ display:
           relationship: field_pays
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
           operator: in
           value:
             fr: fr
@@ -1399,6 +1411,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -1406,8 +1420,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1420,9 +1432,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: taxonomy_term
-          entity_field: langcode
-          plugin_id: language
         field_accepter_value:
           id: field_accepter_value
           table: node__field_accepter
@@ -1430,6 +1439,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: boolean
           operator: '='
           value: '1'
           group: 1
@@ -1440,14 +1450,14 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1460,7 +1470,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: boolean
         field_type_de_partenariat_value:
           id: field_type_de_partenariat_value
           table: profile__field_type_de_partenariat
@@ -1468,6 +1477,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: list_field
           operator: or
           value: {  }
           group: 1
@@ -1478,6 +1488,8 @@ display:
             description: ''
             use_operator: false
             operator: field_type_de_partenariat_value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_type_de_partenariat_value
             required: false
             remember: false
@@ -1498,8 +1510,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1513,26 +1523,17 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          plugin_id: list_field
       filter_groups:
         operator: AND
         groups:
           1: AND
-      sorts:
-        name:
-          id: name
-          table: taxonomy_term_field_data
-          field: name
-          relationship: field_pays
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: standard
+      defaults:
+        title: false
+        relationships: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
       relationships:
         field_intitul_de_l_offre:
           id: field_intitul_de_l_offre
@@ -1541,8 +1542,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_intitul_de_l_offre : Contenu'
-          required: false
           plugin_id: standard
+          required: false
         uid:
           id: uid
           table: node_field_data
@@ -1550,10 +1551,10 @@ display:
           relationship: field_intitul_de_l_offre
           group_type: group
           admin_label: auteur
-          required: false
           entity_type: node
           entity_field: uid
           plugin_id: standard
+          required: false
         profile:
           id: profile
           table: users_field_data
@@ -1561,9 +1562,9 @@ display:
           relationship: uid
           group_type: group
           admin_label: Profil
-          required: false
           entity_type: user
           plugin_id: standard
+          required: false
         field_pays:
           id: field_pays
           table: node__field_pays
@@ -1571,8 +1572,10 @@ display:
           relationship: field_intitul_de_l_offre
           group_type: group
           admin_label: 'field_pays : Terme de taxonomie'
-          required: false
           plugin_id: standard
+          required: false
+      display_extenders: {  }
+      path: admin/stats/postulations/uip/pays
     cache_metadata:
       max-age: -1
       contexts:
@@ -1584,21 +1587,12 @@ display:
         - user.permissions
       tags: {  }
   page_6:
-    display_plugin: page
     id: page_6
     display_title: 'Page 6'
+    display_plugin: page
     position: 5
     display_options:
-      display_extenders: {  }
-      path: admin/stats/postulations/uip/profession
       title: 'Stats postulations validée par UIP et envoyée par profession'
-      defaults:
-        title: false
-        fields: false
-        filters: false
-        filter_groups: false
-        sorts: false
-        relationships: false
       fields:
         name:
           id: name
@@ -1607,6 +1601,9 @@ display:
           relationship: field_profession
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
           label: Profession
           exclude: false
           alter:
@@ -1663,9 +1660,6 @@ display:
           separator: ', '
           field_api_classes: false
           convert_spaces: false
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
         name_1:
           id: name_1
           table: taxonomy_term_field_data
@@ -1673,6 +1667,9 @@ display:
           relationship: field_profession
           group_type: count
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
           label: Nombre
           exclude: false
           alter:
@@ -1714,14 +1711,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          set_precision: false
-          precision: 0
-          decimal: .
-          separator: ', '
-          format_plural: 0
-          format_plural_string: !!binary MQNAY291bnQ=
-          prefix: ''
-          suffix: ''
           click_sort_column: value
           type: string
           settings: {  }
@@ -1733,21 +1722,27 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
+          separator: ', '
           field_api_classes: false
           convert_spaces: false
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
+          set_precision: false
+          precision: 0
+          decimal: .
+          format_plural: 0
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
+      sorts: {  }
       filters:
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            postulation: postulation
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            postulation: postulation
           group: 1
           expose:
             operator_limit_selection: false
@@ -1759,6 +1754,9 @@ display:
           relationship: uid
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: roles
+          plugin_id: user_roles
           operator: or
           value:
             entreprise: entreprise
@@ -1772,6 +1770,8 @@ display:
             description: ''
             use_operator: false
             operator: roles_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: roles_target_id
             required: false
             remember: false
@@ -1792,8 +1792,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: true
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1807,9 +1805,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          entity_type: user
-          entity_field: roles
-          plugin_id: user_roles
         field_accepter_value:
           id: field_accepter_value
           table: node__field_accepter
@@ -1817,6 +1812,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: boolean
           operator: '='
           value: '1'
           group: 1
@@ -1827,14 +1823,14 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1847,7 +1843,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: boolean
         langcode:
           id: langcode
           table: taxonomy_term_field_data
@@ -1855,6 +1850,9 @@ display:
           relationship: field_profession
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
           operator: in
           value:
             fr: fr
@@ -1866,6 +1864,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -1873,8 +1873,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1887,9 +1885,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: taxonomy_term
-          entity_field: langcode
-          plugin_id: language
         field_type_de_partenariat_value:
           id: field_type_de_partenariat_value
           table: profile__field_type_de_partenariat
@@ -1897,6 +1892,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: list_field
           operator: or
           value: {  }
           group: 1
@@ -1907,6 +1903,8 @@ display:
             description: ''
             use_operator: false
             operator: field_type_de_partenariat_value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_type_de_partenariat_value
             required: false
             remember: false
@@ -1927,8 +1925,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1942,12 +1938,17 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          plugin_id: list_field
       filter_groups:
         operator: AND
         groups:
           1: AND
-      sorts: {  }
+      defaults:
+        title: false
+        relationships: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
       relationships:
         field_intitul_de_l_offre:
           id: field_intitul_de_l_offre
@@ -1956,8 +1957,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_intitul_de_l_offre : Contenu'
-          required: false
           plugin_id: standard
+          required: false
         uid:
           id: uid
           table: node_field_data
@@ -1965,10 +1966,10 @@ display:
           relationship: field_intitul_de_l_offre
           group_type: group
           admin_label: auteur
-          required: false
           entity_type: node
           entity_field: uid
           plugin_id: standard
+          required: false
         field_candidats:
           id: field_candidats
           table: node__field_candidats
@@ -1976,8 +1977,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_candidats : Utilisateur'
-          required: false
           plugin_id: standard
+          required: false
         field_cv:
           id: field_cv
           table: node__field_cv
@@ -1985,8 +1986,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_cv : Contenu'
-          required: false
           plugin_id: standard
+          required: false
         field_profession:
           id: field_profession
           table: node__field_profession
@@ -1994,8 +1995,8 @@ display:
           relationship: field_cv
           group_type: group
           admin_label: 'field_profession : Terme de taxonomie'
-          required: false
           plugin_id: standard
+          required: false
         profile:
           id: profile
           table: users_field_data
@@ -2003,10 +2004,12 @@ display:
           relationship: uid
           group_type: group
           admin_label: Profil
-          required: false
           entity_type: user
           plugin_id: standard
+          required: false
       display_description: ''
+      display_extenders: {  }
+      path: admin/stats/postulations/uip/profession
     cache_metadata:
       max-age: -1
       contexts:
@@ -2018,21 +2021,12 @@ display:
         - user.permissions
       tags: {  }
   page_7:
-    display_plugin: page
     id: page_7
     display_title: 'Page 7'
+    display_plugin: page
     position: 5
     display_options:
-      display_extenders: {  }
-      path: admin/stats/postulations/uip/domaine
       title: 'Stats postulations validées par UIP et envoyées par domaine '
-      defaults:
-        title: false
-        fields: false
-        filters: false
-        filter_groups: false
-        sorts: false
-        relationships: false
       fields:
         name:
           id: name
@@ -2041,6 +2035,9 @@ display:
           relationship: field_domaine_et_specialite
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
           label: Domaine
           exclude: false
           alter:
@@ -2097,9 +2094,6 @@ display:
           separator: ', '
           field_api_classes: false
           convert_spaces: false
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
         name_1:
           id: name_1
           table: taxonomy_term_field_data
@@ -2107,6 +2101,9 @@ display:
           relationship: field_domaine_et_specialite
           group_type: count
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
           label: Nombre
           exclude: false
           alter:
@@ -2148,14 +2145,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          set_precision: false
-          precision: 0
-          decimal: .
-          separator: ', '
-          format_plural: 0
-          format_plural_string: !!binary MQNAY291bnQ=
-          prefix: ''
-          suffix: ''
           click_sort_column: value
           type: string
           settings: {  }
@@ -2167,21 +2156,27 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
+          separator: ', '
           field_api_classes: false
           convert_spaces: false
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
+          set_precision: false
+          precision: 0
+          decimal: .
+          format_plural: 0
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
+      sorts: {  }
       filters:
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            postulation: postulation
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            postulation: postulation
           group: 1
           expose:
             operator_limit_selection: false
@@ -2193,6 +2188,9 @@ display:
           relationship: uid
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: roles
+          plugin_id: user_roles
           operator: or
           value:
             entreprise: entreprise
@@ -2206,6 +2204,8 @@ display:
             description: ''
             use_operator: false
             operator: roles_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: roles_target_id
             required: false
             remember: false
@@ -2226,8 +2226,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: true
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -2241,9 +2239,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          entity_type: user
-          entity_field: roles
-          plugin_id: user_roles
         field_accepter_value:
           id: field_accepter_value
           table: node__field_accepter
@@ -2251,6 +2246,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: boolean
           operator: '='
           value: '1'
           group: 1
@@ -2261,14 +2257,14 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -2281,7 +2277,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: boolean
         langcode:
           id: langcode
           table: taxonomy_term_field_data
@@ -2289,6 +2284,9 @@ display:
           relationship: field_domaine_et_specialite
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: langcode
+          plugin_id: language
           operator: in
           value:
             fr: fr
@@ -2300,6 +2298,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -2307,8 +2307,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -2321,9 +2319,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: taxonomy_term
-          entity_field: langcode
-          plugin_id: language
         field_type_de_partenariat_value:
           id: field_type_de_partenariat_value
           table: profile__field_type_de_partenariat
@@ -2331,6 +2326,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: list_field
           operator: or
           value: {  }
           group: 1
@@ -2341,6 +2337,8 @@ display:
             description: ''
             use_operator: false
             operator: field_type_de_partenariat_value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_type_de_partenariat_value
             required: false
             remember: false
@@ -2361,8 +2359,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -2376,12 +2372,17 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          plugin_id: list_field
       filter_groups:
         operator: AND
         groups:
           1: AND
-      sorts: {  }
+      defaults:
+        title: false
+        relationships: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
       relationships:
         field_intitul_de_l_offre:
           id: field_intitul_de_l_offre
@@ -2390,8 +2391,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_intitul_de_l_offre : Contenu'
-          required: false
           plugin_id: standard
+          required: false
         uid:
           id: uid
           table: node_field_data
@@ -2399,10 +2400,10 @@ display:
           relationship: field_intitul_de_l_offre
           group_type: group
           admin_label: auteur
-          required: false
           entity_type: node
           entity_field: uid
           plugin_id: standard
+          required: false
         field_candidats:
           id: field_candidats
           table: node__field_candidats
@@ -2410,8 +2411,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_candidats : Utilisateur'
-          required: false
           plugin_id: standard
+          required: false
         field_cv:
           id: field_cv
           table: node__field_cv
@@ -2419,8 +2420,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_cv : Contenu'
-          required: false
           plugin_id: standard
+          required: false
         field_profession:
           id: field_profession
           table: node__field_profession
@@ -2428,8 +2429,8 @@ display:
           relationship: field_cv
           group_type: group
           admin_label: 'field_profession : Terme de taxonomie'
-          required: false
           plugin_id: standard
+          required: false
         field_domaine_et_specialite:
           id: field_domaine_et_specialite
           table: node__field_domaine_et_specialite
@@ -2437,8 +2438,8 @@ display:
           relationship: field_intitul_de_l_offre
           group_type: group
           admin_label: 'field_domaine_et_specialite : Terme de taxonomie'
-          required: false
           plugin_id: standard
+          required: false
         profile:
           id: profile
           table: users_field_data
@@ -2446,10 +2447,12 @@ display:
           relationship: uid
           group_type: group
           admin_label: Profil
-          required: false
           entity_type: user
           plugin_id: standard
+          required: false
       display_description: ''
+      display_extenders: {  }
+      path: admin/stats/postulations/uip/domaine
     cache_metadata:
       max-age: -1
       contexts:

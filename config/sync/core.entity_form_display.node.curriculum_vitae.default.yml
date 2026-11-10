@@ -59,231 +59,231 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_candidat:
+    type: entity_reference_autocomplete
     weight: 0
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_cv_anglais:
+    type: file_generic
     weight: 4
+    region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
-    type: file_generic
-    region: content
   field_cv_arabe:
+    type: file_generic
     weight: 7
+    region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
-    type: file_generic
-    region: content
   field_cv_canadien:
+    type: file_generic
     weight: 6
+    region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
-    type: file_generic
-    region: content
   field_cv_francais:
+    type: file_generic
     weight: 5
+    region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
-    type: file_generic
-    region: content
   field_cv_valider:
+    type: boolean_checkbox
     weight: 2
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_date_diplome:
+    type: datetime_default
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_date_fin_validit_:
-    weight: 28
-    settings: {  }
-    third_party_settings: {  }
     type: datetime_default
+    weight: 28
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_destination:
+    type: options_select
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_diplome:
-    weight: 9
-    settings: {  }
-    third_party_settings: {  }
     type: options_select
+    weight: 9
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_domaine_de_profession:
+    type: options_shs
     weight: 11
+    region: content
     settings:
-      force_deepest: true
+      display_node_count: false
       create_new_items: false
       create_new_levels: false
-      display_node_count: false
+      force_deepest: true
     third_party_settings: {  }
-    type: options_shs
-    region: content
   field_domaine_specialite:
+    type: options_shs
     weight: 12
+    region: content
     settings:
-      force_deepest: true
+      display_node_count: false
       create_new_items: false
       create_new_levels: false
-      display_node_count: false
+      force_deepest: true
     third_party_settings: {  }
-    type: options_shs
-    region: content
   field_help_moderation:
-    weight: 33
-    settings: {  }
-    third_party_settings: {  }
     type: markup
+    weight: 33
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_langue:
+    type: chosen_select
     weight: 14
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_langue2:
+    type: chosen_select
     weight: 16
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_langue3:
+    type: chosen_select
     weight: 18
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_langue4:
+    type: chosen_select
     weight: 20
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_langue5:
+    type: chosen_select
     weight: 22
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_langue_maternelle:
+    type: chosen_select
     weight: 13
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_n_du_passeport:
+    type: string_textfield
     weight: 27
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_niveau:
+    type: options_select
     weight: 8
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_niveau_ecrit_parle:
+    type: options_select
     weight: 15
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_niveau_langue_2_ecrit_parl:
+    type: options_select
     weight: 17
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_niveau_langue_3_ecrit_parl:
+    type: options_select
     weight: 19
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_niveau_langue_4_ecrit_parl:
+    type: options_select
     weight: 21
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_niveau_langue_5_ecrit_parl:
+    type: options_select
     weight: 23
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_nombre_d_annee_d_exercice:
+    type: number
     weight: 26
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_operation_qatar:
+    type: boolean_checkbox
     weight: 3
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_passeport_valide:
+    type: boolean_checkbox
     weight: 29
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_pays_experience:
+    type: entity_reference_autocomplete
     weight: 25
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_profession:
+    type: chosen_select
     weight: 24
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_pseudo_skype:
+    type: string_textfield
     weight: 30
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_validit_du_passeport:
+    type: datetime_default
     weight: 31
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
-    region: content
   langcode:
     type: language_select
     weight: 35
@@ -294,8 +294,8 @@ content:
   moderation_state:
     type: moderation_state_default
     weight: 32
-    settings: {  }
     region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -305,10 +305,10 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 38
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
@@ -318,17 +318,17 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 41
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 39
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -346,12 +346,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 36
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default

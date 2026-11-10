@@ -20,6 +20,8 @@ expression:
       -
         id: rules_condition
         uuid: f899fb53-af80-44e5-bdbe-f587854fc65c
+        condition_id: custom_rules_user_has_role
+        negate: true
         context_values:
           roles: conseiller_central
         context_mapping:
@@ -28,11 +30,11 @@ expression:
           roles:
             rules_tokens: {  }
         provides_mapping: {  }
-        condition_id: custom_rules_user_has_role
-        negate: true
       -
         id: rules_condition
         uuid: f16d9e19-6790-4852-9fd1-e744e316220a
+        condition_id: rules_node_is_of_type
+        negate: false
         context_values:
           types:
             - action_client
@@ -42,8 +44,6 @@ expression:
           types:
             rules_tokens: {  }
         provides_mapping: {  }
-        condition_id: rules_node_is_of_type
-        negate: false
   actions:
     id: rules_action_set
     uuid: 62847217-7945-4632-8b7d-4a8f2d34d89b
@@ -51,6 +51,7 @@ expression:
       -
         id: rules_action
         uuid: f2fb5f81-bb30-42f5-a4e6-246bc1e4569b
+        action_id: rules_page_redirect
         context_values:
           url: /
         context_mapping: {  }
@@ -58,4 +59,3 @@ expression:
           url:
             rules_tokens: {  }
         provides_mapping: {  }
-        action_id: rules_page_redirect

@@ -15,19 +15,19 @@ bundle: field_action_grc
 mode: default
 content:
   field_date_action_grc:
-    weight: 0
+    type: datetime_default
     label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: medium
     third_party_settings: {  }
-    type: datetime_default
+    weight: 0
     region: content
   field_description_grc:
-    weight: 1
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 1
     region: content
 hidden: {  }

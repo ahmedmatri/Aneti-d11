@@ -18,14 +18,14 @@ plugin: 'block_content:dabdc4a5-4afe-4fe7-a950-76a8f5695b76'
 settings:
   id: 'block_content:dabdc4a5-4afe-4fe7-a950-76a8f5695b76'
   label: 'Video Reclamation'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: /form/reclamation
     negate: false
     context_mapping: {  }
+    pages: /form/reclamation

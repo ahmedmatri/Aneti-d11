@@ -17,11 +17,11 @@ settings:
   right_to_left: true
   draggable: true
   free_scroll: false
+  lazy_load: 0
+  auto_play: 0
   wrap_around: true
   group_cells: 1
   adaptive_height: false
-  lazy_load: 0
-  auto_play: 0
   watch_css: false
   as_nav_for: ''
   drag_threshold: 3

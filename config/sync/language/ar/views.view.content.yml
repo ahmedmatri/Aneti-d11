@@ -1,14 +1,9 @@
 label: المحتوى
 display:
   default:
+    display_title: الافتراضي
     display_options:
-      exposed_form:
-        options:
-          submit_button: انتقاء
-          reset_button_label: 'إعادة الضبط'
-          exposed_sorts_label: 'الترتيب حسب'
-          sort_asc_label: تصاعدي
-          sort_desc_label: تنازلي
+      title: المحتوى
       fields:
         title:
           label: العنوان
@@ -24,6 +19,13 @@ display:
           label: التحديث
         operations:
           label: عمليات
+      exposed_form:
+        options:
+          submit_button: انتقاء
+          reset_button_label: 'إعادة الضبط'
+          exposed_sorts_label: 'الترتيب حسب'
+          sort_asc_label: تصاعدي
+          sort_desc_label: تنازلي
       filters:
         title:
           expose:
@@ -41,12 +43,10 @@ display:
         langcode:
           expose:
             label: اللغة
-      title: المحتوى
-    display_title: الرئيسي
   page_1:
+    display_title: الصفحة
     display_options:
       menu:
         title: المحتوى
       tab_options:
         title: المحتوى
-    display_title: الصفحة

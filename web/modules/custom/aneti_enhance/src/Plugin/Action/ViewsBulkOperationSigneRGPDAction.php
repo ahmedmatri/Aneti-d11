@@ -43,7 +43,7 @@ class ViewsBulkOperationSigneRGPDAction extends ViewsBulkOperationPostulationAct
   /**
    * {@inheritdoc}
    */
-  public function buildPreConfigurationForm(array $form, array $values, FormStateInterface $form_state) {
+  public function buildPreConfigurationForm(array $form, array $values, FormStateInterface $form_state): array {
     return $form;
   }
 

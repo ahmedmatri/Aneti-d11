@@ -2,56 +2,166 @@ uuid: e52d0ea2-b863-401c-b6e3-b564114911e3
 langcode: fr
 status: open
 dependencies: {  }
+weight: 0
 open: null
 close: null
-weight: 0
 uid: 1
 template: false
 archive: false
 id: reclamation
 title: 'Réclamation des travailleurs Tunisiens à l''étranger'
 description: ''
-category: ''
-elements: "processed_text:\n  '#type': processed_text\n  '#text': \"<h2>IMPORTANT</h2>\\r\\n\\r\\n<ul>\\r\\n\\t<li>Il s’agit d’une procédure totalement gratuite.</li>\\r\\n\\t<li>Aucunes données confidentielles propres au réclamant ou à la réclamation ne sera divulguée à toute autre personne que les services internes de l’ANETI sans l’accord explicite du réclamant.</li>\\r\\n\\t<li>La prise en charge de la réclamation garantit un processus d’enregistrement de la réclamation et d’information aux entités concernées.</li>\\r\\n\\t<li>La prise en charge ne donne pas droit à une prise en charge automatique, par les services de l’ANETI, à une procédure de gestion de différends.</li>\\r\\n\\t<li>La procédure pédagogique de réclamation est visible sur ce <a href=\\\"https://www.ilo.org/global/topics/fair-recruitment/WCMS_568730/lang--fr/index.htm\\\">lien</a></li>\\r\\n</ul>\\r\\n\"\n  '#format': full_html\ninformations_reclamant:\n  '#type': fieldset\n  '#title': 'Informations réclamant'\n  '#description_display': before\n  nom_et_prenom:\n    '#type': textfield\n    '#title': 'Nom et prénom'\n  telephone:\n    '#type': textfield\n    '#title': Téléphone\n  email:\n    '#type': email\n    '#title': Email\n  cin:\n    '#type': textfield\n    '#title': CIN\ninformations_employeur:\n  '#type': fieldset\n  '#title': 'Informations employeur'\n  raison_sociale:\n    '#type': textfield\n    '#title': 'Raison sociale'\n  autres_informations:\n    '#type': textarea\n    '#title': 'Autres informations'\n    '#description': 'Toute information sur l&rsquo;entreprise ou toute autre intervenant dans le processus de recrutement et d&eacute;marches de contractualisation, ainsi que les indications sur son emplacement et &eacute;ventuellement toute information permettant son identification d&rsquo;une mani&egrave;re ais&eacute;e.'\n    '#help_title': Aide\n    '#help': 'Toute information sur l&rsquo;entreprise ou toute autre intervenant dans le processus de recrutement et d&eacute;marches de contractualisation, ainsi que les indications sur son emplacement et &eacute;ventuellement toute information permettant son identification d&rsquo;une mani&egrave;re ais&eacute;e.'\nreclamation:\n  '#type': fieldset\n  '#title': Réclamation\n  gravite_de_la_situation:\n    '#type': webform_checkboxes_other\n    '#title': 'Gravité de la situation'\n    '#options':\n      Violence: Violence\n      Séquestration: Séquestration\n      'Interdiction de se déplacer': 'Interdiction de se déplacer'\n      'Rétention des documents officiels': 'Rétention des documents officiels'\n    '#other__type': textarea\n  objet_de_la_reclamation:\n    '#type': textfield\n    '#title': 'Objet de la réclamation'\n  reclamation_txt:\n    '#type': textarea\n    '#title': Réclamation\n  date_de_l_incident:\n    '#type': date\n    '#title': 'Date de l''incident'\n    '#datepicker': true\netat_de_la_reclamation:\n  '#type': select\n  '#title': 'Etat de la réclamation'\n  '#options':\n    'En attente': 'En attente'\n    'En cours de traitement': 'En cours de traitement'\n    Finalisée: Finalisée\n    Rejetée: Rejetée\n  '#required': true\n  '#default_value': 'En attente'\n  '#access_create_roles':\n    - super_admin\n    - administrator\ninformations_supplementaires:\n  '#type': details\n  '#title': 'Informations supplémentaires'\n  source_du_contrat:\n    '#type': webform_radios_other\n    '#title': 'Source du contrat'\n    '#options':\n      'plateforme de l’ANETI': 'plateforme de l’ANETI'\n  cadre_de_signature_de_contrat:\n    '#type': webform_radios_other\n    '#title': 'Cadre de signature de contrat'\n    '#options':\n      'Processus assuré par les services de l’ANETI': 'Processus assuré par les services de l’ANETI'\n  vous_etes:\n    '#type': radios\n    '#title': 'Vous êtes'\n    '#options':\n      'Travailleur à l’étranger': 'Travailleur à l’étranger'\n      'De retour en Tunisie': 'De retour en Tunisie'\n  contrat_obtenu_a_la_suite_d_une_demarche_propre_a_:\n    '#type': webform_radios_other\n    '#title': \"Contrat obtenu à la suite d’une démarche propre à\\_:\"\n    '#options':\n      'L''ANETI': 'L''ANETI'\n      'Autres structures tunisiennes publiques (telle que l’ATCT)': 'Autres structures tunisiennes publiques (telle que l’ATCT)'\n      'Autres entités privées (tunisiennes ou internationales)': 'Autres entités privées (tunisiennes ou internationales)'"
+categories: {  }
+elements: |-
+  processed_text:
+    '#type': processed_text
+    '#text': "<h2>IMPORTANT</h2>\r\n\r\n<ul>\r\n\t<li>Il s’agit d’une procédure totalement gratuite.</li>\r\n\t<li>Aucunes données confidentielles propres au réclamant ou à la réclamation ne sera divulguée à toute autre personne que les services internes de l’ANETI sans l’accord explicite du réclamant.</li>\r\n\t<li>La prise en charge de la réclamation garantit un processus d’enregistrement de la réclamation et d’information aux entités concernées.</li>\r\n\t<li>La prise en charge ne donne pas droit à une prise en charge automatique, par les services de l’ANETI, à une procédure de gestion de différends.</li>\r\n\t<li>La procédure pédagogique de réclamation est visible sur ce <a href=\"https://www.ilo.org/global/topics/fair-recruitment/WCMS_568730/lang--fr/index.htm\">lien</a></li>\r\n</ul>\r\n"
+    '#format': full_html
+  informations_reclamant:
+    '#type': fieldset
+    '#title': 'Informations réclamant'
+    '#description_display': before
+    nom_et_prenom:
+      '#type': textfield
+      '#title': 'Nom et prénom'
+    telephone:
+      '#type': textfield
+      '#title': Téléphone
+    email:
+      '#type': email
+      '#title': Email
+    cin:
+      '#type': textfield
+      '#title': CIN
+  informations_employeur:
+    '#type': fieldset
+    '#title': 'Informations employeur'
+    raison_sociale:
+      '#type': textfield
+      '#title': 'Raison sociale'
+    autres_informations:
+      '#type': textarea
+      '#title': 'Autres informations'
+      '#description': 'Toute information sur l&rsquo;entreprise ou toute autre intervenant dans le processus de recrutement et d&eacute;marches de contractualisation, ainsi que les indications sur son emplacement et &eacute;ventuellement toute information permettant son identification d&rsquo;une mani&egrave;re ais&eacute;e.'
+      '#help_title': Aide
+      '#help': 'Toute information sur l&rsquo;entreprise ou toute autre intervenant dans le processus de recrutement et d&eacute;marches de contractualisation, ainsi que les indications sur son emplacement et &eacute;ventuellement toute information permettant son identification d&rsquo;une mani&egrave;re ais&eacute;e.'
+  reclamation:
+    '#type': fieldset
+    '#title': Réclamation
+    gravite_de_la_situation:
+      '#type': webform_checkboxes_other
+      '#title': 'Gravité de la situation'
+      '#options':
+        Violence: Violence
+        Séquestration: Séquestration
+        'Interdiction de se déplacer': 'Interdiction de se déplacer'
+        'Rétention des documents officiels': 'Rétention des documents officiels'
+      '#other__type': textarea
+    objet_de_la_reclamation:
+      '#type': textfield
+      '#title': 'Objet de la réclamation'
+    reclamation_txt:
+      '#type': textarea
+      '#title': Réclamation
+    date_de_l_incident:
+      '#type': date
+      '#title': 'Date de l''incident'
+      '#datepicker': true
+  etat_de_la_reclamation:
+    '#type': select
+    '#title': 'Etat de la réclamation'
+    '#options':
+      'En attente': 'En attente'
+      'En cours de traitement': 'En cours de traitement'
+      Finalisée: Finalisée
+      Rejetée: Rejetée
+    '#required': true
+    '#default_value': 'En attente'
+    '#access_create_roles':
+      - super_admin
+      - administrator
+  informations_supplementaires:
+    '#type': details
+    '#title': 'Informations supplémentaires'
+    source_du_contrat:
+      '#type': webform_radios_other
+      '#title': 'Source du contrat'
+      '#options':
+        'plateforme de l’ANETI': 'plateforme de l’ANETI'
+    cadre_de_signature_de_contrat:
+      '#type': webform_radios_other
+      '#title': 'Cadre de signature de contrat'
+      '#options':
+        'Processus assuré par les services de l’ANETI': 'Processus assuré par les services de l’ANETI'
+    vous_etes:
+      '#type': radios
+      '#title': 'Vous êtes'
+      '#options':
+        'Travailleur à l’étranger': 'Travailleur à l’étranger'
+        'De retour en Tunisie': 'De retour en Tunisie'
+    contrat_obtenu_a_la_suite_d_une_demarche_propre_a_:
+      '#type': webform_radios_other
+      '#title': "Contrat obtenu à la suite d’une démarche propre à\_:"
+      '#options':
+        'L''ANETI': 'L''ANETI'
+        'Autres structures tunisiennes publiques (telle que l’ATCT)': 'Autres structures tunisiennes publiques (telle que l’ATCT)'
+        'Autres entités privées (tunisiennes ou internationales)': 'Autres entités privées (tunisiennes ou internationales)'
 css: ''
 javascript: ''
 settings:
   ajax: false
   ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
   page: true
   page_submit_path: ''
   page_confirm_path: ''
+  page_theme_name: ''
   form_title: both
   form_submit_once: false
-  form_exception_message: ''
   form_open_message: ''
   form_close_message: ''
+  form_exception_message: ''
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
-  form_remote_addr: true
+  form_disable_remote_addr: false
   form_convert_anonymous: false
   form_prepopulate: false
   form_prepopulate_source_entity: false
   form_prepopulate_source_entity_required: false
   form_prepopulate_source_entity_type: ''
-  form_reset: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
   form_disable_autocomplete: false
   form_novalidate: false
   form_disable_inline_errors: false
   form_required: false
-  form_unsaved: false
-  form_disable_back: false
-  form_submit_back: false
   form_autofocus: false
   form_details_toggle: false
+  form_reset: false
   form_access_denied: default
   form_access_denied_title: ''
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
   submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
   submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
   submission_views: {  }
   submission_views_replace: {  }
   submission_user_columns: {  }
@@ -60,11 +170,6 @@ settings:
   submission_access_denied_title: ''
   submission_access_denied_message: ''
   submission_access_denied_attributes: {  }
-  submission_exception_message: ''
-  submission_locked_message: ''
-  submission_excluded_elements: {  }
-  submission_exclude_empty: false
-  submission_exclude_empty_checkbox: false
   previous_submission_message: ''
   previous_submissions_message: ''
   autofill: false
@@ -74,11 +179,22 @@ settings:
   wizard_progress_pages: false
   wizard_progress_percentage: false
   wizard_progress_link: false
+  wizard_progress_states: false
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
   wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
   wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''
@@ -92,16 +208,19 @@ settings:
   draft_auto_save: false
   draft_saved_message: ''
   draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
   confirmation_type: page
+  confirmation_url: ''
   confirmation_title: 'Votre réclamation a été enregistrée.'
   confirmation_message: 'Votre r&eacute;clamation a &eacute;t&eacute; enregistr&eacute;e. Elle sera trait&eacute;e dans les plus brefs d&eacute;lais.'
-  confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: false
   confirmation_back_label: ''
   confirmation_back_attributes: {  }
   confirmation_exclude_query: false
   confirmation_exclude_token: false
+  confirmation_update: false
   limit_total: null
   limit_total_interval: null
   limit_total_message: ''
@@ -118,7 +237,11 @@ settings:
   purge_days: null
   results_disabled: false
   results_disabled_ignore: false
+  results_customize: false
+  token_view: false
   token_update: false
+  token_delete: false
+  serial_disabled: false
 access:
   create:
     roles:
@@ -169,8 +292,9 @@ access:
 handlers:
   email:
     id: email
-    label: 'Email Réclamation'
     handler_id: email
+    label: 'Email Réclamation'
+    notes: ''
     status: true
     conditions: {  }
     weight: 0
@@ -179,25 +303,28 @@ handlers:
         - completed
       to_mail: _default
       to_options: {  }
-      cc_mail: ''
-      cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
       from_mail: '[webform_submission:values:email:raw]'
       from_options: {  }
       from_name: '[webform_submission:values:nom_et_prenom:raw]'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
       subject: _default
       body: _default
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
       exclude_empty_checkbox: false
+      exclude_attachments: false
       html: true
       attachments: false
       twig: false
-      debug: false
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
       theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

@@ -14,12 +14,14 @@ third_party_settings:
     group_box:
       children:
         - field_body
+      label: Box
       parent_name: ''
+      region: content
       weight: 0
       format_type: html_element
       format_settings:
-        id: ''
         classes: content-box
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -27,8 +29,6 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-      label: Box
-      region: content
 id: block_content.block_front_page.default
 targetEntityType: block_content
 bundle: block_front_page
@@ -36,12 +36,12 @@ mode: default
 content:
   field_body:
     type: entity_reference_revisions_entity_view
-    weight: 4
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 4
     region: content
 hidden:
   body: true

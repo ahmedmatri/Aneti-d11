@@ -1,1 +1,44 @@
-elements: "processed_text:\n  '#text': \"<h2>هام</h2>\\n\\n<ul>\\n\\t<li>هذا إجراء مجاني </li>\\n\\t<li>لن يتم الكشف عن أي بيانات سرية خاصة بمقدم الشكوى أو الشكوى لأي شخص بخلاف الإدارات الداخلية في الوكالة الوطنية للتشغيل والعمل المستقل دون موافقة صريحة من مقدم الشكوى.</li>\\n\\t<li>تضمن معالجة الشكوى عملية تسجيل الشكوى وإبلاغ الجهات المعنية.</li>\\n\\t<li>La prise en charge ne donne pas droit à une prise en charge automatique, par les services de l’ANETI, à une procédure de gestion de différends.</li>\\n\\t<li>La procédure pédagogique de réclamation est visible sur ce <a href=\\\"https://www.ilo.org/global/topics/fair-recruitment/WCMS_568730/lang--fr/index.htm\\\">lien</a></li>\\n</ul>\\n\"\ninformations_reclamant:\n  '#title': 'معلومات حول الشاكي'\nnom_et_prenom:\n  '#title': 'الأسم واللقب'\ntelephone:\n  '#title': الهاتف\nemail:\n  '#title': 'البريد الإلكتروني'\ncin:\n  '#title': 'بطاقة التعريف الوطنية'\ninformations_employeur:\n  '#title': 'معلومات حول المشغل'\nraison_sociale:\n  '#title': 'المقر الإجتماعي'\nautres_informations:\n  '#title': 'معلومات أخرى'\nreclamation:\n  '#title': الشكوى\ngravite_de_la_situation:\n  '#title': 'خطورة الوضعية'\n  '#options':\n    Violence: عنف\n    'Interdiction de se déplacer': 'منع التنقل'\n    'Rétention des documents officiels': 'حجز وثائق رسمية'\nobjet_de_la_reclamation:\n  '#title': 'موضوع الشكوى'\ndate_de_l_incident:\n  '#title': 'تاريخ الحادث'\netat_de_la_reclamation:\n  '#title': 'وضعية الشكوى'\n  '#options':\n    'En attente': 'في الإنتظار'\n    'En cours de traitement': 'بصدد المعالجة'\ninformations_supplementaires:\n  '#title': 'معلومات إضافية'\nsource_du_contrat:\n  '#title': 'مصدر عقد الشغل'\nvous_etes:\n  '#options':\n    'Travailleur à l’étranger': 'عامل بالخارج'\n    'De retour en Tunisie': 'تاريخ العودة لتونس'\n"
+elements: |
+  processed_text:
+    '#text': "<h2>هام</h2>\n\n<ul>\n\t<li>هذا إجراء مجاني </li>\n\t<li>لن يتم الكشف عن أي بيانات سرية خاصة بمقدم الشكوى أو الشكوى لأي شخص بخلاف الإدارات الداخلية في الوكالة الوطنية للتشغيل والعمل المستقل دون موافقة صريحة من مقدم الشكوى.</li>\n\t<li>تضمن معالجة الشكوى عملية تسجيل الشكوى وإبلاغ الجهات المعنية.</li>\n\t<li>La prise en charge ne donne pas droit à une prise en charge automatique, par les services de l’ANETI, à une procédure de gestion de différends.</li>\n\t<li>La procédure pédagogique de réclamation est visible sur ce <a href=\"https://www.ilo.org/global/topics/fair-recruitment/WCMS_568730/lang--fr/index.htm\">lien</a></li>\n</ul>\n"
+  informations_reclamant:
+    '#title': 'معلومات حول الشاكي'
+  nom_et_prenom:
+    '#title': 'الأسم واللقب'
+  telephone:
+    '#title': الهاتف
+  email:
+    '#title': 'البريد الإلكتروني'
+  cin:
+    '#title': 'بطاقة التعريف الوطنية'
+  informations_employeur:
+    '#title': 'معلومات حول المشغل'
+  raison_sociale:
+    '#title': 'المقر الإجتماعي'
+  autres_informations:
+    '#title': 'معلومات أخرى'
+  reclamation:
+    '#title': الشكوى
+  gravite_de_la_situation:
+    '#title': 'خطورة الوضعية'
+    '#options':
+      Violence: عنف
+      'Interdiction de se déplacer': 'منع التنقل'
+      'Rétention des documents officiels': 'حجز وثائق رسمية'
+  objet_de_la_reclamation:
+    '#title': 'موضوع الشكوى'
+  date_de_l_incident:
+    '#title': 'تاريخ الحادث'
+  etat_de_la_reclamation:
+    '#title': 'وضعية الشكوى'
+    '#options':
+      'En attente': 'في الإنتظار'
+      'En cours de traitement': 'بصدد المعالجة'
+  informations_supplementaires:
+    '#title': 'معلومات إضافية'
+  source_du_contrat:
+    '#title': 'مصدر عقد الشغل'
+  vous_etes:
+    '#options':
+      'Travailleur à l’étranger': 'عامل بالخارج'
+      'De retour en Tunisie': 'تاريخ العودة لتونس'

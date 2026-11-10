@@ -53,61 +53,12 @@ base_table: node_field_data
 base_field: nid
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: perm
-        options:
-          perm: 'access content'
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          disable_sql_rewrite: false
-          distinct: true
-          replica: false
-          query_comment: ''
-          query_tags: {  }
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: full
-        options:
-          items_per_page: 20
-          offset: 0
-          id: 0
-          total_pages: null
-          tags:
-            previous: ‹‹
-            next: ››
-            first: '« First'
-            last: 'Last »'
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          quantity: 9
-      style:
-        type: table
-      row:
-        type: fields
+      title: 'Postulations par offre'
       fields:
         nid:
           id: nid
@@ -116,6 +67,9 @@ display:
           relationship: field_intitul_de_l_offre
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: ID
           exclude: false
           alter:
@@ -172,9 +126,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -182,6 +133,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: Title
           exclude: true
           alter:
@@ -237,9 +191,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_intitul_de_l_offre:
           id: field_intitul_de_l_offre
           table: node__field_intitul_de_l_offre
@@ -247,6 +198,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'intitulé de l''offre'
           exclude: false
           alter:
@@ -302,7 +254,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_candidature:
           id: field_candidature
           table: node__field_candidature
@@ -310,6 +261,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Candidature
           exclude: false
           alter:
@@ -364,7 +316,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_cin:
           id: field_cin
           table: profile__field_cin
@@ -372,6 +323,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: CIN
           exclude: false
           alter:
@@ -427,7 +379,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_nom:
           id: field_nom
           table: profile__field_nom
@@ -435,6 +386,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Nom
           exclude: false
           alter:
@@ -490,7 +442,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_prenom:
           id: field_prenom
           table: profile__field_prenom
@@ -498,6 +449,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Prénom
           exclude: false
           alter:
@@ -553,7 +505,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         mail:
           id: mail
           table: users_field_data
@@ -561,6 +512,9 @@ display:
           relationship: field_candidats
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: mail
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -615,9 +569,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: user
-          entity_field: mail
-          plugin_id: field
         init:
           id: init
           table: users_field_data
@@ -625,6 +576,9 @@ display:
           relationship: field_candidats
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: init
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -679,9 +633,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: user
-          entity_field: init
-          plugin_id: field
         field_telephone:
           id: field_telephone
           table: profile__field_telephone
@@ -689,6 +640,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -744,81 +696,44 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
-      filters:
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            postulation: postulation
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 20
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
+            first: '« First'
+            last: 'Last »'
           expose:
-            operator_limit_selection: false
-            operator_list: {  }
-        type_1:
-          id: type_1
-          table: profile
-          field: type
-          relationship: profile
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            candidat: candidat
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: profile
-          entity_field: type
-          plugin_id: bundle
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-      title: 'Postulations par offre'
-      header: {  }
-      footer: {  }
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
       empty:
         area:
           id: area
@@ -827,60 +742,29 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: text
           empty: true
-          tokenize: false
           content:
             value: 'Aucun résultat à afficher.'
             format: basic_html
-          plugin_id: text
-      relationships:
-        field_candidats:
-          id: field_candidats
-          table: node__field_candidats
-          field: field_candidats
+          tokenize: false
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
           relationship: none
           group_type: group
-          admin_label: 'field_candidats : Utilisateur'
-          required: true
-          plugin_id: standard
-        profile:
-          id: profile
-          table: users_field_data
-          field: profile
-          relationship: field_candidats
-          group_type: group
-          admin_label: Profil
-          required: true
-          entity_type: user
-          plugin_id: standard
-        field_intitul_de_l_offre:
-          id: field_intitul_de_l_offre
-          table: node__field_intitul_de_l_offre
-          field: field_intitul_de_l_offre
-          relationship: none
-          group_type: group
-          admin_label: 'field_intitul_de_l_offre : Contenu'
-          required: true
-          plugin_id: standard
-        field_postulation:
-          id: field_postulation
-          table: node__field_postulation
-          field: field_postulation
-          relationship: none
-          group_type: group
-          admin_label: 'field_postulation : Content'
-          required: false
-          plugin_id: standard
-        reverse__node__field_candidat:
-          id: reverse__node__field_candidat
-          table: users_field_data
-          field: reverse__node__field_candidat
-          relationship: field_candidats
-          group_type: group
-          admin_label: field_candidat
-          required: false
-          entity_type: user
-          plugin_id: entity_reverse
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
       arguments:
         nid:
           id: nid
@@ -889,6 +773,9 @@ display:
           relationship: field_intitul_de_l_offre
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: node_nid
           default_action: ignore
           exception:
             value: all
@@ -903,8 +790,8 @@ display:
           summary_options:
             base_path: ''
             count: true
-            items_per_page: 25
             override: false
+            items_per_page: 25
           summary:
             sort_order: asc
             number_of_records: 0
@@ -916,9 +803,123 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
           entity_type: node
-          entity_field: nid
-          plugin_id: node_nid
+          entity_field: type
+          plugin_id: bundle
+          value:
+            postulation: postulation
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        type_1:
+          id: type_1
+          table: profile
+          field: type
+          relationship: profile
+          group_type: group
+          admin_label: ''
+          entity_type: profile
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            candidat: candidat
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      style:
+        type: table
+      row:
+        type: fields
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: true
+          replica: false
+          query_tags: {  }
+      relationships:
+        field_candidats:
+          id: field_candidats
+          table: node__field_candidats
+          field: field_candidats
+          relationship: none
+          group_type: group
+          admin_label: 'field_candidats : Utilisateur'
+          plugin_id: standard
+          required: true
+        profile:
+          id: profile
+          table: users_field_data
+          field: profile
+          relationship: field_candidats
+          group_type: group
+          admin_label: Profil
+          entity_type: user
+          plugin_id: standard
+          required: true
+        field_intitul_de_l_offre:
+          id: field_intitul_de_l_offre
+          table: node__field_intitul_de_l_offre
+          field: field_intitul_de_l_offre
+          relationship: none
+          group_type: group
+          admin_label: 'field_intitul_de_l_offre : Contenu'
+          plugin_id: standard
+          required: true
+        field_postulation:
+          id: field_postulation
+          table: node__field_postulation
+          field: field_postulation
+          relationship: none
+          group_type: group
+          admin_label: 'field_postulation : Content'
+          plugin_id: standard
+          required: false
+        reverse__node__field_candidat:
+          id: reverse__node__field_candidat
+          table: users_field_data
+          field: reverse__node__field_candidat
+          relationship: field_candidats
+          group_type: group
+          admin_label: field_candidat
+          entity_type: user
+          plugin_id: entity_reverse
+          required: false
+      header: {  }
+      footer: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -937,154 +938,12 @@ display:
         - 'config:field.storage.profile.field_prenom'
         - 'config:field.storage.profile.field_telephone'
   data_export_1:
-    display_plugin: data_export
     id: data_export_1
     display_title: 'Data export'
+    display_plugin: data_export
     position: 4
     display_options:
-      display_extenders: {  }
-      displays:
-        page_3: page_3
-        default: '0'
-        page_1: '0'
-        page_2: '0'
-      path: administration/offre/postulations/selction
-      filename: ''
-      style:
-        type: data_export
-        options:
-          formats:
-            csv: csv
-          csv_settings:
-            delimiter: ;
-            enclosure: '"'
-            escape_char: \
-            strip_tags: true
-            trim: true
-            encoding: utf8
-          xls_settings:
-            xls_format: Excel2007
-            metadata:
-              creator: ''
-              last_modified_by: ''
-              title: ''
-              description: ''
-              subject: ''
-              keywords: ''
-              category: ''
-              manager: ''
-              company: ''
-      pager:
-        type: none
-        options:
-          offset: 0
-      rendering_language: '***LANGUAGE_site_default***'
       title: 'Postulations par offre'
-      defaults:
-        title: false
-        filters: false
-        filter_groups: false
-        fields: false
-      filters:
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            postulation: postulation
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-        type_1:
-          id: type_1
-          table: profile
-          field: type
-          relationship: profile
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            candidat: candidat
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: profile
-          entity_field: type
-          plugin_id: bundle
-        field_candidature_value:
-          id: field_candidature_value
-          table: node__field_candidature
-          field: field_candidature_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            3: '3'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: true
-          plugin_id: list_field
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
       fields:
         field_intitul_de_l_offre:
           id: field_intitul_de_l_offre
@@ -1093,6 +952,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'intitulé de l''offre'
           exclude: false
           alter:
@@ -1148,7 +1008,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_candidature:
           id: field_candidature
           table: node__field_candidature
@@ -1156,6 +1015,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Candidature
           exclude: false
           alter:
@@ -1210,7 +1070,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_cin:
           id: field_cin
           table: profile__field_cin
@@ -1218,6 +1077,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: CIN
           exclude: false
           alter:
@@ -1273,7 +1133,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_nom:
           id: field_nom
           table: profile__field_nom
@@ -1281,6 +1140,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Nom
           exclude: false
           alter:
@@ -1336,7 +1196,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_prenom:
           id: field_prenom
           table: profile__field_prenom
@@ -1344,6 +1203,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Prénom
           exclude: false
           alter:
@@ -1399,7 +1259,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_telephone:
           id: field_telephone
           table: profile__field_telephone
@@ -1407,6 +1266,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -1462,7 +1322,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         mail:
           id: mail
           table: users_field_data
@@ -1470,6 +1329,9 @@ display:
           relationship: field_candidats
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: mail
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -1524,9 +1386,149 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: user
-          entity_field: mail
-          plugin_id: field
+      pager:
+        type: none
+        options:
+          offset: 0
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            postulation: postulation
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        type_1:
+          id: type_1
+          table: profile
+          field: type
+          relationship: profile
+          group_type: group
+          admin_label: ''
+          entity_type: profile
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            candidat: candidat
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_candidature_value:
+          id: field_candidature_value
+          table: node__field_candidature
+          field: field_candidature_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value:
+            3: '3'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: data_export
+        options:
+          formats:
+            csv: csv
+          csv_settings:
+            delimiter: ;
+            enclosure: '"'
+            escape_char: \
+            strip_tags: true
+            trim: true
+            encoding: utf8
+          xls_settings:
+            xls_format: Excel2007
+            metadata:
+              creator: ''
+              last_modified_by: ''
+              title: ''
+              description: ''
+              subject: ''
+              keywords: ''
+              category: ''
+              manager: ''
+              company: ''
+      defaults:
+        title: false
+        fields: false
+        filters: false
+        filter_groups: false
+      rendering_language: '***LANGUAGE_site_default***'
+      display_extenders: {  }
+      path: administration/offre/postulations/selction
+      displays:
+        page_3: page_3
+        default: '0'
+        page_1: '0'
+        page_2: '0'
+      filename: ''
+      export_filesystem: public
     cache_metadata:
       max-age: -1
       contexts:
@@ -1543,76 +1545,11 @@ display:
         - 'config:field.storage.profile.field_prenom'
         - 'config:field.storage.profile.field_telephone'
   page_1:
-    display_plugin: page
     id: page_1
     display_title: Page
+    display_plugin: page
     position: 1
     display_options:
-      display_extenders: {  }
-      path: postulations-par-offre
-      filters:
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            postulation: postulation
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-        type_1:
-          id: type_1
-          table: profile
-          field: type
-          relationship: profile
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            candidat: candidat
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: profile
-          entity_field: type
-          plugin_id: bundle
-      defaults:
-        filters: false
-        filter_groups: false
-        fields: false
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
       fields:
         views_bulk_operations_bulk_form:
           id: views_bulk_operations_bulk_form
@@ -1621,6 +1558,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: views_bulk_operations_bulk_form
           label: Operations
           exclude: false
           alter:
@@ -1665,31 +1603,11 @@ display:
           batch: true
           batch_size: 10
           form_step: true
+          ajax_loader: false
           buttons: false
-          clear_on_exposed: false
           action_title: Action
-          selected_actions:
-            comment_delete_action: 0
-            node_assign_owner_action: 0
-            node_unpublish_by_keyword_action: 0
-            node_save_action: 0
-            node_unpromote_action: 0
-            node_make_sticky_action: 0
-            node_publish_action: 0
-            node_make_unsticky_action: 0
-            node_unpublish_action: 0
-            node_promote_action: 0
-            simplenews_send_action: 0
-            simplenews_stop_action: 0
-            vbo_export_generate_csv_action: 0
-            vbo_export_generate_xlsx_action: 0
-            views_bulk_operations_delete_entity: 0
-            'entity:unpublish_action:node': 0
-            'entity:save_action:node': 0
-            'entity:delete_action:node': 0
-            'entity:publish_action:node': 0
-          preconfiguration: {  }
-          plugin_id: views_bulk_operations_bulk_form
+          clear_on_exposed: false
+          selected_actions: {  }
         nid:
           id: nid
           table: node_field_data
@@ -1697,6 +1615,9 @@ display:
           relationship: field_intitul_de_l_offre
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: ID
           exclude: false
           alter:
@@ -1753,9 +1674,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -1763,6 +1681,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: Title
           exclude: true
           alter:
@@ -1818,9 +1739,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_intitul_de_l_offre:
           id: field_intitul_de_l_offre
           table: node__field_intitul_de_l_offre
@@ -1828,6 +1746,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'intitulé de l''offre'
           exclude: false
           alter:
@@ -1883,7 +1802,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         moderation_state:
           id: moderation_state
           table: node_field_data
@@ -1891,6 +1809,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: moderation_state_field
           label: Etat
           exclude: false
           alter:
@@ -1945,8 +1865,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          plugin_id: moderation_state_field
         field_cin:
           id: field_cin
           table: profile__field_cin
@@ -1954,6 +1872,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: CIN
           exclude: false
           alter:
@@ -2009,7 +1928,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_nom:
           id: field_nom
           table: profile__field_nom
@@ -2017,6 +1935,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Nom
           exclude: false
           alter:
@@ -2072,7 +1991,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_prenom:
           id: field_prenom
           table: profile__field_prenom
@@ -2080,6 +1998,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Prénom
           exclude: false
           alter:
@@ -2135,7 +2054,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         edit_node:
           id: edit_node
           table: node
@@ -2143,6 +2061,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: entity_link_edit
           label: Modifier
           exclude: false
           alter:
@@ -2187,8 +2107,6 @@ display:
           text: edit
           output_url_as_text: false
           absolute: false
-          entity_type: node
-          plugin_id: entity_link_edit
         field_candidature:
           id: field_candidature
           table: node__field_candidature
@@ -2196,6 +2114,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Candidature
           exclude: false
           alter:
@@ -2250,8 +2169,72 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            postulation: postulation
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        type_1:
+          id: type_1
+          table: profile
+          field: type
+          relationship: profile
+          group_type: group
+          admin_label: ''
+          entity_type: profile
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            candidat: candidat
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        fields: false
+        filters: false
+        filter_groups: false
       rendering_language: '***LANGUAGE_entity_translation***'
+      display_extenders: {  }
+      path: postulations-par-offre
     cache_metadata:
       max-age: 0
       contexts:
@@ -2268,13 +2251,11 @@ display:
         - 'config:field.storage.profile.field_nom'
         - 'config:field.storage.profile.field_prenom'
   page_2:
-    display_plugin: page
     id: page_2
     display_title: 'Page 2'
+    display_plugin: page
     position: 2
     display_options:
-      display_extenders: {  }
-      path: entreprise/offre/postulation
       fields:
         views_bulk_operations_bulk_form:
           id: views_bulk_operations_bulk_form
@@ -2283,6 +2264,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: views_bulk_operations_bulk_form
           label: Operations
           exclude: false
           alter:
@@ -2327,39 +2309,19 @@ display:
           batch: true
           batch_size: 10
           form_step: true
+          ajax_loader: false
           buttons: false
-          clear_on_exposed: false
           action_title: Action
+          clear_on_exposed: false
           selected_actions:
-            views_bulk_operations_accept_by_company: views_bulk_operations_accept_by_company
-            views_bulk_operations_refuse_by_aneti: 0
-            views_bulk_operations_accept_by_aneti: 0
-            views_bulk_operations_refuse_by_company: views_bulk_operations_refuse_by_company
-            comment_delete_action: 0
-            node_assign_owner_action: 0
-            node_unpublish_by_keyword_action: 0
-            node_save_action: 0
-            node_unpromote_action: 0
-            node_make_sticky_action: 0
-            node_publish_action: 0
-            node_make_unsticky_action: 0
-            node_unpublish_action: 0
-            node_promote_action: 0
-            simplenews_send_action: 0
-            simplenews_stop_action: 0
-            vbo_export_generate_csv_action: 0
-            vbo_export_generate_xlsx_action: 0
-            views_bulk_operations_delete_entity: 0
-            'entity:unpublish_action:node': 0
-            'entity:save_action:node': 0
-            'entity:delete_action:node': 0
-            'entity:publish_action:node': 0
-          preconfiguration:
-            views_bulk_operations_accept_by_company:
-              label_override: ''
-            views_bulk_operations_refuse_by_company:
-              label_override: ''
-          plugin_id: views_bulk_operations_bulk_form
+            -
+              action_id: views_bulk_operations_accept_by_company
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: views_bulk_operations_refuse_by_company
+              preconfiguration:
+                label_override: ''
         nid:
           id: nid
           table: node_field_data
@@ -2367,6 +2329,9 @@ display:
           relationship: field_intitul_de_l_offre
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: ID
           exclude: false
           alter:
@@ -2423,9 +2388,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -2433,6 +2395,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: Title
           exclude: true
           alter:
@@ -2488,9 +2453,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_intitul_de_l_offre:
           id: field_intitul_de_l_offre
           table: node__field_intitul_de_l_offre
@@ -2498,6 +2460,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'intitulé de l''offre'
           exclude: false
           alter:
@@ -2553,7 +2516,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_cin:
           id: field_cin
           table: profile__field_cin
@@ -2561,6 +2523,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: CIN
           exclude: false
           alter:
@@ -2616,7 +2579,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_nom:
           id: field_nom
           table: profile__field_nom
@@ -2624,6 +2586,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Nom
           exclude: false
           alter:
@@ -2679,7 +2642,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_prenom:
           id: field_prenom
           table: profile__field_prenom
@@ -2687,6 +2649,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Prénom
           exclude: false
           alter:
@@ -2742,7 +2705,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         edit_node:
           id: edit_node
           table: node
@@ -2750,6 +2712,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: entity_link_edit
           label: Modifier
           exclude: true
           alter:
@@ -2794,8 +2758,6 @@ display:
           text: edit
           output_url_as_text: false
           absolute: false
-          entity_type: node
-          plugin_id: entity_link_edit
         field_candidature:
           id: field_candidature
           table: node__field_candidature
@@ -2803,6 +2765,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Candidature
           exclude: false
           alter:
@@ -2857,7 +2820,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nid_1:
           id: nid_1
           table: node_field_data
@@ -2865,6 +2827,9 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: 'ID CV'
           exclude: true
           alter:
@@ -2921,9 +2886,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -2931,6 +2893,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: CV
           exclude: false
           alter:
@@ -2972,21 +2935,16 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      defaults:
-        fields: false
-        filters: false
-        filter_groups: false
       filters:
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            postulation: postulation
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            postulation: postulation
           expose:
             operator_limit_selection: false
             operator_list: {  }
@@ -2997,6 +2955,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: list_field
           operator: or
           value:
             3: '3'
@@ -3010,6 +2969,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -3017,8 +2978,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -3032,7 +2991,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          plugin_id: list_field
         type_1:
           id: type_1
           table: profile
@@ -3040,6 +2998,9 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          entity_type: profile
+          entity_field: type
+          plugin_id: bundle
           operator: in
           value:
             candidat: candidat
@@ -3051,6 +3012,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -3058,8 +3021,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -3072,9 +3033,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: profile
-          entity_field: type
-          plugin_id: bundle
         field_candidature_value_1:
           id: field_candidature_value_1
           table: node__field_candidature
@@ -3082,6 +3040,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: list_field
           operator: or
           value:
             3: '3'
@@ -3095,6 +3054,8 @@ display:
             description: ''
             use_operator: false
             operator: field_candidature_value_1_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_candidature_value_1
             required: false
             remember: false
@@ -3115,8 +3076,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: true
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -3130,7 +3089,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          plugin_id: list_field
         field_domaine_de_profession_target_id:
           id: field_domaine_de_profession_target_id
           table: node__field_domaine_de_profession
@@ -3138,6 +3096,7 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          plugin_id: taxonomy_index_tid
           operator: or
           value: {  }
           group: 1
@@ -3148,6 +3107,8 @@ display:
             description: ''
             use_operator: false
             operator: field_domaine_de_profession_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_domaine_de_profession_target_id
             required: false
             remember: false
@@ -3168,8 +3129,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -3183,12 +3142,11 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: textfield
-          limit: true
           vid: specialite_par_domaine
+          type: textfield
           hierarchy: false
+          limit: true
           error_message: true
-          plugin_id: taxonomy_index_tid
         field_nombre_d_annee_d_exercice_value:
           id: field_nombre_d_annee_d_exercice_value
           table: node__field_nombre_d_annee_d_exercice
@@ -3196,6 +3154,7 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          plugin_id: numeric
           operator: '>='
           value:
             min: ''
@@ -3209,6 +3168,8 @@ display:
             description: ''
             use_operator: false
             operator: field_nombre_d_annee_d_exercice_value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_nombre_d_annee_d_exercice_value
             required: false
             remember: false
@@ -3228,11 +3189,9 @@ display:
               partenaire: '0'
               webmaster: '0'
               pdg: '0'
-            placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -3245,12 +3204,17 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: numeric
       filter_groups:
         operator: AND
         groups:
           1: AND
+      defaults:
+        fields: false
+        filters: false
+        filter_groups: false
       rendering_language: '***LANGUAGE_entity_default***'
+      display_extenders: {  }
+      path: entreprise/offre/postulation
     cache_metadata:
       max-age: 0
       contexts:
@@ -3267,13 +3231,12 @@ display:
         - 'config:field.storage.profile.field_nom'
         - 'config:field.storage.profile.field_prenom'
   page_3:
-    display_plugin: page
     id: page_3
     display_title: 'Page 2'
+    display_plugin: page
     position: 2
     display_options:
-      display_extenders: {  }
-      path: administration/offre/postulation
+      title: 'Postulations par offre (admin)'
       fields:
         views_bulk_operations_bulk_form:
           id: views_bulk_operations_bulk_form
@@ -3282,6 +3245,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: views_bulk_operations_bulk_form
           label: Operations
           exclude: false
           alter:
@@ -3326,60 +3290,50 @@ display:
           batch: true
           batch_size: 10
           form_step: true
+          ajax_loader: false
           buttons: false
-          clear_on_exposed: false
           action_title: Action
+          clear_on_exposed: false
           selected_actions:
-            views_bulk_operations_refuse_by_referent: 0
-            views_bulk_operations_accept_by_aneti: views_bulk_operations_accept_by_aneti
-            views_bulk_operations_accept_by_company: views_bulk_operations_accept_by_company
-            views_bulk_operations_refuse_by_aneti: views_bulk_operations_refuse_by_aneti
-            views_bulk_operations_refuse_by_company: views_bulk_operations_refuse_by_company
-            views_bulk_operations_accept_by_referent: views_bulk_operations_accept_by_referent
-            views_bulk_operations_signe_rgpd: views_bulk_operations_signe_rgpd
-            views_bulk_operations_traitement_en_cours: views_bulk_operations_traitement_en_cours
-            comment_delete_action: 0
-            node_assign_owner_action: 0
-            node_unpromote_action: 0
-            node_promote_action: 0
-            node_publish_action: 0
-            node_save_action: 0
-            node_make_sticky_action: 0
-            node_unpublish_by_keyword_action: 0
-            node_unpublish_action: 0
-            node_make_unsticky_action: 0
-            simplenews_stop_action: 0
-            simplenews_send_action: 0
-            vbo_export_generate_xlsx_action: vbo_export_generate_xlsx_action
-            vbo_export_generate_csv_action: vbo_export_generate_csv_action
-            views_bulk_operations_delete_entity: 0
-            'entity:delete_action:node': 0
-            'entity:publish_action:node': 0
-            'entity:save_action:node': 0
-            'entity:unpublish_action:node': 0
-          preconfiguration:
-            views_bulk_operations_accept_by_aneti:
-              label_override: ''
-            views_bulk_operations_accept_by_company:
-              label_override: ''
-            views_bulk_operations_refuse_by_aneti:
-              label_override: ''
-            views_bulk_operations_refuse_by_company:
-              label_override: ''
-            views_bulk_operations_accept_by_referent:
-              label_override: ''
-            views_bulk_operations_signe_rgpd:
-              label_override: ''
-            views_bulk_operations_traitement_en_cours:
-              label_override: ''
-            vbo_export_generate_xlsx_action:
-              label_override: 'Export Excel'
-              strip_tags: 1
-            vbo_export_generate_csv_action:
-              label_override: 'Exporter en CSV'
-              strip_tags: 1
-              separator: ;
-          plugin_id: views_bulk_operations_bulk_form
+            -
+              action_id: views_bulk_operations_accept_by_aneti
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: views_bulk_operations_accept_by_company
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: views_bulk_operations_refuse_by_aneti
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: views_bulk_operations_refuse_by_company
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: views_bulk_operations_accept_by_referent
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: views_bulk_operations_signe_rgpd
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: views_bulk_operations_traitement_en_cours
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: vbo_export_generate_xlsx_action
+              preconfiguration:
+                label_override: 'Export Excel'
+                strip_tags: true
+            -
+              action_id: vbo_export_generate_csv_action
+              preconfiguration:
+                label_override: 'Exporter en CSV'
+                strip_tags: true
+                separator: ;
         nid:
           id: nid
           table: node_field_data
@@ -3387,6 +3341,9 @@ display:
           relationship: field_intitul_de_l_offre
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: ID
           exclude: false
           alter:
@@ -3443,9 +3400,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -3453,6 +3407,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: Title
           exclude: true
           alter:
@@ -3508,9 +3465,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_intitul_de_l_offre:
           id: field_intitul_de_l_offre
           table: node__field_intitul_de_l_offre
@@ -3518,6 +3472,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'intitulé de l''offre'
           exclude: false
           alter:
@@ -3573,7 +3528,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_cin:
           id: field_cin
           table: profile__field_cin
@@ -3581,6 +3535,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: CIN
           exclude: false
           alter:
@@ -3636,7 +3591,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_nom:
           id: field_nom
           table: profile__field_nom
@@ -3644,6 +3598,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Nom
           exclude: false
           alter:
@@ -3699,7 +3654,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_prenom:
           id: field_prenom
           table: profile__field_prenom
@@ -3707,6 +3661,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Prénom
           exclude: false
           alter:
@@ -3762,7 +3717,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         mail:
           id: mail
           table: users_field_data
@@ -3770,6 +3724,9 @@ display:
           relationship: field_candidats
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: mail
+          plugin_id: field
           label: Email
           exclude: false
           alter:
@@ -3824,9 +3781,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: user
-          entity_field: mail
-          plugin_id: field
         field_telephone:
           id: field_telephone
           table: profile__field_telephone
@@ -3834,6 +3788,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Téléphone
           exclude: false
           alter:
@@ -3889,7 +3844,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         edit_node:
           id: edit_node
           table: node
@@ -3897,6 +3851,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: entity_link_edit
           label: Modifier
           exclude: true
           alter:
@@ -3941,8 +3897,6 @@ display:
           text: edit
           output_url_as_text: false
           absolute: false
-          entity_type: node
-          plugin_id: entity_link_edit
         field_candidature:
           id: field_candidature
           table: node__field_candidature
@@ -3950,6 +3904,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Candidature
           exclude: false
           alter:
@@ -4004,7 +3959,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_accepter:
           id: field_accepter
           table: node__field_accepter
@@ -4012,6 +3966,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'RGPD Signé'
           exclude: false
           alter:
@@ -4057,8 +4012,8 @@ display:
           type: boolean
           settings:
             format: yes-no
-            format_custom_true: ''
             format_custom_false: ''
+            format_custom_true: ''
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -4069,7 +4024,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nid_1:
           id: nid_1
           table: node_field_revision
@@ -4077,6 +4031,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: 'Identifiant (ID)'
           exclude: true
           alter:
@@ -4133,9 +4090,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         nid_2:
           id: nid_2
           table: node_field_data
@@ -4143,6 +4097,9 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: 'Identifiant (ID)'
           exclude: true
           alter:
@@ -4199,9 +4156,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -4209,6 +4163,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: Complément
           exclude: false
           alter:
@@ -4250,7 +4205,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         nothing_1:
           id: nothing_1
           table: views
@@ -4258,6 +4212,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: CV
           exclude: false
           alter:
@@ -4299,7 +4254,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         changed:
           id: changed
           table: node_field_data
@@ -4307,6 +4261,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: changed
+          plugin_id: field
           label: Modifié
           exclude: false
           alter:
@@ -4364,9 +4321,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: changed
-          plugin_id: field
         field_code_postal:
           id: field_code_postal
           table: profile__field_code_postal
@@ -4374,6 +4328,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'Code postal'
           exclude: true
           alter:
@@ -4430,7 +4385,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_ville_tunisie:
           id: field_ville_tunisie
           table: profile__field_ville_tunisie
@@ -4438,6 +4392,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Ville
           exclude: false
           alter:
@@ -4493,7 +4448,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_ville:
           id: field_ville
           table: profile__field_ville
@@ -4501,6 +4455,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Ville
           exclude: false
           alter:
@@ -4556,7 +4511,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_pays:
           id: field_pays
           table: node__field_pays
@@ -4564,6 +4518,7 @@ display:
           relationship: field_intitul_de_l_offre
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Pays
           exclude: false
           alter:
@@ -4619,7 +4574,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_entreprise_id:
           id: field_entreprise_id
           table: node__field_entreprise_id
@@ -4627,6 +4581,7 @@ display:
           relationship: field_intitul_de_l_offre
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Entreprises
           exclude: false
           alter:
@@ -4682,25 +4637,22 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
-      defaults:
-        fields: false
-        filters: false
-        filter_groups: false
-        title: false
-        relationships: false
-        access: false
-        footer: false
+      access:
+        type: role
+        options:
+          role:
+            administrator: administrator
+            conseiller_central: conseiller_central
       filters:
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            postulation: postulation
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            postulation: postulation
           group: 1
           expose:
             operator_limit_selection: false
@@ -4712,6 +4664,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: list_field
           operator: or
           value:
             0: '0'
@@ -4726,6 +4679,8 @@ display:
             description: ''
             use_operator: false
             operator: field_candidature_value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_candidature_value
             required: false
             remember: false
@@ -4746,8 +4701,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -4761,7 +4714,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          plugin_id: list_field
         field_accepter_value:
           id: field_accepter_value
           table: node__field_accepter
@@ -4769,6 +4721,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: boolean
           operator: '='
           value: All
           group: 1
@@ -4813,7 +4766,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: boolean
         field_cin_value_1:
           id: field_cin_value_1
           table: profile__field_cin
@@ -4821,6 +4773,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: string
           operator: contains
           value: ''
           group: 1
@@ -4831,6 +4784,8 @@ display:
             description: ''
             use_operator: false
             operator: field_cin_value_1_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_cin_value_1
             required: false
             remember: false
@@ -4852,8 +4807,6 @@ display:
               pdg: '0'
               chef_de_bureau: '0'
             placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -4866,7 +4819,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: string
         type_1:
           id: type_1
           table: profile
@@ -4874,6 +4826,9 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          entity_type: profile
+          entity_field: type
+          plugin_id: bundle
           operator: in
           value:
             candidat: candidat
@@ -4885,6 +4840,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -4892,8 +4849,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -4906,9 +4861,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: profile
-          entity_field: type
-          plugin_id: bundle
         field_domaine_de_profession_target_id:
           id: field_domaine_de_profession_target_id
           table: node__field_domaine_de_profession
@@ -4916,6 +4868,7 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          plugin_id: taxonomy_index_tid
           operator: or
           value: {  }
           group: 1
@@ -4964,12 +4917,11 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: textfield
-          limit: true
           vid: specialite_par_domaine
+          type: textfield
           hierarchy: false
+          limit: true
           error_message: true
-          plugin_id: taxonomy_index_tid
         field_nombre_d_annee_d_exercice_value:
           id: field_nombre_d_annee_d_exercice_value
           table: node__field_nombre_d_annee_d_exercice
@@ -4977,6 +4929,7 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          plugin_id: numeric
           operator: '>='
           value:
             min: ''
@@ -4990,6 +4943,8 @@ display:
             description: ''
             use_operator: false
             operator: field_nombre_d_annee_d_exercice_value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_nombre_d_annee_d_exercice_value
             required: false
             remember: false
@@ -5009,11 +4964,9 @@ display:
               partenaire: '0'
               webmaster: '0'
               pdg: '0'
-            placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -5026,7 +4979,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: numeric
         field_diplome_target_id:
           id: field_diplome_target_id
           table: node__field_diplome
@@ -5034,6 +4986,7 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          plugin_id: taxonomy_index_tid
           operator: or
           value: {  }
           group: 1
@@ -5082,17 +5035,23 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: textfield
-          limit: true
           vid: diplome
+          type: textfield
           hierarchy: true
+          limit: true
           error_message: true
-          plugin_id: taxonomy_index_tid
       filter_groups:
         operator: AND
         groups:
           1: AND
-      title: 'Postulations par offre (admin)'
+      defaults:
+        access: false
+        title: false
+        relationships: false
+        fields: false
+        filters: false
+        filter_groups: false
+        footer: false
       relationships:
         field_candidats:
           id: field_candidats
@@ -5101,8 +5060,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_candidats : Utilisateur'
-          required: true
           plugin_id: standard
+          required: true
         profile:
           id: profile
           table: users_field_data
@@ -5110,9 +5069,9 @@ display:
           relationship: field_candidats
           group_type: group
           admin_label: Profil
-          required: true
           entity_type: user
           plugin_id: standard
+          required: true
         field_intitul_de_l_offre:
           id: field_intitul_de_l_offre
           table: node__field_intitul_de_l_offre
@@ -5120,8 +5079,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_intitul_de_l_offre : Contenu'
-          required: true
           plugin_id: standard
+          required: true
         field_postulation:
           id: field_postulation
           table: node__field_postulation
@@ -5129,8 +5088,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_postulation : Content'
-          required: false
           plugin_id: standard
+          required: false
         reverse__node__field_candidat:
           id: reverse__node__field_candidat
           table: users_field_data
@@ -5138,9 +5097,9 @@ display:
           relationship: field_candidats
           group_type: group
           admin_label: field_candidat
-          required: false
           entity_type: user
           plugin_id: entity_reverse
+          required: false
         term_node_tid:
           id: term_node_tid
           table: node_field_data
@@ -5148,18 +5107,11 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: terme
+          entity_type: node
+          plugin_id: node_term_data
           required: false
           vids:
             - codepostal
-          entity_type: node
-          plugin_id: node_term_data
-      rendering_language: '***LANGUAGE_site_default***'
-      access:
-        type: role
-        options:
-          role:
-            administrator: administrator
-            conseiller_central: conseiller_central
       footer:
         result:
           id: result
@@ -5168,9 +5120,12 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: result
           empty: false
           content: 'Affichage @start - @end de @total'
-          plugin_id: result
+      rendering_language: '***LANGUAGE_site_default***'
+      display_extenders: {  }
+      path: administration/offre/postulation
     cache_metadata:
       max-age: 0
       contexts:
@@ -5194,13 +5149,12 @@ display:
         - 'config:field.storage.profile.field_ville'
         - 'config:field.storage.profile.field_ville_tunisie'
   page_4:
-    display_plugin: page
     id: page_4
     display_title: referent
+    display_plugin: page
     position: 2
     display_options:
-      display_extenders: {  }
-      path: referent/offre/postulations
+      title: 'Postulations par offre (admin)'
       fields:
         views_bulk_operations_bulk_form:
           id: views_bulk_operations_bulk_form
@@ -5209,6 +5163,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: views_bulk_operations_bulk_form
           label: Operations
           exclude: false
           alter:
@@ -5253,44 +5208,24 @@ display:
           batch: true
           batch_size: 10
           form_step: true
+          ajax_loader: false
           buttons: false
-          clear_on_exposed: false
           action_title: Action
+          clear_on_exposed: false
           selected_actions:
-            views_bulk_operations_refuse_by_referent: views_bulk_operations_refuse_by_referent
-            views_bulk_operations_accept_by_aneti: 0
-            views_bulk_operations_accept_by_company: 0
-            views_bulk_operations_refuse_by_aneti: 0
-            views_bulk_operations_refuse_by_company: 0
-            views_bulk_operations_accept_by_referent: views_bulk_operations_accept_by_referent
-            comment_delete_action: 0
-            node_make_sticky_action: 0
-            node_unpublish_by_keyword_action: 0
-            node_publish_action: 0
-            node_unpublish_action: 0
-            node_unpromote_action: 0
-            node_make_unsticky_action: 0
-            node_save_action: 0
-            node_assign_owner_action: 0
-            node_promote_action: 0
-            simplenews_stop_action: 0
-            simplenews_send_action: 0
-            vbo_export_generate_xlsx_action: vbo_export_generate_xlsx_action
-            vbo_export_generate_csv_action: 0
-            views_bulk_operations_delete_entity: 0
-            'entity:save_action:node': 0
-            'entity:publish_action:node': 0
-            'entity:delete_action:node': 0
-            'entity:unpublish_action:node': 0
-          preconfiguration:
-            views_bulk_operations_refuse_by_referent:
-              label_override: ''
-            views_bulk_operations_accept_by_referent:
-              label_override: ''
-            vbo_export_generate_xlsx_action:
-              label_override: 'Export Excel'
-              strip_tags: 0
-          plugin_id: views_bulk_operations_bulk_form
+            -
+              action_id: views_bulk_operations_refuse_by_referent
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: views_bulk_operations_accept_by_referent
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: vbo_export_generate_xlsx_action
+              preconfiguration:
+                label_override: 'Export Excel'
+                strip_tags: false
         nid:
           id: nid
           table: node_field_data
@@ -5298,6 +5233,9 @@ display:
           relationship: field_intitul_de_l_offre
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: ID
           exclude: false
           alter:
@@ -5354,9 +5292,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -5364,6 +5299,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: Title
           exclude: true
           alter:
@@ -5419,9 +5357,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_intitul_de_l_offre:
           id: field_intitul_de_l_offre
           table: node__field_intitul_de_l_offre
@@ -5429,6 +5364,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'intitulé de l''offre'
           exclude: false
           alter:
@@ -5484,7 +5420,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_cin:
           id: field_cin
           table: profile__field_cin
@@ -5492,6 +5427,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: CIN
           exclude: false
           alter:
@@ -5547,7 +5483,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_nom:
           id: field_nom
           table: profile__field_nom
@@ -5555,6 +5490,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Nom
           exclude: false
           alter:
@@ -5610,7 +5546,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_prenom:
           id: field_prenom
           table: profile__field_prenom
@@ -5618,6 +5553,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Prénom
           exclude: false
           alter:
@@ -5673,7 +5609,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         edit_node:
           id: edit_node
           table: node
@@ -5681,6 +5616,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: entity_link_edit
           label: Modifier
           exclude: true
           alter:
@@ -5725,8 +5662,6 @@ display:
           text: edit
           output_url_as_text: false
           absolute: false
-          entity_type: node
-          plugin_id: entity_link_edit
         field_candidature:
           id: field_candidature
           table: node__field_candidature
@@ -5734,6 +5669,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Candidature
           exclude: false
           alter:
@@ -5788,7 +5724,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nid_1:
           id: nid_1
           table: node_field_revision
@@ -5796,6 +5731,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: 'Identifiant (ID)'
           exclude: true
           alter:
@@ -5852,9 +5790,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         nid_2:
           id: nid_2
           table: node_field_data
@@ -5862,6 +5797,9 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: 'Identifiant (ID)'
           exclude: true
           alter:
@@ -5918,9 +5856,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -5928,6 +5863,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: Complément
           exclude: false
           alter:
@@ -5969,7 +5905,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         nothing_1:
           id: nothing_1
           table: views
@@ -5977,6 +5912,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: CV
           exclude: false
           alter:
@@ -6018,24 +5954,22 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      defaults:
-        fields: false
-        filters: false
-        filter_groups: false
-        title: false
-        relationships: false
-        access: false
+      access:
+        type: role
+        options:
+          role:
+            referent: referent
+            chef_de_bureau: chef_de_bureau
       filters:
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            postulation: postulation
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            postulation: postulation
           group: 1
           expose:
             operator_limit_selection: false
@@ -6047,6 +5981,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: list_field
           operator: or
           value:
             0: '0'
@@ -6061,6 +5996,8 @@ display:
             description: ''
             use_operator: false
             operator: field_candidature_value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_candidature_value
             required: false
             remember: false
@@ -6081,8 +6018,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -6096,7 +6031,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          plugin_id: list_field
         field_cin_value_1:
           id: field_cin_value_1
           table: profile__field_cin
@@ -6104,6 +6038,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: string
           operator: contains
           value: ''
           group: 1
@@ -6114,6 +6049,8 @@ display:
             description: ''
             use_operator: false
             operator: field_cin_value_1_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_cin_value_1
             required: false
             remember: false
@@ -6135,8 +6072,6 @@ display:
               pdg: '0'
               chef_de_bureau: '0'
             placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -6149,7 +6084,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: string
         type_1:
           id: type_1
           table: profile
@@ -6157,6 +6091,9 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          entity_type: profile
+          entity_field: type
+          plugin_id: bundle
           operator: in
           value:
             candidat: candidat
@@ -6168,6 +6105,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -6175,8 +6114,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -6189,9 +6126,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: profile
-          entity_field: type
-          plugin_id: bundle
         field_domaine_de_profession_target_id:
           id: field_domaine_de_profession_target_id
           table: node__field_domaine_de_profession
@@ -6199,6 +6133,7 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          plugin_id: taxonomy_index_tid
           operator: or
           value: {  }
           group: 1
@@ -6209,6 +6144,8 @@ display:
             description: ''
             use_operator: false
             operator: field_domaine_de_profession_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_domaine_de_profession_target_id
             required: false
             remember: false
@@ -6229,8 +6166,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -6244,12 +6179,11 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: textfield
-          limit: true
           vid: specialite_par_domaine
+          type: textfield
           hierarchy: false
+          limit: true
           error_message: true
-          plugin_id: taxonomy_index_tid
         field_nombre_d_annee_d_exercice_value:
           id: field_nombre_d_annee_d_exercice_value
           table: node__field_nombre_d_annee_d_exercice
@@ -6257,6 +6191,7 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          plugin_id: numeric
           operator: '>='
           value:
             min: ''
@@ -6270,6 +6205,8 @@ display:
             description: ''
             use_operator: false
             operator: field_nombre_d_annee_d_exercice_value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_nombre_d_annee_d_exercice_value
             required: false
             remember: false
@@ -6289,11 +6226,9 @@ display:
               partenaire: '0'
               webmaster: '0'
               pdg: '0'
-            placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -6306,12 +6241,17 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: numeric
       filter_groups:
         operator: AND
         groups:
           1: AND
-      title: 'Postulations par offre (admin)'
+      defaults:
+        access: false
+        title: false
+        relationships: false
+        fields: false
+        filters: false
+        filter_groups: false
       relationships:
         field_candidats:
           id: field_candidats
@@ -6320,8 +6260,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_candidats : Utilisateur'
-          required: true
           plugin_id: standard
+          required: true
         profile:
           id: profile
           table: users_field_data
@@ -6329,9 +6269,9 @@ display:
           relationship: field_candidats
           group_type: group
           admin_label: Profil
-          required: true
           entity_type: user
           plugin_id: standard
+          required: true
         field_intitul_de_l_offre:
           id: field_intitul_de_l_offre
           table: node__field_intitul_de_l_offre
@@ -6339,8 +6279,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_intitul_de_l_offre : Contenu'
-          required: true
           plugin_id: standard
+          required: true
         field_postulation:
           id: field_postulation
           table: node__field_postulation
@@ -6348,8 +6288,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_postulation : Content'
-          required: false
           plugin_id: standard
+          required: false
         reverse__node__field_candidat:
           id: reverse__node__field_candidat
           table: users_field_data
@@ -6357,17 +6297,13 @@ display:
           relationship: field_candidats
           group_type: group
           admin_label: field_candidat
-          required: false
           entity_type: user
           plugin_id: entity_reverse
-      rendering_language: '***LANGUAGE_site_default***'
+          required: false
       display_description: ''
-      access:
-        type: role
-        options:
-          role:
-            referent: referent
-            chef_de_bureau: chef_de_bureau
+      rendering_language: '***LANGUAGE_site_default***'
+      display_extenders: {  }
+      path: referent/offre/postulations
     cache_metadata:
       max-age: 0
       contexts:
@@ -6384,13 +6320,12 @@ display:
         - 'config:field.storage.profile.field_nom'
         - 'config:field.storage.profile.field_prenom'
   page_5:
-    display_plugin: page
     id: page_5
     display_title: 'Page 2'
+    display_plugin: page
     position: 2
     display_options:
-      display_extenders: {  }
-      path: administration/offre/postulations
+      title: 'Postulations par offre (admin)'
       fields:
         views_bulk_operations_bulk_form:
           id: views_bulk_operations_bulk_form
@@ -6399,6 +6334,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: views_bulk_operations_bulk_form
           label: Operations
           exclude: false
           alter:
@@ -6443,60 +6379,50 @@ display:
           batch: true
           batch_size: 10
           form_step: true
+          ajax_loader: false
           buttons: false
-          clear_on_exposed: false
           action_title: Action
+          clear_on_exposed: false
           selected_actions:
-            views_bulk_operations_refuse_by_referent: 0
-            views_bulk_operations_accept_by_aneti: views_bulk_operations_accept_by_aneti
-            views_bulk_operations_accept_by_company: views_bulk_operations_accept_by_company
-            views_bulk_operations_refuse_by_aneti: views_bulk_operations_refuse_by_aneti
-            views_bulk_operations_refuse_by_company: views_bulk_operations_refuse_by_company
-            views_bulk_operations_accept_by_referent: views_bulk_operations_accept_by_referent
-            views_bulk_operations_signe_rgpd: views_bulk_operations_signe_rgpd
-            views_bulk_operations_traitement_en_cours: views_bulk_operations_traitement_en_cours
-            comment_delete_action: 0
-            node_assign_owner_action: 0
-            node_unpromote_action: 0
-            node_promote_action: 0
-            node_publish_action: 0
-            node_save_action: 0
-            node_make_sticky_action: 0
-            node_unpublish_by_keyword_action: 0
-            node_unpublish_action: 0
-            node_make_unsticky_action: 0
-            simplenews_stop_action: 0
-            simplenews_send_action: 0
-            vbo_export_generate_xlsx_action: vbo_export_generate_xlsx_action
-            vbo_export_generate_csv_action: vbo_export_generate_csv_action
-            views_bulk_operations_delete_entity: 0
-            'entity:delete_action:node': 0
-            'entity:publish_action:node': 0
-            'entity:save_action:node': 0
-            'entity:unpublish_action:node': 0
-          preconfiguration:
-            views_bulk_operations_accept_by_aneti:
-              label_override: ''
-            views_bulk_operations_accept_by_company:
-              label_override: ''
-            views_bulk_operations_refuse_by_aneti:
-              label_override: ''
-            views_bulk_operations_refuse_by_company:
-              label_override: ''
-            views_bulk_operations_accept_by_referent:
-              label_override: ''
-            views_bulk_operations_signe_rgpd:
-              label_override: ''
-            views_bulk_operations_traitement_en_cours:
-              label_override: ''
-            vbo_export_generate_xlsx_action:
-              label_override: 'Export Excel'
-              strip_tags: 1
-            vbo_export_generate_csv_action:
-              label_override: 'Exporter en CSV'
-              strip_tags: 1
-              separator: ;
-          plugin_id: views_bulk_operations_bulk_form
+            -
+              action_id: views_bulk_operations_accept_by_aneti
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: views_bulk_operations_accept_by_company
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: views_bulk_operations_refuse_by_aneti
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: views_bulk_operations_refuse_by_company
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: views_bulk_operations_accept_by_referent
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: views_bulk_operations_signe_rgpd
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: views_bulk_operations_traitement_en_cours
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: vbo_export_generate_xlsx_action
+              preconfiguration:
+                label_override: 'Export Excel'
+                strip_tags: true
+            -
+              action_id: vbo_export_generate_csv_action
+              preconfiguration:
+                label_override: 'Exporter en CSV'
+                strip_tags: true
+                separator: ;
         nid:
           id: nid
           table: node_field_data
@@ -6504,6 +6430,9 @@ display:
           relationship: field_intitul_de_l_offre
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: ID
           exclude: true
           alter:
@@ -6560,9 +6489,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -6570,6 +6496,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: Title
           exclude: true
           alter:
@@ -6625,9 +6554,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_intitul_de_l_offre:
           id: field_intitul_de_l_offre
           table: node__field_intitul_de_l_offre
@@ -6635,6 +6561,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'intitulé de l''offre'
           exclude: false
           alter:
@@ -6690,7 +6617,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_cin:
           id: field_cin
           table: profile__field_cin
@@ -6698,6 +6624,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: CIN
           exclude: false
           alter:
@@ -6753,7 +6680,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_nom:
           id: field_nom
           table: profile__field_nom
@@ -6761,6 +6687,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Nom
           exclude: false
           alter:
@@ -6816,7 +6743,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_prenom:
           id: field_prenom
           table: profile__field_prenom
@@ -6824,6 +6750,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Prénom
           exclude: false
           alter:
@@ -6879,7 +6806,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         mail:
           id: mail
           table: users_field_data
@@ -6887,6 +6813,9 @@ display:
           relationship: field_candidats
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: mail
+          plugin_id: field
           label: Email
           exclude: false
           alter:
@@ -6941,9 +6870,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: user
-          entity_field: mail
-          plugin_id: field
         field_telephone:
           id: field_telephone
           table: profile__field_telephone
@@ -6951,6 +6877,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Téléphone
           exclude: false
           alter:
@@ -7006,7 +6933,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         edit_node:
           id: edit_node
           table: node
@@ -7014,6 +6940,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: entity_link_edit
           label: Modifier
           exclude: true
           alter:
@@ -7058,8 +6986,6 @@ display:
           text: edit
           output_url_as_text: false
           absolute: false
-          entity_type: node
-          plugin_id: entity_link_edit
         field_candidature:
           id: field_candidature
           table: node__field_candidature
@@ -7067,6 +6993,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Candidature
           exclude: false
           alter:
@@ -7121,7 +7048,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_accepter:
           id: field_accepter
           table: node__field_accepter
@@ -7129,6 +7055,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'RGPD Signé'
           exclude: false
           alter:
@@ -7174,8 +7101,8 @@ display:
           type: boolean
           settings:
             format: yes-no
-            format_custom_true: ''
             format_custom_false: ''
+            format_custom_true: ''
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -7186,7 +7113,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nid_1:
           id: nid_1
           table: node_field_revision
@@ -7194,6 +7120,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: 'Identifiant (ID)'
           exclude: true
           alter:
@@ -7250,9 +7179,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         nid_2:
           id: nid_2
           table: node_field_data
@@ -7260,6 +7186,9 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: 'Identifiant (ID)'
           exclude: true
           alter:
@@ -7316,9 +7245,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -7326,6 +7252,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: Complément
           exclude: false
           alter:
@@ -7367,7 +7294,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         nothing_1:
           id: nothing_1
           table: views
@@ -7375,6 +7301,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: CV
           exclude: false
           alter:
@@ -7416,7 +7343,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         changed:
           id: changed
           table: node_field_data
@@ -7424,6 +7350,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: changed
+          plugin_id: field
           label: Modifié
           exclude: false
           alter:
@@ -7481,9 +7410,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: changed
-          plugin_id: field
         field_code_postal:
           id: field_code_postal
           table: profile__field_code_postal
@@ -7491,6 +7417,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'Code postal'
           exclude: true
           alter:
@@ -7547,7 +7474,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_bureau_referent:
           id: field_bureau_referent
           table: profile__field_bureau_referent
@@ -7555,6 +7481,7 @@ display:
           relationship: profile_1
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Bureau
           exclude: false
           alter:
@@ -7610,7 +7537,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_ville_tunisie:
           id: field_ville_tunisie
           table: profile__field_ville_tunisie
@@ -7618,6 +7544,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Ville
           exclude: true
           alter:
@@ -7673,7 +7600,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_ville:
           id: field_ville
           table: profile__field_ville
@@ -7681,6 +7607,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Ville
           exclude: true
           alter:
@@ -7736,23 +7663,16 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
-      defaults:
-        fields: false
-        filters: false
-        filter_groups: false
-        title: false
-        relationships: false
       filters:
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            postulation: postulation
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            postulation: postulation
           group: 1
           expose:
             operator_limit_selection: false
@@ -7764,6 +7684,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: list_field
           operator: or
           value:
             0: '0'
@@ -7778,6 +7699,8 @@ display:
             description: ''
             use_operator: false
             operator: field_candidature_value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_candidature_value
             required: false
             remember: false
@@ -7798,8 +7721,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -7813,7 +7734,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          plugin_id: list_field
         field_accepter_value:
           id: field_accepter_value
           table: node__field_accepter
@@ -7821,6 +7741,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: boolean
           operator: '='
           value: All
           group: 1
@@ -7865,7 +7786,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: boolean
         field_cin_value_1:
           id: field_cin_value_1
           table: profile__field_cin
@@ -7873,6 +7793,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: string
           operator: contains
           value: ''
           group: 1
@@ -7883,6 +7804,8 @@ display:
             description: ''
             use_operator: false
             operator: field_cin_value_1_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_cin_value_1
             required: false
             remember: false
@@ -7904,8 +7827,6 @@ display:
               pdg: '0'
               chef_de_bureau: '0'
             placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -7918,7 +7839,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: string
         type_1:
           id: type_1
           table: profile
@@ -7926,6 +7846,9 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          entity_type: profile
+          entity_field: type
+          plugin_id: bundle
           operator: in
           value:
             candidat: candidat
@@ -7937,6 +7860,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -7944,8 +7869,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -7958,9 +7881,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: profile
-          entity_field: type
-          plugin_id: bundle
         field_domaine_de_profession_target_id:
           id: field_domaine_de_profession_target_id
           table: node__field_domaine_de_profession
@@ -7968,6 +7888,7 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          plugin_id: taxonomy_index_tid
           operator: or
           value: {  }
           group: 1
@@ -7978,6 +7899,8 @@ display:
             description: ''
             use_operator: false
             operator: field_domaine_de_profession_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_domaine_de_profession_target_id
             required: false
             remember: false
@@ -7998,8 +7921,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -8013,12 +7934,11 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: textfield
-          limit: true
           vid: specialite_par_domaine
+          type: textfield
           hierarchy: false
+          limit: true
           error_message: true
-          plugin_id: taxonomy_index_tid
         field_nombre_d_annee_d_exercice_value:
           id: field_nombre_d_annee_d_exercice_value
           table: node__field_nombre_d_annee_d_exercice
@@ -8026,6 +7946,7 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          plugin_id: numeric
           operator: '>='
           value:
             min: ''
@@ -8039,6 +7960,8 @@ display:
             description: ''
             use_operator: false
             operator: field_nombre_d_annee_d_exercice_value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_nombre_d_annee_d_exercice_value
             required: false
             remember: false
@@ -8058,11 +7981,9 @@ display:
               partenaire: '0'
               webmaster: '0'
               pdg: '0'
-            placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -8075,7 +7996,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: numeric
         type_2:
           id: type_2
           table: profile
@@ -8083,6 +8003,9 @@ display:
           relationship: profile_1
           group_type: group
           admin_label: ''
+          entity_type: profile
+          entity_field: type
+          plugin_id: bundle
           operator: in
           value:
             referent: referent
@@ -8115,14 +8038,16 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: profile
-          entity_field: type
-          plugin_id: bundle
       filter_groups:
         operator: AND
         groups:
           1: AND
-      title: 'Postulations par offre (admin)'
+      defaults:
+        title: false
+        relationships: false
+        fields: false
+        filters: false
+        filter_groups: false
       relationships:
         field_candidats:
           id: field_candidats
@@ -8131,8 +8056,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_candidats : Utilisateur'
-          required: true
           plugin_id: standard
+          required: true
         profile:
           id: profile
           table: users_field_data
@@ -8140,9 +8065,9 @@ display:
           relationship: field_candidats
           group_type: group
           admin_label: Profil
-          required: true
           entity_type: user
           plugin_id: standard
+          required: true
         field_intitul_de_l_offre:
           id: field_intitul_de_l_offre
           table: node__field_intitul_de_l_offre
@@ -8150,8 +8075,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_intitul_de_l_offre : Contenu'
-          required: true
           plugin_id: standard
+          required: true
         field_postulation:
           id: field_postulation
           table: node__field_postulation
@@ -8159,8 +8084,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_postulation : Content'
-          required: false
           plugin_id: standard
+          required: false
         reverse__node__field_candidat:
           id: reverse__node__field_candidat
           table: users_field_data
@@ -8168,9 +8093,9 @@ display:
           relationship: field_candidats
           group_type: group
           admin_label: field_candidat
-          required: false
           entity_type: user
           plugin_id: entity_reverse
+          required: false
         field_referant:
           id: field_referant
           table: profile__field_referant
@@ -8178,8 +8103,8 @@ display:
           relationship: profile
           group_type: group
           admin_label: 'field_referant : User'
-          required: false
           plugin_id: standard
+          required: false
         profile_1:
           id: profile_1
           table: users_field_data
@@ -8187,10 +8112,12 @@ display:
           relationship: field_referant
           group_type: group
           admin_label: Profil
-          required: false
           entity_type: user
           plugin_id: standard
+          required: false
       rendering_language: '***LANGUAGE_site_default***'
+      display_extenders: {  }
+      path: administration/offre/postulations
     cache_metadata:
       max-age: 0
       contexts:
@@ -8213,13 +8140,12 @@ display:
         - 'config:field.storage.profile.field_ville'
         - 'config:field.storage.profile.field_ville_tunisie'
   page_6:
-    display_plugin: page
     id: page_6
     display_title: 'Page 2'
+    display_plugin: page
     position: 2
     display_options:
-      display_extenders: {  }
-      path: administration/offre/postulation-mail
+      title: 'Mail-Postulations par offre (admin)'
       fields:
         views_send_bulk_form:
           id: views_send_bulk_form
@@ -8228,6 +8154,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: views_send_bulk_form
           label: 'Envoyer le courriel'
           exclude: false
           alter:
@@ -8273,7 +8200,6 @@ display:
           include_exclude: exclude
           selected_actions: {  }
           enable_excluded_fields: 1
-          plugin_id: views_send_bulk_form
         nid:
           id: nid
           table: node_field_data
@@ -8281,6 +8207,9 @@ display:
           relationship: field_intitul_de_l_offre
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: ID
           exclude: false
           alter:
@@ -8337,9 +8266,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -8347,6 +8273,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: Title
           exclude: true
           alter:
@@ -8402,9 +8331,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_intitul_de_l_offre:
           id: field_intitul_de_l_offre
           table: node__field_intitul_de_l_offre
@@ -8412,6 +8338,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'intitulé de l''offre'
           exclude: false
           alter:
@@ -8467,7 +8394,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_cin:
           id: field_cin
           table: profile__field_cin
@@ -8475,6 +8401,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: CIN
           exclude: false
           alter:
@@ -8530,7 +8457,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_nom:
           id: field_nom
           table: profile__field_nom
@@ -8538,6 +8464,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Nom
           exclude: false
           alter:
@@ -8593,7 +8520,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_prenom:
           id: field_prenom
           table: profile__field_prenom
@@ -8601,6 +8527,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Prénom
           exclude: false
           alter:
@@ -8656,7 +8583,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         mail:
           id: mail
           table: users_field_data
@@ -8664,6 +8590,9 @@ display:
           relationship: field_candidats
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: mail
+          plugin_id: field
           label: Email
           exclude: false
           alter:
@@ -8718,9 +8647,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: user
-          entity_field: mail
-          plugin_id: field
         field_telephone:
           id: field_telephone
           table: profile__field_telephone
@@ -8728,6 +8654,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Téléphone
           exclude: false
           alter:
@@ -8783,7 +8710,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         edit_node:
           id: edit_node
           table: node
@@ -8791,6 +8717,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: entity_link_edit
           label: Modifier
           exclude: true
           alter:
@@ -8835,8 +8763,6 @@ display:
           text: edit
           output_url_as_text: false
           absolute: false
-          entity_type: node
-          plugin_id: entity_link_edit
         field_candidature:
           id: field_candidature
           table: node__field_candidature
@@ -8844,6 +8770,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Candidature
           exclude: false
           alter:
@@ -8898,7 +8825,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_accepter:
           id: field_accepter
           table: node__field_accepter
@@ -8906,6 +8832,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'RGPD Signé'
           exclude: false
           alter:
@@ -8951,8 +8878,8 @@ display:
           type: boolean
           settings:
             format: yes-no
-            format_custom_true: ''
             format_custom_false: ''
+            format_custom_true: ''
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -8963,7 +8890,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nid_1:
           id: nid_1
           table: node_field_revision
@@ -8971,6 +8897,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: 'Identifiant (ID)'
           exclude: true
           alter:
@@ -9027,9 +8956,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         nid_2:
           id: nid_2
           table: node_field_data
@@ -9037,6 +8963,9 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: 'Identifiant (ID)'
           exclude: true
           alter:
@@ -9093,9 +9022,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -9103,6 +9029,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: Complément
           exclude: false
           alter:
@@ -9144,7 +9071,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         nothing_1:
           id: nothing_1
           table: views
@@ -9152,6 +9078,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: CV
           exclude: false
           alter:
@@ -9193,7 +9120,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         changed:
           id: changed
           table: node_field_data
@@ -9201,6 +9127,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: changed
+          plugin_id: field
           label: Modifié
           exclude: false
           alter:
@@ -9258,9 +9187,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: changed
-          plugin_id: field
         field_code_postal:
           id: field_code_postal
           table: profile__field_code_postal
@@ -9268,6 +9194,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'Code postal'
           exclude: true
           alter:
@@ -9324,7 +9251,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_ville_tunisie:
           id: field_ville_tunisie
           table: profile__field_ville_tunisie
@@ -9332,6 +9258,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Ville
           exclude: false
           alter:
@@ -9387,7 +9314,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_ville:
           id: field_ville
           table: profile__field_ville
@@ -9395,6 +9321,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Ville
           exclude: false
           alter:
@@ -9450,7 +9377,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_pays:
           id: field_pays
           table: node__field_pays
@@ -9458,6 +9384,7 @@ display:
           relationship: field_intitul_de_l_offre
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Pays
           exclude: false
           alter:
@@ -9513,23 +9440,16 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
-      defaults:
-        fields: false
-        filters: false
-        filter_groups: false
-        title: false
-        relationships: false
       filters:
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            postulation: postulation
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            postulation: postulation
           group: 1
           expose:
             operator_limit_selection: false
@@ -9541,6 +9461,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: list_field
           operator: or
           value:
             0: '0'
@@ -9555,6 +9476,8 @@ display:
             description: ''
             use_operator: false
             operator: field_candidature_value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_candidature_value
             required: false
             remember: false
@@ -9575,8 +9498,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -9590,7 +9511,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          plugin_id: list_field
         field_accepter_value:
           id: field_accepter_value
           table: node__field_accepter
@@ -9598,6 +9518,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: boolean
           operator: '='
           value: All
           group: 1
@@ -9642,7 +9563,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: boolean
         field_cin_value_1:
           id: field_cin_value_1
           table: profile__field_cin
@@ -9650,6 +9570,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: string
           operator: contains
           value: ''
           group: 1
@@ -9660,6 +9581,8 @@ display:
             description: ''
             use_operator: false
             operator: field_cin_value_1_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_cin_value_1
             required: false
             remember: false
@@ -9681,8 +9604,6 @@ display:
               pdg: '0'
               chef_de_bureau: '0'
             placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -9695,7 +9616,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: string
         type_1:
           id: type_1
           table: profile
@@ -9703,6 +9623,9 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          entity_type: profile
+          entity_field: type
+          plugin_id: bundle
           operator: in
           value:
             candidat: candidat
@@ -9714,6 +9637,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -9721,8 +9646,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -9735,9 +9658,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: profile
-          entity_field: type
-          plugin_id: bundle
         field_domaine_de_profession_target_id:
           id: field_domaine_de_profession_target_id
           table: node__field_domaine_de_profession
@@ -9745,6 +9665,7 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          plugin_id: taxonomy_index_tid
           operator: or
           value: {  }
           group: 1
@@ -9755,6 +9676,8 @@ display:
             description: ''
             use_operator: false
             operator: field_domaine_de_profession_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_domaine_de_profession_target_id
             required: false
             remember: false
@@ -9775,8 +9698,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -9790,12 +9711,11 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: textfield
-          limit: true
           vid: specialite_par_domaine
+          type: textfield
           hierarchy: false
+          limit: true
           error_message: true
-          plugin_id: taxonomy_index_tid
         field_nombre_d_annee_d_exercice_value:
           id: field_nombre_d_annee_d_exercice_value
           table: node__field_nombre_d_annee_d_exercice
@@ -9803,6 +9723,7 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          plugin_id: numeric
           operator: '>='
           value:
             min: ''
@@ -9816,6 +9737,8 @@ display:
             description: ''
             use_operator: false
             operator: field_nombre_d_annee_d_exercice_value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_nombre_d_annee_d_exercice_value
             required: false
             remember: false
@@ -9835,11 +9758,9 @@ display:
               partenaire: '0'
               webmaster: '0'
               pdg: '0'
-            placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -9852,12 +9773,16 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: numeric
       filter_groups:
         operator: AND
         groups:
           1: AND
-      title: 'Mail-Postulations par offre (admin)'
+      defaults:
+        title: false
+        relationships: false
+        fields: false
+        filters: false
+        filter_groups: false
       relationships:
         field_candidats:
           id: field_candidats
@@ -9866,8 +9791,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_candidats : Utilisateur'
-          required: true
           plugin_id: standard
+          required: true
         profile:
           id: profile
           table: users_field_data
@@ -9875,9 +9800,9 @@ display:
           relationship: field_candidats
           group_type: group
           admin_label: Profil
-          required: true
           entity_type: user
           plugin_id: standard
+          required: true
         field_intitul_de_l_offre:
           id: field_intitul_de_l_offre
           table: node__field_intitul_de_l_offre
@@ -9885,8 +9810,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_intitul_de_l_offre : Contenu'
-          required: true
           plugin_id: standard
+          required: true
         field_postulation:
           id: field_postulation
           table: node__field_postulation
@@ -9894,8 +9819,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_postulation : Content'
-          required: false
           plugin_id: standard
+          required: false
         reverse__node__field_candidat:
           id: reverse__node__field_candidat
           table: users_field_data
@@ -9903,9 +9828,9 @@ display:
           relationship: field_candidats
           group_type: group
           admin_label: field_candidat
-          required: false
           entity_type: user
           plugin_id: entity_reverse
+          required: false
         term_node_tid:
           id: term_node_tid
           table: node_field_data
@@ -9913,12 +9838,14 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: terme
+          entity_type: node
+          plugin_id: node_term_data
           required: false
           vids:
             - codepostal
-          entity_type: node
-          plugin_id: node_term_data
       rendering_language: '***LANGUAGE_site_default***'
+      display_extenders: {  }
+      path: administration/offre/postulation-mail
     cache_metadata:
       max-age: 0
       contexts:
@@ -9941,13 +9868,12 @@ display:
         - 'config:field.storage.profile.field_ville'
         - 'config:field.storage.profile.field_ville_tunisie'
   page_7:
-    display_plugin: page
     id: page_7
     display_title: 'Page 2'
+    display_plugin: page
     position: 2
     display_options:
-      display_extenders: {  }
-      path: administration/offre/postulation/cv
+      title: 'Postulations par offre (admin)'
       fields:
         views_bulk_operations_bulk_form:
           id: views_bulk_operations_bulk_form
@@ -9956,6 +9882,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: views_bulk_operations_bulk_form
           label: Operations
           exclude: false
           alter:
@@ -10000,60 +9927,50 @@ display:
           batch: true
           batch_size: 10
           form_step: true
+          ajax_loader: false
           buttons: false
-          clear_on_exposed: false
           action_title: Action
+          clear_on_exposed: false
           selected_actions:
-            views_bulk_operations_refuse_by_referent: 0
-            views_bulk_operations_accept_by_aneti: views_bulk_operations_accept_by_aneti
-            views_bulk_operations_accept_by_company: views_bulk_operations_accept_by_company
-            views_bulk_operations_refuse_by_aneti: views_bulk_operations_refuse_by_aneti
-            views_bulk_operations_refuse_by_company: views_bulk_operations_refuse_by_company
-            views_bulk_operations_accept_by_referent: views_bulk_operations_accept_by_referent
-            views_bulk_operations_signe_rgpd: views_bulk_operations_signe_rgpd
-            views_bulk_operations_traitement_en_cours: views_bulk_operations_traitement_en_cours
-            comment_delete_action: 0
-            node_assign_owner_action: 0
-            node_unpromote_action: 0
-            node_promote_action: 0
-            node_publish_action: 0
-            node_save_action: 0
-            node_make_sticky_action: 0
-            node_unpublish_by_keyword_action: 0
-            node_unpublish_action: 0
-            node_make_unsticky_action: 0
-            simplenews_stop_action: 0
-            simplenews_send_action: 0
-            vbo_export_generate_xlsx_action: vbo_export_generate_xlsx_action
-            vbo_export_generate_csv_action: vbo_export_generate_csv_action
-            views_bulk_operations_delete_entity: 0
-            'entity:delete_action:node': 0
-            'entity:publish_action:node': 0
-            'entity:save_action:node': 0
-            'entity:unpublish_action:node': 0
-          preconfiguration:
-            views_bulk_operations_accept_by_aneti:
-              label_override: ''
-            views_bulk_operations_accept_by_company:
-              label_override: ''
-            views_bulk_operations_refuse_by_aneti:
-              label_override: ''
-            views_bulk_operations_refuse_by_company:
-              label_override: ''
-            views_bulk_operations_accept_by_referent:
-              label_override: ''
-            views_bulk_operations_signe_rgpd:
-              label_override: ''
-            views_bulk_operations_traitement_en_cours:
-              label_override: ''
-            vbo_export_generate_xlsx_action:
-              label_override: 'Export Excel'
-              strip_tags: 1
-            vbo_export_generate_csv_action:
-              label_override: 'Exporter en CSV'
-              strip_tags: 1
-              separator: ;
-          plugin_id: views_bulk_operations_bulk_form
+            -
+              action_id: views_bulk_operations_accept_by_aneti
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: views_bulk_operations_accept_by_company
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: views_bulk_operations_refuse_by_aneti
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: views_bulk_operations_refuse_by_company
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: views_bulk_operations_accept_by_referent
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: views_bulk_operations_signe_rgpd
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: views_bulk_operations_traitement_en_cours
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: vbo_export_generate_xlsx_action
+              preconfiguration:
+                label_override: 'Export Excel'
+                strip_tags: true
+            -
+              action_id: vbo_export_generate_csv_action
+              preconfiguration:
+                label_override: 'Exporter en CSV'
+                strip_tags: true
+                separator: ;
         nid:
           id: nid
           table: node_field_data
@@ -10061,6 +9978,9 @@ display:
           relationship: field_intitul_de_l_offre
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: ID
           exclude: true
           alter:
@@ -10117,9 +10037,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -10127,6 +10044,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: Title
           exclude: true
           alter:
@@ -10182,9 +10102,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_intitul_de_l_offre:
           id: field_intitul_de_l_offre
           table: node__field_intitul_de_l_offre
@@ -10192,6 +10109,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'intitulé de l''offre'
           exclude: true
           alter:
@@ -10247,7 +10165,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_cin:
           id: field_cin
           table: profile__field_cin
@@ -10255,6 +10172,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: CIN
           exclude: false
           alter:
@@ -10310,7 +10228,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_nom:
           id: field_nom
           table: profile__field_nom
@@ -10318,6 +10235,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Nom
           exclude: false
           alter:
@@ -10373,7 +10291,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_prenom:
           id: field_prenom
           table: profile__field_prenom
@@ -10381,6 +10298,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Prénom
           exclude: false
           alter:
@@ -10436,7 +10354,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         mail:
           id: mail
           table: users_field_data
@@ -10444,6 +10361,9 @@ display:
           relationship: field_candidats
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: mail
+          plugin_id: field
           label: Email
           exclude: false
           alter:
@@ -10498,9 +10418,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: user
-          entity_field: mail
-          plugin_id: field
         field_telephone:
           id: field_telephone
           table: profile__field_telephone
@@ -10508,6 +10425,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Téléphone
           exclude: false
           alter:
@@ -10563,7 +10481,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         edit_node:
           id: edit_node
           table: node
@@ -10571,6 +10488,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: entity_link_edit
           label: Modifier
           exclude: true
           alter:
@@ -10615,8 +10534,6 @@ display:
           text: edit
           output_url_as_text: false
           absolute: false
-          entity_type: node
-          plugin_id: entity_link_edit
         field_candidature:
           id: field_candidature
           table: node__field_candidature
@@ -10624,6 +10541,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Candidature
           exclude: false
           alter:
@@ -10678,7 +10596,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nid_1:
           id: nid_1
           table: node_field_revision
@@ -10686,6 +10603,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: 'Identifiant (ID)'
           exclude: true
           alter:
@@ -10742,9 +10662,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         nid_2:
           id: nid_2
           table: node_field_data
@@ -10752,6 +10669,9 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: 'Identifiant (ID)'
           exclude: false
           alter:
@@ -10808,9 +10728,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -10818,6 +10735,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: Complément
           exclude: false
           alter:
@@ -10859,7 +10777,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         nothing_1:
           id: nothing_1
           table: views
@@ -10867,6 +10784,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: custom
           label: CV
           exclude: false
           alter:
@@ -10908,7 +10826,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         changed:
           id: changed
           table: node_field_data
@@ -10916,6 +10833,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: changed
+          plugin_id: field
           label: Modifié
           exclude: true
           alter:
@@ -10973,9 +10893,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: changed
-          plugin_id: field
         field_code_postal:
           id: field_code_postal
           table: profile__field_code_postal
@@ -10983,6 +10900,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'Code postal'
           exclude: true
           alter:
@@ -11039,7 +10957,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_ville_tunisie:
           id: field_ville_tunisie
           table: profile__field_ville_tunisie
@@ -11047,6 +10964,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Ville
           exclude: true
           alter:
@@ -11102,7 +11020,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_ville:
           id: field_ville
           table: profile__field_ville
@@ -11110,6 +11027,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Ville
           exclude: true
           alter:
@@ -11165,7 +11083,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_pays:
           id: field_pays
           table: node__field_pays
@@ -11173,6 +11090,7 @@ display:
           relationship: field_intitul_de_l_offre
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Pays
           exclude: true
           alter:
@@ -11228,7 +11146,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_entreprise_id:
           id: field_entreprise_id
           table: node__field_entreprise_id
@@ -11236,6 +11153,7 @@ display:
           relationship: field_intitul_de_l_offre
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Entreprises
           exclude: true
           alter:
@@ -11291,7 +11209,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_nombre_d_annee_d_exercice:
           id: field_nombre_d_annee_d_exercice
           table: node__field_nombre_d_annee_d_exercice
@@ -11299,6 +11216,7 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'Nombre d’année d’exercice'
           exclude: false
           alter:
@@ -11355,7 +11273,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_diplome:
           id: field_diplome
           table: node__field_diplome
@@ -11363,6 +11280,7 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Diplôme
           exclude: false
           alter:
@@ -11418,7 +11336,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_profession:
           id: field_profession
           table: node__field_profession
@@ -11426,6 +11343,7 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Profession
           exclude: false
           alter:
@@ -11481,7 +11399,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_domaine_de_profession:
           id: field_domaine_de_profession
           table: node__field_domaine_de_profession
@@ -11489,6 +11406,7 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'Domaine profession'
           exclude: false
           alter:
@@ -11544,7 +11462,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_domaine_specialite:
           id: field_domaine_specialite
           table: node__field_domaine_specialite
@@ -11552,6 +11469,7 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'Domaine spécialité'
           exclude: false
           alter:
@@ -11607,24 +11525,22 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
-      defaults:
-        fields: false
-        filters: false
-        filter_groups: false
-        title: false
-        relationships: false
-        access: false
+      access:
+        type: role
+        options:
+          role:
+            administrator: administrator
+            conseiller_central: conseiller_central
       filters:
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            postulation: postulation
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            postulation: postulation
           group: 1
           expose:
             operator_limit_selection: false
@@ -11636,6 +11552,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: list_field
           operator: or
           value:
             0: '0'
@@ -11650,6 +11567,8 @@ display:
             description: ''
             use_operator: false
             operator: field_candidature_value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_candidature_value
             required: false
             remember: false
@@ -11670,8 +11589,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -11685,7 +11602,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          plugin_id: list_field
         field_accepter_value:
           id: field_accepter_value
           table: node__field_accepter
@@ -11693,6 +11609,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: boolean
           operator: '='
           value: All
           group: 1
@@ -11737,7 +11654,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: boolean
         field_cin_value_1:
           id: field_cin_value_1
           table: profile__field_cin
@@ -11745,6 +11661,7 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          plugin_id: string
           operator: contains
           value: ''
           group: 1
@@ -11755,6 +11672,8 @@ display:
             description: ''
             use_operator: false
             operator: field_cin_value_1_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_cin_value_1
             required: false
             remember: false
@@ -11776,8 +11695,6 @@ display:
               pdg: '0'
               chef_de_bureau: '0'
             placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -11790,7 +11707,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: string
         type_1:
           id: type_1
           table: profile
@@ -11798,6 +11714,9 @@ display:
           relationship: profile
           group_type: group
           admin_label: ''
+          entity_type: profile
+          entity_field: type
+          plugin_id: bundle
           operator: in
           value:
             candidat: candidat
@@ -11809,6 +11728,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -11816,8 +11737,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -11830,9 +11749,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: profile
-          entity_field: type
-          plugin_id: bundle
         field_domaine_de_profession_target_id:
           id: field_domaine_de_profession_target_id
           table: node__field_domaine_de_profession
@@ -11840,6 +11756,7 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          plugin_id: taxonomy_index_tid
           operator: or
           value: {  }
           group: 1
@@ -11850,6 +11767,8 @@ display:
             description: ''
             use_operator: false
             operator: field_domaine_de_profession_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_domaine_de_profession_target_id
             required: false
             remember: false
@@ -11870,8 +11789,6 @@ display:
               webmaster: '0'
               pdg: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -11885,12 +11802,11 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: textfield
-          limit: true
           vid: specialite_par_domaine
+          type: textfield
           hierarchy: false
+          limit: true
           error_message: true
-          plugin_id: taxonomy_index_tid
         field_nombre_d_annee_d_exercice_value:
           id: field_nombre_d_annee_d_exercice_value
           table: node__field_nombre_d_annee_d_exercice
@@ -11898,6 +11814,7 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: ''
+          plugin_id: numeric
           operator: '>='
           value:
             min: ''
@@ -11911,6 +11828,8 @@ display:
             description: ''
             use_operator: false
             operator: field_nombre_d_annee_d_exercice_value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_nombre_d_annee_d_exercice_value
             required: false
             remember: false
@@ -11930,11 +11849,9 @@ display:
               partenaire: '0'
               webmaster: '0'
               pdg: '0'
-            placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -11947,7 +11864,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: numeric
         changed:
           id: changed
           table: node_field_data
@@ -11955,6 +11871,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: changed
+          plugin_id: date
           operator: '>='
           value:
             min: ''
@@ -11993,9 +11912,9 @@ display:
               chef_de_bureau: '0'
               mobile_application: '0'
               personnes_ressources: '0'
-            placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -12008,14 +11927,17 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: node
-          entity_field: changed
-          plugin_id: date
       filter_groups:
         operator: AND
         groups:
           1: AND
-      title: 'Postulations par offre (admin)'
+      defaults:
+        access: false
+        title: false
+        relationships: false
+        fields: false
+        filters: false
+        filter_groups: false
       relationships:
         field_candidats:
           id: field_candidats
@@ -12024,8 +11946,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_candidats : Utilisateur'
-          required: true
           plugin_id: standard
+          required: true
         profile:
           id: profile
           table: users_field_data
@@ -12033,9 +11955,9 @@ display:
           relationship: field_candidats
           group_type: group
           admin_label: Profil
-          required: true
           entity_type: user
           plugin_id: standard
+          required: true
         field_intitul_de_l_offre:
           id: field_intitul_de_l_offre
           table: node__field_intitul_de_l_offre
@@ -12043,8 +11965,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_intitul_de_l_offre : Contenu'
-          required: true
           plugin_id: standard
+          required: true
         field_postulation:
           id: field_postulation
           table: node__field_postulation
@@ -12052,8 +11974,8 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_postulation : Content'
-          required: false
           plugin_id: standard
+          required: false
         reverse__node__field_candidat:
           id: reverse__node__field_candidat
           table: users_field_data
@@ -12061,9 +11983,9 @@ display:
           relationship: field_candidats
           group_type: group
           admin_label: field_candidat
-          required: false
           entity_type: user
           plugin_id: entity_reverse
+          required: false
         term_node_tid:
           id: term_node_tid
           table: node_field_data
@@ -12071,18 +11993,14 @@ display:
           relationship: reverse__node__field_candidat
           group_type: group
           admin_label: terme
+          entity_type: node
+          plugin_id: node_term_data
           required: false
           vids:
             - codepostal
-          entity_type: node
-          plugin_id: node_term_data
       rendering_language: '***LANGUAGE_site_default***'
-      access:
-        type: role
-        options:
-          role:
-            administrator: administrator
-            conseiller_central: conseiller_central
+      display_extenders: {  }
+      path: administration/offre/postulation/cv
     cache_metadata:
       max-age: 0
       contexts:

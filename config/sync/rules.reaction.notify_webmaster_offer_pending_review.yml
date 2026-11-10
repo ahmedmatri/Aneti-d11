@@ -20,6 +20,8 @@ expression:
       -
         id: rules_condition
         uuid: 2b73ce91-e445-432d-a6ac-d746bf4fa3ee
+        condition_id: rules_node_is_of_type
+        negate: false
         context_values:
           types:
             - offre
@@ -29,11 +31,11 @@ expression:
           types:
             rules_tokens: {  }
         provides_mapping: {  }
-        condition_id: rules_node_is_of_type
-        negate: false
       -
         id: rules_condition
         uuid: d9c25af4-90fc-4a05-ac16-a0d71f8c40db
+        condition_id: rules_data_comparison
+        negate: false
         context_values:
           operation: '=='
           value: need_review
@@ -45,8 +47,6 @@ expression:
           value:
             rules_tokens: {  }
         provides_mapping: {  }
-        condition_id: rules_data_comparison
-        negate: false
   actions:
     id: rules_action_set
     uuid: 1c13b412-e906-46ec-a97b-a319979f3704
@@ -54,6 +54,7 @@ expression:
       -
         id: rules_action
         uuid: 260a4a63-fe9b-4bda-88b8-822631fadbd2
+        action_id: role_email_action
         context_values:
           roles:
             - webmaster
@@ -69,4 +70,3 @@ expression:
           message:
             rules_tokens: {  }
         provides_mapping: {  }
-        action_id: role_email_action

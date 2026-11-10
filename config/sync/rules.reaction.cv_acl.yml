@@ -20,6 +20,8 @@ expression:
       -
         id: rules_condition
         uuid: 3d854167-134c-4c58-b8a2-06a0afc039b2
+        condition_id: rules_node_is_of_type
+        negate: false
         context_values:
           types:
             - curriculum_vitae
@@ -29,11 +31,11 @@ expression:
           types:
             rules_tokens: {  }
         provides_mapping: {  }
-        condition_id: rules_node_is_of_type
-        negate: false
       -
         id: rules_condition
         uuid: 521f6ad9-12a5-4ae6-a43f-8c03810f4980
+        condition_id: custom_rules_user_has_role
+        negate: true
         context_values:
           roles: authenticated
         context_mapping:
@@ -42,8 +44,6 @@ expression:
           roles:
             rules_tokens: {  }
         provides_mapping: {  }
-        condition_id: custom_rules_user_has_role
-        negate: true
   actions:
     id: rules_action_set
     uuid: 41ad26c4-a668-466b-921b-ec7f3ee8dbb0
@@ -51,6 +51,7 @@ expression:
       -
         id: rules_action
         uuid: 94a29196-e8b6-4426-9ee8-52c05e6bfdb6
+        action_id: rules_page_redirect
         context_values:
           url: /
         context_mapping: {  }
@@ -58,4 +59,3 @@ expression:
           url:
             rules_tokens: {  }
         provides_mapping: {  }
-        action_id: rules_page_redirect

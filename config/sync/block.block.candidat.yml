@@ -18,14 +18,14 @@ plugin: 'block_content:fa2e09cf-56be-4761-959b-7629b629a9ae'
 settings:
   id: 'block_content:fa2e09cf-56be-4761-959b-7629b629a9ae'
   label: Candidat
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: /Espace-candidat
     negate: false
     context_mapping: {  }
+    pages: /Espace-candidat

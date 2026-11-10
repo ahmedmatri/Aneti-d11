@@ -46,73 +46,73 @@ third_party_settings:
       children:
         - group_right
         - group_left
+      label: Identifiant
+      region: content
       parent_name: ''
       weight: 0
       format_type: fieldset
       format_settings:
+        classes: col-md-12
+        id: ''
         description: ''
         required_fields: true
-        id: ''
-        classes: col-md-12
-      label: Identifiant
-      region: content
     group_right:
       children:
         - field_groupe_filiale
         - field_nom_entreprise
         - field_identifiant_entreprise
+      label: right
+      region: content
       parent_name: group_identifiant
       weight: 21
       format_type: html_element
       format_settings:
-        id: ''
         classes: 'col-md-6 right-form'
+        id: ''
         element: div
         show_label: false
         label_element: h3
         label_element_classes: ''
-        required_fields: true
         attributes: ''
         effect: none
         speed: fast
-      label: right
-      region: content
+        required_fields: true
     group_left:
       children:
         - field_raison_social
         - field_secteurs_d_activite
         - field_image
+      label: left
+      region: content
       parent_name: group_identifiant
       weight: 22
       format_type: html_element
       format_settings:
-        id: ''
         classes: col-md-6
+        id: ''
         element: div
         show_label: false
         label_element: h3
         label_element_classes: ''
-        required_fields: true
         attributes: ''
         effect: none
         speed: fast
-      label: left
-      region: content
+        required_fields: true
     group_coordonnees:
       children:
         - field_adresse_entreprise
         - group_right_1
         - group_left_1
+      label: Coordonnées
+      region: content
       parent_name: ''
       weight: 1
       format_type: fieldset
       format_settings:
-        id: ''
         classes: col-md-12
+        id: ''
         description: ''
         required_fields: true
-      label: Coordonnées
-      region: content
     group_contact:
       children:
         - group_right_2
@@ -122,181 +122,181 @@ third_party_settings:
         - group_left_3
         - field_adresse_entreprise_ar
         - field_ville_ar
+      label: Contact
+      region: content
       parent_name: ''
       weight: 2
       format_type: fieldset
       format_settings:
-        id: ''
         classes: col-md-12
+        id: ''
         description: ''
         required_fields: true
-      label: Contact
-      region: content
     group_right_1:
       children:
         - field_pays
         - field_courriel
+      label: right
+      region: content
       parent_name: group_coordonnees
       weight: 26
       format_type: html_element
       format_settings:
-        id: ''
         classes: 'col-md-6 right-form'
+        id: ''
         element: div
         show_label: false
         label_element: h3
         label_element_classes: ''
-        required_fields: true
         attributes: ''
         effect: none
         speed: fast
-      label: right
-      region: content
+        required_fields: true
     group_left_1:
       children:
         - field_code_postal
         - field_ville
         - field_telephone
+      label: left
+      region: content
       parent_name: group_coordonnees
       weight: 27
       format_type: html_element
       format_settings:
-        id: ''
         classes: col-md-6
+        id: ''
         element: div
         show_label: false
         label_element: h3
         label_element_classes: ''
-        required_fields: true
         attributes: ''
         effect: none
         speed: fast
-      label: left
-      region: content
+        required_fields: true
     group_right_2:
       children:
         - field_fonction
         - field_telecopie
+      label: right
+      region: content
       parent_name: group_contact
       weight: 24
       format_type: html_element
       format_settings:
-        id: ''
         classes: 'col-md-6 right-form'
+        id: ''
         element: div
         show_label: false
         label_element: h3
         label_element_classes: ''
-        required_fields: true
         attributes: ''
         effect: none
         speed: fast
-      label: right
-      region: content
+        required_fields: true
     group_left_2:
       children:
         - field_personne_contacter
         - field_telephone_contact
+      label: left
+      region: content
       parent_name: group_contact
       weight: 25
       format_type: html_element
       format_settings:
-        id: ''
         classes: col-md-6
+        id: ''
         element: div
         show_label: false
         label_element: h3
         label_element_classes: ''
-        required_fields: true
         attributes: ''
         effect: none
         speed: fast
-      label: left
-      region: content
+        required_fields: true
     group_right_3:
       children:
         - field_nom_entreprise_ar
         - field_field_groupe_filiale_ar
+      label: right
+      region: content
       parent_name: group_contact
       weight: 27
       format_type: html_element
       format_settings:
-        id: ''
         classes: 'col-md-6 right-form'
+        id: ''
         element: div
         show_label: false
         label_element: h3
         label_element_classes: ''
-        required_fields: true
         attributes: ''
         effect: none
         speed: fast
-      label: right
-      region: content
+        required_fields: true
     group_left_3:
       children:
         - field_resp_contact_ar
         - field_poste_resp_contact_ar
+      label: left
+      region: content
       parent_name: group_contact
       weight: 28
       format_type: html_element
       format_settings:
-        id: ''
         classes: col-md-6
+        id: ''
         element: div
         show_label: false
         label_element: h3
         label_element_classes: ''
-        required_fields: true
         attributes: ''
         effect: none
         speed: fast
-      label: left
-      region: content
+        required_fields: true
 id: profile.entreprise.default
 targetEntityType: profile
 bundle: entreprise
 mode: default
 content:
   field_adresse_entreprise:
+    type: string_textarea
     weight: 25
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_adresse_entreprise_ar:
+    type: string_textarea
     weight: 29
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_code_postal:
-    weight: 23
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
     type: number
+    weight: 23
     region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   field_courriel:
+    type: email_default
     weight: 27
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: email_default
     region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
   field_courriel_contact:
-    weight: 26
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
     type: email_default
+    weight: 26
     region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
   field_date_validation:
     type: datetime_default
     weight: 5
@@ -304,146 +304,146 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_field_groupe_filiale_ar:
+    type: string_textfield
     weight: 2
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_fonction:
+    type: string_textfield
     weight: 23
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_groupe_filiale:
+    type: string_textfield
     weight: 22
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_identifiant_entreprise:
+    type: string_textfield
     weight: 24
+    region: content
     settings:
       size: 60
       placeholder: 'SIRET, registre de commerce...'
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_image:
+    type: image_image
     weight: 3
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
-    region: content
   field_nom_entreprise:
+    type: string_textfield
     weight: 23
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_nom_entreprise_ar:
+    type: string_textfield
     weight: 1
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_pays:
+    type: options_select
     weight: 25
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_personne_contacter:
+    type: string_textfield
     weight: 22
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_poste_resp_contact_ar:
+    type: string_textfield
     weight: 5
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_profile_blacklisted:
+    type: boolean_checkbox
     weight: 7
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_raison_social:
+    type: string_textfield
     weight: 1
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_referant:
     type: entity_reference_autocomplete
     weight: 4
     region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
   field_resp_contact_ar:
+    type: string_textfield
     weight: 4
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_secteurs_d_activite:
+    type: chosen_select
     weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: chosen_select
-    region: content
   field_telecopie:
+    type: string_textfield
     weight: 24
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_telephone:
+    type: string_textfield
     weight: 26
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_telephone_contact:
+    type: string_textfield
     weight: 23
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_valider:
     type: boolean_checkbox
     weight: 6
@@ -452,21 +452,21 @@ content:
       display_label: true
     third_party_settings: {  }
   field_ville:
+    type: string_textfield
     weight: 25
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_ville_ar:
+    type: string_textfield
     weight: 30
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   moderation_state:
     type: moderation_state_default
     weight: 3

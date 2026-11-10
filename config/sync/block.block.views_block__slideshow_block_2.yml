@@ -18,13 +18,13 @@ plugin: 'views_block:slideshow-block_2'
 settings:
   id: 'views_block:slideshow-block_2'
   label: slideshow
-  provider: views
   label_display: '0'
+  provider: views
   views_label: slideshow
   items_per_page: none
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
     context_mapping: {  }
+    pages: '<front>'

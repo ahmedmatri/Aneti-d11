@@ -2,24 +2,9 @@ label: File
 description: 'Trova e gestisci i file.'
 display:
   default:
-    display_title: Principale
+    display_title: Predefinito
     display_options:
-      exposed_form:
-        options:
-          submit_button: Filtra
-          reset_button_label: Ripristina
-          exposed_sorts_label: 'Ordina per'
-          sort_asc_label: Asc
-          sort_desc_label: Disc
-      pager:
-        options:
-          tags:
-            previous: '‹ Precedente'
-            next: 'Seguente ›'
-          expose:
-            items_per_page_label: 'Voci per pagina'
-            items_per_page_options_all_label: '- Tutto -'
-            offset_label: Scostamento
+      title: File
       fields:
         filename:
           label: Nome
@@ -39,6 +24,25 @@ display:
           label: 'Data di ultima modifica'
         count:
           label: 'Usato in'
+      pager:
+        options:
+          tags:
+            next: 'Seguente ›'
+            previous: '‹ Precedente'
+          expose:
+            items_per_page_label: 'Voci per pagina'
+            items_per_page_options_all_label: '- Tutto -'
+            offset_label: Scostamento
+      exposed_form:
+        options:
+          submit_button: Filtra
+          reset_button_label: Ripristina
+          exposed_sorts_label: 'Ordina per'
+          sort_asc_label: Asc
+          sort_desc_label: Disc
+      empty:
+        area_text_custom:
+          content: 'Nessun file disponibile.'
       filters:
         filename:
           expose:
@@ -49,10 +53,6 @@ display:
         status:
           expose:
             label: Stato
-      title: File
-      empty:
-        area_text_custom:
-          content: 'Nessun file disponibile.'
   page_1:
     display_title: 'Panoramica file'
     display_options:
@@ -61,15 +61,7 @@ display:
   page_2:
     display_title: 'Utilizzo del file'
     display_options:
-      pager:
-        options:
-          tags:
-            previous: '‹ Precedente'
-            next: 'Seguente ›'
-          expose:
-            items_per_page_label: 'Voci per pagina'
-            items_per_page_options_all_label: '- Tutto -'
-            offset_label: Scostamento
+      title: 'Utilizzo del file'
       fields:
         entity_label:
           label: Entità
@@ -80,7 +72,15 @@ display:
         count:
           label: 'Contatore di utilizzo'
           format_plural_string: !!binary MQNAY291bnQ=
-      title: 'Utilizzo del file'
+      pager:
+        options:
+          tags:
+            next: 'Seguente ›'
+            previous: '‹ Precedente'
+          expose:
+            items_per_page_label: 'Voci per pagina'
+            items_per_page_options_all_label: '- Tutto -'
+            offset_label: Scostamento
       arguments:
         fid:
           exception:

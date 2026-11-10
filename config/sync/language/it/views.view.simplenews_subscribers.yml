@@ -25,8 +25,8 @@ display:
           label: E-mail
         user_name:
           label: 'Nome utente'
-        subscriptions:
-          label: Iscrizioni
+        subscriptions_target_id:
+          label: Subscriptions
           separator: ', '
         status:
           label: Attivo

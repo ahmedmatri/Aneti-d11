@@ -1,7 +1,26 @@
 uuid: f624e5c1-d909-45a7-917d-6b1be47e66cc
 langcode: fr
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.curriculum_vitae
+    - node.type.plan_d_accompagnement_collectif
+    - node.type.plan_d_accompagnement_individuel
+    - node.type.postulation
+    - workflows.workflow.candidat
+    - workflows.workflow.cv
+    - workflows.workflow.editorial
+    - workflows.workflow.postulation
+  module:
+    - aneti_cv
+    - contact
+    - content_moderation
+    - field_permissions
+    - file_entity
+    - node
+    - profile
+    - search
+    - system
 id: chef_de_bureau
 label: 'Chef de Bureau'
 weight: 15

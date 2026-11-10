@@ -17,8 +17,8 @@ plugin: 'block_content:0dafe957-573f-4299-9ceb-b1f43225aa04'
 settings:
   id: 'block_content:0dafe957-573f-4299-9ceb-b1f43225aa04'
   label: BF
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

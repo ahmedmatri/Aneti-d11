@@ -15,20 +15,23 @@ bundle: hero
 mode: default
 content:
   field_contenu:
-    weight: 2
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 2
     region: content
   field_image_de_bg:
-    weight: 1
+    type: image
     label: above
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
-    type: image
+    weight: 1
     region: content
 hidden:
   langcode: true
+  search_api_excerpt: true

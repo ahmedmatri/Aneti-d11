@@ -155,3 +155,4 @@ db-dump/*
 .DS_Store?
 .DS_Store
 
+/README.md

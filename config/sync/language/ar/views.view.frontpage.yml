@@ -1,5 +1,6 @@
 display:
   default:
+    display_title: الافتراضي
     display_options:
       exposed_form:
         options:
@@ -8,6 +9,5 @@ display:
           exposed_sorts_label: 'الترتيب حسب'
           sort_asc_label: تصاعدي
           sort_desc_label: تنازلي
-    display_title: الرئيسي
   page_1:
     display_title: الصفحة

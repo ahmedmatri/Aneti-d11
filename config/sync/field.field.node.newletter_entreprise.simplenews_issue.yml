@@ -18,12 +18,12 @@ required: false
 translatable: false
 default_value:
   -
+    target_uuid: d9173bf5-cd59-4260-80ff-a45d8fd43ed1
     handler: simplenews_all
     handler_settings: null
     status: 0
     sent_count: 0
     subscribers: 0
-    target_uuid: d9173bf5-cd59-4260-80ff-a45d8fd43ed1
 default_value_callback: ''
 settings:
   handler: 'default:simplenews_newsletter'

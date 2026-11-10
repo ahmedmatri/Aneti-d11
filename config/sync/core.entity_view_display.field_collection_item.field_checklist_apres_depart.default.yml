@@ -53,350 +53,350 @@ bundle: field_checklist_apres_depart
 mode: default
 content:
   field_q19_label:
-    weight: 0
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 0
     region: content
   field_q20_label:
-    weight: 1
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 1
     region: content
   field_q21_label:
-    weight: 2
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 2
     region: content
   field_q22_label:
-    weight: 4
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 4
     region: content
   field_q23_label:
-    weight: 3
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 3
     region: content
   field_q24_label:
-    weight: 5
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 5
     region: content
   field_q25_label:
-    weight: 6
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 6
     region: content
   field_q26_label:
-    weight: 7
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 7
     region: content
   field_q27_label:
-    weight: 8
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 8
     region: content
   field_q28_label:
-    weight: 9
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 9
     region: content
   field_q29_label:
-    weight: 10
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 10
     region: content
   field_q30_label:
-    weight: 11
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 11
     region: content
   field_q30a_label:
-    weight: 12
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 12
     region: content
   field_q30b_label:
-    weight: 13
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 13
     region: content
   field_q30c_label:
-    weight: 14
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 14
     region: content
   field_q30d_label:
-    weight: 15
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 15
     region: content
   field_q30e_label:
-    weight: 16
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 16
     region: content
   field_q31_label:
-    weight: 17
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 17
     region: content
   field_q32_label:
-    weight: 18
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 18
     region: content
   field_q33_label:
-    weight: 19
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 19
     region: content
   field_q34_label:
-    weight: 20
+    type: markup
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: markup
+    weight: 20
     region: content
   field_r19:
-    weight: 21
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 21
     region: content
   field_r20:
-    weight: 22
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 22
     region: content
   field_r21:
-    weight: 23
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 23
     region: content
   field_r22:
-    weight: 24
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 24
     region: content
   field_r23:
-    weight: 25
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 25
     region: content
   field_r24:
-    weight: 26
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 26
     region: content
   field_r25:
-    weight: 27
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 27
     region: content
   field_r26:
-    weight: 28
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 28
     region: content
   field_r27:
-    weight: 29
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 29
     region: content
   field_r28:
-    weight: 30
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 30
     region: content
   field_r29:
-    weight: 31
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 31
     region: content
   field_r30:
-    weight: 33
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 33
     region: content
   field_r30a:
-    weight: 32
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 32
     region: content
   field_r30c:
-    weight: 34
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 34
     region: content
   field_r30d:
-    weight: 35
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 35
     region: content
   field_r30e:
-    weight: 36
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 36
     region: content
   field_r31:
-    weight: 37
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 37
     region: content
   field_r32:
-    weight: 38
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 38
     region: content
   field_r33:
-    weight: 41
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 41
     region: content
   field_r34:
-    weight: 40
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 40
     region: content
 hidden: {  }

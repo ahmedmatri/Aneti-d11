@@ -21,16 +21,16 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       action_ac: action_ac
+    negate: 0
     target_bundles_drag_drop:
+      action_ac:
+        weight: 5
+        enabled: true
       action_ai:
         weight: 4
         enabled: false
-      action_ac:
-        enabled: true
-        weight: 5
       description:
         weight: 6
         enabled: false

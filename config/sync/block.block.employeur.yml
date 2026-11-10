@@ -18,14 +18,14 @@ plugin: 'block_content:c5418b00-22f8-4994-91f0-ffda48444c8c'
 settings:
   id: 'block_content:c5418b00-22f8-4994-91f0-ffda48444c8c'
   label: Employeur
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: /Espace-employeur
     negate: false
     context_mapping: {  }
+    pages: /Espace-employeur

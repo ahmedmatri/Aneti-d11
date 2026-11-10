@@ -18,14 +18,14 @@ plugin: 'block_content:2ba9c180-8ad4-491d-a8ad-0719edfdfea4'
 settings:
   id: 'block_content:2ba9c180-8ad4-491d-a8ad-0719edfdfea4'
   label: Espaces
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
     context_mapping: {  }
+    pages: '<front>'

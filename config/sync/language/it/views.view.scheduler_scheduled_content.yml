@@ -1,6 +1,34 @@
 display:
   default:
     display_options:
+      filters:
+        publish_on:
+          expose:
+            label: 'Pubblica il'
+          group_info:
+            label: 'Pubblica il'
+        unpublish_on:
+          expose:
+            label: 'Rimuovi pubblicazione il'
+        title:
+          expose:
+            label: Titolo
+        type:
+          expose:
+            label: 'Tipo di contenuto'
+        status:
+          expose:
+            label: Stato
+          group_info:
+            label: 'Stato pubblicazione'
+            group_items:
+              1:
+                title: Pubblicato
+              2:
+                title: 'Non pubblicato'
+        langcode:
+          expose:
+            label: Lingua
       exposed_form:
         options:
           submit_button: Filtra
@@ -33,34 +61,6 @@ display:
           label: 'Rimuovi pubblicazione il'
         operations:
           label: Operazioni
-      filters:
-        status:
-          expose:
-            label: Stato
-          group_info:
-            label: 'Stato pubblicazione'
-            group_items:
-              1:
-                title: Pubblicato
-              2:
-                title: 'Non pubblicato'
-        type:
-          expose:
-            label: Tipo
-        title:
-          expose:
-            label: Titolo
-        langcode:
-          expose:
-            label: Lingua
-        publish_on:
-          expose:
-            label: 'Pubblica il'
-          group_info:
-            label: 'Pubblica il'
-        unpublish_on:
-          expose:
-            label: 'Rimuovi pubblicazione il'
     display_title: Principale
   overview:
     display_options:

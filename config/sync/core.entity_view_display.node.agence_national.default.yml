@@ -16,25 +16,25 @@ bundle: agence_national
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 101
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 101
     region: content
   field_coordonnees:
-    weight: 102
+    type: geofield_default
     label: above
     settings:
       output_format: wkt
       output_escape: true
     third_party_settings: {  }
-    type: geofield_default
+    weight: 102
     region: content
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
 hidden:
   langcode: true

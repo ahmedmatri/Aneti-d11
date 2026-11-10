@@ -4,8 +4,8 @@ status: true
 dependencies: {  }
 id: chef_de_bureau
 label: 'Chef de Bureau'
-registration: false
 multiple: false
+registration: false
 roles:
   chef_de_bureau: chef_de_bureau
   authenticated: '0'

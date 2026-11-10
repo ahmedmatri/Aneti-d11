@@ -4,8 +4,8 @@ status: true
 dependencies: {  }
 id: referent
 label: Référent
-registration: true
 multiple: false
+registration: true
 roles:
   referent: referent
   authenticated: '0'

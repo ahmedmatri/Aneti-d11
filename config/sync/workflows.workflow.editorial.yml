@@ -18,24 +18,24 @@ type_settings:
       default_revision: true
     draft:
       label: Draft
-      published: false
-      default_revision: false
       weight: -3
-    need_review:
       published: false
       default_revision: false
+    need_review:
       label: 'Need review'
       weight: -2
-    published:
-      label: Published
-      published: true
-      default_revision: true
-      weight: 0
-    validated:
       published: false
       default_revision: false
+    published:
+      label: Published
+      weight: 0
+      published: true
+      default_revision: true
+    validated:
       label: Validated
       weight: -1
+      published: false
+      default_revision: false
   transitions:
     archive:
       label: Archive
@@ -57,13 +57,13 @@ type_settings:
       weight: 4
     create_new_draft:
       label: 'Create New Draft'
-      to: draft
-      weight: 0
       from:
         - draft
         - need_review
         - published
         - validated
+      to: draft
+      weight: 0
     need_review:
       label: 'Need review'
       from:
@@ -74,13 +74,13 @@ type_settings:
       weight: 5
     publish:
       label: Publish
-      to: published
-      weight: 1
       from:
         - draft
         - need_review
         - published
         - validated
+      to: published
+      weight: 1
     to_validated:
       label: 'To validated'
       from:
