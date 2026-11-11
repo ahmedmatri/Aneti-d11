@@ -26,6 +26,7 @@ module:
   config: 0
   config_log: 0
   config_log_views: 0
+  config_split: 0
   config_translation: 0
   contact: 0
   content_moderation: 0

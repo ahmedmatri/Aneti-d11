@@ -61,22 +61,17 @@ flowchart TD
   * `sessions` : Plus de 5 700 sessions d'utilisateurs résiduelles du dump de production (purge hygiénique et sécuritaire).
   * `flood`, `batch`, `semaphore` : Nettoyage des verrous temporaires.
 
-### Étape 6 : Désinstallation des modules inactifs et obsolètes
+### Étape 6 : Désinstallation des modules inactifs et assainissement des schémas
 * **Action** :
-  1. Réinitialise la colonne `depth_level = NULL` sur `taxonomy_term_field_data` pour autoriser la désinstallation de `taxonomy_term_depth`.
-  2. Crée une table factice `rest_log` pour éviter l'exception d'entité inexistante lors de la désinstallation de `rest_log`.
-  3. Désinstalle via Drush les modules contrib et custom confirmés à 0 usage : `select2`, `conditional_fields`, `unique_entity_title`, `rules_role_email`, `taxonomy_term_depth`, `taxonomy_import`, `menu_export`, `search_exclude`, `devel`, `rest_log`, `node_action_log`, `aneti_tools`.
-  4. Désinstalle les modules dépréciés du cœur supprimés sous Drupal 10 : `color`, `quickedit`, `rdf`, `hal`, `tracker`.
-  5. Supprime définitivement les tables SQL résiduelles associées (`tracker_node` avec 1M+ de lignes, `tracker_user`, `node_action_log`, `rest_log`).
+  1. **Neutralisation SMTP en BDD** : Met à jour directement `smtp.settings` (`smtp_on = 0`) et `config_log.settings` (`mail = 0`) pour neutraliser les lenteurs réseau locales.
+  2. **Purge des configurations orphelines** : Supprime de la table `config` les entités conflictuelles (`search.page.content_exclude_`, `field.%simplenews_subscriber.subscriptions%`, `devel.%`, `block.block.aneti_2019_%`).
+  3. **Désenregistrement direct des modules sans fichiers** : Retire proprement de `core.extension` et de `system.schema` les modules retirés du dépôt Composer (`select2`, `conditional_fields`, `unique_entity_title`, `rules_role_email`, `taxonomy_term_depth`, `taxonomy_import`, `menu_export`, `search_exclude`, `devel`, `rest_log`, `node_action_log`, `aneti_tools`, `contact_message_rest`, `dbug`).
+  4. **Désinstallation des modules core dépréciés** : Réinitialise la colonne `depth_level` et désinstalle via Drush `color`, `quickedit`, `rdf`, `hal`, `tracker`.
+  5. **Suppression des tables SQL orphelines** : Supprime définitivement les tables résiduelles (`tracker_node` avec 1M+ de lignes, `tracker_user`, `node_action_log`, `rest_log`).
+  6. **Traductions locales** : Force `locale.settings translation.use_source = local` pour prévenir tout crash de lecture Gettext.
 
 ### Étape 7 : Recompilation des caches Drupal
-* **Action** : Exécute `drush cr` pour réinitialiser le conteneur de services et le routage.
-  * `flood` : Compteurs de tentatives de connexion échouées.
-  * `batch` & `semaphore` : Verrous et opérations par lots potentiellement bloqués.
-
-### Étape 6 : Recompilation du cache Drupal
-* **Action** : Exécution de `drush cr`.
-* **Objectif** : Reconstituer un container de cache propre et vérifier que Drupal répond parfaitement.
+* **Action** : Exécute `drush cr` pour réinitialiser le conteneur de services et le routage sans aucun avertissement.
 
 ---
 

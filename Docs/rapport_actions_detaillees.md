@@ -170,14 +170,46 @@ flowchart TD
 | `web/modules/contrib/rest_log/...` | Fix PHP 8 | Correction de la virgule orpheline bloquant le parseur |
 | `web/drupal-8.9.20/` | Nettoyage | Suppression d'un dossier obsolète de 144 Mo |
 | `web/modules/contrib/[17 modules]` | Nettoyage | Élimination des répertoires de modules inactifs non utilisés |
-| `scripts/1-cleanup_db_pre_upgrade.sh` | Automatisation | Ajout de l'étape 6 : désinstallation préventive des 16 modules inactifs et purge BDD |
-| `scripts/2-upgrade_drupal9.sh` | Automatisation | Script complet d'upgrade automatisé D8 ➔ D9.5 (idempotent, 7 étapes) |
-| `composer.json` | Dépendances | Suppression de 11 modules inutilisés (`select2`, `devel`, `rest_log`, etc.) et 7 sous-paquets |
+| `scripts/1-cleanup_db_pre_upgrade.sh` | Automatisation | Étape 6 assainie : neutralisation SMTP en SQL, purge configs orphelines, désenregistrement propre et translations locales |
+| `scripts/2-upgrade_drupal9.sh` | Automatisation | Script complet d'upgrade automatisé D8 ➔ D9.5 (idempotent, 7 étapes renforcées) |
+| `composer.json` | Dépendances | Suppression modules inutilisés, ajout `config_split:^2.0`, `phpdotenv:^5.5` et `devel:^5.1` en `require-dev` |
+| `.env` / `.env.example` | Environnement | Gestion dynamique des environnements (`dev`, `stage`, `prod`) |
+| `config/split/dev/*.yml` | Config Split | Stockage isolé des configurations de développement (`devel`) |
+| `web/sites/default/settings.php` | Configuration | Chargement automatique Dotenv, activation dynamique du split `dev` et neutralisation SMTP locale |
 | `web/modules/custom/aneti_tools` | Code mort | Suppression du module obsolète contenant du code Drupal Console |
 
 ---
 
-## 4. Statut du Palier Drupal 9 & Prochaines Étapes (Feuille de Route)
+## 4. Architecture Multi-Environnement : Config Split & `.env`
+
+Pour concilier l'interdiction d'outils de debug en production et le confort de travail en développement :
+1. **Séparation Composer** : `drupal/devel:^5.1` est placé dans `require-dev`. Il n'est donc jamais déployé lors d'un `composer install --no-dev`.
+2. **Configuration Split (`drupal/config_split:^2.0`)** :
+   - Le dossier `config/sync/` principal reste strictement exempt de `devel`.
+   - Le dossier `config/split/dev/` isole `devel.settings.yml`, `devel.toolbar.settings.yml` et `system.menu.devel.yml`.
+3. **Fichiers `.env` et `.env.example`** :
+   - `.env` (ignoré par Git) configure `ENVIRONMENT=dev` en local.
+   - `.env.example` (versionné) sert de template configuré à `ENVIRONMENT=prod`.
+4. **Activation conditionnelle dans `settings.php`** :
+   - Le split `dev` est activé uniquement si `ENVIRONMENT=dev`.
+   - Les envois SMTP externes sont désactivés localement pour éviter les timeouts réseau.
+
+### 4.3. Qualification Fonctionnelle Automatisée (19/19 Tests PASS)
+- **Script automatisé** : [`scripts/test_aneti_features.php`](file:///Users/irtam/Desktop/Drupal/aneti-prod%203/scripts/test_aneti_features.php).
+- **Périmètre validé à 100%** : Création compte Candidat/Entreprise, profils associés, publication CV, modération et publication d'offres d'emploi, flux de candidature/postulation complet, formulaires Webform citoyens, moteurs de recherche SQL/Vues, gestion multilingue (FR, AR, EN, IT) et rollback hygiénique.
+- **Rapport détaillé** : Consulter [`Docs/rapport_tests_fonctionnels_d9.md`](file:///Users/irtam/Desktop/Drupal/aneti-prod%203/Docs/rapport_tests_fonctionnels_d9.md).
+
+### 4.4. Nettoyage et Assainissement de l'Arborescence & Déplacement du Thème
+- **Relocalisation du thème custom** : Déplacement de `web/themes/job_board` vers le standard Drupal [`web/themes/custom/job_board`](file:///Users/irtam/Desktop/Drupal/aneti-prod%203/web/themes/custom/job_board). Détection et chemin mis à jour automatiquement par Drupal (`themes/custom/job_board`).
+- **Élimination des risques de sécurité** : Suppression immédiate du fichier sensible `web/.env` qui exposait des identifiants dans le docroot public.
+- **Purge des scripts et fichiers résiduels** : Suppression de `web/reclamation.csv`, `web/resetmigration.sh`, `web/upd_postulation.php`, `web/google*.html`, `web/.well-known/pki-validation/`, `web/sites/default/settings.php.example`, `load.environment.php`, et `scripts/composer/ScriptHandler.php`.
+- **Suppression des librairies JS orphelines** : `web/libraries/select2`, `almond`, `jquery-mousewheel`.
+- **Purge des volumineux dumps SQL** : Suppression de `aneti_db.sql` (3,89 Go), `aneti_db.sql.gz` (723 Mo) et des 4 anciens backups dans `.ddev/` (libération de **~7,2 Go** de disque).
+- **Validation** : Recompilation du cache (`drush cr`) et réexécution intégrale des tests avec **19/19 PASS**.
+
+---
+
+## 5. Statut du Palier Drupal 9 & Prochaines Étapes (Feuille de Route)
 
 ### 4.1. Validation du Palier Drupal 9.5.11
 * **Drupal Core** : 9.5.11 opérationnel

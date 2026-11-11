@@ -777,6 +777,29 @@ $settings['entity_update_batch_size'] = 50;
 # }
 $settings['config_sync_directory'] = '../config/sync';
 
+/**
+ * Chargement des variables d'environnement (.env via Dotenv).
+ */
+if (file_exists($app_root . '/../.env') && class_exists('Dotenv\Dotenv')) {
+  $dotenv = Dotenv\Dotenv::createUnsafeImmutable($app_root . '/..');
+  $dotenv->safeLoad();
+}
+
+$site_env = getenv('ENVIRONMENT') ?: ($_ENV['ENVIRONMENT'] ?? 'prod');
+
+/**
+ * Configuration Split dynamique selon l'environnement (.env).
+ * - dev : active le split 'dev' (modules devel, etc.)
+ * - prod/autres : désactive le split 'dev'
+ */
+$config['config_split.config_split.dev']['status'] = ($site_env === 'dev');
+
+// Neutralisation automatique des emails SMTP en local / dev
+if ($site_env === 'dev') {
+  $config['smtp.settings']['smtp_on'] = FALSE;
+  $config['config_log.settings']['log_destination']['mail'] = '0';
+}
+
 $databases['default']['default'] = array(
   'database' => 'aneti_fev020520',
   'username' => 'root',

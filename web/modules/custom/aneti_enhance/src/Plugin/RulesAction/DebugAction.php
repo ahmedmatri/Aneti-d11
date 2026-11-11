@@ -14,7 +14,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *  id = "aneti_debug_action",
  *  label = @Translation("Debug a value"),
  *  category = @Translation("Debug"),
- *  context = {
+ *  context_definitions = {
  *    "data" = @ContextDefinition("any",
  *      label = @Translation("Data"),
  *      multiple = FALSE

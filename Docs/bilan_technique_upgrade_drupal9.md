@@ -241,10 +241,29 @@ ddev drush cst
 
 ### 7.3. Audit Approfondi & Purge des 16 Modules Inutilisés / Dépréciés
 Un audit complet (requêtes SQL, dépendances et schémas) a permis de détecter et d'éliminer définitivement 16 modules actifs mais sans aucune donnée ni utilité :
-* **Modules Contrib supprimés** : `select2` (Chosen utilisé partout), `conditional_fields` (0 règle), `unique_entity_title` (0 type configuré), `rules_role_email` (0 règle l'utilise), `taxonomy_term_depth` (0 vue l'utilise), `taxonomy_import` (outil CSV de dev), `menu_export` (outil de dev), `search_exclude` (0 exclusion), `devel` (débogage interdit en prod), `rest_log` (table inexistante), `node_action_log` (table vide).
+* **Modules Contrib supprimés** : `select2` (Chosen utilisé partout), `conditional_fields` (0 règle), `unique_entity_title` (0 type configuré), `rules_role_email` (0 règle l'utilise), `taxonomy_term_depth` (0 vue l'utilise), `taxonomy_import` (outil CSV de dev), `menu_export` (outil de dev), `search_exclude` (0 exclusion), `rest_log` (table inexistante), `node_action_log` (table vide).
 * **Module Custom supprimé** : `aneti_tools` (code mort contenant uniquement une commande Drupal Console obsolète).
 * **Modules Core dépréciés désinstallés** (supprimés sous Drupal 10) : `color`, `quickedit`, `rdf`, `hal`, `tracker` (purge de 1 068 290 lignes inutiles dans `tracker_node`).
 * **Paquets Composer retirés** : 11 paquets de modules et 7 sous-dépendances Doctrine nettoyés via `composer remove`.
+
+### 7.4. Gestion Multi-Environnement : Configuration Split, `.env` et Isolation de `devel`
+Pour répondre aux exigences de propreté et de sécurité en production tout en préservant le confort de développement :
+* **Séparation stricte Composer** : `drupal/devel:^5.1` a été réintégré mais positionné exclusivement dans la section **`require-dev`** du `composer.json`. En production, un `composer install --no-dev` n'embarquera donc aucun code de débogage.
+* **Module Configuration Split (`drupal/config_split:^2.0`)** : Installé pour fractionner les configurations selon l'environnement.
+* **Fichiers d'environnement (`.env` et `.env.example`)** : Gérés via la bibliothèque standard `vlucas/phpdotenv:^5.5`. Le fichier `.env` local définit `ENVIRONMENT=dev`, tandis que `.env.example` (versionné sous Git) est préconfiguré pour `ENVIRONMENT=prod`.
+* **Dossier de Split Dev (`config/split/dev/`)** : Stocke de manière isolée les configurations de développement (`devel.settings.yml`, `devel.toolbar.settings.yml`, `system.menu.devel.yml`).
+* **Dossier principal (`config/sync/`)** : Reste 100 % vierge de tout module de développement (`devel` n'est pas présent dans `core.extension.yml`).
+* **Activation dynamique dans `settings.php`** :
+  ```php
+  $config['config_split.config_split.dev']['status'] = ($site_env === 'dev');
+  ```
+  Le split s'active automatiquement en environnement local et reste désactivé en recette/production.
+
+### 7.5. Validation Fonctionnelle Automatisée (19/19 Tests PASS)
+Une suite de tests fonctionnels automatisés complète a été développée et validée dans [`scripts/test_aneti_features.php`](file:///Users/irtam/Desktop/Drupal/aneti-prod%203/scripts/test_aneti_features.php) :
+* **100% des tests réussis** : Inscription Candidat & Entreprise, association Profils, workflow CV, publication d'Offres d'emploi, candidature/postulation, modération, soumission Webform, moteurs de recherche Vues, multilinguisme et purge hygiénique.
+* **Corrections appliquées** : Modernisation PHP 8.1 des conditions et actions Rules (`UserHasRole`, `RoleEmailAction`), activation des routes `multiple_registration`.
+* **Documentation dédiée** : Consulter le rapport exhaustif dans [`Docs/rapport_tests_fonctionnels_d9.md`](file:///Users/irtam/Desktop/Drupal/aneti-prod%203/Docs/rapport_tests_fonctionnels_d9.md).
 
 ---
 

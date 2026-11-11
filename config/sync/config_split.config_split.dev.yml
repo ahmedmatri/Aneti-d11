@@ -1,0 +1,21 @@
+uuid: 4f7c6e4e-093a-4e2b-bb4c-d6b7b2576b5c
+langcode: fr
+status: false
+dependencies: {  }
+id: dev
+label: 'Environnement Dev'
+description: 'Modules et configurations réservés au développement (devel, etc.)'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/split/dev
+module:
+  devel: 0
+theme: {  }
+complete_list:
+  - devel.settings
+  - devel.toolbar.settings
+  - system.menu.devel
+partial_list: {  }
+

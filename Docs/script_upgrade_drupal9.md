@@ -57,17 +57,24 @@ flowchart TD
 * Vérifie si des tables orphelines de migration D6/D7 (`migrate_map_*`) subsistent dans la base.
 * Si oui, lance automatiquement [`scripts/1-cleanup_db_pre_upgrade.sh -y`](file:///Users/irtam/Desktop/Drupal/aneti-prod%203/scripts/1-cleanup_db_pre_upgrade.sh) pour libérer plus de **1 Go** de données volatiles (5M de lignes de recherche, caches, watchdog).
 
-### Étape 2 : Neutralisation des timeouts SMTP
-* Passe `smtp_on: false` et désactive l'envoi d'emails dans `config_log` pour éviter les ralentissements réseau sur chaque entité sauvegardée en environnement local.
+### Étape 2 : Neutralisation des timeouts SMTP et téléchargements distants
+* Exécute une mise à jour directe en SQL pour forcer `smtp_on: false` et désactiver les alertes e-mail dans `config_log` (`log_destination.mail = 0`). Cela empêche tout timeout réseau sur le serveur inaccessible `192.168.1.10:25` lors des sauvegardes de configurations.
+* Configure `locale.settings translation.use_source = local` pour éviter l'erreur `TypeError fgets()` liée aux téléchargements distants de fichiers de langue manquants.
 
-### Étape 3 : Sécurisation de `multiple_registration` & nettoyage blocs et modules orphelins
-* Supprime les blocs orphelins liés à l'ancien thème `aneti_2019` pour que le validateur de synchronisation Drupal ne bloque pas l'import.
-* Désinstalle de manière défensive les modules inactifs et obsolètes s'ils sont encore présents (`select2`, `conditional_fields`, `unique_entity_title`, `rules_role_email`, `taxonomy_term_depth`, `taxonomy_import`, `menu_export`, `search_exclude`, `devel`, `rest_log`, `node_action_log`, `aneti_tools`, `color`, `quickedit`, `rdf`, `hal`, `tracker`).
+### Étape 3 : Sécurisation de `multiple_registration`, nettoyage des orphelins et désenregistrement des modules
+* Supprime préventivement en base les entités de configuration orphelines ou conflictuelles :
+  * `search.page.content_exclude_` (référençant le plugin manquant `search_exclude_node_search`).
+  * `field.field.simplenews_subscriber.simplenews_subscriber.subscriptions` et son `field.storage` (qui entraient en collision avec le champ natif de Simplenews 2.x).
+  * Configurations obsolètes de Devel et blocs orphelins du thème `aneti_2019`.
+* Désenregistre proprement via l'API Drupal les modules dont le code a été supprimé (`select2`, `conditional_fields`, `unique_entity_title`, `rules_role_email`, `taxonomy_term_depth`, `taxonomy_import`, `menu_export`, `search_exclude`, `devel`, `rest_log`, `node_action_log`, `aneti_tools`, `contact_message_rest`, `dbug`).
+* Désinstalle via Drush les modules dépréciés du core (`color`, `quickedit`, `rdf`, `hal`, `tracker`).
 * Applique directement la clé primaire `(uid, rid)` sur `multiple_registration` et enregistre le schéma 8204 dans le registre Drush. Les **318 075 comptes utilisateurs restent 100 % intacts** et la boucle infinie est neutralisée.
 
-### Étape 4 : Mises à jour de schémas (`drush updatedb`)
+### Étape 4 : Mises à jour de schémas (`drush updatedb`) & Définitions d'entités
 * Passe le site en mode maintenance pour garantir l'intégrité transactionnelle.
-* Exécute l'ensemble des hooks de mise à jour de schéma BDD (`drush updatedb -y`) et vide le cache.
+* Exécute l'ensemble des hooks de mise à jour de schéma BDD (`drush updatedb -y`).
+* Purge automatiquement la définition de champ résiduelle `depth_level` sur l'entité `taxonomy_term` et met à jour la définition de l'entité `paragraph`.
+* Vide et reconstruit le cache Drupal.
 
 ### Étape 5 : Thème d'administration Claro
 * Active le thème officiel moderne **Claro**.
@@ -76,6 +83,7 @@ flowchart TD
 
 ### Étape 6 : Import de la configuration synchronisée (`drush cim`)
 * Importe les fichiers YAML versionnés du dossier `config/sync/` dans la base de données.
+* Prend en compte dynamiquement la séparation **Config Split** selon la variable `ENVIRONMENT` définie dans le fichier [`.env`](file:///Users/irtam/Desktop/Drupal/aneti-prod%203/.env).
 * Reconstruit les caches d'entités et de routage.
 
 ### Étape 7 : Sortie de maintenance & Restitution
@@ -83,4 +91,28 @@ flowchart TD
 * Exécute un `drush cr` final.
 * Affiche l'état de santé du site (`drush status`) avec confirmation du bootstrap.
 * Génère et affiche un lien de connexion administrateur one-time (`drush uli`).
+
+---
+
+## 4. Gestion Multi-Environnement : Config Split & Fichier `.env`
+
+Le projet intègre désormais une architecture stricte de gestion de configuration par environnement :
+
+* **Fichier `.env` racine** :
+  Permet de définir l'environnement d'exécution via la variable `ENVIRONMENT` :
+  ```ini
+  # dev : active le split 'dev' et les outils de développement (devel)
+  # prod : environnement de production strict (aucun module de dev)
+  ENVIRONMENT=dev
+  ```
+* **Fichier `.env.example`** :
+  Fichier modèle versionné sous Git, configuré par défaut à `ENVIRONMENT=prod`.
+* **Configuration Split (`config/split/dev/`)** :
+  * Le paquet `drupal/devel:^5.1` est placé dans `require-dev` dans `composer.json`.
+  * La configuration de `devel` (`devel.settings.yml`, `devel.toolbar.settings.yml`, `system.menu.devel.yml`) réside exclusivement dans `config/split/dev/`.
+  * Le dossier `config/sync/` principal de production ne contient **aucune référence à `devel`**.
+  * Dans `settings.php`, le split est activé dynamiquement :
+    ```php
+    $config['config_split.config_split.dev']['status'] = ($site_env === 'dev');
+    ```
 

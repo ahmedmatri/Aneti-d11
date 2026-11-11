@@ -13,7 +13,7 @@ use Drupal\user\UserInterface;
  *   id = "custom_rules_user_has_role",
  *   label = @Translation("User has role (custom)"),
  *   category = @Translation("User"),
- *   context = {
+ *   context_definitions = {
  *     "user" = @ContextDefinition("entity:user",
  *       label = @Translation("User")
  *     ),
@@ -31,10 +31,10 @@ class UserHasRole extends RulesConditionBase {
   /**
    * Evaluate if user has role(s).
    *
-   * @param \Drupal\user\UserInterface $account
+   * @param \Drupal\user\UserInterface $user
    *   The account to check.
-   * @param \Drupal\user\RoleInterface[] $roles
-   *   Array of user roles.
+   * @param string $roles
+   *   User role.
    * @param string $operation
    *   Either "AND": user has all of roles.
    *   Or "OR": user has at least one of all roles.
@@ -43,8 +43,8 @@ class UserHasRole extends RulesConditionBase {
    * @return bool
    *   TRUE if the user has the role(s).
    */
-  protected function doEvaluate(UserInterface $account, $roles, $operation = 'AND') {
-    return in_array($roles,$account->getRoles());
+  protected function doEvaluate(UserInterface $user, $roles, $operation = 'AND') {
+    return in_array($roles, $user->getRoles());
   }
 
 }

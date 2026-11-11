@@ -14,14 +14,14 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *  id = "role_user_subscribe_action",
  *  label = @Translation("Subscribe a user to a news letter"),
  *  category = @Translation("User"),
- *  context = {
+ *  context_definitions = {
  *    "user" = @ContextDefinition("entity:user",
  *      label = @Translation("User"),
  *      multiple = FALSE
  *    ),
  *    "newsletter_id" = @ContextDefinition("string",
  *      label = @Translation("Newsletter ID"),
- *      description = @Translation("The id of the newsletter."),
+ *      description = @Translation("The id of the newsletter.")
  *    )
  *  }
  * )
