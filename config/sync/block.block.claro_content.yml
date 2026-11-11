@@ -1,5 +1,5 @@
-uuid: 27b6333b-7536-404b-b383-b5769f6f4793
-langcode: en
+uuid: f2336420-ac8e-4ffa-8900-953236fd394d
+langcode: fr
 status: true
 dependencies:
   module:
@@ -19,7 +19,7 @@ provider: null
 plugin: system_main_block
 settings:
   id: system_main_block
-  label: 'Main page content'
+  label: 'Contenu de la page principale'
   label_display: '0'
   provider: system
 visibility: {  }

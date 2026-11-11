@@ -18,7 +18,6 @@ dependencies:
     - contact
     - content_moderation
     - contextual
-    - devel
     - field_permissions
     - file_entity
     - filter
@@ -52,7 +51,6 @@ permissions:
   - 'access content'
   - 'access content overview'
   - 'access contextual links'
-  - 'access devel information'
   - 'access private fields'
   - 'access rules debug'
   - 'access site in maintenance mode'
@@ -238,7 +236,6 @@ permissions:
   - 'skip comment approval'
   - 'subscribe to newsletters'
   - 'switch shortcut sets'
-  - 'switch users'
   - 'translate interface'
   - 'use advanced search'
   - 'use offre transition create_new_draft'

@@ -13,7 +13,6 @@ dependencies:
     - comment
     - contact
     - contextual
-    - devel
     - field_permissions
     - file_entity
     - filter
@@ -153,7 +152,6 @@ permissions:
   - 'send newsletter'
   - 'skip comment approval'
   - 'subscribe to newsletters'
-  - 'switch users'
   - 'translate interface'
   - 'use advanced search'
   - 'use text format full_html'

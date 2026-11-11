@@ -15,7 +15,6 @@ dependencies:
     - field.field.node.postulation.field_offre_id
     - node.type.postulation
   module:
-    - conditional_fields
     - content_moderation
     - field_collection
     - path
@@ -59,51 +58,13 @@ content:
     weight: 130
     region: content
     settings: {  }
-    third_party_settings:
-      conditional_fields:
-        137ffe97-e055-49f0-a75b-7778d8281710:
-          entity_type: node
-          bundle: postulation
-          dependee: field_candidature
-          settings:
-            state: '!visible'
-            condition: value
-            grouping: AND
-            values_set: 3
-            value: ''
-            values: "0\r\n3\r\n2"
-            value_form: {  }
-            effect: show
-            effect_options: {  }
-            selector: ''
-            field_candidature:
-              -
-                value: '0'
+    third_party_settings: {  }
   field_checklist_avant_depart:
     type: field_collection_embed
     weight: 129
     region: content
     settings: {  }
-    third_party_settings:
-      conditional_fields:
-        53b5cfd5-a0e4-43f5-9b7a-06969ecaac21:
-          entity_type: node
-          bundle: postulation
-          dependee: field_candidature
-          settings:
-            state: '!visible'
-            condition: value
-            grouping: AND
-            values_set: 3
-            value: ''
-            values: "0\r\n1\r\n2"
-            value_form: {  }
-            effect: show
-            effect_options: {  }
-            selector: ''
-            field_candidature:
-              -
-                value: '0'
+    third_party_settings: {  }
   field_cin:
     type: string_textfield
     weight: 121

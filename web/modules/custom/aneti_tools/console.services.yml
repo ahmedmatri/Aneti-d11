@@ -1,6 +1,0 @@
-services:
-  aneti_tools.aneti_tools_clean_rev:
-    class: Drupal\aneti_tools\Command\CleanRevisionsCommand
-    arguments: []
-    tags:
-      - { name: drupal.command }

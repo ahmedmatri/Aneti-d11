@@ -239,6 +239,13 @@ ddev drush cst
 * **Back-end** : Thème Claro fonctionnel avec barre d'administration opérationnelle.
 * **Modules custom** : Les 10 modules custom et le thème `job_board` sont actifs et sans erreur de compilation.
 
+### 7.3. Audit Approfondi & Purge des 16 Modules Inutilisés / Dépréciés
+Un audit complet (requêtes SQL, dépendances et schémas) a permis de détecter et d'éliminer définitivement 16 modules actifs mais sans aucune donnée ni utilité :
+* **Modules Contrib supprimés** : `select2` (Chosen utilisé partout), `conditional_fields` (0 règle), `unique_entity_title` (0 type configuré), `rules_role_email` (0 règle l'utilise), `taxonomy_term_depth` (0 vue l'utilise), `taxonomy_import` (outil CSV de dev), `menu_export` (outil de dev), `search_exclude` (0 exclusion), `devel` (débogage interdit en prod), `rest_log` (table inexistante), `node_action_log` (table vide).
+* **Module Custom supprimé** : `aneti_tools` (code mort contenant uniquement une commande Drupal Console obsolète).
+* **Modules Core dépréciés désinstallés** (supprimés sous Drupal 10) : `color`, `quickedit`, `rdf`, `hal`, `tracker` (purge de 1 068 290 lignes inutiles dans `tracker_node`).
+* **Paquets Composer retirés** : 11 paquets de modules et 7 sous-dépendances Doctrine nettoyés via `composer remove`.
+
 ---
 
 ## 8. Prochaine Étape : Préparation du Saut vers Drupal 10

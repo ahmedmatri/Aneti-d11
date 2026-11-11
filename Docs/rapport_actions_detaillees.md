@@ -170,6 +170,10 @@ flowchart TD
 | `web/modules/contrib/rest_log/...` | Fix PHP 8 | Correction de la virgule orpheline bloquant le parseur |
 | `web/drupal-8.9.20/` | Nettoyage | Suppression d'un dossier obsolète de 144 Mo |
 | `web/modules/contrib/[17 modules]` | Nettoyage | Élimination des répertoires de modules inactifs non utilisés |
+| `scripts/1-cleanup_db_pre_upgrade.sh` | Automatisation | Ajout de l'étape 6 : désinstallation préventive des 16 modules inactifs et purge BDD |
+| `scripts/2-upgrade_drupal9.sh` | Automatisation | Script complet d'upgrade automatisé D8 ➔ D9.5 (idempotent, 7 étapes) |
+| `composer.json` | Dépendances | Suppression de 11 modules inutilisés (`select2`, `devel`, `rest_log`, etc.) et 7 sous-paquets |
+| `web/modules/custom/aneti_tools` | Code mort | Suppression du module obsolète contenant du code Drupal Console |
 
 ---
 

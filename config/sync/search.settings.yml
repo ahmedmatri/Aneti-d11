@@ -2,7 +2,6 @@ _core:
   default_config_hash: hvVxL1G-ZCxaq32IZws0YsfuhvaDiQE_np-0g35KjUk
 langcode: fr
 and_or_limit: 7
-default_page: content_exclude_
 index:
   cron_limit: 500
   overlap_cjk: true

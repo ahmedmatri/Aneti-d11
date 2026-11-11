@@ -3,7 +3,6 @@ langcode: fr
 status: true
 dependencies:
   module:
-    - hal
     - jwt
     - serialization
     - webform_rest
@@ -14,7 +13,6 @@ configuration:
   methods:
     - POST
   formats:
-    - hal_json
-    - json
+    1: json
   authentication:
     - jwt_auth

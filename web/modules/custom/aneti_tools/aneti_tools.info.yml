@@ -1,5 +1,0 @@
-name: 'Aneti Tools'
-type: module
-description: 'Provides Tools for ANETI project'
-core_version_requirement: ^8.9 || ^9 || ^10
-package: 'Custom'
