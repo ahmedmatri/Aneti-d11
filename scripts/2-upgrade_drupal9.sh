@@ -16,6 +16,11 @@
 
 set -euo pipefail
 
+# Détermination absolue des chemins
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+cd "${PROJECT_ROOT}"
+
 # Couleurs pour l'affichage
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -105,9 +110,9 @@ if [ "$MIGRATE_TABLES_COUNT" -gt 0 ]; then
         echo -e "${YELLOW}[INFO] Des tables de migration orphelines ($MIGRATE_TABLES_COUNT tables) sont présentes.${NC}"
         echo -e "${YELLOW}[INFO] Lancement automatique du script de nettoyage préalable (1-cleanup_db_pre_upgrade.sh)...${NC}"
         if [ "$IS_DDEV_HOST" = true ]; then
-            ./scripts/1-cleanup_db_pre_upgrade.sh -y
+            "${SCRIPT_DIR}/1-cleanup_db_pre_upgrade.sh" -y
         else
-            ./scripts/1-cleanup_db_pre_upgrade.sh -y
+            "${SCRIPT_DIR}/1-cleanup_db_pre_upgrade.sh" -y
         fi
     else
         echo -e "${YELLOW}[WARNING] Le nettoyage préalable a été sauté via --skip-cleanup.${NC}"

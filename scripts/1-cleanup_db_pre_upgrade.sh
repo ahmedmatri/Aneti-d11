@@ -15,6 +15,11 @@
 
 set -euo pipefail
 
+# Détermination absolue des chemins
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+cd "${PROJECT_ROOT}"
+
 # Couleurs pour l'affichage
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -105,7 +110,9 @@ fi
 
 # Étape 1 : Sauvegarde préalable (Snapshot)
 if [ "$SKIP_BACKUP" = false ]; then
-    BACKUP_FILE=".ddev/backup-pre-cleanup-$(date +%Y%m%d_%H%M%S).sql.gz"
+    BACKUP_DIR="${PROJECT_ROOT}/.ddev"
+    mkdir -p "${BACKUP_DIR}"
+    BACKUP_FILE="${BACKUP_DIR}/backup-pre-cleanup-$(date +%Y%m%d_%H%M%S).sql.gz"
     echo ""
     echo -e "${BLUE}💾 Étape 1/5 : Création d'une sauvegarde de sécurité...${NC}"
     if [ "$IS_DDEV_HOST" = true ]; then
